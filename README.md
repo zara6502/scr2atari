@@ -7,7 +7,7 @@ C# project compiled on VS .NET 4.8
 
 Command line usage:<br>
 scr2asm [-option1][-option2] [filename1] [*.scr] - filenames or masks separated by space<br>
-<div style="text-indent:25px;">-pngbw  : only generate monochrome PNG files<br></div>
+<p style="text-indent:25px;">-pngbw  : only generate monochrome PNG files<br></p>
 <div style="text-indent:25px;">-png    : only generate color PNG files<br></div>
 <div style="text-indent:25px;">-png2   : only generate color PNG files, scale x2<br></div>
 <div style="text-indent:25px;">-png4   : only generate color PNG files, scale x4<br></div>
