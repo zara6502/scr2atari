@@ -15,5 +15,3 @@ scr2asm [-option1][-option2] [filename1] [*.scr] - filenames or masks separated 
 <div style="text-indent:25px;">-noobx  : not  generate OBX files (only ASM and PNG B/W)<br></div>
 <div style="text-indent:25px;">-nopng  : not  generate PNG files (only ASM and OBX)<br></div>
 </p>
-
-https://boosty.to/zara6502/donate
