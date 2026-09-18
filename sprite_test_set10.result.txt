@@ -1,0 +1,338 @@
+
+############################################################
+# rolling_stone
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys=  6 ambiguous=  6 conflicts= 13 extra-states= 13
+      F(x)                         keybits=3 approx=99 bits
+      F(y)                         keys=  5 ambiguous=  5 conflicts= 14 extra-states= 14
+      F(y)                         keybits=3 approx=92 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys=  6 ambiguous=  6 conflicts= 13 extra-states= 13
+      F(x + phase[y])              keybits=3 approx=99 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys=  5 ambiguous=  5 conflicts= 14 extra-states= 14
+      F(y + phase[x])              keybits=3 approx=92 bits
+
+      Row template similarity
+      -----------------------
+      row  6 -> row  7  shift= +1  match= 2
+      row  7 -> row  6  shift= -1  match= 2
+      row  8 -> row  7  shift= -1  match= 1
+      row  9 -> row  7  shift= -3  match= 1
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      02 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      03 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      04 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      05 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      06 .. .. .. .. .. 7F 7D 04 08 01 .. .. .. .. .. .. 
+      07 .. .. .. .. .. 61 .. 02 04 08 13 .. .. .. .. .. 
+      08 .. .. .. .. .. 10 61 .. .. 6F 5F .. .. .. .. .. 
+      09 .. .. .. .. .. .. 1C .. .. 60 02 .. .. .. .. .. 
+      0A .. .. .. .. .. .. .. 0C 40 .. .. .. .. .. .. .. 
+      0B .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0C .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0D .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0E .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0F .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# walk
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys=  9 ambiguous=  8 conflicts= 13 extra-states= 13
+      F(x)                         keybits=4 approx=151 bits
+      F(y)                         keys=  5 ambiguous=  3 conflicts=  6 extra-states=  6
+      F(y)                         keybits=3 approx=68 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys=  9 ambiguous=  8 conflicts= 13 extra-states= 13
+      F(x + phase[y])              keybits=4 approx=151 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys=  5 ambiguous=  3 conflicts=  6 extra-states=  6
+      F(y + phase[x])              keybits=3 approx=68 bits
+
+      Row template similarity
+      -----------------------
+      row  7 -> row  8  shift= -7  match= 1
+      row  8 -> row  7  shift= -7  match= 1
+      row 12 -> row 13  shift= -1  match= 3
+      row 13 -> row 12  shift= -1  match= 3
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      02 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      03 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      04 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      05 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      06 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      07 .. .. .. .. .. 18 .. .. .. .. .. 18 .. .. .. .. 
+      08 .. .. .. .. 18 20 44 .. .. .. 44 20 18 .. .. .. 
+      09 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0A .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0B .. .. .. .. .. .. 3E 3E 3E 3E .. .. .. .. .. .. 
+      0C .. .. .. .. .. 7F 49 36 36 49 7F .. .. .. .. .. 
+      0D .. .. .. .. 7F 49 .. 36 36 .. 49 7F .. .. .. .. 
+      0E .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0F .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# rotor
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys= 15 ambiguous= 15 conflicts= 23 extra-states= 23
+      F(x)                         keybits=4 approx=257 bits
+      F(y)                         keys= 15 ambiguous= 15 conflicts= 23 extra-states= 23
+      F(y)                         keybits=4 approx=257 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys= 15 ambiguous= 15 conflicts= 23 extra-states= 23
+      F(x + phase[y])              keybits=4 approx=257 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys= 15 ambiguous= 15 conflicts= 23 extra-states= 23
+      F(y + phase[x])              keybits=4 approx=257 bits
+
+      Row template similarity
+      -----------------------
+      row  1 -> row  2  shift= -1  match= 2
+      row  2 -> row  4  shift= +0  match= 7
+      row  3 -> row  4  shift= -1  match= 7
+      row  4 -> row  2  shift= +0  match= 7
+      row  5 -> row  3  shift= +0  match= 7
+      row  6 -> row  2  shift= +0  match= 2
+      row  7 -> row  8  shift= +0  match= 8
+      row  8 -> row  7  shift= +0  match= 8
+      row  9 -> row  7  shift= +0  match= 8
+      row 10 -> row 11  shift= -1  match= 2
+      row 11 -> row 13  shift= +0  match= 7
+      row 12 -> row 13  shift= -1  match= 7
+      row 13 -> row 11  shift= +0  match= 7
+      row 14 -> row 12  shift= +0  match= 7
+      row 15 -> row 11  shift= +0  match= 2
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. 10 .. .. .. .. .. .. .. .. .. 40 .. .. 
+      02 .. .. 10 .. 10 .. .. 20 20 20 .. .. 40 .. 40 .. 
+      03 .. 10 .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. 40 
+      04 .. .. 10 .. 10 .. 10 20 20 20 40 .. 40 .. 40 .. 
+      05 .. .. .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. .. 
+      06 .. .. .. .. 10 .. .. .. .. .. .. .. 40 .. .. .. 
+      07 .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+      08 .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+      09 .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+      0A .. .. .. .. 04 .. .. .. .. .. .. .. 01 .. .. .. 
+      0B .. .. .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. .. 
+      0C .. .. 04 .. 04 .. 04 02 02 02 01 .. 01 .. 01 .. 
+      0D .. 04 .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. 01 
+      0E .. .. 04 .. 04 .. .. 02 02 02 .. .. 01 .. 01 .. 
+      0F .. .. .. 04 .. .. .. .. .. .. .. .. .. 01 .. .. 
+
+############################################################
+# pulse
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys= 13 ambiguous= 11 conflicts= 29 extra-states= 29
+      F(x)                         keybits=4 approx=259 bits
+      F(y)                         keys= 13 ambiguous= 11 conflicts= 29 extra-states= 29
+      F(y)                         keybits=4 approx=259 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys= 13 ambiguous= 11 conflicts= 29 extra-states= 29
+      F(x + phase[y])              keybits=4 approx=259 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys= 13 ambiguous= 11 conflicts= 29 extra-states= 29
+      F(y + phase[x])              keybits=4 approx=259 bits
+
+      Row template similarity
+      -----------------------
+      row  2 -> row  3  shift= -3  match= 1
+      row  3 -> row 13  shift= +0  match= 7
+      row  4 -> row 12  shift= +0  match= 9
+      row  5 -> row 11  shift= +0  match=11
+      row  6 -> row 10  shift= +0  match=11
+      row  7 -> row  9  shift= +0  match=11
+      row  8 -> row  4  shift= -4  match= 3
+      row  9 -> row  7  shift= +0  match=11
+      row 10 -> row  6  shift= +0  match=11
+      row 11 -> row  5  shift= +0  match=11
+      row 12 -> row  4  shift= +0  match= 9
+      row 13 -> row  3  shift= +0  match= 7
+      row 14 -> row  2  shift= +0  match= 1
+
+      Manhattan + secondary feature
+      -----------------------------
+      distance                     keys=  8 ambiguous=  6 conflicts=  7 extra-states=  7
+      distance + x&1               keys= 16 ambiguous=  9 conflicts=  9 extra-states=  9
+      distance + y&1               keys= 16 ambiguous=  9 conflicts=  9 extra-states=  9
+      distance + (x+y)&1           keys=  8 ambiguous=  6 conflicts=  7 extra-states=  7
+      distance + (x-y)&1           keys=  8 ambiguous=  6 conflicts=  7 extra-states=  7
+      distance + left/right        keys= 16 ambiguous= 12 conflicts= 14 extra-states= 14
+      distance + up/down           keys= 16 ambiguous= 12 conflicts= 14 extra-states= 14
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      02 .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+      03 .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+      04 .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+      05 .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+      06 .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+      07 .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+      08 .. .. 04 0E 1F 44 0E 1F .. 1F 0E 44 1F 0E 04 .. 
+      09 .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+      0A .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+      0B .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+      0C .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+      0D .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+      0E .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+      0F .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# translate
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys= 12 ambiguous= 10 conflicts= 21 extra-states= 21
+      F(x)                         keybits=4 approx=216 bits
+      F(y)                         keys=  5 ambiguous=  5 conflicts= 42 extra-states= 42
+      F(y)                         keybits=3 approx=176 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys= 12 ambiguous= 10 conflicts= 21 extra-states= 21
+      F(x + phase[y])              keybits=4 approx=216 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys=  5 ambiguous=  5 conflicts= 42 extra-states= 42
+      F(y + phase[x])              keybits=3 approx=176 bits
+
+      Row template similarity
+      -----------------------
+      row  5 -> row  6  shift= -1  match= 3
+      row  6 -> row  7  shift= +0  match=12
+      row  7 -> row  6  shift= +0  match=12
+      row  8 -> row  6  shift= -1  match= 4
+      row  9 -> row  5  shift= -1  match= 2
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      02 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      03 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      04 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      05 .. .. .. 7F 7E 7C 07 0E 1C 38 70 60 40 .. .. .. 
+      06 .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+      07 .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+      08 .. .. .. 7F 7E 7C 78 0F 1E 3C 78 70 60 40 .. .. 
+      09 .. .. .. .. 7F 7E 03 06 0C 18 30 60 40 .. .. .. 
+      0A .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0B .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0C .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0D .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0E .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0F .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# chaos
+############################################################
+
+Coordinate phase models
+-----------------------
+      F(x)                         keys= 11 ambiguous= 11 conflicts= 78 extra-states= 78
+      F(x)                         keybits=4 approx=433 bits
+      F(y)                         keys= 11 ambiguous= 11 conflicts= 86 extra-states= 86
+      F(y)                         keybits=4 approx=465 bits
+
+Optimized row-phase model
+-------------------------
+      row phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(x + phase[y])              keys= 11 ambiguous= 11 conflicts= 78 extra-states= 78
+      F(x + phase[y])              keybits=4 approx=433 bits
+
+Optimized column-phase model
+----------------------------
+      col phase: -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16 -16
+      F(y + phase[x])              keys= 11 ambiguous= 11 conflicts= 86 extra-states= 86
+      F(y + phase[x])              keybits=4 approx=465 bits
+
+      Row template similarity
+      -----------------------
+      row  3 -> row  6  shift= +2  match= 2
+      row  4 -> row  3  shift= -4  match= 1
+      row  5 -> row  6  shift= -3  match= 2
+      row  6 -> row  3  shift= -2  match= 2
+      row  7 -> row  3  shift= +0  match= 1
+      row  8 -> row 10  shift= +0  match= 2
+      row  9 -> row  3  shift= -5  match= 1
+      row 10 -> row  6  shift= +1  match= 2
+      row 11 -> row  8  shift= -2  match= 2
+      row 12 -> row  3  shift= +1  match= 1
+      row 13 -> row 10  shift= -2  match= 2
+
+      Raw temporal map
+      ----------------
+          00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+      00 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      01 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      02 .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      03 .. .. .. .. .. 78 .. 26 1E 55 32 0F .. .. .. .. 
+      04 .. .. .. .. .. 0E 38 0F 59 6B 2D 26 4B .. .. .. 
+      05 .. .. .. 1C 12 0F 25 1C 19 36 78 0E 66 70 .. .. 
+      06 .. .. .. 1B 6D 0F .. 78 19 66 67 2D 55 0F .. .. 
+      07 .. .. .. 1C 4A 60 70 .. 5B 55 4E 66 46 2A .. .. 
+      08 .. .. .. 69 .. 29 5A 32 49 2D 63 47 63 1E .. .. 
+      09 .. .. .. 7C 33 0F 7E 0E 7E 4A 5B 15 69 1E .. .. 
+      0A .. .. .. 47 40 0E 78 32 49 67 13 6A 33 2B .. .. 
+      0B .. .. .. 33 35 .. 1F 29 49 7C 49 1E 19 7E .. .. 
+      0C .. .. .. .. 4E 0F 1B 1E 12 60 13 4C 49 .. .. .. 
+      0D .. .. .. .. .. 5B .. 0E 78 15 73 3C .. .. .. .. 
+      0E .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+      0F .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
