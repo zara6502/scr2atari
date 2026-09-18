@@ -1,0 +1,419 @@
+TEMPORAL COORDINATE-FUNCTION TEST #5
+=====================================
+KEY = frame 0
+7-bit pattern = frames 1..7 XOR KEY
+
+
+############################################################
+# rolling_stone
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys=  6 ambiguous=  6 extra-states= 13
+      F(y)                           keys=  5 ambiguous=  5 extra-states= 14
+      F(x+y)                         keys=  9 ambiguous=  6 extra-states= 10
+      F(x-y)                         keys=  7 ambiguous=  6 extra-states=  9
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 13
+              model                  keys=  6 ambiguous=  6 extra-states= 13
+      abs(y-cy):      cy= 0 conflicts= 14
+              model                  keys=  5 ambiguous=  5 extra-states= 14
+      chebyshev:      cx= 5 cy= 8 conflicts= 12
+              model                  keys=  6 ambiguous=  5 extra-states= 12
+      manhattan:      cx= 9 cy= 0 conflicts=  9
+              model                  keys=  7 ambiguous=  5 extra-states=  9
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  4 states=15 conflicts= 15  keybits=2  approx=70 bits
+      center | abs(y-8)        keys=  3 states=15 conflicts= 16  keybits=2  approx=62 bits
+      center | chebyshev       keys=  3 states=15 conflicts= 16  keybits=2  approx=62 bits
+      center | manhattan       keys=  5 states=15 conflicts= 13  keybits=3  approx=97 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=-3                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=-2                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=-1                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=+0                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=+1                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=+2                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=+3                     keys=  6 ambiguous=  6 extra-states= 13
+      x-phase=+4                     keys=  6 ambiguous=  6 extra-states= 13
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 11 ambiguous=  6 extra-states=  8
+      x+-1y                          keys=  7 ambiguous=  6 extra-states=  9
+      x+0y                           keys=  6 ambiguous=  6 extra-states= 13
+      x+1y                           keys=  9 ambiguous=  6 extra-states= 10
+      x+2y                           keys= 12 ambiguous=  6 extra-states=  7
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+05  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+06  .. .. .. .. .. 7F 7D 04 08 01 .. .. .. .. .. .. 
+07  .. .. .. .. .. 61 .. 02 04 08 13 .. .. .. .. .. 
+08  .. .. .. .. .. 10 61 .. .. 6F 5F .. .. .. .. .. 
+09  .. .. .. .. .. .. 1C .. .. 60 02 .. .. .. .. .. 
+0A  .. .. .. .. .. .. .. 0C 40 .. .. .. .. .. .. .. 
+0B  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0C  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0D  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# walk
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys=  9 ambiguous=  8 extra-states= 13
+      F(y)                           keys=  5 ambiguous=  3 extra-states=  6
+      F(x+y)                         keys= 11 ambiguous=  5 extra-states=  9
+      F(x-y)                         keys= 11 ambiguous=  5 extra-states=  9
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 15
+              model                  keys=  9 ambiguous=  8 extra-states= 13
+      abs(y-cy):      cy= 0 conflicts= 12
+              model                  keys=  5 ambiguous=  3 extra-states=  6
+      chebyshev:      cx= 8 cy=13 conflicts=  9
+              model                  keys=  7 ambiguous=  4 extra-states=  6
+      manhattan:      cx= 8 cy=12 conflicts=  9
+              model                  keys=  9 ambiguous=  4 extra-states=  8
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  5 states= 7 conflicts= 15  keybits=3  approx=112 bits
+      center | abs(y-8)        keys=  5 states= 7 conflicts= 12  keybits=3  approx=112 bits
+      center | chebyshev       keys=  4 states= 7 conflicts= 16  keybits=2  approx=80 bits
+      center | manhattan       keys=  8 states= 7 conflicts= 11  keybits=3  approx=136 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=-3                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=-2                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=-1                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=+0                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=+1                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=+2                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=+3                     keys=  9 ambiguous=  8 extra-states= 13
+      x-phase=+4                     keys=  9 ambiguous=  8 extra-states= 13
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 17 ambiguous=  5 extra-states=  7
+      x+-1y                          keys= 11 ambiguous=  5 extra-states=  9
+      x+0y                           keys=  9 ambiguous=  8 extra-states= 13
+      x+1y                           keys= 11 ambiguous=  5 extra-states=  9
+      x+2y                           keys= 16 ambiguous=  6 extra-states=  8
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+05  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+06  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+07  .. .. .. .. .. 18 .. .. .. .. .. 18 .. .. .. .. 
+08  .. .. .. .. 18 20 44 .. .. .. 44 20 18 .. .. .. 
+09  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0A  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0B  .. .. .. .. .. .. 3E 3E 3E 3E .. .. .. .. .. .. 
+0C  .. .. .. .. .. 7F 49 36 36 49 7F .. .. .. .. .. 
+0D  .. .. .. .. 7F 49 .. 36 36 .. 49 7F .. .. .. .. 
+0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# rotor
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys= 15 ambiguous= 15 extra-states= 23
+      F(y)                           keys= 15 ambiguous= 15 extra-states= 23
+      F(x+y)                         keys= 19 ambiguous= 13 extra-states= 19
+      F(x-y)                         keys= 19 ambiguous= 13 extra-states= 19
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 60
+              model                  keys= 15 ambiguous= 15 extra-states= 23
+      abs(y-cy):      cy= 0 conflicts= 60
+              model                  keys= 15 ambiguous= 15 extra-states= 23
+      chebyshev:      cx= 9 cy=14 conflicts= 56
+              model                  keys= 14 ambiguous= 12 extra-states= 23
+      manhattan:      cx= 4 cy= 3 conflicts= 41
+              model                  keys= 17 ambiguous= 12 extra-states= 18
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  8 states= 8 conflicts= 72  keybits=3  approx=352 bits
+      center | abs(y-8)        keys=  8 states= 8 conflicts= 72  keybits=3  approx=352 bits
+      center | chebyshev       keys=  5 states= 8 conflicts= 84  keybits=3  approx=328 bits
+      center | manhattan       keys=  8 states= 8 conflicts= 75  keybits=3  approx=352 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=-3                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=-2                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=-1                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=+0                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=+1                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=+2                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=+3                     keys= 15 ambiguous= 15 extra-states= 23
+      x-phase=+4                     keys= 15 ambiguous= 15 extra-states= 23
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 39 ambiguous= 27 extra-states= 39
+      x+-1y                          keys= 19 ambiguous= 13 extra-states= 19
+      x+0y                           keys= 15 ambiguous= 15 extra-states= 23
+      x+1y                           keys= 19 ambiguous= 13 extra-states= 19
+      x+2y                           keys= 39 ambiguous= 27 extra-states= 39
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. 10 .. .. .. .. .. .. .. .. .. 40 .. .. 
+02  .. .. 10 .. 10 .. .. 20 20 20 .. .. 40 .. 40 .. 
+03  .. 10 .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. 40 
+04  .. .. 10 .. 10 .. 10 20 20 20 40 .. 40 .. 40 .. 
+05  .. .. .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. .. 
+06  .. .. .. .. 10 .. .. .. .. .. .. .. 40 .. .. .. 
+07  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+08  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+09  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+0A  .. .. .. .. 04 .. .. .. .. .. .. .. 01 .. .. .. 
+0B  .. .. .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. .. 
+0C  .. .. 04 .. 04 .. 04 02 02 02 01 .. 01 .. 01 .. 
+0D  .. 04 .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. 01 
+0E  .. .. 04 .. 04 .. .. 02 02 02 .. .. 01 .. 01 .. 
+0F  .. .. .. 04 .. .. .. .. .. .. .. .. .. 01 .. .. 
+
+############################################################
+# pulse
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys= 13 ambiguous= 11 extra-states= 29
+      F(y)                           keys= 13 ambiguous= 11 extra-states= 29
+      F(x+y)                         keys= 17 ambiguous= 15 extra-states= 33
+      F(x-y)                         keys= 17 ambiguous= 15 extra-states= 33
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 80
+              model                  keys= 13 ambiguous= 11 extra-states= 29
+      abs(y-cy):      cy= 0 conflicts= 80
+              model                  keys= 13 ambiguous= 11 extra-states= 29
+      chebyshev:      cx= 9 cy= 8 conflicts= 54
+              model                  keys=  8 ambiguous=  6 extra-states= 17
+      manhattan:      cx= 8 cy= 8 conflicts= 52
+              model                  keys=  8 ambiguous=  6 extra-states=  7
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  7 states= 6 conflicts= 80  keybits=3  approx=392 bits
+      center | abs(y-8)        keys=  7 states= 6 conflicts= 80  keybits=3  approx=392 bits
+      center | chebyshev       keys=  6 states= 6 conflicts= 56  keybits=3  approx=384 bits
+      center | manhattan       keys=  8 states= 6 conflicts= 52  keybits=3  approx=400 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=-3                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=-2                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=-1                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=+0                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=+1                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=+2                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=+3                     keys= 13 ambiguous= 11 extra-states= 29
+      x-phase=+4                     keys= 13 ambiguous= 11 extra-states= 29
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 27 ambiguous= 21 extra-states= 49
+      x+-1y                          keys= 17 ambiguous= 15 extra-states= 33
+      x+0y                           keys= 13 ambiguous= 11 extra-states= 29
+      x+1y                           keys= 17 ambiguous= 15 extra-states= 33
+      x+2y                           keys= 27 ambiguous= 21 extra-states= 49
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+02  .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+03  .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+04  .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+05  .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+06  .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+07  .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+08  .. .. 04 0E 1F 44 0E 1F .. 1F 0E 44 1F 0E 04 .. 
+09  .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+0A  .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+0B  .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+0C  .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+0D  .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+0E  .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# translate
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys= 12 ambiguous= 10 extra-states= 21
+      F(y)                           keys=  5 ambiguous=  5 extra-states= 30
+      F(x+y)                         keys= 14 ambiguous= 12 extra-states= 35
+      F(x-y)                         keys= 13 ambiguous= 11 extra-states= 32
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 34
+              model                  keys= 12 ambiguous= 10 extra-states= 21
+      abs(y-cy):      cy= 0 conflicts= 49
+              model                  keys=  5 ambiguous=  5 extra-states= 30
+      chebyshev:      cx= 0 cy= 5 conflicts= 34
+              model                  keys= 12 ambiguous= 10 extra-states= 21
+      manhattan:      cx=13 cy= 6 conflicts= 33
+              model                  keys= 13 ambiguous= 11 extra-states= 29
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  7 states=21 conflicts= 43  keybits=3  approx=218 bits
+      center | abs(y-8)        keys=  4 states=21 conflicts= 49  keybits=2  approx=140 bits
+      center | chebyshev       keys=  7 states=21 conflicts= 42  keybits=3  approx=218 bits
+      center | manhattan       keys=  9 states=21 conflicts= 42  keybits=4  approx=288 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=-3                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=-2                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=-1                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=+0                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=+1                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=+2                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=+3                     keys= 12 ambiguous= 10 extra-states= 21
+      x-phase=+4                     keys= 12 ambiguous= 10 extra-states= 21
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 17 ambiguous= 15 extra-states= 36
+      x+-1y                          keys= 13 ambiguous= 11 extra-states= 32
+      x+0y                           keys= 12 ambiguous= 10 extra-states= 21
+      x+1y                           keys= 14 ambiguous= 12 extra-states= 35
+      x+2y                           keys= 18 ambiguous= 16 extra-states= 33
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+05  .. .. .. 7F 7E 7C 07 0E 1C 38 70 60 40 .. .. .. 
+06  .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+07  .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+08  .. .. .. 7F 7E 7C 78 0F 1E 3C 78 70 60 40 .. .. 
+09  .. .. .. .. 7F 7E 03 06 0C 18 30 60 40 .. .. .. 
+0A  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0B  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0C  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0D  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# chaos
+############################################################
+
+Coordinate-function tests
+-------------------------
+      F(x)                           keys= 11 ambiguous= 11 extra-states= 63
+      F(y)                           keys= 11 ambiguous= 11 extra-states= 64
+      F(x+y)                         keys= 17 ambiguous= 17 extra-states= 76
+      F(x-y)                         keys= 17 ambiguous= 17 extra-states= 75
+
+Best radial centers
+-------------------
+      abs(x-cx):      cx= 0 conflicts= 89
+              model                  keys= 11 ambiguous= 11 extra-states= 63
+      abs(y-cy):      cy= 0 conflicts= 90
+              model                  keys= 11 ambiguous= 11 extra-states= 64
+      chebyshev:      cx=12 cy=12 conflicts= 85
+              model                  keys= 10 ambiguous=  9 extra-states= 51
+      manhattan:      cx= 0 cy= 7 conflicts= 81
+              model                  keys= 15 ambiguous= 14 extra-states= 66
+
+Fixed-center radial tests
+-------------------------
+      center | abs(x-8)        keys=  6 states=47 conflicts= 95  keybits=3  approx=354 bits
+      center | abs(y-8)        keys=  6 states=47 conflicts= 94  keybits=3  approx=354 bits
+      center | chebyshev       keys=  6 states=47 conflicts= 92  keybits=3  approx=354 bits
+      center | manhattan       keys=  9 states=47 conflicts= 91  keybits=4  approx=480 bits
+
+Moving-boundary tests
+---------------------
+      x-phase=-4                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=-3                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=-2                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=-1                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=+0                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=+1                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=+2                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=+3                     keys= 11 ambiguous= 11 extra-states= 63
+      x-phase=+4                     keys= 11 ambiguous= 11 extra-states= 63
+
+Diagonal phase tests
+--------------------
+      x+-2y                          keys= 27 ambiguous= 24 extra-states= 72
+      x+-1y                          keys= 17 ambiguous= 17 extra-states= 75
+      x+0y                           keys= 11 ambiguous= 11 extra-states= 63
+      x+1y                           keys= 17 ambiguous= 17 extra-states= 76
+      x+2y                           keys= 26 ambiguous= 24 extra-states= 71
+
+Raw temporal map
+----------------
+    00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+03  .. .. .. .. .. 78 .. 26 1E 55 32 0F .. .. .. .. 
+04  .. .. .. .. .. 0E 38 0F 59 6B 2D 26 4B .. .. .. 
+05  .. .. .. 1C 12 0F 25 1C 19 36 78 0E 66 70 .. .. 
+06  .. .. .. 1B 6D 0F .. 78 19 66 67 2D 55 0F .. .. 
+07  .. .. .. 1C 4A 60 70 .. 5B 55 4E 66 46 2A .. .. 
+08  .. .. .. 69 .. 29 5A 32 49 2D 63 47 63 1E .. .. 
+09  .. .. .. 7C 33 0F 7E 0E 7E 4A 5B 15 69 1E .. .. 
+0A  .. .. .. 47 40 0E 78 32 49 67 13 6A 33 2B .. .. 
+0B  .. .. .. 33 35 .. 1F 29 49 7C 49 1E 19 7E .. .. 
+0C  .. .. .. .. 4E 0F 1B 1E 12 60 13 4C 49 .. .. .. 
+0D  .. .. .. .. .. 5B .. 0E 78 15 73 3C .. .. .. .. 
+0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
