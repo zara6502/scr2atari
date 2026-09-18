@@ -1,0 +1,1312 @@
+TEMPORAL x SPATIAL FACTORIZATION TEST #4
+=========================================
+KEY = frame 0
+7-bit pattern = frames 1..7 XOR KEY
+
+
+############################################################
+# rolling_stone
+############################################################
+
+Changed pixels : 19 / 256
+Components     : 2
+Global BBox     : x=5..10 y=6..10 (6x5 = 30)
+Fill            : 63.3%
+Temporal states : 15
+Temporal boundaries : 21
+Horizontal temporal RLE runs : 19
+Vertical temporal RLE runs   : 19
+
+    Pattern distribution:
+      01  0000001 : 1 px  interval=[1]
+      02  0000010 : 2 px  interval=[2]
+      04  0000100 : 2 px  interval=[3]
+      08  0001000 : 2 px  interval=[4]
+      0C  0001100 : 1 px  interval=[3..4]
+      10  0010000 : 1 px  interval=[5]
+      13  0010011 : 1 px  interval=[1..5]
+      1C  0011100 : 1 px  interval=[3..5]
+      40  1000000 : 1 px  interval=[7]
+      5F  1011111 : 1 px  interval=[1..7]
+      60  1100000 : 1 px  interval=[6..7]
+      61  1100001 : 2 px  interval=[1..7]
+      6F  1101111 : 1 px  interval=[1..7]
+      7D  1111101 : 1 px  interval=[1..7]
+      7F  1111111 : 1 px  interval=[1..7]
+    Temporal interval representation:
+      Nonzero pixels : 19
+      Interval bits  : 87
+      Raw 7-bit      : 133
+
+      Interval distribution:
+        [1..1] : 1 pixels
+        [1..5] : 1 pixels
+        [1..7] : 6 pixels
+        [2..2] : 2 pixels
+        [3..3] : 2 pixels
+        [3..4] : 1 pixels
+        [3..5] : 1 pixels
+        [4..4] : 2 pixels
+        [5..5] : 1 pixels
+        [6..7] : 1 pixels
+        [7..7] : 1 pixels
+
+    Horizontal temporal RLE:
+      y= 6  x= 5.. 5  state=7F  len=1
+      y= 6  x= 6.. 6  state=7D  len=1
+      y= 6  x= 7.. 7  state=04  len=1
+      y= 6  x= 8.. 8  state=08  len=1
+      y= 6  x= 9.. 9  state=01  len=1
+      y= 7  x= 5.. 5  state=61  len=1
+      y= 7  x= 7.. 7  state=02  len=1
+      y= 7  x= 8.. 8  state=04  len=1
+      y= 7  x= 9.. 9  state=08  len=1
+      y= 7  x=10..10  state=13  len=1
+      y= 8  x= 5.. 5  state=10  len=1
+      y= 8  x= 6.. 6  state=61  len=1
+      y= 8  x= 9.. 9  state=6F  len=1
+      y= 8  x=10..10  state=5F  len=1
+      y= 9  x= 6.. 6  state=1C  len=1
+      y= 9  x= 9.. 9  state=60  len=1
+      y= 9  x=10..10  state=02  len=1
+      y=10  x= 7.. 7  state=0C  len=1
+      y=10  x= 8.. 8  state=40  len=1
+
+    Greedy rectangles by temporal state:
+      state=7F : 1 rectangles, 1 pixels
+        (5,6) 1x1
+      state=7D : 1 rectangles, 1 pixels
+        (6,6) 1x1
+      state=04 : 2 rectangles, 2 pixels
+        (7,6) 1x1
+        (8,7) 1x1
+      state=08 : 2 rectangles, 2 pixels
+        (8,6) 1x1
+        (9,7) 1x1
+      state=01 : 1 rectangles, 1 pixels
+        (9,6) 1x1
+      state=61 : 2 rectangles, 2 pixels
+        (5,7) 1x1
+        (6,8) 1x1
+      state=02 : 2 rectangles, 2 pixels
+        (7,7) 1x1
+        (10,9) 1x1
+      state=13 : 1 rectangles, 1 pixels
+        (10,7) 1x1
+      state=10 : 1 rectangles, 1 pixels
+        (5,8) 1x1
+      state=6F : 1 rectangles, 1 pixels
+        (9,8) 1x1
+      state=5F : 1 rectangles, 1 pixels
+        (10,8) 1x1
+      state=1C : 1 rectangles, 1 pixels
+        (6,9) 1x1
+      state=60 : 1 rectangles, 1 pixels
+        (9,9) 1x1
+      state=0C : 1 rectangles, 1 pixels
+        (7,10) 1x1
+      state=40 : 1 rectangles, 1 pixels
+        (8,10) 1x1
+      TOTAL : 19 rectangles
+      Covered pixels : 19
+
+    Repeated translated temporal patterns:
+      none
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  05  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  06  .. .. .. .. .. 7F 7D 04 08 01 .. .. .. .. .. .. 
+  07  .. .. .. .. .. 61 .. 02 04 08 13 .. .. .. .. .. 
+  08  .. .. .. .. .. 10 61 .. .. 6F 5F .. .. .. .. .. 
+  09  .. .. .. .. .. .. 1C .. .. 60 02 .. .. .. .. .. 
+  0A  .. .. .. .. .. .. .. 0C 40 .. .. .. .. .. .. .. 
+  0B  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0C  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0D  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# walk
+############################################################
+
+Changed pixels : 24 / 256
+Components     : 3
+Global BBox     : x=4..12 y=7..13 (9x7 = 63)
+Fill            : 38.1%
+Temporal states : 7
+Temporal boundaries : 18
+Horizontal temporal RLE runs : 19
+Vertical temporal RLE runs   : 22
+
+    Pattern distribution:
+      18  0011000 : 4 px  interval=[4..5]
+      20  0100000 : 2 px  interval=[6]
+      36  0110110 : 4 px  interval=[2..6]
+      3E  0111110 : 4 px  interval=[2..6]
+      44  1000100 : 2 px  interval=[3..7]
+      49  1001001 : 4 px  interval=[1..7]
+      7F  1111111 : 4 px  interval=[1..7]
+    Temporal interval representation:
+      Nonzero pixels : 24
+      Interval bits  : 138
+      Raw 7-bit      : 168
+
+      Interval distribution:
+        [1..7] : 8 pixels
+        [2..6] : 8 pixels
+        [3..7] : 2 pixels
+        [4..5] : 4 pixels
+        [6..6] : 2 pixels
+
+    Horizontal temporal RLE:
+      y= 7  x= 5.. 5  state=18  len=1
+      y= 7  x=11..11  state=18  len=1
+      y= 8  x= 4.. 4  state=18  len=1
+      y= 8  x= 5.. 5  state=20  len=1
+      y= 8  x= 6.. 6  state=44  len=1
+      y= 8  x=10..10  state=44  len=1
+      y= 8  x=11..11  state=20  len=1
+      y= 8  x=12..12  state=18  len=1
+      y=11  x= 6.. 9  state=3E  len=4
+      y=12  x= 5.. 5  state=7F  len=1
+      y=12  x= 6.. 6  state=49  len=1
+      y=12  x= 7.. 8  state=36  len=2
+      y=12  x= 9.. 9  state=49  len=1
+      y=12  x=10..10  state=7F  len=1
+      y=13  x= 4.. 4  state=7F  len=1
+      y=13  x= 5.. 5  state=49  len=1
+      y=13  x= 7.. 8  state=36  len=2
+      y=13  x=10..10  state=49  len=1
+      y=13  x=11..11  state=7F  len=1
+
+    Greedy rectangles by temporal state:
+      state=18 : 4 rectangles, 4 pixels
+        (5,7) 1x1
+        (11,7) 1x1
+        (4,8) 1x1
+        (12,8) 1x1
+      state=20 : 2 rectangles, 2 pixels
+        (5,8) 1x1
+        (11,8) 1x1
+      state=44 : 2 rectangles, 2 pixels
+        (6,8) 1x1
+        (10,8) 1x1
+      state=3E : 1 rectangles, 4 pixels
+        (6,11) 4x1
+      state=7F : 4 rectangles, 4 pixels
+        (5,12) 1x1
+        (10,12) 1x1
+        (4,13) 1x1
+        (11,13) 1x1
+      state=49 : 4 rectangles, 4 pixels
+        (6,12) 1x1
+        (9,12) 1x1
+        (5,13) 1x1
+        (10,13) 1x1
+      state=36 : 1 rectangles, 4 pixels
+        (7,12) 2x2
+      TOTAL : 18 rectangles
+      Covered pixels : 24
+
+    Repeated translated temporal patterns:
+      2x2 template at (6,10) -> (7,10), offset +1,+0
+      2x2 template at (6,10) -> (8,10), offset +2,+0
+      2x2 template at (7,10) -> (6,10), offset -1,+0
+      2x2 template at (7,10) -> (8,10), offset +1,+0
+      2x2 template at (8,10) -> (6,10), offset -2,+0
+      2x2 template at (8,10) -> (7,10), offset -1,+0
+      3x2 template at (6,10) -> (7,10), offset +1,+0
+      3x2 template at (7,10) -> (6,10), offset -1,+0
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  05  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  06  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  07  .. .. .. .. .. 18 .. .. .. .. .. 18 .. .. .. .. 
+  08  .. .. .. .. 18 20 44 .. .. .. 44 20 18 .. .. .. 
+  09  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0A  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0B  .. .. .. .. .. .. 3E 3E 3E 3E .. .. .. .. .. .. 
+  0C  .. .. .. .. .. 7F 49 36 36 49 7F .. .. .. .. .. 
+  0D  .. .. .. .. 7F 49 .. 36 36 .. 49 7F .. .. .. .. 
+  0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# rotor
+############################################################
+
+Changed pixels : 96 / 256
+Components     : 44
+Global BBox     : x=1..15 y=1..15 (15x15 = 225)
+Fill            : 42.7%
+Temporal states : 8
+Temporal boundaries : 8
+Horizontal temporal RLE runs : 62
+Vertical temporal RLE runs   : 62
+
+    Pattern distribution:
+      01  0000001 : 12 px  interval=[1]
+      02  0000010 : 12 px  interval=[2]
+      04  0000100 : 12 px  interval=[3]
+      08  0001000 : 12 px  interval=[4]
+      10  0010000 : 12 px  interval=[5]
+      20  0100000 : 12 px  interval=[6]
+      40  1000000 : 12 px  interval=[7]
+      7F  1111111 : 12 px  interval=[1..7]
+    Temporal interval representation:
+      Nonzero pixels : 96
+      Interval bits  : 324
+      Raw 7-bit      : 672
+
+      Interval distribution:
+        [1..1] : 12 pixels
+        [1..7] : 12 pixels
+        [2..2] : 12 pixels
+        [3..3] : 12 pixels
+        [4..4] : 12 pixels
+        [5..5] : 12 pixels
+        [6..6] : 12 pixels
+        [7..7] : 12 pixels
+
+    Horizontal temporal RLE:
+      y= 1  x= 3.. 3  state=10  len=1
+      y= 1  x=13..13  state=40  len=1
+      y= 2  x= 2.. 2  state=10  len=1
+      y= 2  x= 4.. 4  state=10  len=1
+      y= 2  x= 7.. 9  state=20  len=3
+      y= 2  x=12..12  state=40  len=1
+      y= 2  x=14..14  state=40  len=1
+      y= 3  x= 1.. 1  state=10  len=1
+      y= 3  x= 3.. 3  state=10  len=1
+      y= 3  x= 5.. 5  state=10  len=1
+      y= 3  x= 7.. 9  state=20  len=3
+      y= 3  x=11..11  state=40  len=1
+      y= 3  x=13..13  state=40  len=1
+      y= 3  x=15..15  state=40  len=1
+      y= 4  x= 2.. 2  state=10  len=1
+      y= 4  x= 4.. 4  state=10  len=1
+      y= 4  x= 6.. 6  state=10  len=1
+      y= 4  x= 7.. 9  state=20  len=3
+      y= 4  x=10..10  state=40  len=1
+      y= 4  x=12..12  state=40  len=1
+      y= 4  x=14..14  state=40  len=1
+      y= 5  x= 3.. 3  state=10  len=1
+      y= 5  x= 5.. 5  state=10  len=1
+      y= 5  x= 7.. 9  state=20  len=3
+      y= 5  x=11..11  state=40  len=1
+      y= 5  x=13..13  state=40  len=1
+      y= 6  x= 4.. 4  state=10  len=1
+      y= 6  x=12..12  state=40  len=1
+      y= 7  x= 2.. 5  state=08  len=4
+      y= 7  x=11..14  state=7F  len=4
+      y= 8  x= 2.. 5  state=08  len=4
+      y= 8  x=11..14  state=7F  len=4
+      y= 9  x= 2.. 5  state=08  len=4
+      y= 9  x=11..14  state=7F  len=4
+      y=10  x= 4.. 4  state=04  len=1
+      y=10  x=12..12  state=01  len=1
+      y=11  x= 3.. 3  state=04  len=1
+      y=11  x= 5.. 5  state=04  len=1
+      y=11  x= 7.. 9  state=02  len=3
+      y=11  x=11..11  state=01  len=1
+      y=11  x=13..13  state=01  len=1
+      y=12  x= 2.. 2  state=04  len=1
+      y=12  x= 4.. 4  state=04  len=1
+      y=12  x= 6.. 6  state=04  len=1
+      y=12  x= 7.. 9  state=02  len=3
+      y=12  x=10..10  state=01  len=1
+      y=12  x=12..12  state=01  len=1
+      y=12  x=14..14  state=01  len=1
+      y=13  x= 1.. 1  state=04  len=1
+      y=13  x= 3.. 3  state=04  len=1
+      y=13  x= 5.. 5  state=04  len=1
+      y=13  x= 7.. 9  state=02  len=3
+      y=13  x=11..11  state=01  len=1
+      y=13  x=13..13  state=01  len=1
+      y=13  x=15..15  state=01  len=1
+      y=14  x= 2.. 2  state=04  len=1
+      y=14  x= 4.. 4  state=04  len=1
+      y=14  x= 7.. 9  state=02  len=3
+      y=14  x=12..12  state=01  len=1
+      y=14  x=14..14  state=01  len=1
+      y=15  x= 3.. 3  state=04  len=1
+      y=15  x=13..13  state=01  len=1
+
+    Greedy rectangles by temporal state:
+      state=10 : 12 rectangles, 12 pixels
+        (3,1) 1x1
+        (2,2) 1x1
+        (4,2) 1x1
+        (1,3) 1x1
+        (3,3) 1x1
+        (5,3) 1x1
+        (2,4) 1x1
+        (4,4) 1x1
+        (6,4) 1x1
+        (3,5) 1x1
+        (5,5) 1x1
+        (4,6) 1x1
+      state=40 : 12 rectangles, 12 pixels
+        (13,1) 1x1
+        (12,2) 1x1
+        (14,2) 1x1
+        (11,3) 1x1
+        (13,3) 1x1
+        (15,3) 1x1
+        (10,4) 1x1
+        (12,4) 1x1
+        (14,4) 1x1
+        (11,5) 1x1
+        (13,5) 1x1
+        (12,6) 1x1
+      state=20 : 1 rectangles, 12 pixels
+        (7,2) 3x4
+      state=08 : 1 rectangles, 12 pixels
+        (2,7) 4x3
+      state=7F : 1 rectangles, 12 pixels
+        (11,7) 4x3
+      state=04 : 12 rectangles, 12 pixels
+        (4,10) 1x1
+        (3,11) 1x1
+        (5,11) 1x1
+        (2,12) 1x1
+        (4,12) 1x1
+        (6,12) 1x1
+        (1,13) 1x1
+        (3,13) 1x1
+        (5,13) 1x1
+        (2,14) 1x1
+        (4,14) 1x1
+        (3,15) 1x1
+      state=01 : 12 rectangles, 12 pixels
+        (12,10) 1x1
+        (11,11) 1x1
+        (13,11) 1x1
+        (10,12) 1x1
+        (12,12) 1x1
+        (14,12) 1x1
+        (11,13) 1x1
+        (13,13) 1x1
+        (15,13) 1x1
+        (12,14) 1x1
+        (14,14) 1x1
+        (13,15) 1x1
+      state=02 : 1 rectangles, 12 pixels
+        (7,11) 3x4
+      TOTAL : 52 rectangles
+      Covered pixels : 96
+
+    Repeated translated temporal patterns:
+      2x2 template at (2,1) -> (1,2), offset -1,+1
+      2x2 template at (2,1) -> (3,2), offset +1,+1
+      2x2 template at (2,1) -> (2,3), offset +0,+2
+      2x2 template at (2,1) -> (4,3), offset +2,+2
+      2x2 template at (2,1) -> (3,4), offset +1,+3
+      2x2 template at (2,1) -> (5,4), offset +3,+3
+      2x2 template at (2,1) -> (4,5), offset +2,+4
+      2x2 template at (3,1) -> (2,2), offset -1,+1
+      2x2 template at (3,1) -> (4,2), offset +1,+1
+      2x2 template at (3,1) -> (1,3), offset -2,+2
+      2x2 template at (3,1) -> (3,3), offset +0,+2
+      2x2 template at (3,1) -> (5,3), offset +2,+2
+      2x2 template at (3,1) -> (2,4), offset -1,+3
+      2x2 template at (3,1) -> (4,4), offset +1,+3
+      2x2 template at (3,1) -> (3,5), offset +0,+4
+      2x2 template at (7,1) -> (8,1), offset +1,+0
+      2x2 template at (8,1) -> (7,1), offset -1,+0
+      2x2 template at (12,1) -> (11,2), offset -1,+1
+      2x2 template at (12,1) -> (13,2), offset +1,+1
+      2x2 template at (12,1) -> (10,3), offset -2,+2
+      2x2 template at (12,1) -> (12,3), offset +0,+2
+      2x2 template at (12,1) -> (14,3), offset +2,+2
+      2x2 template at (12,1) -> (11,4), offset -1,+3
+      2x2 template at (12,1) -> (13,4), offset +1,+3
+      2x2 template at (12,1) -> (12,5), offset +0,+4
+      2x2 template at (13,1) -> (12,2), offset -1,+1
+      2x2 template at (13,1) -> (14,2), offset +1,+1
+      2x2 template at (13,1) -> (11,3), offset -2,+2
+      2x2 template at (13,1) -> (13,3), offset +0,+2
+      2x2 template at (13,1) -> (10,4), offset -3,+3
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. 10 .. .. .. .. .. .. .. .. .. 40 .. .. 
+  02  .. .. 10 .. 10 .. .. 20 20 20 .. .. 40 .. 40 .. 
+  03  .. 10 .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. 40 
+  04  .. .. 10 .. 10 .. 10 20 20 20 40 .. 40 .. 40 .. 
+  05  .. .. .. 10 .. 10 .. 20 20 20 .. 40 .. 40 .. .. 
+  06  .. .. .. .. 10 .. .. .. .. .. .. .. 40 .. .. .. 
+  07  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+  08  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+  09  .. .. 08 08 08 08 .. .. .. .. .. 7F 7F 7F 7F .. 
+  0A  .. .. .. .. 04 .. .. .. .. .. .. .. 01 .. .. .. 
+  0B  .. .. .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. .. 
+  0C  .. .. 04 .. 04 .. 04 02 02 02 01 .. 01 .. 01 .. 
+  0D  .. 04 .. 04 .. 04 .. 02 02 02 .. 01 .. 01 .. 01 
+  0E  .. .. 04 .. 04 .. .. 02 02 02 .. .. 01 .. 01 .. 
+  0F  .. .. .. 04 .. .. .. .. .. .. .. .. .. 01 .. .. 
+
+############################################################
+# pulse
+############################################################
+
+Changed pixels : 112 / 256
+Components     : 1
+Global BBox     : x=2..14 y=2..14 (13x13 = 169)
+Fill            : 66.3%
+Temporal states : 6
+Temporal boundaries : 132
+Horizontal temporal RLE runs : 80
+Vertical temporal RLE runs   : 80
+
+    Pattern distribution:
+      04  0000100 : 32 px  interval=[3]
+      0E  0001110 : 36 px  interval=[2..4]
+      1B  0011011 : 16 px  interval=[1..5]
+      1F  0011111 : 12 px  interval=[1..5]
+      44  1000100 : 4 px  interval=[3..7]
+      4E  1001110 : 12 px  interval=[2..7]
+    Temporal interval representation:
+      Nonzero pixels : 112
+      Interval bits  : 576
+      Raw 7-bit      : 784
+
+      Interval distribution:
+        [1..5] : 28 pixels
+        [2..4] : 36 pixels
+        [2..7] : 12 pixels
+        [3..3] : 32 pixels
+        [3..7] : 4 pixels
+
+    Horizontal temporal RLE:
+      y= 2  x= 8.. 8  state=04  len=1
+      y= 3  x= 5.. 7  state=04  len=3
+      y= 3  x= 8.. 8  state=0E  len=1
+      y= 3  x= 9..11  state=04  len=3
+      y= 4  x= 4.. 4  state=04  len=1
+      y= 4  x= 5.. 7  state=0E  len=3
+      y= 4  x= 8.. 8  state=1F  len=1
+      y= 4  x= 9..11  state=0E  len=3
+      y= 4  x=12..12  state=04  len=1
+      y= 5  x= 3.. 3  state=04  len=1
+      y= 5  x= 4.. 5  state=0E  len=2
+      y= 5  x= 6.. 7  state=1B  len=2
+      y= 5  x= 8.. 8  state=44  len=1
+      y= 5  x= 9..10  state=1B  len=2
+      y= 5  x=11..12  state=0E  len=2
+      y= 5  x=13..13  state=04  len=1
+      y= 6  x= 3.. 3  state=04  len=1
+      y= 6  x= 4.. 4  state=0E  len=1
+      y= 6  x= 5.. 5  state=1B  len=1
+      y= 6  x= 6.. 7  state=4E  len=2
+      y= 6  x= 8.. 8  state=0E  len=1
+      y= 6  x= 9..10  state=4E  len=2
+      y= 6  x=11..11  state=1B  len=1
+      y= 6  x=12..12  state=0E  len=1
+      y= 6  x=13..13  state=04  len=1
+      y= 7  x= 3.. 3  state=04  len=1
+      y= 7  x= 4.. 4  state=0E  len=1
+      y= 7  x= 5.. 5  state=1B  len=1
+      y= 7  x= 6.. 6  state=4E  len=1
+      y= 7  x= 7.. 9  state=1F  len=3
+      y= 7  x=10..10  state=4E  len=1
+      y= 7  x=11..11  state=1B  len=1
+      y= 7  x=12..12  state=0E  len=1
+      y= 7  x=13..13  state=04  len=1
+      y= 8  x= 2.. 2  state=04  len=1
+      y= 8  x= 3.. 3  state=0E  len=1
+      y= 8  x= 4.. 4  state=1F  len=1
+      y= 8  x= 5.. 5  state=44  len=1
+      y= 8  x= 6.. 6  state=0E  len=1
+      y= 8  x= 7.. 7  state=1F  len=1
+      y= 8  x= 9.. 9  state=1F  len=1
+      y= 8  x=10..10  state=0E  len=1
+      y= 8  x=11..11  state=44  len=1
+      y= 8  x=12..12  state=1F  len=1
+      y= 8  x=13..13  state=0E  len=1
+      y= 8  x=14..14  state=04  len=1
+      y= 9  x= 3.. 3  state=04  len=1
+      y= 9  x= 4.. 4  state=0E  len=1
+      y= 9  x= 5.. 5  state=1B  len=1
+      y= 9  x= 6.. 6  state=4E  len=1
+      y= 9  x= 7.. 9  state=1F  len=3
+      y= 9  x=10..10  state=4E  len=1
+      y= 9  x=11..11  state=1B  len=1
+      y= 9  x=12..12  state=0E  len=1
+      y= 9  x=13..13  state=04  len=1
+      y=10  x= 3.. 3  state=04  len=1
+      y=10  x= 4.. 4  state=0E  len=1
+      y=10  x= 5.. 5  state=1B  len=1
+      y=10  x= 6.. 7  state=4E  len=2
+      y=10  x= 8.. 8  state=0E  len=1
+      y=10  x= 9..10  state=4E  len=2
+      y=10  x=11..11  state=1B  len=1
+      y=10  x=12..12  state=0E  len=1
+      y=10  x=13..13  state=04  len=1
+      y=11  x= 3.. 3  state=04  len=1
+      y=11  x= 4.. 5  state=0E  len=2
+      y=11  x= 6.. 7  state=1B  len=2
+      y=11  x= 8.. 8  state=44  len=1
+      y=11  x= 9..10  state=1B  len=2
+      y=11  x=11..12  state=0E  len=2
+      y=11  x=13..13  state=04  len=1
+      y=12  x= 4.. 4  state=04  len=1
+      y=12  x= 5.. 7  state=0E  len=3
+      y=12  x= 8.. 8  state=1F  len=1
+      y=12  x= 9..11  state=0E  len=3
+      y=12  x=12..12  state=04  len=1
+      y=13  x= 5.. 7  state=04  len=3
+      y=13  x= 8.. 8  state=0E  len=1
+      y=13  x= 9..11  state=04  len=3
+      y=14  x= 8.. 8  state=04  len=1
+
+    Greedy rectangles by temporal state:
+      state=04 : 16 rectangles, 32 pixels
+        (8,2) 1x1
+        (5,3) 3x1
+        (9,3) 3x1
+        (4,4) 1x1
+        (12,4) 1x1
+        (3,5) 1x3
+        (13,5) 1x3
+        (2,8) 1x1
+        (14,8) 1x1
+        (3,9) 1x3
+        (13,9) 1x3
+        (4,12) 1x1
+        (12,12) 1x1
+        (5,13) 3x1
+        (9,13) 3x1
+        (8,14) 1x1
+      state=0E : 20 rectangles, 37 pixels
+        (8,3) 1x1
+        (5,4) 3x1
+        (9,4) 3x1
+        (4,5) 1x3
+        (5,5) 1x1
+        (11,5) 2x1
+        (8,6) 1x1
+        (12,6) 1x2
+        (3,8) 1x1
+        (6,8) 1x1
+        (10,8) 1x1
+        (13,8) 1x1
+        (4,9) 1x3
+        (12,9) 1x3
+        (8,10) 1x1
+        (5,11) 1x2
+        (11,11) 1x2
+        (6,12) 2x1
+        (9,12) 3x1
+        (8,13) 1x1
+      state=1F : 8 rectangles, 13 pixels
+        (8,4) 1x1
+        (7,7) 1x3
+        (8,7) 2x1
+        (4,8) 1x1
+        (9,8) 1x2
+        (12,8) 1x1
+        (8,9) 2x1
+        (8,12) 1x1
+      state=1B : 8 rectangles, 16 pixels
+        (6,5) 2x1
+        (9,5) 2x1
+        (5,6) 1x2
+        (11,6) 1x2
+        (5,9) 1x2
+        (11,9) 1x2
+        (6,11) 2x1
+        (9,11) 2x1
+      state=44 : 4 rectangles, 4 pixels
+        (8,5) 1x1
+        (5,8) 1x1
+        (11,8) 1x1
+        (8,11) 1x1
+      state=4E : 8 rectangles, 13 pixels
+        (6,6) 1x2
+        (7,6) 1x1
+        (9,6) 2x1
+        (10,7) 1x1
+        (6,9) 1x2
+        (10,9) 1x2
+        (7,10) 1x1
+        (9,10) 2x1
+      TOTAL : 64 rectangles
+      Covered pixels : 115
+
+    Repeated translated temporal patterns:
+      2x2 template at (5,2) -> (6,2), offset +1,+0
+      2x2 template at (5,2) -> (9,2), offset +4,+0
+      2x2 template at (5,2) -> (10,2), offset +5,+0
+      2x2 template at (6,2) -> (5,2), offset -1,+0
+      2x2 template at (6,2) -> (9,2), offset +3,+0
+      2x2 template at (6,2) -> (10,2), offset +4,+0
+      2x2 template at (7,2) -> (4,3), offset -3,+1
+      2x2 template at (7,2) -> (3,4), offset -4,+2
+      2x2 template at (7,2) -> (2,7), offset -5,+5
+      2x2 template at (8,2) -> (11,3), offset +3,+1
+      2x2 template at (8,2) -> (12,4), offset +4,+2
+      2x2 template at (8,2) -> (13,7), offset +5,+5
+      2x2 template at (9,2) -> (5,2), offset -4,+0
+      2x2 template at (9,2) -> (6,2), offset -3,+0
+      2x2 template at (9,2) -> (10,2), offset +1,+0
+      2x2 template at (10,2) -> (5,2), offset -5,+0
+      2x2 template at (10,2) -> (6,2), offset -4,+0
+      2x2 template at (10,2) -> (9,2), offset -1,+0
+      2x2 template at (4,3) -> (7,2), offset +3,-1
+      2x2 template at (4,3) -> (3,4), offset -1,+1
+      2x2 template at (4,3) -> (2,7), offset -2,+4
+      2x2 template at (5,3) -> (6,3), offset +1,+0
+      2x2 template at (5,3) -> (9,3), offset +4,+0
+      2x2 template at (5,3) -> (10,3), offset +5,+0
+      2x2 template at (6,3) -> (5,3), offset -1,+0
+      2x2 template at (6,3) -> (9,3), offset +3,+0
+      2x2 template at (6,3) -> (10,3), offset +4,+0
+      2x2 template at (7,3) -> (3,7), offset -4,+4
+      2x2 template at (8,3) -> (12,7), offset +4,+4
+      2x2 template at (9,3) -> (5,3), offset -4,+0
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  02  .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+  03  .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+  04  .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+  05  .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+  06  .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+  07  .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+  08  .. .. 04 0E 1F 44 0E 1F .. 1F 0E 44 1F 0E 04 .. 
+  09  .. .. .. 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 .. .. 
+  0A  .. .. .. 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 .. .. 
+  0B  .. .. .. 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 .. .. 
+  0C  .. .. .. .. 04 0E 0E 0E 1F 0E 0E 0E 04 .. .. .. 
+  0D  .. .. .. .. .. 04 04 04 0E 04 04 04 .. .. .. .. 
+  0E  .. .. .. .. .. .. .. .. 04 .. .. .. .. .. .. .. 
+  0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# translate
+############################################################
+
+Changed pixels : 54 / 256
+Components     : 1
+Global BBox     : x=2..13 y=5..9 (12x5 = 60)
+Fill            : 90.0%
+Temporal states : 21
+Temporal boundaries : 75
+Horizontal temporal RLE runs : 54
+Vertical temporal RLE runs   : 38
+
+    Pattern distribution:
+      03  0000011 : 1 px  interval=[1..2]
+      06  0000110 : 1 px  interval=[2..3]
+      07  0000111 : 1 px  interval=[1..3]
+      0C  0001100 : 1 px  interval=[3..4]
+      0E  0001110 : 1 px  interval=[2..4]
+      0F  0001111 : 1 px  interval=[1..4]
+      18  0011000 : 1 px  interval=[4..5]
+      1C  0011100 : 1 px  interval=[3..5]
+      1E  0011110 : 1 px  interval=[2..5]
+      1F  0011111 : 2 px  interval=[1..5]
+      30  0110000 : 1 px  interval=[5..6]
+      38  0111000 : 1 px  interval=[4..6]
+      3C  0111100 : 1 px  interval=[3..6]
+      3E  0111110 : 2 px  interval=[2..6]
+      40  1000000 : 5 px  interval=[7]
+      60  1100000 : 5 px  interval=[6..7]
+      70  1110000 : 6 px  interval=[5..7]
+      78  1111000 : 6 px  interval=[4..7]
+      7C  1111100 : 6 px  interval=[3..7]
+      7E  1111110 : 5 px  interval=[2..7]
+      7F  1111111 : 5 px  interval=[1..7]
+    Temporal interval representation:
+      Nonzero pixels : 54
+      Interval bits  : 309
+      Raw 7-bit      : 378
+
+      Interval distribution:
+        [1..2] : 1 pixels
+        [1..3] : 1 pixels
+        [1..4] : 1 pixels
+        [1..5] : 2 pixels
+        [1..7] : 5 pixels
+        [2..3] : 1 pixels
+        [2..4] : 1 pixels
+        [2..5] : 1 pixels
+        [2..6] : 2 pixels
+        [2..7] : 5 pixels
+        [3..4] : 1 pixels
+        [3..5] : 1 pixels
+        [3..6] : 1 pixels
+        [3..7] : 6 pixels
+        [4..5] : 1 pixels
+        [4..6] : 1 pixels
+        [4..7] : 6 pixels
+        [5..6] : 1 pixels
+        [5..7] : 6 pixels
+        [6..7] : 5 pixels
+        [7..7] : 5 pixels
+
+    Horizontal temporal RLE:
+      y= 5  x= 3.. 3  state=7F  len=1
+      y= 5  x= 4.. 4  state=7E  len=1
+      y= 5  x= 5.. 5  state=7C  len=1
+      y= 5  x= 6.. 6  state=07  len=1
+      y= 5  x= 7.. 7  state=0E  len=1
+      y= 5  x= 8.. 8  state=1C  len=1
+      y= 5  x= 9.. 9  state=38  len=1
+      y= 5  x=10..10  state=70  len=1
+      y= 5  x=11..11  state=60  len=1
+      y= 5  x=12..12  state=40  len=1
+      y= 6  x= 2.. 2  state=7F  len=1
+      y= 6  x= 3.. 3  state=7E  len=1
+      y= 6  x= 4.. 4  state=7C  len=1
+      y= 6  x= 5.. 5  state=78  len=1
+      y= 6  x= 6.. 6  state=70  len=1
+      y= 6  x= 7.. 7  state=1F  len=1
+      y= 6  x= 8.. 8  state=3E  len=1
+      y= 6  x= 9.. 9  state=7C  len=1
+      y= 6  x=10..10  state=78  len=1
+      y= 6  x=11..11  state=70  len=1
+      y= 6  x=12..12  state=60  len=1
+      y= 6  x=13..13  state=40  len=1
+      y= 7  x= 2.. 2  state=7F  len=1
+      y= 7  x= 3.. 3  state=7E  len=1
+      y= 7  x= 4.. 4  state=7C  len=1
+      y= 7  x= 5.. 5  state=78  len=1
+      y= 7  x= 6.. 6  state=70  len=1
+      y= 7  x= 7.. 7  state=1F  len=1
+      y= 7  x= 8.. 8  state=3E  len=1
+      y= 7  x= 9.. 9  state=7C  len=1
+      y= 7  x=10..10  state=78  len=1
+      y= 7  x=11..11  state=70  len=1
+      y= 7  x=12..12  state=60  len=1
+      y= 7  x=13..13  state=40  len=1
+      y= 8  x= 3.. 3  state=7F  len=1
+      y= 8  x= 4.. 4  state=7E  len=1
+      y= 8  x= 5.. 5  state=7C  len=1
+      y= 8  x= 6.. 6  state=78  len=1
+      y= 8  x= 7.. 7  state=0F  len=1
+      y= 8  x= 8.. 8  state=1E  len=1
+      y= 8  x= 9.. 9  state=3C  len=1
+      y= 8  x=10..10  state=78  len=1
+      y= 8  x=11..11  state=70  len=1
+      y= 8  x=12..12  state=60  len=1
+      y= 8  x=13..13  state=40  len=1
+      y= 9  x= 4.. 4  state=7F  len=1
+      y= 9  x= 5.. 5  state=7E  len=1
+      y= 9  x= 6.. 6  state=03  len=1
+      y= 9  x= 7.. 7  state=06  len=1
+      y= 9  x= 8.. 8  state=0C  len=1
+      y= 9  x= 9.. 9  state=18  len=1
+      y= 9  x=10..10  state=30  len=1
+      y= 9  x=11..11  state=60  len=1
+      y= 9  x=12..12  state=40  len=1
+
+    Greedy rectangles by temporal state:
+      state=7F : 4 rectangles, 5 pixels
+        (3,5) 1x1
+        (2,6) 1x2
+        (3,8) 1x1
+        (4,9) 1x1
+      state=7E : 4 rectangles, 5 pixels
+        (4,5) 1x1
+        (3,6) 1x2
+        (4,8) 1x1
+        (5,9) 1x1
+      state=7C : 4 rectangles, 6 pixels
+        (5,5) 1x1
+        (4,6) 1x2
+        (9,6) 1x2
+        (5,8) 1x1
+      state=07 : 1 rectangles, 1 pixels
+        (6,5) 1x1
+      state=0E : 1 rectangles, 1 pixels
+        (7,5) 1x1
+      state=1C : 1 rectangles, 1 pixels
+        (8,5) 1x1
+      state=38 : 1 rectangles, 1 pixels
+        (9,5) 1x1
+      state=70 : 3 rectangles, 6 pixels
+        (10,5) 1x1
+        (6,6) 1x2
+        (11,6) 1x3
+      state=60 : 3 rectangles, 5 pixels
+        (11,5) 1x1
+        (12,6) 1x3
+        (11,9) 1x1
+      state=40 : 3 rectangles, 5 pixels
+        (12,5) 1x1
+        (13,6) 1x3
+        (12,9) 1x1
+      state=78 : 3 rectangles, 6 pixels
+        (5,6) 1x2
+        (10,6) 1x3
+        (6,8) 1x1
+      state=1F : 1 rectangles, 2 pixels
+        (7,6) 1x2
+      state=3E : 1 rectangles, 2 pixels
+        (8,6) 1x2
+      state=0F : 1 rectangles, 1 pixels
+        (7,8) 1x1
+      state=1E : 1 rectangles, 1 pixels
+        (8,8) 1x1
+      state=3C : 1 rectangles, 1 pixels
+        (9,8) 1x1
+      state=03 : 1 rectangles, 1 pixels
+        (6,9) 1x1
+      state=06 : 1 rectangles, 1 pixels
+        (7,9) 1x1
+      state=0C : 1 rectangles, 1 pixels
+        (8,9) 1x1
+      state=18 : 1 rectangles, 1 pixels
+        (9,9) 1x1
+      state=30 : 1 rectangles, 1 pixels
+        (10,9) 1x1
+      TOTAL : 38 rectangles
+      Covered pixels : 54
+
+    Repeated translated temporal patterns:
+      2x2 template at (4,6) -> (9,6), offset +5,+0
+      2x2 template at (5,6) -> (10,6), offset +5,+0
+      2x2 template at (5,6) -> (10,7), offset +5,+1
+      2x2 template at (9,6) -> (4,6), offset -5,+0
+      2x2 template at (10,6) -> (5,6), offset -5,+0
+      2x2 template at (10,6) -> (10,7), offset +0,+1
+      2x2 template at (11,6) -> (11,7), offset +0,+1
+      2x2 template at (12,6) -> (12,7), offset +0,+1
+      2x2 template at (13,6) -> (13,7), offset +0,+1
+      2x2 template at (2,7) -> (3,8), offset +1,+1
+      2x2 template at (3,7) -> (4,8), offset +1,+1
+      2x2 template at (10,7) -> (5,6), offset -5,-1
+      2x2 template at (10,7) -> (10,6), offset +0,-1
+      2x2 template at (11,7) -> (11,6), offset +0,-1
+      2x2 template at (12,7) -> (12,6), offset +0,-1
+      2x2 template at (13,7) -> (13,6), offset +0,-1
+      2x2 template at (3,8) -> (2,7), offset -1,-1
+      2x2 template at (4,8) -> (3,7), offset -1,-1
+      3x2 template at (4,6) -> (9,6), offset +5,+0
+      3x2 template at (9,6) -> (4,6), offset -5,+0
+      3x2 template at (10,6) -> (10,7), offset +0,+1
+      3x2 template at (11,6) -> (11,7), offset +0,+1
+      3x2 template at (12,6) -> (12,7), offset +0,+1
+      3x2 template at (1,7) -> (2,8), offset +1,+1
+      3x2 template at (2,7) -> (3,8), offset +1,+1
+      3x2 template at (10,7) -> (10,6), offset +0,-1
+      3x2 template at (11,7) -> (11,6), offset +0,-1
+      3x2 template at (12,7) -> (12,6), offset +0,-1
+      3x2 template at (2,8) -> (1,7), offset -1,-1
+      3x2 template at (3,8) -> (2,7), offset -1,-1
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  03  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  04  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  05  .. .. .. 7F 7E 7C 07 0E 1C 38 70 60 40 .. .. .. 
+  06  .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+  07  .. .. 7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 .. .. 
+  08  .. .. .. 7F 7E 7C 78 0F 1E 3C 78 70 60 40 .. .. 
+  09  .. .. .. .. 7F 7E 03 06 0C 18 30 60 40 .. .. .. 
+  0A  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0B  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0C  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0D  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+############################################################
+# chaos
+############################################################
+
+Changed pixels : 102 / 256
+Components     : 1
+Global BBox     : x=3..13 y=3..13 (11x11 = 121)
+Fill            : 84.3%
+Temporal states : 47
+Temporal boundaries : 168
+Horizontal temporal RLE runs : 102
+Vertical temporal RLE runs   : 98
+
+    Pattern distribution:
+      0E  0001110 : 5 px  interval=[2..4]
+      0F  0001111 : 7 px  interval=[1..4]
+      12  0010010 : 2 px  interval=[2..5]
+      13  0010011 : 2 px  interval=[1..5]
+      15  0010101 : 2 px  interval=[1..5]
+      19  0011001 : 3 px  interval=[1..5]
+      1B  0011011 : 2 px  interval=[1..5]
+      1C  0011100 : 3 px  interval=[3..5]
+      1E  0011110 : 5 px  interval=[2..5]
+      1F  0011111 : 1 px  interval=[1..5]
+      25  0100101 : 1 px  interval=[1..6]
+      26  0100110 : 2 px  interval=[2..6]
+      29  0101001 : 2 px  interval=[1..6]
+      2A  0101010 : 1 px  interval=[2..6]
+      2B  0101011 : 1 px  interval=[1..6]
+      2D  0101101 : 3 px  interval=[1..6]
+      32  0110010 : 3 px  interval=[2..6]
+      33  0110011 : 3 px  interval=[1..6]
+      35  0110101 : 1 px  interval=[1..6]
+      36  0110110 : 1 px  interval=[2..6]
+      38  0111000 : 1 px  interval=[4..6]
+      3C  0111100 : 1 px  interval=[3..6]
+      40  1000000 : 1 px  interval=[7]
+      46  1000110 : 1 px  interval=[2..7]
+      47  1000111 : 2 px  interval=[1..7]
+      49  1001001 : 5 px  interval=[1..7]
+      4A  1001010 : 2 px  interval=[2..7]
+      4B  1001011 : 1 px  interval=[1..7]
+      4C  1001100 : 1 px  interval=[3..7]
+      4E  1001110 : 2 px  interval=[2..7]
+      55  1010101 : 3 px  interval=[1..7]
+      59  1011001 : 1 px  interval=[1..7]
+      5A  1011010 : 1 px  interval=[2..7]
+      5B  1011011 : 3 px  interval=[1..7]
+      60  1100000 : 2 px  interval=[6..7]
+      63  1100011 : 2 px  interval=[1..7]
+      66  1100110 : 3 px  interval=[2..7]
+      67  1100111 : 2 px  interval=[1..7]
+      69  1101001 : 2 px  interval=[1..7]
+      6A  1101010 : 1 px  interval=[2..7]
+      6B  1101011 : 1 px  interval=[1..7]
+      6D  1101101 : 1 px  interval=[1..7]
+      70  1110000 : 2 px  interval=[5..7]
+      73  1110011 : 1 px  interval=[1..7]
+      78  1111000 : 5 px  interval=[4..7]
+      7C  1111100 : 2 px  interval=[3..7]
+      7E  1111110 : 3 px  interval=[2..7]
+    Temporal interval representation:
+      Nonzero pixels : 102
+      Interval bits  : 609
+      Raw 7-bit      : 714
+
+      Interval distribution:
+        [1..4] : 7 pixels
+        [1..5] : 10 pixels
+        [1..6] : 11 pixels
+        [1..7] : 24 pixels
+        [2..4] : 5 pixels
+        [2..5] : 7 pixels
+        [2..6] : 7 pixels
+        [2..7] : 13 pixels
+        [3..5] : 3 pixels
+        [3..6] : 1 pixels
+        [3..7] : 3 pixels
+        [4..6] : 1 pixels
+        [4..7] : 5 pixels
+        [5..7] : 2 pixels
+        [6..7] : 2 pixels
+        [7..7] : 1 pixels
+
+    Horizontal temporal RLE:
+      y= 3  x= 5.. 5  state=78  len=1
+      y= 3  x= 7.. 7  state=26  len=1
+      y= 3  x= 8.. 8  state=1E  len=1
+      y= 3  x= 9.. 9  state=55  len=1
+      y= 3  x=10..10  state=32  len=1
+      y= 3  x=11..11  state=0F  len=1
+      y= 4  x= 5.. 5  state=0E  len=1
+      y= 4  x= 6.. 6  state=38  len=1
+      y= 4  x= 7.. 7  state=0F  len=1
+      y= 4  x= 8.. 8  state=59  len=1
+      y= 4  x= 9.. 9  state=6B  len=1
+      y= 4  x=10..10  state=2D  len=1
+      y= 4  x=11..11  state=26  len=1
+      y= 4  x=12..12  state=4B  len=1
+      y= 5  x= 3.. 3  state=1C  len=1
+      y= 5  x= 4.. 4  state=12  len=1
+      y= 5  x= 5.. 5  state=0F  len=1
+      y= 5  x= 6.. 6  state=25  len=1
+      y= 5  x= 7.. 7  state=1C  len=1
+      y= 5  x= 8.. 8  state=19  len=1
+      y= 5  x= 9.. 9  state=36  len=1
+      y= 5  x=10..10  state=78  len=1
+      y= 5  x=11..11  state=0E  len=1
+      y= 5  x=12..12  state=66  len=1
+      y= 5  x=13..13  state=70  len=1
+      y= 6  x= 3.. 3  state=1B  len=1
+      y= 6  x= 4.. 4  state=6D  len=1
+      y= 6  x= 5.. 5  state=0F  len=1
+      y= 6  x= 7.. 7  state=78  len=1
+      y= 6  x= 8.. 8  state=19  len=1
+      y= 6  x= 9.. 9  state=66  len=1
+      y= 6  x=10..10  state=67  len=1
+      y= 6  x=11..11  state=2D  len=1
+      y= 6  x=12..12  state=55  len=1
+      y= 6  x=13..13  state=0F  len=1
+      y= 7  x= 3.. 3  state=1C  len=1
+      y= 7  x= 4.. 4  state=4A  len=1
+      y= 7  x= 5.. 5  state=60  len=1
+      y= 7  x= 6.. 6  state=70  len=1
+      y= 7  x= 8.. 8  state=5B  len=1
+      y= 7  x= 9.. 9  state=55  len=1
+      y= 7  x=10..10  state=4E  len=1
+      y= 7  x=11..11  state=66  len=1
+      y= 7  x=12..12  state=46  len=1
+      y= 7  x=13..13  state=2A  len=1
+      y= 8  x= 3.. 3  state=69  len=1
+      y= 8  x= 5.. 5  state=29  len=1
+      y= 8  x= 6.. 6  state=5A  len=1
+      y= 8  x= 7.. 7  state=32  len=1
+      y= 8  x= 8.. 8  state=49  len=1
+      y= 8  x= 9.. 9  state=2D  len=1
+      y= 8  x=10..10  state=63  len=1
+      y= 8  x=11..11  state=47  len=1
+      y= 8  x=12..12  state=63  len=1
+      y= 8  x=13..13  state=1E  len=1
+      y= 9  x= 3.. 3  state=7C  len=1
+      y= 9  x= 4.. 4  state=33  len=1
+      y= 9  x= 5.. 5  state=0F  len=1
+      y= 9  x= 6.. 6  state=7E  len=1
+      y= 9  x= 7.. 7  state=0E  len=1
+      y= 9  x= 8.. 8  state=7E  len=1
+      y= 9  x= 9.. 9  state=4A  len=1
+      y= 9  x=10..10  state=5B  len=1
+      y= 9  x=11..11  state=15  len=1
+      y= 9  x=12..12  state=69  len=1
+      y= 9  x=13..13  state=1E  len=1
+      y=10  x= 3.. 3  state=47  len=1
+      y=10  x= 4.. 4  state=40  len=1
+      y=10  x= 5.. 5  state=0E  len=1
+      y=10  x= 6.. 6  state=78  len=1
+      y=10  x= 7.. 7  state=32  len=1
+      y=10  x= 8.. 8  state=49  len=1
+      y=10  x= 9.. 9  state=67  len=1
+      y=10  x=10..10  state=13  len=1
+      y=10  x=11..11  state=6A  len=1
+      y=10  x=12..12  state=33  len=1
+      y=10  x=13..13  state=2B  len=1
+      y=11  x= 3.. 3  state=33  len=1
+      y=11  x= 4.. 4  state=35  len=1
+      y=11  x= 6.. 6  state=1F  len=1
+      y=11  x= 7.. 7  state=29  len=1
+      y=11  x= 8.. 8  state=49  len=1
+      y=11  x= 9.. 9  state=7C  len=1
+      y=11  x=10..10  state=49  len=1
+      y=11  x=11..11  state=1E  len=1
+      y=11  x=12..12  state=19  len=1
+      y=11  x=13..13  state=7E  len=1
+      y=12  x= 4.. 4  state=4E  len=1
+      y=12  x= 5.. 5  state=0F  len=1
+      y=12  x= 6.. 6  state=1B  len=1
+      y=12  x= 7.. 7  state=1E  len=1
+      y=12  x= 8.. 8  state=12  len=1
+      y=12  x= 9.. 9  state=60  len=1
+      y=12  x=10..10  state=13  len=1
+      y=12  x=11..11  state=4C  len=1
+      y=12  x=12..12  state=49  len=1
+      y=13  x= 5.. 5  state=5B  len=1
+      y=13  x= 7.. 7  state=0E  len=1
+      y=13  x= 8.. 8  state=78  len=1
+      y=13  x= 9.. 9  state=15  len=1
+      y=13  x=10..10  state=73  len=1
+      y=13  x=11..11  state=3C  len=1
+
+    Greedy rectangles by temporal state:
+      state=78 : 5 rectangles, 5 pixels
+        (5,3) 1x1
+        (10,5) 1x1
+        (7,6) 1x1
+        (6,10) 1x1
+        (8,13) 1x1
+      state=26 : 2 rectangles, 2 pixels
+        (7,3) 1x1
+        (11,4) 1x1
+      state=1E : 4 rectangles, 5 pixels
+        (8,3) 1x1
+        (13,8) 1x2
+        (11,11) 1x1
+        (7,12) 1x1
+      state=55 : 3 rectangles, 3 pixels
+        (9,3) 1x1
+        (12,6) 1x1
+        (9,7) 1x1
+      state=32 : 3 rectangles, 3 pixels
+        (10,3) 1x1
+        (7,8) 1x1
+        (7,10) 1x1
+      state=0F : 6 rectangles, 7 pixels
+        (11,3) 1x1
+        (7,4) 1x1
+        (5,5) 1x2
+        (13,6) 1x1
+        (5,9) 1x1
+        (5,12) 1x1
+      state=0E : 5 rectangles, 5 pixels
+        (5,4) 1x1
+        (11,5) 1x1
+        (7,9) 1x1
+        (5,10) 1x1
+        (7,13) 1x1
+      state=38 : 1 rectangles, 1 pixels
+        (6,4) 1x1
+      state=59 : 1 rectangles, 1 pixels
+        (8,4) 1x1
+      state=6B : 1 rectangles, 1 pixels
+        (9,4) 1x1
+      state=2D : 3 rectangles, 3 pixels
+        (10,4) 1x1
+        (11,6) 1x1
+        (9,8) 1x1
+      state=4B : 1 rectangles, 1 pixels
+        (12,4) 1x1
+      state=1C : 3 rectangles, 3 pixels
+        (3,5) 1x1
+        (7,5) 1x1
+        (3,7) 1x1
+      state=12 : 2 rectangles, 2 pixels
+        (4,5) 1x1
+        (8,12) 1x1
+      state=25 : 1 rectangles, 1 pixels
+        (6,5) 1x1
+      state=19 : 2 rectangles, 3 pixels
+        (8,5) 1x2
+        (12,11) 1x1
+      state=36 : 1 rectangles, 1 pixels
+        (9,5) 1x1
+      state=66 : 3 rectangles, 3 pixels
+        (12,5) 1x1
+        (9,6) 1x1
+        (11,7) 1x1
+      state=70 : 2 rectangles, 2 pixels
+        (13,5) 1x1
+        (6,7) 1x1
+      state=1B : 2 rectangles, 2 pixels
+        (3,6) 1x1
+        (6,12) 1x1
+      state=6D : 1 rectangles, 1 pixels
+        (4,6) 1x1
+      state=67 : 2 rectangles, 2 pixels
+        (10,6) 1x1
+        (9,10) 1x1
+      state=4A : 2 rectangles, 2 pixels
+        (4,7) 1x1
+        (9,9) 1x1
+      state=60 : 2 rectangles, 2 pixels
+        (5,7) 1x1
+        (9,12) 1x1
+      state=5B : 3 rectangles, 3 pixels
+        (8,7) 1x1
+        (10,9) 1x1
+        (5,13) 1x1
+      state=4E : 2 rectangles, 2 pixels
+        (10,7) 1x1
+        (4,12) 1x1
+      state=46 : 1 rectangles, 1 pixels
+        (12,7) 1x1
+      state=2A : 1 rectangles, 1 pixels
+        (13,7) 1x1
+      state=69 : 2 rectangles, 2 pixels
+        (3,8) 1x1
+        (12,9) 1x1
+      state=29 : 2 rectangles, 2 pixels
+        (5,8) 1x1
+        (7,11) 1x1
+      state=5A : 1 rectangles, 1 pixels
+        (6,8) 1x1
+      state=49 : 4 rectangles, 5 pixels
+        (8,8) 1x1
+        (8,10) 1x2
+        (10,11) 1x1
+        (12,12) 1x1
+      state=63 : 2 rectangles, 2 pixels
+        (10,8) 1x1
+        (12,8) 1x1
+      state=47 : 2 rectangles, 2 pixels
+        (11,8) 1x1
+        (3,10) 1x1
+      state=7C : 2 rectangles, 2 pixels
+        (3,9) 1x1
+        (9,11) 1x1
+      state=33 : 3 rectangles, 3 pixels
+        (4,9) 1x1
+        (12,10) 1x1
+        (3,11) 1x1
+      state=7E : 3 rectangles, 3 pixels
+        (6,9) 1x1
+        (8,9) 1x1
+        (13,11) 1x1
+      state=15 : 2 rectangles, 2 pixels
+        (11,9) 1x1
+        (9,13) 1x1
+      state=40 : 1 rectangles, 1 pixels
+        (4,10) 1x1
+      state=13 : 2 rectangles, 2 pixels
+        (10,10) 1x1
+        (10,12) 1x1
+      state=6A : 1 rectangles, 1 pixels
+        (11,10) 1x1
+      state=2B : 1 rectangles, 1 pixels
+        (13,10) 1x1
+      state=35 : 1 rectangles, 1 pixels
+        (4,11) 1x1
+      state=1F : 1 rectangles, 1 pixels
+        (6,11) 1x1
+      state=4C : 1 rectangles, 1 pixels
+        (11,12) 1x1
+      state=73 : 1 rectangles, 1 pixels
+        (10,13) 1x1
+      state=3C : 1 rectangles, 1 pixels
+        (11,13) 1x1
+      TOTAL : 98 rectangles
+      Covered pixels : 102
+
+    Repeated translated temporal patterns:
+      none
+
+    Temporal map:
+
+      00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F 
+  00  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  01  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  02  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  03  .. .. .. .. .. 78 .. 26 1E 55 32 0F .. .. .. .. 
+  04  .. .. .. .. .. 0E 38 0F 59 6B 2D 26 4B .. .. .. 
+  05  .. .. .. 1C 12 0F 25 1C 19 36 78 0E 66 70 .. .. 
+  06  .. .. .. 1B 6D 0F .. 78 19 66 67 2D 55 0F .. .. 
+  07  .. .. .. 1C 4A 60 70 .. 5B 55 4E 66 46 2A .. .. 
+  08  .. .. .. 69 .. 29 5A 32 49 2D 63 47 63 1E .. .. 
+  09  .. .. .. 7C 33 0F 7E 0E 7E 4A 5B 15 69 1E .. .. 
+  0A  .. .. .. 47 40 0E 78 32 49 67 13 6A 33 2B .. .. 
+  0B  .. .. .. 33 35 .. 1F 29 49 7C 49 1E 19 7E .. .. 
+  0C  .. .. .. .. 4E 0F 1B 1E 12 60 13 4C 49 .. .. .. 
+  0D  .. .. .. .. .. 5B .. 0E 78 15 73 3C .. .. .. .. 
+  0E  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+  0F  .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. 
+
+============================================================
+SUMMARY
+============================================================
+
+Animation       Pixels States   H-RLE   V-RLE  Bounds Components
+--------------- ------ ------ ------- ------- ------- ----------
+rolling_stone       19     15      19      19      21       2
+walk                24      7      19      22      18       3
+rotor               96      8      62      62       8      44
+pulse              112      6      80      80     132       1
+translate           54     21      54      38      75       1
+chaos              102     47     102      98     168       1
+
