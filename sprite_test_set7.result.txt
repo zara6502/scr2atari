@@ -1,0 +1,2114 @@
+TEMPORAL x SPATIAL FACTORIZATION TEST
+=====================================
+KEY = frame 0
+7-bit pattern = frames 1..7 XOR KEY
+Components = 4-neighbour
+
+
+
+############################################################
+# rolling_stone
+############################################################
+
+Changed pixels : 19 / 256
+Components     : 2
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 17
+    BBox   : x=5..10 y=6..9 (6x4 = 24)
+    Fill   : 70.8%
+    Temporal boundaries : 20
+
+    Temporal states : 13
+
+    Pattern distribution:
+      0000001 :   1 pixels
+      0000010 :   2 pixels
+      0000100 :   2 pixels
+      0001000 :   2 pixels
+      0010000 :   1 pixels
+      0010011 :   1 pixels
+      0011100 :   1 pixels
+      1011111 :   1 pixels
+      1100000 :   1 pixels
+      1100001 :   2 pixels
+      1101111 :   1 pixels
+      1111101 :   1 pixels
+      1111111 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 17
+      Vertical   : 17
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0000010 : 2 px, bbox 4x3, rows=2 cols=2
+
+      0000100 : 2 px, bbox 2x2, rows=2 cols=2
+
+      0001000 : 2 px, bbox 2x2, rows=2 cols=2
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0010011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0011100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1011111 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1100000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1100001 : 2 px, bbox 2x2, rows=2 cols=2
+
+      1101111 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1111101 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1111111 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 119 bits
+      Pattern + local position  : 204 bits
+      Pattern table + indexes   : 159 bits
+      Full BBox pattern map     : 168 bits
+
+    Pattern map:
+
+      5 6 7 8 9 A 
+  6   7F 7D 04 08 01 . 
+  7   61 . 02 04 08 13 
+  8   10 61 . . 6F 5F 
+  9   . 1C . . 60 02 
+
+============================================================
+COMPONENT 2
+============================================================
+
+    Pixels : 2
+    BBox   : x=7..8 y=10..10 (2x1 = 2)
+    Fill   : 100.0%
+    Temporal boundaries : 1
+
+    Temporal states : 2
+
+    Pattern distribution:
+      0001100 :   1 pixels
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 2
+      Vertical   : 2
+
+    Temporal state geometry:
+
+      0001100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 14 bits
+      Pattern + local position  : 16 bits
+      Pattern table + indexes   : 16 bits
+      Full BBox pattern map     : 14 bits
+
+    Pattern map:
+
+      7 8 
+  A   0C 40 
+
+
+############################################################
+# walk
+############################################################
+
+Changed pixels : 24 / 256
+Components     : 3
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 4
+    BBox   : x=4..6 y=7..8 (3x2 = 6)
+    Fill   : 66.7%
+    Temporal boundaries : 3
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0011000 :   2 pixels
+      0100000 :   1 pixels
+      1000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 4
+      Vertical   : 4
+
+    Temporal state geometry:
+
+      0011000 : 2 px, bbox 2x2, rows=2 cols=2
+
+      0100000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 28 bits
+      Pattern + local position  : 40 bits
+      Pattern table + indexes   : 29 bits
+      Full BBox pattern map     : 42 bits
+
+    Pattern map:
+
+      4 5 6 
+  7   . 18 . 
+  8   18 20 44 
+
+============================================================
+COMPONENT 2
+============================================================
+
+    Pixels : 4
+    BBox   : x=10..12 y=7..8 (3x2 = 6)
+    Fill   : 66.7%
+    Temporal boundaries : 3
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0011000 :   2 pixels
+      0100000 :   1 pixels
+      1000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 4
+      Vertical   : 4
+
+    Temporal state geometry:
+
+      0011000 : 2 px, bbox 2x2, rows=2 cols=2
+
+      0100000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 28 bits
+      Pattern + local position  : 40 bits
+      Pattern table + indexes   : 29 bits
+      Full BBox pattern map     : 42 bits
+
+    Pattern map:
+
+      A B C 
+  7   . 18 . 
+  8   44 20 18 
+
+============================================================
+COMPONENT 3
+============================================================
+
+    Pixels : 16
+    BBox   : x=4..11 y=11..13 (8x3 = 24)
+    Fill   : 66.7%
+    Temporal boundaries : 12
+
+    Temporal states : 4
+
+    Pattern distribution:
+      0110110 :   4 pixels
+      0111110 :   4 pixels
+      1001001 :   4 pixels
+      1111111 :   4 pixels
+
+    Same-pattern runs:
+      Horizontal : 11
+      Vertical   : 14
+
+    Temporal state geometry:
+
+      0110110 : 4 px, bbox 2x2, rows=2 cols=2
+
+      0111110 : 4 px, bbox 4x1, rows=1 cols=4
+
+      1001001 : 4 px, bbox 6x2, rows=4 cols=4
+
+      1111111 : 4 px, bbox 8x2, rows=4 cols=4
+
+    Rough structural costs:
+      Raw temporal pixels       : 112 bits
+      Pattern + local position  : 192 bits
+      Pattern table + indexes   : 60 bits
+      Full BBox pattern map     : 168 bits
+
+    Pattern map:
+
+      4 5 6 7 8 9 A B 
+  B   . . 3E 3E 3E 3E . . 
+  C   . 7F 49 36 36 49 7F . 
+  D   7F 49 . 36 36 . 49 7F 
+
+
+############################################################
+# rotor
+############################################################
+
+Changed pixels : 96 / 256
+Components     : 44
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=1..1 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  1   10 
+
+============================================================
+COMPONENT 2
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=1..1 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  1   40 
+
+============================================================
+COMPONENT 3
+============================================================
+
+    Pixels : 1
+    BBox   : x=2..2 y=2..2 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      2 
+  2   10 
+
+============================================================
+COMPONENT 4
+============================================================
+
+    Pixels : 1
+    BBox   : x=4..4 y=2..2 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      4 
+  2   10 
+
+============================================================
+COMPONENT 5
+============================================================
+
+    Pixels : 14
+    BBox   : x=6..10 y=2..5 (5x4 = 20)
+    Fill   : 70.0%
+    Temporal boundaries : 2
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0010000 :   1 pixels
+      0100000 :  12 pixels
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 6
+      Vertical   : 5
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0100000 : 12 px, bbox 3x4, rows=4 cols=3
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 98 bits
+      Pattern + local position  : 168 bits
+      Pattern table + indexes   : 49 bits
+      Full BBox pattern map     : 140 bits
+
+    Pattern map:
+
+      6 7 8 9 A 
+  2   . 20 20 20 . 
+  3   . 20 20 20 . 
+  4   10 20 20 20 40 
+  5   . 20 20 20 . 
+
+============================================================
+COMPONENT 6
+============================================================
+
+    Pixels : 1
+    BBox   : x=12..12 y=2..2 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      C 
+  2   40 
+
+============================================================
+COMPONENT 7
+============================================================
+
+    Pixels : 1
+    BBox   : x=14..14 y=2..2 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      E 
+  2   40 
+
+============================================================
+COMPONENT 8
+============================================================
+
+    Pixels : 1
+    BBox   : x=1..1 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      1 
+  3   10 
+
+============================================================
+COMPONENT 9
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  3   10 
+
+============================================================
+COMPONENT 10
+============================================================
+
+    Pixels : 1
+    BBox   : x=5..5 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      5 
+  3   10 
+
+============================================================
+COMPONENT 11
+============================================================
+
+    Pixels : 1
+    BBox   : x=11..11 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      B 
+  3   40 
+
+============================================================
+COMPONENT 12
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  3   40 
+
+============================================================
+COMPONENT 13
+============================================================
+
+    Pixels : 1
+    BBox   : x=15..15 y=3..3 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      F 
+  3   40 
+
+============================================================
+COMPONENT 14
+============================================================
+
+    Pixels : 1
+    BBox   : x=2..2 y=4..4 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      2 
+  4   10 
+
+============================================================
+COMPONENT 15
+============================================================
+
+    Pixels : 1
+    BBox   : x=4..4 y=4..4 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      4 
+  4   10 
+
+============================================================
+COMPONENT 16
+============================================================
+
+    Pixels : 1
+    BBox   : x=12..12 y=4..4 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      C 
+  4   40 
+
+============================================================
+COMPONENT 17
+============================================================
+
+    Pixels : 1
+    BBox   : x=14..14 y=4..4 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      E 
+  4   40 
+
+============================================================
+COMPONENT 18
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=5..5 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  5   10 
+
+============================================================
+COMPONENT 19
+============================================================
+
+    Pixels : 1
+    BBox   : x=5..5 y=5..5 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      5 
+  5   10 
+
+============================================================
+COMPONENT 20
+============================================================
+
+    Pixels : 1
+    BBox   : x=11..11 y=5..5 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      B 
+  5   40 
+
+============================================================
+COMPONENT 21
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=5..5 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      1000000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  5   40 
+
+============================================================
+COMPONENT 22
+============================================================
+
+    Pixels : 14
+    BBox   : x=2..5 y=6..10 (4x5 = 20)
+    Fill   : 70.0%
+    Temporal boundaries : 2
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0000100 :   1 pixels
+      0001000 :  12 pixels
+      0010000 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 5
+      Vertical   : 6
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0001000 : 12 px, bbox 4x3, rows=3 cols=4
+
+      0010000 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 98 bits
+      Pattern + local position  : 168 bits
+      Pattern table + indexes   : 49 bits
+      Full BBox pattern map     : 140 bits
+
+    Pattern map:
+
+      2 3 4 5 
+  6   . . 10 . 
+  7   08 08 08 08 
+  8   08 08 08 08 
+  9   08 08 08 08 
+  A   . . 04 . 
+
+============================================================
+COMPONENT 23
+============================================================
+
+    Pixels : 14
+    BBox   : x=11..14 y=6..10 (4x5 = 20)
+    Fill   : 70.0%
+    Temporal boundaries : 2
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0000001 :   1 pixels
+      1000000 :   1 pixels
+      1111111 :  12 pixels
+
+    Same-pattern runs:
+      Horizontal : 5
+      Vertical   : 6
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1111111 : 12 px, bbox 4x3, rows=3 cols=4
+
+    Rough structural costs:
+      Raw temporal pixels       : 98 bits
+      Pattern + local position  : 168 bits
+      Pattern table + indexes   : 49 bits
+      Full BBox pattern map     : 140 bits
+
+    Pattern map:
+
+      B C D E 
+  6   . 40 . . 
+  7   7F 7F 7F 7F 
+  8   7F 7F 7F 7F 
+  9   7F 7F 7F 7F 
+  A   . 01 . . 
+
+============================================================
+COMPONENT 24
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=11..11 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  B   04 
+
+============================================================
+COMPONENT 25
+============================================================
+
+    Pixels : 1
+    BBox   : x=5..5 y=11..11 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      5 
+  B   04 
+
+============================================================
+COMPONENT 26
+============================================================
+
+    Pixels : 14
+    BBox   : x=6..10 y=11..14 (5x4 = 20)
+    Fill   : 70.0%
+    Temporal boundaries : 2
+
+    Temporal states : 3
+
+    Pattern distribution:
+      0000001 :   1 pixels
+      0000010 :  12 pixels
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 6
+      Vertical   : 5
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0000010 : 12 px, bbox 3x4, rows=4 cols=3
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 98 bits
+      Pattern + local position  : 168 bits
+      Pattern table + indexes   : 49 bits
+      Full BBox pattern map     : 140 bits
+
+    Pattern map:
+
+      6 7 8 9 A 
+  B   . 02 02 02 . 
+  C   04 02 02 02 01 
+  D   . 02 02 02 . 
+  E   . 02 02 02 . 
+
+============================================================
+COMPONENT 27
+============================================================
+
+    Pixels : 1
+    BBox   : x=11..11 y=11..11 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      B 
+  B   01 
+
+============================================================
+COMPONENT 28
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=11..11 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  B   01 
+
+============================================================
+COMPONENT 29
+============================================================
+
+    Pixels : 1
+    BBox   : x=2..2 y=12..12 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      2 
+  C   04 
+
+============================================================
+COMPONENT 30
+============================================================
+
+    Pixels : 1
+    BBox   : x=4..4 y=12..12 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      4 
+  C   04 
+
+============================================================
+COMPONENT 31
+============================================================
+
+    Pixels : 1
+    BBox   : x=12..12 y=12..12 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      C 
+  C   01 
+
+============================================================
+COMPONENT 32
+============================================================
+
+    Pixels : 1
+    BBox   : x=14..14 y=12..12 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      E 
+  C   01 
+
+============================================================
+COMPONENT 33
+============================================================
+
+    Pixels : 1
+    BBox   : x=1..1 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      1 
+  D   04 
+
+============================================================
+COMPONENT 34
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  D   04 
+
+============================================================
+COMPONENT 35
+============================================================
+
+    Pixels : 1
+    BBox   : x=5..5 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      5 
+  D   04 
+
+============================================================
+COMPONENT 36
+============================================================
+
+    Pixels : 1
+    BBox   : x=11..11 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      B 
+  D   01 
+
+============================================================
+COMPONENT 37
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  D   01 
+
+============================================================
+COMPONENT 38
+============================================================
+
+    Pixels : 1
+    BBox   : x=15..15 y=13..13 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      F 
+  D   01 
+
+============================================================
+COMPONENT 39
+============================================================
+
+    Pixels : 1
+    BBox   : x=2..2 y=14..14 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      2 
+  E   04 
+
+============================================================
+COMPONENT 40
+============================================================
+
+    Pixels : 1
+    BBox   : x=4..4 y=14..14 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      4 
+  E   04 
+
+============================================================
+COMPONENT 41
+============================================================
+
+    Pixels : 1
+    BBox   : x=12..12 y=14..14 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      C 
+  E   01 
+
+============================================================
+COMPONENT 42
+============================================================
+
+    Pixels : 1
+    BBox   : x=14..14 y=14..14 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      E 
+  E   01 
+
+============================================================
+COMPONENT 43
+============================================================
+
+    Pixels : 1
+    BBox   : x=3..3 y=15..15 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000100 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000100 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      3 
+  F   04 
+
+============================================================
+COMPONENT 44
+============================================================
+
+    Pixels : 1
+    BBox   : x=13..13 y=15..15 (1x1 = 1)
+    Fill   : 100.0%
+    Temporal boundaries : 0
+
+    Temporal states : 1
+
+    Pattern distribution:
+      0000001 :   1 pixels
+
+    Same-pattern runs:
+      Horizontal : 1
+      Vertical   : 1
+
+    Temporal state geometry:
+
+      0000001 : 1 px, bbox 1x1, rows=1 cols=1
+
+    Rough structural costs:
+      Raw temporal pixels       : 7 bits
+      Pattern + local position  : 7 bits
+      Pattern table + indexes   : 7 bits
+      Full BBox pattern map     : 7 bits
+
+    Pattern map:
+
+      D 
+  F   01 
+
+
+############################################################
+# pulse
+############################################################
+
+Changed pixels : 112 / 256
+Components     : 1
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 112
+    BBox   : x=2..14 y=2..14 (13x13 = 169)
+    Fill   : 66.3%
+    Temporal boundaries : 132
+
+    Temporal states : 6
+
+    Pattern distribution:
+      0000100 :  32 pixels
+      0001110 :  36 pixels
+      0011011 :  16 pixels
+      0011111 :  12 pixels
+      1000100 :   4 pixels
+      1001110 :  12 pixels
+
+    Same-pattern runs:
+      Horizontal : 80
+      Vertical   : 80
+
+    Temporal state geometry:
+
+      0000100 : 32 px, bbox 13x13, rows=24 cols=24
+
+      0001110 : 36 px, bbox 11x11, rows=24 cols=24
+
+      0011011 : 16 px, bbox 7x7, rows=12 cols=12
+
+      0011111 : 12 px, bbox 9x9, rows=8 cols=8
+
+      1000100 : 4 px, bbox 7x7, rows=4 cols=4
+
+      1001110 : 12 px, bbox 5x5, rows=8 cols=8
+
+    Rough structural costs:
+      Raw temporal pixels       : 784 bits
+      Pattern + local position  : 1680 bits
+      Pattern table + indexes   : 378 bits
+      Full BBox pattern map     : 1183 bits
+
+    Pattern map:
+
+      2 3 4 5 6 7 8 9 A B C D E 
+  2   . . . . . . 04 . . . . . . 
+  3   . . . 04 04 04 0E 04 04 04 . . . 
+  4   . . 04 0E 0E 0E 1F 0E 0E 0E 04 . . 
+  5   . 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 . 
+  6   . 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 . 
+  7   . 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 . 
+  8   04 0E 1F 44 0E 1F . 1F 0E 44 1F 0E 04 
+  9   . 04 0E 1B 4E 1F 1F 1F 4E 1B 0E 04 . 
+  A   . 04 0E 1B 4E 4E 0E 4E 4E 1B 0E 04 . 
+  B   . 04 0E 0E 1B 1B 44 1B 1B 0E 0E 04 . 
+  C   . . 04 0E 0E 0E 1F 0E 0E 0E 04 . . 
+  D   . . . 04 04 04 0E 04 04 04 . . . 
+  E   . . . . . . 04 . . . . . . 
+
+
+############################################################
+# translate
+############################################################
+
+Changed pixels : 54 / 256
+Components     : 1
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 54
+    BBox   : x=2..13 y=5..9 (12x5 = 60)
+    Fill   : 90.0%
+    Temporal boundaries : 75
+
+    Temporal states : 21
+
+    Pattern distribution:
+      0000011 :   1 pixels
+      0000110 :   1 pixels
+      0000111 :   1 pixels
+      0001100 :   1 pixels
+      0001110 :   1 pixels
+      0001111 :   1 pixels
+      0011000 :   1 pixels
+      0011100 :   1 pixels
+      0011110 :   1 pixels
+      0011111 :   2 pixels
+      0110000 :   1 pixels
+      0111000 :   1 pixels
+      0111100 :   1 pixels
+      0111110 :   2 pixels
+      1000000 :   5 pixels
+      1100000 :   5 pixels
+      1110000 :   6 pixels
+      1111000 :   6 pixels
+      1111100 :   6 pixels
+      1111110 :   5 pixels
+      1111111 :   5 pixels
+
+    Same-pattern runs:
+      Horizontal : 54
+      Vertical   : 38
+
+    Temporal state geometry:
+
+      0000011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0000110 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0000111 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0001100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0001110 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0001111 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0011000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0011100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0011110 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0011111 : 2 px, bbox 1x2, rows=2 cols=1
+
+      0110000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0111000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0111100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0111110 : 2 px, bbox 1x2, rows=2 cols=1
+
+      1000000 : 5 px, bbox 2x5, rows=5 cols=3
+
+      1100000 : 5 px, bbox 2x5, rows=5 cols=3
+
+      1110000 : 6 px, bbox 6x4, rows=6 cols=3
+
+      1111000 : 6 px, bbox 6x3, rows=6 cols=3
+
+      1111100 : 6 px, bbox 6x4, rows=6 cols=4
+
+      1111110 : 5 px, bbox 3x5, rows=5 cols=4
+
+      1111111 : 5 px, bbox 3x5, rows=5 cols=4
+
+    Rough structural costs:
+      Raw temporal pixels       : 378 bits
+      Pattern + local position  : 702 bits
+      Pattern table + indexes   : 417 bits
+      Full BBox pattern map     : 420 bits
+
+    Pattern map:
+
+      2 3 4 5 6 7 8 9 A B C D 
+  5   . 7F 7E 7C 07 0E 1C 38 70 60 40 . 
+  6   7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 
+  7   7F 7E 7C 78 70 1F 3E 7C 78 70 60 40 
+  8   . 7F 7E 7C 78 0F 1E 3C 78 70 60 40 
+  9   . . 7F 7E 03 06 0C 18 30 60 40 . 
+
+
+############################################################
+# chaos
+############################################################
+
+Changed pixels : 102 / 256
+Components     : 1
+
+============================================================
+COMPONENT 1
+============================================================
+
+    Pixels : 102
+    BBox   : x=3..13 y=3..13 (11x11 = 121)
+    Fill   : 84.3%
+    Temporal boundaries : 168
+
+    Temporal states : 47
+
+    Pattern distribution:
+      0001110 :   5 pixels
+      0001111 :   7 pixels
+      0010010 :   2 pixels
+      0010011 :   2 pixels
+      0010101 :   2 pixels
+      0011001 :   3 pixels
+      0011011 :   2 pixels
+      0011100 :   3 pixels
+      0011110 :   5 pixels
+      0011111 :   1 pixels
+      0100101 :   1 pixels
+      0100110 :   2 pixels
+      0101001 :   2 pixels
+      0101010 :   1 pixels
+      0101011 :   1 pixels
+      0101101 :   3 pixels
+      0110010 :   3 pixels
+      0110011 :   3 pixels
+      0110101 :   1 pixels
+      0110110 :   1 pixels
+      0111000 :   1 pixels
+      0111100 :   1 pixels
+      1000000 :   1 pixels
+      1000110 :   1 pixels
+      1000111 :   2 pixels
+      1001001 :   5 pixels
+      1001010 :   2 pixels
+      1001011 :   1 pixels
+      1001100 :   1 pixels
+      1001110 :   2 pixels
+      1010101 :   3 pixels
+      1011001 :   1 pixels
+      1011010 :   1 pixels
+      1011011 :   3 pixels
+      1100000 :   2 pixels
+      1100011 :   2 pixels
+      1100110 :   3 pixels
+      1100111 :   2 pixels
+      1101001 :   2 pixels
+      1101010 :   1 pixels
+      1101011 :   1 pixels
+      1101101 :   1 pixels
+      1110000 :   2 pixels
+      1110011 :   1 pixels
+      1111000 :   5 pixels
+      1111100 :   2 pixels
+      1111110 :   3 pixels
+
+    Same-pattern runs:
+      Horizontal : 102
+      Vertical   : 98
+
+    Temporal state geometry:
+
+      0001110 : 5 px, bbox 7x10, rows=5 cols=5
+
+      0001111 : 7 px, bbox 9x10, rows=7 cols=6
+
+      0010010 : 2 px, bbox 5x8, rows=2 cols=2
+
+      0010011 : 2 px, bbox 1x3, rows=2 cols=2
+
+      0010101 : 2 px, bbox 3x5, rows=2 cols=2
+
+      0011001 : 3 px, bbox 5x7, rows=3 cols=2
+
+      0011011 : 2 px, bbox 4x7, rows=2 cols=2
+
+      0011100 : 3 px, bbox 5x3, rows=3 cols=3
+
+      0011110 : 5 px, bbox 7x10, rows=5 cols=4
+
+      0011111 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0100101 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0100110 : 2 px, bbox 5x2, rows=2 cols=2
+
+      0101001 : 2 px, bbox 3x4, rows=2 cols=2
+
+      0101010 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0101011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0101101 : 3 px, bbox 3x5, rows=3 cols=3
+
+      0110010 : 3 px, bbox 4x8, rows=3 cols=3
+
+      0110011 : 3 px, bbox 10x3, rows=3 cols=3
+
+      0110101 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0110110 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0111000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      0111100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000000 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000110 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1000111 : 2 px, bbox 9x3, rows=2 cols=2
+
+      1001001 : 5 px, bbox 5x5, rows=5 cols=4
+
+      1001010 : 2 px, bbox 6x3, rows=2 cols=2
+
+      1001011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1001100 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1001110 : 2 px, bbox 7x6, rows=2 cols=2
+
+      1010101 : 3 px, bbox 4x5, rows=3 cols=3
+
+      1011001 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1011010 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1011011 : 3 px, bbox 6x7, rows=3 cols=3
+
+      1100000 : 2 px, bbox 5x6, rows=2 cols=2
+
+      1100011 : 2 px, bbox 3x1, rows=2 cols=2
+
+      1100110 : 3 px, bbox 4x3, rows=3 cols=3
+
+      1100111 : 2 px, bbox 2x5, rows=2 cols=2
+
+      1101001 : 2 px, bbox 10x2, rows=2 cols=2
+
+      1101010 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1101011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1101101 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1110000 : 2 px, bbox 8x3, rows=2 cols=2
+
+      1110011 : 1 px, bbox 1x1, rows=1 cols=1
+
+      1111000 : 5 px, bbox 6x11, rows=5 cols=5
+
+      1111100 : 2 px, bbox 7x3, rows=2 cols=2
+
+      1111110 : 3 px, bbox 8x3, rows=3 cols=3
+
+    Rough structural costs:
+      Raw temporal pixels       : 714 bits
+      Pattern + local position  : 1428 bits
+      Pattern table + indexes   : 941 bits
+      Full BBox pattern map     : 847 bits
+
+    Pattern map:
+
+      3 4 5 6 7 8 9 A B C D 
+  3   . . 78 . 26 1E 55 32 0F . . 
+  4   . . 0E 38 0F 59 6B 2D 26 4B . 
+  5   1C 12 0F 25 1C 19 36 78 0E 66 70 
+  6   1B 6D 0F . 78 19 66 67 2D 55 0F 
+  7   1C 4A 60 70 . 5B 55 4E 66 46 2A 
+  8   69 . 29 5A 32 49 2D 63 47 63 1E 
+  9   7C 33 0F 7E 0E 7E 4A 5B 15 69 1E 
+  A   47 40 0E 78 32 49 67 13 6A 33 2B 
+  B   33 35 . 1F 29 49 7C 49 1E 19 7E 
+  C   . 4E 0F 1B 1E 12 60 13 4C 49 . 
+  D   . . 5B . 0E 78 15 73 3C . . 
