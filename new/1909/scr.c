@@ -90,6 +90,43 @@ int zx_color_is_light(unsigned color)
 
 
 /* ========================================================= */
+/* ZX pixel color                                            */
+/* ========================================================= */
+
+static unsigned zx_pixel_color(const uint8_t *scr,
+                               unsigned x,
+                               unsigned y)
+{
+    unsigned bitmap_pos;
+    unsigned attr_pos;
+    unsigned attr;
+    unsigned ink;
+    unsigned paper;
+    unsigned bright;
+    unsigned color;
+
+    bitmap_pos = zx_bitmap_offset(x, y);
+    attr_pos   = zx_attr_offset(x, y);
+
+    attr = scr[attr_pos];
+
+    ink    = attr & 7;
+    paper  = (attr >> 3) & 7;
+    bright = (attr >> 6) & 1;
+
+    if (scr[bitmap_pos] & (0x80 >> (x & 7)))
+        color = ink;
+    else
+        color = paper;
+
+    if (bright)
+        color |= 8;
+
+    return color;
+}
+
+
+/* ========================================================= */
 /* ZX -> RGB                                                  */
 /* ========================================================= */
 
@@ -102,34 +139,13 @@ void zx_to_rgb(const uint8_t *scr, uint8_t *rgb)
     {
         for (x = 0; x < 256; ++x)
         {
-            unsigned bitmap_pos;
-            unsigned attr_pos;
-            unsigned attr;
-            unsigned ink;
-            unsigned paper;
-            unsigned bright;
             unsigned color;
 
             uint8_t r;
             uint8_t g;
             uint8_t b;
 
-            bitmap_pos = zx_bitmap_offset(x, y);
-            attr_pos   = zx_attr_offset(x, y);
-
-            attr = scr[attr_pos];
-
-            ink    = attr & 7;
-            paper  = (attr >> 3) & 7;
-            bright = (attr >> 6) & 1;
-
-            if (scr[bitmap_pos] & (0x80 >> (x & 7)))
-                color = ink;
-            else
-                color = paper;
-
-            if (bright)
-                color |= 8;
+            color = zx_pixel_color(scr, x, y);
 
             zx_get_palette((int)color, &r, &g, &b);
 
@@ -507,14 +523,45 @@ static const uint8_t atari_gtia_palette[256][3] =
 /*      -> 192x192 logical Atari pixels                      */
 /*      -> 384x192 physical/reference image                  */
 /*                                                           */
-/* At most four different source colors are allowed.         */
+/* -color  : fixed 16-entry ZX -> GTIA mapping               */
+/* -colorn : nearest GTIA color for each ZX palette entry    */
+/*                                                           */
 /* No dithering. No blending. No color mixing.               */
 /* ========================================================= */
 
 #define ATARI_LOGICAL_WIDTH   192
 #define ATARI_PHYSICAL_WIDTH  384
 #define ATARI_COLOR_COUNT     256
-#define ATARI_COLOR_LIMIT     4
+
+
+/*
+ * Fixed ZX -> GTIA mapping.
+ *
+ * This table was calculated once from the ZX RGB888 palette
+ * against the current 256-entry Atari GTIA RGB888 palette.
+ *
+ * Index 0..15 is the ZX Spectrum color index.
+ */
+static const uint8_t zx_to_gtia_fixed[16] =
+{
+    0,    /*  0: black       -> 0x00 */
+    112,  /*  1: blue        -> 0x70 */
+    66,   /*  2: red         -> 0x42 */
+    103,  /*  3: magenta     -> 0x67 */
+    197,  /*  4: green       -> 0xc5 */
+    169,  /*  5: cyan        -> 0xa9 */
+    27,   /*  6: yellow      -> 0x1b */
+    12,   /*  7: white       -> 0x0c */
+
+    0,    /*  8: bright black -> 0x00 */
+    113,  /*  9: bright blue  -> 0x71 */
+    67,   /* 10: bright red   -> 0x43 */
+    105,  /* 11: bright magenta -> 0x69 */
+    198,  /* 12: bright green -> 0xc6 */
+    172,  /* 13: bright cyan  -> 0xac */
+    30,   /* 14: bright yellow -> 0x1e */
+    15    /* 15: bright white -> 0x0f */
+};
 
 
 static unsigned color_distance_sq(const uint8_t *a,
@@ -557,118 +604,75 @@ static unsigned nearest_atari_color(const uint8_t *rgb)
 }
 
 
-int zx_to_atari_color_rgb(const uint8_t *scr,
-                          uint8_t *rgb)
+/*
+ * Build a 16-entry nearest-color table.
+ *
+ * nearest_atari_color() is therefore never executed once
+ * per image pixel. It is executed only 16 times.
+ */
+static void build_nearest_color_map(uint8_t *map)
 {
-    uint8_t source[SCREEN_WIDTH * SCREEN_HEIGHT * 3];
+    unsigned color;
 
-    uint8_t unique_rgb[ATARI_COLOR_LIMIT][3];
-    unsigned unique_count = 0;
+    for (color = 0; color < 16; ++color)
+    {
+        uint8_t r;
+        uint8_t g;
+        uint8_t b;
 
-    unsigned color_map[ATARI_COLOR_LIMIT];
+        zx_get_palette((int)color, &r, &g, &b);
 
+        {
+            uint8_t rgb[3];
+
+            rgb[0] = r;
+            rgb[1] = g;
+            rgb[2] = b;
+
+            map[color] =
+                (uint8_t)nearest_atari_color(rgb);
+        }
+    }
+}
+
+
+/*
+ * Common renderer.
+ *
+ * map[0..15] contains the GTIA color corresponding to
+ * each ZX Spectrum color index.
+ */
+static int zx_to_atari_color_rgb_map(const uint8_t *scr,
+                                     uint8_t *rgb,
+                                     const uint8_t *map)
+{
     unsigned x;
     unsigned y;
 
-    /*
-     * First create the normal 256x192 ZX RGB image.
-     */
-    zx_to_rgb(scr, source);
-
-    /*
-     * Find actual unique source colors.
-     *
-     * ZX attributes normally produce only a small number of
-     * colors, but this is intentionally checked against the
-     * complete image rather than against attributes alone.
-     */
-    for (y = 0; y < SCREEN_HEIGHT; ++y)
-    {
-        for (x = 0; x < SCREEN_WIDTH; ++x)
-        {
-            const uint8_t *p =
-                &source[(y * SCREEN_WIDTH + x) * 3];
-
-            unsigned i;
-            int found = 0;
-
-            for (i = 0; i < unique_count; ++i)
-            {
-                if (unique_rgb[i][0] == p[0] &&
-                    unique_rgb[i][1] == p[1] &&
-                    unique_rgb[i][2] == p[2])
-                {
-                    found = 1;
-                    break;
-                }
-            }
-
-            if (!found)
-            {
-                if (unique_count >= ATARI_COLOR_LIMIT)
-                    return 0;
-
-                unique_rgb[unique_count][0] = p[0];
-                unique_rgb[unique_count][1] = p[1];
-                unique_rgb[unique_count][2] = p[2];
-
-                ++unique_count;
-            }
-        }
-    }
-
-    /*
-     * Map each source color independently to the nearest
-     * actual Atari GTIA palette entry.
-     */
-    for (x = 0; x < unique_count; ++x)
-        color_map[x] = nearest_atari_color(unique_rgb[x]);
-
-    /*
-     * Convert 256x192 ZX geometry to 192x192 logical Atari
-     * geometry.
-     *
-     * Every logical Atari pixel becomes two horizontal pixels
-     * in the reference image.
-     */
     for (y = 0; y < SCREEN_HEIGHT; ++y)
     {
         for (x = 0; x < ATARI_LOGICAL_WIDTH; ++x)
         {
             unsigned sx;
-            const uint8_t *p;
-            unsigned source_color = 0;
+            unsigned zx_color;
             unsigned atari_color;
             unsigned out_x;
 
             /*
              * Center-sampled 256 -> 192 horizontal mapping.
              */
-            sx = (x * SCREEN_WIDTH + SCREEN_WIDTH / 2) /
-                 ATARI_LOGICAL_WIDTH;
+            sx =
+                (x * SCREEN_WIDTH + SCREEN_WIDTH / 2) /
+                ATARI_LOGICAL_WIDTH;
 
             if (sx >= SCREEN_WIDTH)
                 sx = SCREEN_WIDTH - 1;
 
-            p =
-                &source[(y * SCREEN_WIDTH + sx) * 3];
+            zx_color =
+                zx_pixel_color(scr, sx, y);
 
-            for (source_color = 0;
-                 source_color < unique_count;
-                 ++source_color)
-            {
-                if (unique_rgb[source_color][0] == p[0] &&
-                    unique_rgb[source_color][1] == p[1] &&
-                    unique_rgb[source_color][2] == p[2])
-                {
-                    break;
-                }
-            }
-
-            if (source_color >= unique_count)
-                return 0;
-
-            atari_color = color_map[source_color];
+            atari_color =
+                map[zx_color];
 
             out_x = x * 2;
 
@@ -693,4 +697,28 @@ int zx_to_atari_color_rgb(const uint8_t *scr,
     }
 
     return 1;
+}
+
+
+int zx_to_atari_color_rgb(const uint8_t *scr,
+                          uint8_t *rgb)
+{
+    return
+        zx_to_atari_color_rgb_map(scr,
+                                   rgb,
+                                   zx_to_gtia_fixed);
+}
+
+
+int zx_to_atari_color_rgb_nearest(const uint8_t *scr,
+                                  uint8_t *rgb)
+{
+    uint8_t map[16];
+
+    build_nearest_color_map(map);
+
+    return
+        zx_to_atari_color_rgb_map(scr,
+                                  rgb,
+                                  map);
 }

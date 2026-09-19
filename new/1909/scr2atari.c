@@ -5,6 +5,7 @@
  *
  * Supports:
  *   -color      create 384x192 Atari PAL reference PNG/QOI
+ *   -colorn     create 384x192 Atari PAL reference using nearest colors
  *   -xex FILE   create Atari XEX
  *   -bin FILE   create raw Atari screen BIN
  *   -png FILE   create RGB PNG
@@ -18,11 +19,14 @@
  *
  * Multiple input .SCR files and wildcard masks * and ? are supported.
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdarg.h>
+
 #include "filters.h"
 #include "files.h"
 #include "xex.h"
@@ -46,6 +50,7 @@
 #include <sys/types.h>
 
 #endif
+
 
 /* ========================================================= */
 /* Platform thread abstraction                               */
@@ -156,10 +161,6 @@ static void cond_broadcast(Cond *c)
 #endif
 
 
-
-
-
-
 /* ========================================================= */
 /* RGB -> luminance                                           */
 /* ========================================================= */
@@ -172,8 +173,6 @@ static int rgb_luminance(uint8_t r, uint8_t g, uint8_t b)
           722 * (int)b) / 10000;
 }
 
-
-#include <stdarg.h>
 
 static void print_error(Mutex *mutex,
                         const char *format,
@@ -191,7 +190,6 @@ static void print_error(Mutex *mutex,
     if (mutex)
         mutex_unlock(mutex);
 }
-
 
 
 /* ========================================================= */
@@ -220,23 +218,6 @@ static int write_bin(const char *filename,
     return 1;
 }
 
-/*static int has_extension(const char *name,
-                         const char *extension)
-{
-    size_t n;
-    size_t e;
-
-    n = strlen(name);
-    e = strlen(extension);
-
-    if (n < e)
-        return 0;
-
-    return
-        strcmp(name + n - e,
-               extension) == 0;
-}*/
-
 
 /* ========================================================= */
 /* File processing                                           */
@@ -260,9 +241,9 @@ static int process_file(const char *input_name,
 
     if (!f)
     {
-	print_error(print_mutex,
-                "Cannot open input file: %s\n",
-                input_name);
+        print_error(print_mutex,
+                    "Cannot open input file: %s\n",
+                    input_name);
         return 0;
     }
 
@@ -276,11 +257,11 @@ static int process_file(const char *input_name,
 
     if (file_size != SCR_SIZE)
     {
-	print_error(print_mutex,
-                "Invalid SCR size: %s: %ld bytes, expected %d\n",
-                input_name,
-                file_size,
-                SCR_SIZE);
+        print_error(print_mutex,
+                    "Invalid SCR size: %s: %ld bytes, expected %d\n",
+                    input_name,
+                    file_size,
+                    SCR_SIZE);
 
         fclose(f);
         return 0;
@@ -298,9 +279,9 @@ static int process_file(const char *input_name,
     {
         fclose(f);
 
-	print_error(print_mutex,
-                "Out of memory: %s\n",
-                input_name);
+        print_error(print_mutex,
+                    "Out of memory: %s\n",
+                    input_name);
 
         return 0;
     }
@@ -310,9 +291,9 @@ static int process_file(const char *input_name,
         fclose(f);
         free(scr);
 
-	print_error(print_mutex,
-                "Cannot read input file: %s\n",
-                input_name);
+        print_error(print_mutex,
+                    "Cannot read input file: %s\n",
+                    input_name);
 
         return 0;
     }
@@ -332,9 +313,9 @@ static int process_file(const char *input_name,
 
         if (!rgb)
         {
-	    print_error(print_mutex,
-                    "Out of memory: %s\n",
-                    input_name);
+            print_error(print_mutex,
+                        "Out of memory: %s\n",
+                        input_name);
 
             free(scr);
             return 0;
@@ -349,74 +330,73 @@ static int process_file(const char *input_name,
 
         if (!result)
         {
-	    print_error(print_mutex,
-                    "Cannot write PNG: %s\n",
-                    output_name);
+            print_error(print_mutex,
+                        "Cannot write PNG: %s\n",
+                        output_name);
 
             free(scr);
             return 0;
         }
     }
-	else if (strcmp(format, "qoi") == 0)
-	{
-	    uint8_t *rgb;
-	    qoi_desc desc;
+    else if (strcmp(format, "qoi") == 0)
+    {
+        uint8_t *rgb;
+        qoi_desc desc;
 
-	    rgb = (uint8_t *)
-	        malloc((size_t)SCREEN_WIDTH *
-	               SCREEN_HEIGHT *
-	               3);
+        rgb = (uint8_t *)
+            malloc((size_t)SCREEN_WIDTH *
+                   SCREEN_HEIGHT *
+                   3);
 
-	    if (!rgb)
-	    {
-		print_error(print_mutex,
-	                "Out of memory: %s\n",
-	                input_name);
+        if (!rgb)
+        {
+            print_error(print_mutex,
+                        "Out of memory: %s\n",
+                        input_name);
 
-	        free(scr);
-        	return 0;
-	    }
+            free(scr);
+            return 0;
+        }
 
-	    zx_to_rgb(scr, rgb);
+        zx_to_rgb(scr, rgb);
 
-	    desc.width = SCREEN_WIDTH;
-	    desc.height = SCREEN_HEIGHT;
-	    desc.channels = 3;
-	    desc.colorspace = QOI_SRGB;
+        desc.width = SCREEN_WIDTH;
+        desc.height = SCREEN_HEIGHT;
+        desc.channels = 3;
+        desc.colorspace = QOI_SRGB;
 
-	    result =
-	        qoi_write(output_name,
-	                  rgb,
-	                  &desc);
+        result =
+            qoi_write(output_name,
+                      rgb,
+                      &desc);
 
-	    free(rgb);
+        free(rgb);
 
-	    if (!result)
-	    {
-		print_error(print_mutex,
-	                "Cannot write QOI: %s\n",
-	                output_name);
+        if (!result)
+        {
+            print_error(print_mutex,
+                        "Cannot write QOI: %s\n",
+                        output_name);
 
-	        free(scr);
-	        return 0;
-	    }
-	}
+            free(scr);
+            return 0;
+        }
+    }
     else if (strcmp(format, "color") == 0)
     {
         uint8_t *rgb;
-//        unsigned unique_colors;
 
         rgb =
             (uint8_t *)malloc(
                 (size_t)ATARI_PHYSICAL_WIDTH *
-                ATARI_PHYSICAL_WIDTH *
+                SCREEN_HEIGHT *
                 3);
 
         if (!rgb)
         {
-	    print_error(print_mutex,
-                    "Out of memory: %s\n",
-                    input_name);
+            print_error(print_mutex,
+                        "Out of memory: %s\n",
+                        input_name);
 
             free(scr);
             return 0;
@@ -425,29 +405,17 @@ static int process_file(const char *input_name,
         result =
             zx_to_atari_color_rgb(scr, rgb);
 
-        if (result == 5)
+        if (!result)
         {
-	    print_error(print_mutex,
-                    "Cannot convert %s: image contains more than "
-                    "%d colors (found at least 5)\n",
-                    input_name,
-                    ATARI_COLOR_LIMIT);
+            print_error(print_mutex,
+                        "Cannot convert %s: color conversion failed\n",
+                        input_name);
 
             free(rgb);
             free(scr);
             return 0;
         }
 
-        if (result == 0)
-        {
-	    print_error(print_mutex,
-                    "Cannot convert %s: color conversion failed\n",
-                    input_name);
-
-            free(rgb);
-            free(scr);
-            return 0;
-        }
         /*
          * The color conversion is always represented as a
          * 384x192 image. The actual Atari logical image is
@@ -482,9 +450,79 @@ static int process_file(const char *input_name,
 
         if (!result)
         {
-	    print_error(print_mutex,
-                    "Cannot write color image: %s\n",
-                    output_name);
+            print_error(print_mutex,
+                        "Cannot write color image: %s\n",
+                        output_name);
+
+            free(scr);
+            return 0;
+        }
+    }
+    else if (strcmp(format, "colorn") == 0)
+    {
+        uint8_t *rgb;
+
+        rgb =
+            (uint8_t *)malloc(
+                (size_t)ATARI_PHYSICAL_WIDTH *
+                SCREEN_HEIGHT *
+                3);
+
+        if (!rgb)
+        {
+            print_error(print_mutex,
+                        "Out of memory: %s\n",
+                        input_name);
+
+            free(scr);
+            return 0;
+        }
+
+        result =
+            zx_to_atari_color_rgb_nearest(scr, rgb);
+
+        if (!result)
+        {
+            print_error(print_mutex,
+                        "Cannot convert %s: color conversion failed\n",
+                        input_name);
+
+            free(rgb);
+            free(scr);
+            return 0;
+        }
+
+        if (has_extension(output_name, ".qoi") ||
+            has_extension(output_name, ".QOI"))
+        {
+            qoi_desc desc;
+
+            desc.width = ATARI_PHYSICAL_WIDTH;
+            desc.height = SCREEN_HEIGHT;
+            desc.channels = 3;
+            desc.colorspace = QOI_SRGB;
+
+            result =
+                qoi_write(output_name,
+                          rgb,
+                          &desc);
+        }
+        else
+        {
+            result =
+                write_png(output_name,
+                          rgb,
+                          ATARI_PHYSICAL_WIDTH,
+                          SCREEN_HEIGHT);
+        }
+
+        free(rgb);
+
+        if (!result)
+        {
+            print_error(print_mutex,
+                        "Cannot write color image: %s\n",
+                        output_name);
 
             free(scr);
             return 0;
@@ -512,9 +550,9 @@ static int process_file(const char *input_name,
 
         if (!result)
         {
-	    print_error(print_mutex,
-                    "Cannot write BIN: %s\n",
-                    output_name);
+            print_error(print_mutex,
+                        "Cannot write BIN: %s\n",
+                        output_name);
 
             free(scr);
             return 0;
@@ -534,9 +572,9 @@ static int process_file(const char *input_name,
 
         if (!memory)
         {
-	    print_error(print_mutex,
-                    "Out of memory: %s\n",
-                    input_name);
+            print_error(print_mutex,
+                        "Out of memory: %s\n",
+                        input_name);
 
             free(scr);
             return 0;
@@ -552,8 +590,8 @@ static int process_file(const char *input_name,
         if (screen_offset + SCREEN_SIZE >
             memory_size)
         {
-	    print_error(print_mutex,
-                    "Internal error: screen outside memory image\n");
+            print_error(print_mutex,
+                        "Internal error: screen outside memory image\n");
 
             free(memory);
             free(scr);
@@ -568,9 +606,9 @@ static int process_file(const char *input_name,
 
         if (!result)
         {
-	    print_error(print_mutex,
-                    "Cannot write XEX: %s\n",
-                    output_name);
+            print_error(print_mutex,
+                        "Cannot write XEX: %s\n",
+                        output_name);
 
             free(scr);
             return 0;
@@ -578,9 +616,9 @@ static int process_file(const char *input_name,
     }
     else
     {
-	print_error(print_mutex,
-                "Unknown output format: %s\n",
-                format);
+        print_error(print_mutex,
+                    "Unknown output format: %s\n",
+                    format);
 
         free(scr);
         return 0;
@@ -753,10 +791,10 @@ static void worker_run(WorkerArgs *args)
             break;
 
         if (!process_file(job->input,
-             job->output,
-             args->format,
-             args->dithering,
-             args->print_mutex))
+                          job->output,
+                          args->format,
+                          args->dithering,
+                          args->print_mutex))
         {
             mutex_lock(args->result_mutex);
             ++(*args->errors);
@@ -889,6 +927,7 @@ static void usage(const char *program)
         "  %s input.scr -png output.png\n"
         "  %s input.scr -qoi output.qoi\n"
         "  %s input.scr -color output.png\n"
+        "  %s input.scr -colorn output.png\n"
         "  %s *.scr -xex\n"
         "  %s *.scr -png -j 8\n"
         "  %s input.scr -d -xex output.xex\n"
@@ -901,8 +940,10 @@ static void usage(const char *program)
         "  -png FILE   create RGB PNG\n"
         "  -qoi FILE   create RGB QOI\n"
         "  -color      create 384x192 Atari PAL reference image\n"
+        "  -colorn     create 384x192 reference using nearest GTIA colors\n"
         "  -d          Floyd-Steinberg dithering\n"
         "  -dw         dithering, preserve ZX white\n"
+        "  -do         ordered diagonal dithering\n"
         "  -o FILE     output file, format from extension\n"
         "  -j N        number of worker threads\n"
         "  -q          quiet\n"
@@ -910,6 +951,7 @@ static void usage(const char *program)
         "\n"
         "Multiple input files may be specified.\n"
         "Wildcard masks * and ? are supported.\n",
+        program,
         program,
         program,
         program,
@@ -974,10 +1016,10 @@ int main(int argc, char **argv)
         }
 
         if (!strcmp(argv[i], "-do"))
-	{
-	    dithering = 3;
-	    continue;
-	}
+        {
+            dithering = 3;
+            continue;
+        }
 
         if (strcmp(arg, "-q") == 0)
         {
@@ -1044,6 +1086,7 @@ int main(int argc, char **argv)
 
             continue;
         }
+
         if (strcmp(arg, "-color") == 0)
         {
             format = "color";
@@ -1056,6 +1099,20 @@ int main(int argc, char **argv)
 
             continue;
         }
+
+        if (strcmp(arg, "-colorn") == 0)
+        {
+            format = "colorn";
+
+            if (i + 1 < argc &&
+                argv[i + 1][0] != '-')
+            {
+                explicit_output = argv[++i];
+            }
+
+            continue;
+        }
+
         if (strcmp(arg, "-png") == 0)
         {
             format = "png";
@@ -1068,6 +1125,7 @@ int main(int argc, char **argv)
 
             continue;
         }
+
         if (strcmp(arg, "-qoi") == 0)
         {
             format = "qoi";
@@ -1080,6 +1138,7 @@ int main(int argc, char **argv)
 
             continue;
         }
+
         if (strcmp(arg, "-o") == 0)
         {
             if (i + 1 >= argc)
@@ -1141,10 +1200,6 @@ int main(int argc, char **argv)
     /*
      * With no explicit format and multiple files,
      * default to XEX.
-     *
-     * This keeps batch invocation simple:
-     *
-     *   scr2atari *.scr
      */
 
     if (!format)
@@ -1199,8 +1254,11 @@ int main(int argc, char **argv)
                 ext = ".qoi";
             else if (strcmp(format, "color") == 0)
                 ext = ".png";
+            else if (strcmp(format, "colorn") == 0)
+                ext = ".png";
             else
                 ext = ".png";
+
             output =
                 replace_extension(files.items[0], ext);
         }
@@ -1215,11 +1273,11 @@ int main(int argc, char **argv)
         }
 
         ok =
-		process_file(files.items[0],
-	             output,
-        	     format,
-	             dithering,
-        	     NULL);
+            process_file(files.items[0],
+                         output,
+                         format,
+                         dithering,
+                         NULL);
 
         if (ok && !quiet)
         {
@@ -1334,16 +1392,19 @@ int main(int argc, char **argv)
                 char *output;
                 char *input;
 
-	        if (strcmp(format, "xex") == 0)
-        	    ext = ".xex";
-	        else if (strcmp(format, "bin") == 0)
-        	    ext = ".bin";
-	        else if (strcmp(format, "qoi") == 0)
-        	    ext = ".qoi";
-	        else if (strcmp(format, "color") == 0)
-        	    ext = ".png";
-	        else
-        	    ext = ".png";
+                if (strcmp(format, "xex") == 0)
+                    ext = ".xex";
+                else if (strcmp(format, "bin") == 0)
+                    ext = ".bin";
+                else if (strcmp(format, "qoi") == 0)
+                    ext = ".qoi";
+                else if (strcmp(format, "color") == 0)
+                    ext = ".png";
+                else if (strcmp(format, "colorn") == 0)
+                    ext = ".png";
+                else
+                    ext = ".png";
+
                 input =
                     dup_string(files.items[n]);
 

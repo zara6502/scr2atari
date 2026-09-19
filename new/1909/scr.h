@@ -14,7 +14,6 @@
 #define ATARI_LOGICAL_WIDTH   192
 #define ATARI_PHYSICAL_WIDTH  384
 #define ATARI_COLOR_COUNT     256
-#define ATARI_COLOR_LIMIT     4
 
 void zx_get_palette(int index,
                     uint8_t *r,
@@ -33,9 +32,7 @@ void convert_scr_to_atari(const uint8_t *scr,
  * ZX -> Atari PAL reference conversion.
  *
  * Returns 1 on success.
- * Returns 0 if the source image contains more than
- * ATARI_COLOR_LIMIT different colors or on allocation
- * failure.
+ * Returns 0 on conversion failure.
  *
  * The output is a 384x192 RGB image:
  *
@@ -46,7 +43,20 @@ void convert_scr_to_atari(const uint8_t *scr,
  *   384x192 physical/reference image
  *
  * Every logical Atari pixel is duplicated horizontally.
+ *
+ * This version uses a fixed 16-entry ZX -> GTIA mapping.
  */
-//int zx_to_atari_color_rgb(const uint8_t *scr, uint8_t *rgb, unsigned *unique_colors);
-int zx_to_atari_color_rgb(const uint8_t *scr, uint8_t *rgb);
+int zx_to_atari_color_rgb(const uint8_t *scr,
+                          uint8_t *rgb);
+
+/*
+ * ZX -> Atari PAL reference conversion using
+ * nearest GTIA color matching.
+ *
+ * The nearest color is calculated only once for
+ * each of the 16 ZX palette entries.
+ */
+int zx_to_atari_color_rgb_nearest(const uint8_t *scr,
+                                  uint8_t *rgb);
+
 #endif
