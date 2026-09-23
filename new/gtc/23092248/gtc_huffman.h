@@ -30,6 +30,12 @@ public:
 
     uint32_t readBit();
 
+    bool seek(uint64_t bitPosition);
+
+    uint64_t position() const;
+
+    uint64_t bitCount() const;
+
 private:
     const std::vector<uint8_t>& data_;
 

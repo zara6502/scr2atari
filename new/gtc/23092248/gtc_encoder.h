@@ -16,12 +16,44 @@ struct GtcEncodeStats {
     uint64_t compressedBytes = 0;
 };
 
+
+struct GtcArchiveFile {
+    std::string name;
+
+    uint64_t originalSize = 0;
+
+    uint64_t tokenStart = 0;
+    uint64_t tokenCount = 0;
+
+    uint64_t bitOffset = 0;
+};
+
+
+struct GtcArchiveStats {
+    uint64_t originalSize = 0;
+    uint64_t finalTokenCount = 0;
+
+    uint32_t tokenCount = 0;
+    uint32_t grammarCount = 0;
+
+    uint64_t compressedBits = 0;
+    uint64_t compressedBytes = 0;
+
+    uint32_t fileCount = 0;
+};
+
+
 class GtcEncoder {
 public:
     bool encodeFile(
         const std::string& inputName,
         const std::string& outputName,
         GtcEncodeStats& stats);
+
+    bool encodeArchive(
+        const std::vector<std::string>& inputNames,
+        const std::string& outputName,
+        GtcArchiveStats& stats);
 
 private:
     bool readFile(
@@ -33,12 +65,24 @@ private:
         GtcDictionary& dictionary,
         std::vector<uint32_t>& sequence);
 
+    void buildGrammarMultiFile(
+        const std::vector<std::vector<uint8_t>>& files,
+        GtcDictionary& dictionary,
+        std::vector<uint32_t>& sequence);
+
     bool writeGtc(
         const std::string& filename,
         uint64_t originalSize,
         const GtcDictionary& dictionary,
         const std::vector<uint32_t>& sequence,
         GtcEncodeStats& stats);
+
+    bool writeArchive(
+        const std::string& filename,
+        const std::vector<GtcArchiveFile>& files,
+        const GtcDictionary& dictionary,
+        const std::vector<uint32_t>& sequence,
+        GtcArchiveStats& stats);
 };
 
 #endif

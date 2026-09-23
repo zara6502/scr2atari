@@ -5,10 +5,30 @@
 #include <string>
 #include <vector>
 
+struct GtcArchiveEntry {
+    std::string name;
+
+    uint64_t originalSize = 0;
+
+    uint64_t tokenStart = 0;
+    uint64_t tokenCount = 0;
+
+    uint64_t bitOffset = 0;
+};
+
+
 class GtcDecoder {
 public:
     bool decodeFile(
         const std::string& inputName,
+        const std::string& outputName);
+
+    bool listArchive(
+        const std::string& archiveName);
+
+    bool extractArchiveFile(
+        const std::string& archiveName,
+        const std::string& fileName,
         const std::string& outputName);
 
 private:

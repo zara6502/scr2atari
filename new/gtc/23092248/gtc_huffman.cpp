@@ -85,6 +85,28 @@ uint32_t BitReader::readBit()
         (data_[bytePos] >> bitPos) & 1u;
 }
 
+bool BitReader::seek(
+    uint64_t bitPosition)
+{
+    if (bitPosition > bit_count_)
+        return false;
+
+    position_ = bitPosition;
+    return true;
+}
+
+
+uint64_t BitReader::position() const
+{
+    return position_;
+}
+
+
+uint64_t BitReader::bitCount() const
+{
+    return bit_count_;
+}
+
 
 namespace {
 
