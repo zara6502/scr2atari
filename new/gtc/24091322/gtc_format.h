@@ -7,7 +7,28 @@ static constexpr uint32_t GTC_MAGIC =
     0x31435447u; // "GTC1"
 
 static constexpr uint32_t GTC_VERSION = 4;
-static constexpr uint32_t GTC_ARCHIVE_VERSION = 6;
+
+/*
+ * Archive versions.
+ *
+ * v6:
+ *     Original archive format.
+ *     1 global Huffman model, or legacy
+ *     one-Huffman-model-per-file mode.
+ *
+ * v7:
+ *     Compact per-file Huffman model.
+ *     Global code lengths + signed deltas.
+ */
+static constexpr uint32_t GTC_ARCHIVE_VERSION_LEGACY = 6;
+static constexpr uint32_t GTC_ARCHIVE_VERSION = 7;
+
+/*
+ * Archive Huffman model modes.
+ */
+static constexpr uint32_t GTC_HUFFMAN_MODE_GLOBAL = 1;
+static constexpr uint32_t GTC_HUFFMAN_MODE_PER_FILE = 2;
+static constexpr uint32_t GTC_HUFFMAN_MODE_DELTA = 3;
 
 static constexpr uint32_t GTC_BASE_TOKENS = 256;
 
@@ -18,6 +39,10 @@ static constexpr uint32_t GTC_BASE_TOKENS = 256;
 static constexpr uint32_t GTC_FILE_BOUNDARY =
     0xFFFFFFFFu;
 
+
+/*
+ * Single-file GTC header.
+ */
 struct GtcHeader {
     uint32_t magic;
     uint32_t version;
@@ -34,15 +59,31 @@ struct GtcHeader {
 
 
 /*
- * Version 6 archive header.
+ * Archive header.
  *
- * huffman_model_count:
+ * The first 56 bytes are the old v6 header and remain
+ * unchanged.
  *
- *     1           = one global Huffman model
- *     file_count  = one Huffman model per file
+ * v7 appends:
  *
- * The latter is the experimental "per-file Huffman"
- * archive mode.
+ *     huffman_model_mode : u32
+ *
+ * v6:
+ *
+ *     huffman_model_count == 1
+ *         -> global Huffman
+ *
+ *     huffman_model_count == file_count
+ *         -> legacy per-file Huffman
+ *
+ * v7:
+ *
+ *     huffman_model_count == 1
+ *     huffman_model_mode  == GTC_HUFFMAN_MODE_DELTA
+ *
+ *     The one stored Huffman table is the global
+ *     code-length model. Per-file code lengths are
+ *     reconstructed from the signed delta stream.
  */
 struct GtcArchiveHeader {
     uint32_t magic;
@@ -62,6 +103,11 @@ struct GtcArchiveHeader {
     uint32_t names_size;
 
     uint32_t huffman_model_count;
+
+    /*
+     * Present only in archive v7.
+     */
+    uint32_t huffman_model_mode;
 };
 
 #endif

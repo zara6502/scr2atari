@@ -9,6 +9,7 @@
 #include <limits>
 #include <vector>
 
+
 namespace {
 
 
@@ -41,6 +42,7 @@ bool readFile(
         static_cast<size_t>(size));
 
     if (size != 0) {
+
         if (!file.read(
                 reinterpret_cast<char*>(
                     data.data()),
@@ -64,6 +66,7 @@ bool writeFile(
         return false;
 
     if (!data.empty()) {
+
         file.write(
             reinterpret_cast<const char*>(
                 data.data()),
@@ -134,6 +137,7 @@ bool readU64(
     value = 0;
 
     for (int i = 0; i < 8; ++i) {
+
         value |=
             static_cast<uint64_t>(
                 data[pos + i])
@@ -155,7 +159,8 @@ bool addSize(
         std::numeric_limits<uint64_t>::max() - a)
         return false;
 
-    result = a + b;
+    result =
+        a + b;
 
     return true;
 }
@@ -172,6 +177,7 @@ bool fitsSizeT(
 
 class GrammarExpander {
 public:
+
     GrammarExpander(
         const std::vector<Rule>& rules,
         std::vector<uint8_t>& output)
@@ -186,21 +192,20 @@ public:
         /*
          * Iterative DFS instead of recursive
          * C++ calls.
-         *
-         * This avoids stack overflow for deeply
-         * nested grammars.
          */
         stack_.clear();
 
         stack_.push_back(token);
 
         while (!stack_.empty()) {
+
             uint32_t current =
                 stack_.back();
 
             stack_.pop_back();
 
             if (current < GTC_BASE_TOKENS) {
+
                 output_.push_back(
                     static_cast<uint8_t>(
                         current));
@@ -209,7 +214,8 @@ public:
             }
 
             uint32_t index =
-                current - GTC_BASE_TOKENS;
+                current -
+                GTC_BASE_TOKENS;
 
             if (index >= rules_.size())
                 return;
@@ -231,6 +237,7 @@ public:
 
 
 private:
+
     const std::vector<Rule>& rules_;
 
     std::vector<uint8_t>& output_;
@@ -240,11 +247,7 @@ private:
 
 
 /*
- * Read the v5 archive index and name table.
- *
- * The stream position after this function points
- * immediately after the name table, i.e. at the
- * grammar section.
+ * Read archive index and names.
  */
 bool readArchiveIndex(
     const std::vector<uint8_t>& data,
@@ -255,9 +258,12 @@ bool readArchiveIndex(
     std::vector<GtcArchiveEntry>& entries)
 {
     const uint64_t expectedIndexSize =
-        static_cast<uint64_t>(fileCount) * 40ULL;
+        static_cast<uint64_t>(
+            fileCount) * 40ULL;
 
-    if (expectedIndexSize != indexSize) {
+    if (expectedIndexSize !=
+        indexSize) {
+
         std::cerr
             << "error: invalid archive index size\n";
 
@@ -273,13 +279,17 @@ bool readArchiveIndex(
         return false;
     }
 
-    const size_t indexBegin = pos;
+    const size_t indexBegin =
+        pos;
 
     entries.clear();
     entries.resize(fileCount);
 
-    std::vector<uint32_t> nameOffsets(fileCount);
-    std::vector<uint32_t> nameLengths(fileCount);
+    std::vector<uint32_t>
+        nameOffsets(fileCount);
+
+    std::vector<uint32_t>
+        nameLengths(fileCount);
 
     for (uint32_t i = 0;
          i < fileCount;
@@ -322,7 +332,9 @@ bool readArchiveIndex(
         }
     }
 
-    if (pos - indexBegin != indexSize) {
+    if (pos - indexBegin !=
+        indexSize) {
+
         std::cerr
             << "error: invalid archive index\n";
 
@@ -338,7 +350,8 @@ bool readArchiveIndex(
         return false;
     }
 
-    const size_t namesBegin = pos;
+    const size_t namesBegin =
+        pos;
 
     for (uint32_t i = 0;
          i < fileCount;
@@ -350,7 +363,9 @@ bool readArchiveIndex(
             static_cast<uint64_t>(
                 nameLengths[i]);
 
-        if (nameEnd > namesSize) {
+        if (nameEnd >
+            namesSize) {
+
             std::cerr
                 << "error: invalid archive name range\n";
 
@@ -375,9 +390,22 @@ bool readArchiveIndex(
 }
 
 
+/*
+ * Read both v6 and v7 archive headers.
+ *
+ * For v6:
+ *
+ *     mode is inferred from model count.
+ *
+ * For v7:
+ *
+ *     mode is explicitly stored.
+ */
 bool readArchiveHeader(
     const std::vector<uint8_t>& data,
     size_t& pos,
+    uint32_t& version,
+    uint32_t& mode,
     uint64_t& originalSize,
     uint32_t& tokenCount,
     uint32_t& grammarCount,
@@ -389,7 +417,6 @@ bool readArchiveHeader(
     uint32_t& huffmanModelCount)
 {
     uint32_t magic;
-    uint32_t version;
 
     if (!readU32(
             data,
@@ -453,28 +480,33 @@ bool readArchiveHeader(
     }
 
     if (magic != GTC_MAGIC) {
+
         std::cerr
             << "error: invalid GTC archive\n";
 
         return false;
     }
 
-    if (version != GTC_ARCHIVE_VERSION) {
+    if (version !=
+            GTC_ARCHIVE_VERSION_LEGACY &&
+        version !=
+            GTC_ARCHIVE_VERSION) {
+
         std::cerr
             << "error: unsupported GTC archive version\n";
 
         return false;
     }
 
-    if (huffmanModelCount == 0) {
+    if (fileCount == 0) {
+
         std::cerr
-            << "error: invalid Huffman model count\n";
+            << "error: invalid archive file count\n";
 
         return false;
     }
 
-    if (huffmanModelCount != 1 &&
-        huffmanModelCount != fileCount) {
+    if (huffmanModelCount == 0) {
 
         std::cerr
             << "error: invalid Huffman model count\n";
@@ -492,6 +524,68 @@ bool readArchiveHeader(
         return false;
     }
 
+    if (version ==
+        GTC_ARCHIVE_VERSION_LEGACY) {
+
+        /*
+         * v6:
+         *
+         * 1       = global
+         * fileCount = legacy per-file
+         */
+        if (huffmanModelCount == 1) {
+
+            mode =
+                GTC_HUFFMAN_MODE_GLOBAL;
+        }
+        else if (huffmanModelCount ==
+                 fileCount) {
+
+            mode =
+                GTC_HUFFMAN_MODE_PER_FILE;
+        }
+        else {
+
+            std::cerr
+                << "error: invalid v6 Huffman model count\n";
+
+            return false;
+        }
+    }
+    else {
+
+        /*
+         * v7 currently has one supported model:
+         *
+         * global + compact delta.
+         */
+        uint32_t explicitMode;
+
+        if (!readU32(
+                data,
+                pos,
+                explicitMode)) {
+
+            std::cerr
+                << "error: truncated v7 archive header\n";
+
+            return false;
+        }
+
+        if (huffmanModelCount != 1 ||
+            explicitMode !=
+                GTC_HUFFMAN_MODE_DELTA) {
+
+            std::cerr
+                << "error: unsupported v7 Huffman model\n";
+
+            return false;
+        }
+
+        mode =
+            explicitMode;
+    }
+
     return true;
 }
 
@@ -504,7 +598,9 @@ bool readGrammar(
     std::vector<Rule>& rules)
 {
     rules.clear();
-    rules.resize(grammarCount);
+
+    rules.resize(
+        grammarCount);
 
     for (uint32_t i = 0;
          i < grammarCount;
@@ -535,14 +631,6 @@ bool readGrammar(
             return false;
         }
 
-        /*
-         * Grammar rule i creates token
-         *
-         *     GTC_BASE_TOKENS + i
-         *
-         * and therefore may only reference
-         * tokens that already existed.
-         */
         const uint32_t currentToken =
             GTC_BASE_TOKENS + i;
 
@@ -625,6 +713,12 @@ bool readHuffmanTable(
     return true;
 }
 
+
+/*
+ * v6 legacy:
+ *
+ * Read one full Huffman table per model.
+ */
 bool readHuffmanTables(
     const std::vector<uint8_t>& data,
     size_t& pos,
@@ -633,70 +727,221 @@ bool readHuffmanTables(
     std::vector<GtcHuffman>& huffmans)
 {
     huffmans.clear();
-    huffmans.resize(modelCount);
+
+    huffmans.resize(
+        modelCount);
 
     for (uint32_t modelIndex = 0;
          modelIndex < modelCount;
          ++modelIndex) {
 
-        uint32_t tableSize;
-
-        if (!readU32(
+        if (!readHuffmanTable(
                 data,
                 pos,
-                tableSize)) {
-
-            std::cerr
-                << "error: missing Huffman table size\n";
-
-            return false;
-        }
-
-        if (tableSize >
-            data.size() - pos) {
-
-            std::cerr
-                << "error: truncated Huffman table\n";
-
-            return false;
-        }
-
-        std::vector<uint8_t> tableData(
-            data.begin() +
-                static_cast<std::ptrdiff_t>(pos),
-
-            data.begin() +
-                static_cast<std::ptrdiff_t>(
-                    pos + tableSize));
-
-        pos += tableSize;
-
-        std::vector<uint16_t> lengths;
-
-        GtcLengthTable table;
-
-        if (!table.decode(
-                tableData,
                 tokenCount,
-                lengths)) {
-
-            std::cerr
-                << "error: invalid Huffman table\n";
-
+                huffmans[modelIndex]))
             return false;
-        }
-
-        if (!huffmans[modelIndex].buildFromCodeLengths(
-                lengths)) {
-
-            std::cerr
-                << "error: invalid Huffman code lengths\n";
-
-            return false;
-        }
     }
 
     return true;
+}
+
+
+bool readDeltaTable(
+    const std::vector<uint8_t>& data,
+    size_t& pos,
+    std::vector<int8_t>& deltaValues,
+    GtcHuffman& deltaHuffman)
+{
+    uint16_t deltaAlphabetCount;
+
+    if (!readU16(
+            data,
+            pos,
+            deltaAlphabetCount)) {
+
+        std::cerr
+            << "error: missing delta alphabet size\n";
+
+        return false;
+    }
+
+    if (deltaAlphabetCount == 0 ||
+        deltaAlphabetCount > 256) {
+
+        std::cerr
+            << "error: invalid delta alphabet size\n";
+
+        return false;
+    }
+
+    if (deltaAlphabetCount >
+        data.size() - pos) {
+
+        std::cerr
+            << "error: truncated delta alphabet\n";
+
+        return false;
+    }
+
+    deltaValues.clear();
+
+    deltaValues.reserve(
+        deltaAlphabetCount);
+
+    for (uint32_t i = 0;
+         i < deltaAlphabetCount;
+         ++i) {
+
+        const uint8_t byte =
+            data[pos++];
+
+        deltaValues.push_back(
+            static_cast<int8_t>(
+                byte));
+    }
+
+    /*
+     * Delta Huffman table has one code length
+     * for every entry in the compact alphabet.
+     */
+    uint32_t tableSize;
+
+    if (!readU32(
+            data,
+            pos,
+            tableSize)) {
+
+        std::cerr
+            << "error: missing delta Huffman table size\n";
+
+        return false;
+    }
+
+    if (tableSize >
+        data.size() - pos) {
+
+        std::cerr
+            << "error: truncated delta Huffman table\n";
+
+        return false;
+    }
+
+    std::vector<uint8_t> tableData(
+        data.begin() +
+            static_cast<std::ptrdiff_t>(pos),
+
+        data.begin() +
+            static_cast<std::ptrdiff_t>(
+                pos + tableSize));
+
+    pos += tableSize;
+
+    std::vector<uint16_t> lengths;
+
+    GtcLengthTable table;
+
+    if (!table.decode(
+            tableData,
+            deltaAlphabetCount,
+            lengths)) {
+
+        std::cerr
+            << "error: invalid delta Huffman table\n";
+
+        return false;
+    }
+
+    if (!deltaHuffman.buildFromCodeLengths(
+            lengths)) {
+
+        std::cerr
+            << "error: invalid delta Huffman code lengths\n";
+
+        return false;
+    }
+
+    return true;
+}
+
+
+bool rebuildDeltaHuffman(
+    const std::vector<uint16_t>& globalLengths,
+    const std::vector<int8_t>& deltaValues,
+    const std::vector<uint32_t>& deltaSymbols,
+    size_t fileIndex,
+    uint32_t fileCount,
+    GtcHuffman& huffman)
+{
+    const size_t tokenCount =
+        globalLengths.size();
+
+    if (tokenCount == 0 ||
+        deltaValues.empty())
+        return false;
+
+    const uint64_t expectedCount =
+        static_cast<uint64_t>(
+            fileCount) *
+        static_cast<uint64_t>(
+            tokenCount);
+
+    if (expectedCount >
+        static_cast<uint64_t>(
+            std::numeric_limits<size_t>::max()))
+        return false;
+
+    if (deltaSymbols.size() !=
+        static_cast<size_t>(
+            expectedCount))
+        return false;
+
+    if (fileIndex >= fileCount)
+        return false;
+
+    std::vector<uint16_t> lengths =
+        globalLengths;
+
+    const size_t begin =
+        fileIndex * tokenCount;
+
+    for (size_t symbol = 0;
+         symbol < tokenCount;
+         ++symbol) {
+
+        const uint32_t deltaIndex =
+            deltaSymbols[
+                begin + symbol];
+
+        if (deltaIndex >=
+            deltaValues.size())
+            return false;
+
+        const int delta =
+            static_cast<int>(
+                deltaValues[
+                    deltaIndex]);
+
+        const int length =
+            static_cast<int>(
+                globalLengths[symbol]) +
+            delta;
+
+        /*
+         * Huffman code length zero is valid for
+         * an unused symbol. Negative lengths are not.
+         */
+        if (length < 0 ||
+            length > 65535)
+            return false;
+
+        lengths[symbol] =
+            static_cast<uint16_t>(
+                length);
+    }
+
+    return huffman.buildFromCodeLengths(
+        lengths);
 }
 
 
@@ -800,6 +1045,7 @@ bool GtcDecoder::decodeFile(
     }
 
     if (magic != GTC_MAGIC) {
+
         std::cerr
             << "error: invalid GTC file\n";
 
@@ -807,6 +1053,7 @@ bool GtcDecoder::decodeFile(
     }
 
     if (version != GTC_VERSION) {
+
         std::cerr
             << "error: unsupported GTC version\n";
 
@@ -830,10 +1077,8 @@ bool GtcDecoder::decodeFile(
             pos,
             tokenCount,
             grammarCount,
-            rules)) {
-
+            rules))
         return false;
-    }
 
     GtcHuffman huffman;
 
@@ -841,10 +1086,8 @@ bool GtcDecoder::decodeFile(
             data,
             pos,
             tokenCount,
-            huffman)) {
-
+            huffman))
         return false;
-    }
 
     uint64_t bitCount;
 
@@ -932,8 +1175,11 @@ bool GtcDecoder::decodeFile(
         rules,
         output);
 
-    for (uint32_t token : tokens) {
+    for (uint32_t token :
+         tokens) {
+
         if (token >= tokenCount) {
+
             std::cerr
                 << "error: invalid token\n";
 
@@ -996,6 +1242,9 @@ bool GtcDecoder::listArchive(
 
     size_t pos = 0;
 
+    uint32_t version;
+    uint32_t mode;
+
     uint64_t originalSize;
     uint32_t tokenCount;
     uint32_t grammarCount;
@@ -1004,23 +1253,23 @@ bool GtcDecoder::listArchive(
     uint32_t fileCount;
     uint32_t indexSize;
     uint32_t namesSize;
-    uint32_t huffmanModelCount = 0;
+    uint32_t huffmanModelCount;
 
     if (!readArchiveHeader(
-        data,
-        pos,
-        originalSize,
-        tokenCount,
-        grammarCount,
-        tokenCountInStream,
-        compressedSize,
-        fileCount,
-        indexSize,
-        namesSize,
-        huffmanModelCount)) {
-
+            data,
+            pos,
+            version,
+            mode,
+            originalSize,
+            tokenCount,
+            grammarCount,
+            tokenCountInStream,
+            compressedSize,
+            fileCount,
+            indexSize,
+            namesSize,
+            huffmanModelCount))
         return false;
-    }
 
     std::vector<GtcArchiveEntry> entries;
 
@@ -1030,14 +1279,14 @@ bool GtcDecoder::listArchive(
             fileCount,
             indexSize,
             namesSize,
-            entries)) {
-
+            entries))
         return false;
-    }
 
     uint64_t totalSize = 0;
 
-    for (const GtcArchiveEntry& entry : entries) {
+    for (const GtcArchiveEntry& entry :
+         entries) {
+
         if (!addSize(
                 totalSize,
                 entry.originalSize,
@@ -1050,22 +1299,37 @@ bool GtcDecoder::listArchive(
         }
     }
 
-    if (totalSize != originalSize) {
+    if (totalSize !=
+        originalSize) {
+
         std::cerr
             << "error: archive original size mismatch\n";
 
         return false;
     }
 
-std::cout
-    << "files         : " << fileCount << "\n"
-    << "original      : " << originalSize << " bytes\n"
-    << "tokens        : " << tokenCountInStream << "\n"
-    << "grammar       : " << grammarCount << "\n"
-    << "huffman models: " << huffmanModelCount << "\n"
-    << "compressed    : " << compressedSize << " bytes\n";
+    const char* modeName =
+        mode == GTC_HUFFMAN_MODE_GLOBAL
+            ? "global"
+            : mode == GTC_HUFFMAN_MODE_PER_FILE
+                ? "legacy per-file"
+                : mode == GTC_HUFFMAN_MODE_DELTA
+                    ? "compact delta"
+                    : "unknown";
 
-    for (const GtcArchiveEntry& entry : entries) {
+    std::cout
+        << "version       : " << version << "\n"
+        << "files         : " << fileCount << "\n"
+        << "original      : " << originalSize << " bytes\n"
+        << "tokens        : " << tokenCountInStream << "\n"
+        << "grammar       : " << grammarCount << "\n"
+        << "huffman mode  : " << modeName << "\n"
+        << "huffman models: " << huffmanModelCount << "\n"
+        << "compressed    : " << compressedSize << " bytes\n";
+
+    for (const GtcArchiveEntry& entry :
+         entries) {
+
         std::cout
             << entry.originalSize
             << "\t"
@@ -1098,6 +1362,9 @@ bool GtcDecoder::extractArchiveFile(
 
     size_t pos = 0;
 
+    uint32_t version;
+    uint32_t mode;
+
     uint64_t archiveOriginalSize;
     uint32_t tokenCount;
     uint32_t grammarCount;
@@ -1106,11 +1373,13 @@ bool GtcDecoder::extractArchiveFile(
     uint32_t fileCount;
     uint32_t indexSize;
     uint32_t namesSize;
-    uint32_t huffmanModelCount = 0;
+    uint32_t huffmanModelCount;
 
     if (!readArchiveHeader(
             data,
             pos,
+            version,
+            mode,
             archiveOriginalSize,
             tokenCount,
             grammarCount,
@@ -1119,10 +1388,8 @@ bool GtcDecoder::extractArchiveFile(
             fileCount,
             indexSize,
             namesSize,
-	    huffmanModelCount)) {
-
+            huffmanModelCount))
         return false;
-    }
 
     std::vector<GtcArchiveEntry> entries;
 
@@ -1132,10 +1399,8 @@ bool GtcDecoder::extractArchiveFile(
             fileCount,
             indexSize,
             namesSize,
-            entries)) {
-
+            entries))
         return false;
-    }
 
     size_t selectedIndex =
         static_cast<size_t>(-1);
@@ -1144,7 +1409,9 @@ bool GtcDecoder::extractArchiveFile(
          i < entries.size();
          ++i) {
 
-        if (entries[i].name == fileName) {
+        if (entries[i].name ==
+            fileName) {
+
             selectedIndex = i;
             break;
         }
@@ -1164,9 +1431,6 @@ bool GtcDecoder::extractArchiveFile(
     const GtcArchiveEntry& entry =
         entries[selectedIndex];
 
-    /*
-     * Validate the global token range.
-     */
     if (entry.tokenStart >
         tokenCountInStream) {
 
@@ -1187,7 +1451,7 @@ bool GtcDecoder::extractArchiveFile(
     }
 
     /*
-     * Read the global grammar.
+     * Read grammar.
      */
     std::vector<Rule> rules;
 
@@ -1196,47 +1460,402 @@ bool GtcDecoder::extractArchiveFile(
             pos,
             tokenCount,
             grammarCount,
-            rules)) {
+            rules))
+        return false;
+
+    /*
+     * --------------------------------------------------------
+     * v6 global / legacy per-file
+     * --------------------------------------------------------
+     */
+    if (version ==
+        GTC_ARCHIVE_VERSION_LEGACY) {
+
+        std::vector<GtcHuffman> huffmans;
+
+        if (!readHuffmanTables(
+                data,
+                pos,
+                tokenCount,
+                huffmanModelCount,
+                huffmans))
+            return false;
+
+        const GtcHuffman& huffman =
+            huffmanModelCount == 1
+                ? huffmans[0]
+                : huffmans[selectedIndex];
+
+        uint64_t bitCount;
+
+        if (!readU64(
+                data,
+                pos,
+                bitCount)) {
+
+            std::cerr
+                << "error: missing bit count\n";
+
+            return false;
+        }
+
+        if (bitCount >
+            compressedSize * 8ULL) {
+
+            std::cerr
+                << "error: invalid bit count\n";
+
+            return false;
+        }
+
+        if (entry.bitOffset >
+            bitCount) {
+
+            std::cerr
+                << "error: invalid archive bit offset\n";
+
+            return false;
+        }
+
+        if (compressedSize >
+            data.size() - pos) {
+
+            std::cerr
+                << "error: truncated compressed stream\n";
+
+            return false;
+        }
+
+        if (!fitsSizeT(compressedSize)) {
+
+            std::cerr
+                << "error: compressed stream too large\n";
+
+            return false;
+        }
+
+        const size_t compressedSizeT =
+            static_cast<size_t>(
+                compressedSize);
+
+        std::vector<uint8_t> compressed(
+            data.begin() +
+                static_cast<std::ptrdiff_t>(pos),
+
+            data.begin() +
+                static_cast<std::ptrdiff_t>(
+                    pos + compressedSizeT));
+
+        BitReader reader(
+            compressed,
+            bitCount);
+
+        if (!reader.seek(
+                entry.bitOffset)) {
+
+            std::cerr
+                << "error: cannot seek to archive entry\n";
+
+            return false;
+        }
+
+        std::vector<uint32_t> tokens;
+
+        if (!huffman.decode(
+                reader,
+                entry.tokenCount,
+                tokens)) {
+
+            std::cerr
+                << "error: invalid Huffman stream for archive entry\n";
+
+            return false;
+        }
+
+        if (!fitsSizeT(
+                entry.originalSize)) {
+
+            std::cerr
+                << "error: extracted file too large\n";
+
+            return false;
+        }
+
+        std::vector<uint8_t> output;
+
+        output.reserve(
+            static_cast<size_t>(
+                entry.originalSize));
+
+        GrammarExpander expander(
+            rules,
+            output);
+
+        for (uint32_t token :
+             tokens) {
+
+            if (token >= tokenCount) {
+
+                std::cerr
+                    << "error: invalid token in archive entry\n";
+
+                return false;
+            }
+
+            expander.expand(token);
+
+            if (output.size() >
+                entry.originalSize) {
+
+                std::cerr
+                    << "error: extracted data is too large\n";
+
+                return false;
+            }
+        }
+
+        if (output.size() !=
+            entry.originalSize) {
+
+            std::cerr
+                << "error: extracted size mismatch\n";
+
+            return false;
+        }
+
+        if (!writeFile(
+                outputName,
+                output)) {
+
+            std::cerr
+                << "error: cannot write "
+                << outputName
+                << "\n";
+
+            return false;
+        }
+
+        return true;
+    }
+
+
+    /*
+     * --------------------------------------------------------
+     * v7 compact delta
+     * --------------------------------------------------------
+     *
+     * At this point pos points immediately after grammar.
+     */
+    if (mode !=
+        GTC_HUFFMAN_MODE_DELTA) {
+
+        std::cerr
+            << "error: unsupported archive model\n";
 
         return false;
     }
 
-/*
- * Read all Huffman models.
- *
- * Model 0 is used by the normal archive mode.
- * In per-file mode model N belongs to file N.
- */
-std::vector<GtcHuffman> huffmans;
+    /*
+     * Global code-length model.
+     */
+    GtcHuffman globalHuffman;
 
-if (!readHuffmanTables(
-        data,
-        pos,
-        tokenCount,
-        huffmanModelCount,
-        huffmans)) {
+    if (!readHuffmanTable(
+            data,
+            pos,
+            tokenCount,
+            globalHuffman))
+        return false;
 
-    return false;
-}
+    const std::vector<uint16_t>&
+        globalLengths =
+            globalHuffman.codeLengths();
 
-const GtcHuffman& huffman =
-    huffmanModelCount == 1
-        ? huffmans[0]
-        : huffmans[selectedIndex];
+    if (globalLengths.size() !=
+        tokenCount) {
+
+        std::cerr
+            << "error: invalid global Huffman model\n";
+
+        return false;
+    }
 
     /*
-     * Read the exact number of valid bits in
-     * the global Huffman stream.
+     * Delta alphabet + delta Huffman table.
      */
+    std::vector<int8_t> deltaValues;
+
+    GtcHuffman deltaHuffman;
+
+    if (!readDeltaTable(
+            data,
+            pos,
+            deltaValues,
+            deltaHuffman))
+        return false;
+
+    /*
+     * The main stream is always at the very end and its
+     * byte size is explicitly stored in the archive header.
+     *
+     * Immediately before the main stream is the uint64
+     * main bit count.
+     *
+     * Therefore everything from current 'pos' up to
+     *
+     *     data.size() - compressedSize - 8
+     *
+     * is the delta stream.
+     */
+    if (compressedSize >
+        data.size()) {
+
+        std::cerr
+            << "error: invalid compressed size\n";
+
+        return false;
+    }
+
+    const size_t mainStreamSize =
+        static_cast<size_t>(
+            compressedSize);
+
+    if (mainStreamSize >
+        data.size()) {
+
+        std::cerr
+            << "error: invalid main stream size\n";
+
+        return false;
+    }
+
+    if (data.size() <
+        mainStreamSize + 8) {
+
+        std::cerr
+            << "error: truncated v7 archive\n";
+
+        return false;
+    }
+
+    const size_t mainStreamStart =
+        data.size() -
+        mainStreamSize;
+
+    if (mainStreamStart < 8 ||
+        mainStreamStart < pos) {
+
+        std::cerr
+            << "error: invalid v7 stream layout\n";
+
+        return false;
+    }
+
+    const size_t bitCountPos =
+        mainStreamStart - 8;
+
+    if (bitCountPos < pos) {
+
+        std::cerr
+            << "error: missing delta stream\n";
+
+        return false;
+    }
+
+    size_t deltaBegin =
+        pos;
+
+    size_t deltaEnd =
+        bitCountPos;
+
+    std::vector<uint8_t> deltaCompressed(
+        data.begin() +
+            static_cast<std::ptrdiff_t>(
+                deltaBegin),
+
+        data.begin() +
+            static_cast<std::ptrdiff_t>(
+                deltaEnd));
+
+    /*
+     * Decode exactly:
+     *
+     *     fileCount * tokenCount
+     *
+     * delta symbols.
+     */
+    const uint64_t deltaCount64 =
+        static_cast<uint64_t>(
+            fileCount) *
+        static_cast<uint64_t>(
+            tokenCount);
+
+    if (deltaCount64 >
+        static_cast<uint64_t>(
+            std::numeric_limits<size_t>::max())) {
+
+        std::cerr
+            << "error: delta stream too large\n";
+
+        return false;
+    }
+
+    const size_t deltaCount =
+        static_cast<size_t>(
+            deltaCount64);
+
+    BitReader deltaReader(
+        deltaCompressed,
+        static_cast<uint64_t>(
+            deltaCompressed.size()) * 8ULL);
+
+    std::vector<uint32_t> deltaSymbols;
+
+    if (!deltaHuffman.decode(
+            deltaReader,
+            deltaCount,
+            deltaSymbols)) {
+
+        std::cerr
+            << "error: invalid delta Huffman stream\n";
+
+        return false;
+    }
+
+    /*
+     * Reconstruct the Huffman model for the selected file.
+     */
+    GtcHuffman selectedHuffman;
+
+    if (!rebuildDeltaHuffman(
+            globalLengths,
+            deltaValues,
+            deltaSymbols,
+            selectedIndex,
+            fileCount,
+            selectedHuffman)) {
+
+        std::cerr
+            << "error: invalid per-file Huffman model\n";
+
+        return false;
+    }
+
+    /*
+     * Read main stream bit count.
+     */
+    size_t bitPos =
+        bitCountPos;
+
     uint64_t bitCount;
 
     if (!readU64(
             data,
-            pos,
+            bitPos,
             bitCount)) {
 
         std::cerr
-            << "error: missing bit count\n";
+            << "error: missing main bit count\n";
 
         return false;
     }
@@ -1245,7 +1864,7 @@ const GtcHuffman& huffman =
         compressedSize * 8ULL) {
 
         std::cerr
-            << "error: invalid bit count\n";
+            << "error: invalid main bit count\n";
 
         return false;
     }
@@ -1259,47 +1878,37 @@ const GtcHuffman& huffman =
         return false;
     }
 
-    if (compressedSize >
-        data.size() - pos) {
+    /*
+     * Main stream must occupy the rest of the file exactly.
+     */
+    if (bitPos !=
+        mainStreamStart) {
 
         std::cerr
-            << "error: truncated compressed stream\n";
+            << "error: invalid main stream position\n";
 
         return false;
     }
-
-    if (!fitsSizeT(compressedSize)) {
-
-        std::cerr
-            << "error: compressed stream too large\n";
-
-        return false;
-    }
-
-    const size_t compressedSizeT =
-        static_cast<size_t>(
-            compressedSize);
 
     std::vector<uint8_t> compressed(
         data.begin() +
-            static_cast<std::ptrdiff_t>(pos),
-
-        data.begin() +
             static_cast<std::ptrdiff_t>(
-                pos + compressedSizeT));
+                mainStreamStart),
 
-    /*
-     * This is the important part of the v5
-     * random-access design.
-     *
-     * The Huffman stream is global, but we can
-     * jump directly to the first bit belonging
-     * to the selected file.
-     */
+        data.end());
+
     BitReader reader(
         compressed,
         bitCount);
 
+    /*
+     * Random access remains exactly the same:
+     *
+     *     index.bitOffset
+     *
+     * points to the first Huffman bit of the selected
+     * file's token stream.
+     */
     if (!reader.seek(
             entry.bitOffset)) {
 
@@ -1311,7 +1920,7 @@ const GtcHuffman& huffman =
 
     std::vector<uint32_t> tokens;
 
-    if (!huffman.decode(
+    if (!selectedHuffman.decode(
             reader,
             entry.tokenCount,
             tokens)) {
@@ -1322,13 +1931,8 @@ const GtcHuffman& huffman =
         return false;
     }
 
-    /*
-     * Expand only the selected file.
-     *
-     * We deliberately do NOT decode the tokens
-     * belonging to preceding or following files.
-     */
-    if (!fitsSizeT(entry.originalSize)) {
+    if (!fitsSizeT(
+            entry.originalSize)) {
 
         std::cerr
             << "error: extracted file too large\n";
@@ -1346,7 +1950,8 @@ const GtcHuffman& huffman =
         rules,
         output);
 
-    for (uint32_t token : tokens) {
+    for (uint32_t token :
+         tokens) {
 
         if (token >= tokenCount) {
 

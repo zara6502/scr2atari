@@ -18,12 +18,8 @@ static void printUsage()
         "\n"
         "Archive:\n"
         "  gtc -c archive.gtc file1 file2 ...\n"
-        "  gtc -c -p archive.gtc file1 file2 ...\n"
         "  gtc -l archive.gtc\n"
         "  gtc -e archive.gtc file output\n"
-        "\n"
-        "Archive options:\n"
-        "  -p    separate Huffman model for each file\n"
         "\n");
 }
 
@@ -105,42 +101,24 @@ static int encodeArchive(
     int argc,
     char** argv)
 {
-    bool perFileHuffman = false;
-
-    int firstInput = 3;
-
     /*
-     * Normal:
+     * Syntax:
      *
      *   gtc -c archive.gtc file1 file2 ...
-     *
-     * Experimental:
-     *
-     *   gtc -c -p archive.gtc file1 file2 ...
      */
-    if (argc >= 4 &&
-        std::string(argv[2]) == "-p") {
+    if (argc <= 3) {
 
-        perFileHuffman = true;
-        firstInput = 4;
-    }
-
-    /*
-     * Need:
-     *
-     *   output + at least one input
-     */
-    if (argc <= firstInput) {
         printUsage();
+
         return 1;
     }
 
     const std::string outputName =
-        argv[2 + (perFileHuffman ? 1 : 0)];
+        argv[2];
 
     std::vector<std::string> inputNames;
 
-    for (int i = firstInput;
+    for (int i = 3;
          i < argc;
          ++i) {
 
@@ -157,8 +135,7 @@ static int encodeArchive(
     if (!encoder.encodeArchive(
             inputNames,
             outputName,
-            stats,
-            perFileHuffman)) {
+            stats)) {
 
         return 1;
     }
@@ -188,7 +165,7 @@ static int encodeArchive(
             end - start).count();
 
     std::printf(
-        "GTC 0.2 archive%s\n"
+        "GTC 0.2 archive\n"
         "\n"
         "files          : %u\n"
         "original       : %llu bytes\n"
@@ -199,10 +176,7 @@ static int encodeArchive(
         "Huffman bits   : %llu\n"
         "ratio          : %.3fx\n"
         "bits/byte      : %.3f\n"
-        "time            : \033[32m%lld ms\033[0m\n",
-        perFileHuffman
-            ? " (per-file Huffman)"
-            : "",
+        "time           : \033[32m%lld ms\033[0m\n",
         stats.fileCount,
         static_cast<unsigned long long>(
             stats.originalSize),
@@ -267,7 +241,9 @@ int main(
     char** argv)
 {
     if (argc < 2) {
+
         printUsage();
+
         return 1;
     }
 
@@ -301,9 +277,7 @@ int main(
      *
      *   gtc -c archive.gtc file1 file2 ...
      *
-     * or
-     *
-     *   gtc -c -p archive.gtc file1 file2 ...
+     * Huffman model selection is automatic.
      */
     if (argc >= 4 &&
         std::string(argv[1]) == "-c") {
@@ -340,7 +314,7 @@ int main(
     }
 
     /*
-     * Default: old single-file encoder.
+     * Default: single-file encoder.
      *
      *   gtc input.txt output.gtc
      */

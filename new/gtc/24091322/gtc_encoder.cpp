@@ -5,10 +5,14 @@
 
 #include <cstdio>
 #include <fstream>
-#include <unordered_map>
 #include <iostream>
+#include <map>
+#include <unordered_map>
+#include <limits>
+
 
 namespace {
+
 
 static uint64_t pairKey(
     uint32_t a,
@@ -19,11 +23,13 @@ static uint64_t pairKey(
         b;
 }
 
+
 struct PairInfo {
     uint32_t left = 0;
     uint32_t right = 0;
     uint32_t count = 0;
 };
+
 
 void writeU16(
     std::ofstream& out,
@@ -41,6 +47,7 @@ void writeU16(
         reinterpret_cast<const char*>(b),
         2);
 }
+
 
 void writeU32(
     std::ofstream& out,
@@ -65,6 +72,7 @@ void writeU32(
         4);
 }
 
+
 void writeU64(
     std::ofstream& out,
     uint64_t value)
@@ -81,7 +89,151 @@ void writeU64(
         8);
 }
 
+
+bool addArchiveSize(
+    uint64_t a,
+    uint64_t b,
+    uint64_t& result)
+{
+    if (b >
+        std::numeric_limits<uint64_t>::max() - a)
+        return false;
+
+    result = a + b;
+
+    return true;
+}
+
+
+/*
+ * Write the common archive prefix:
+ *
+ *     header
+ *     index
+ *     names
+ *     grammar
+ *
+ * The Huffman-specific part is written by the
+ * selected model below.
+ */
+bool writeArchiveCommon(
+    std::ofstream& out,
+    const std::vector<GtcArchiveFile>& index,
+    const std::vector<uint8_t>& names,
+    const GtcDictionary& dictionary)
+{
+    uint32_t nameOffset = 0;
+
+    for (const GtcArchiveFile& entry : index) {
+
+        writeU32(
+            out,
+            nameOffset);
+
+        writeU32(
+            out,
+            static_cast<uint32_t>(
+                entry.name.size()));
+
+        writeU64(
+            out,
+            entry.originalSize);
+
+        writeU64(
+            out,
+            entry.tokenStart);
+
+        writeU64(
+            out,
+            entry.tokenCount);
+
+        writeU64(
+            out,
+            entry.bitOffset);
+
+        nameOffset +=
+            static_cast<uint32_t>(
+                entry.name.size() + 1);
+    }
+
+    if (!names.empty()) {
+        out.write(
+            reinterpret_cast<const char*>(
+                names.data()),
+            static_cast<std::streamsize>(
+                names.size()));
+    }
+
+    /*
+     * Grammar.
+     *
+     * Exactly 4 bytes per rule:
+     *
+     *     uint16 left
+     *     uint16 right
+     */
+    for (uint32_t i = 0;
+         i < dictionary.size();
+         ++i) {
+
+        const GtcRule& rule =
+            dictionary.rule(
+                GTC_BASE_TOKENS + i);
+
+        writeU16(
+            out,
+            rule.left);
+
+        writeU16(
+            out,
+            rule.right);
+    }
+
+    return static_cast<bool>(out);
+}
+
+
+/*
+ * Calculate the fixed part common to v6 and v7.
+ */
+uint64_t archiveFixedSize(
+    uint64_t headerSize,
+    uint64_t indexSize,
+    uint64_t namesSize,
+    uint64_t grammarCount)
+{
+    uint64_t size = 0;
+
+    if (!addArchiveSize(
+            size,
+            headerSize,
+            size))
+        return UINT64_MAX;
+
+    if (!addArchiveSize(
+            size,
+            indexSize,
+            size))
+        return UINT64_MAX;
+
+    if (!addArchiveSize(
+            size,
+            namesSize,
+            size))
+        return UINT64_MAX;
+
+    if (!addArchiveSize(
+            size,
+            grammarCount * 4ULL,
+            size))
+        return UINT64_MAX;
+
+    return size;
+}
+
+
 } // namespace
+
 
 bool GtcEncoder::readFile(
     const std::string& filename,
@@ -106,6 +258,7 @@ bool GtcEncoder::readFile(
         static_cast<size_t>(size));
 
     if (size != 0) {
+
         if (!file.read(
                 reinterpret_cast<char*>(data.data()),
                 size))
@@ -114,6 +267,7 @@ bool GtcEncoder::readFile(
 
     return true;
 }
+
 
 void GtcEncoder::buildGrammar(
     const std::vector<uint8_t>& input,
@@ -143,6 +297,7 @@ void GtcEncoder::buildGrammar(
      */
 
     while (sequence.size() >= 2) {
+
         std::unordered_map<
             uint64_t,
             PairInfo> pairs;
@@ -167,6 +322,7 @@ void GtcEncoder::buildGrammar(
                 pairs.find(key);
 
             if (it == pairs.end()) {
+
                 PairInfo info;
 
                 info.left = a;
@@ -185,6 +341,7 @@ void GtcEncoder::buildGrammar(
         PairInfo best;
 
         for (const auto& item : pairs) {
+
             const PairInfo& info =
                 item.second;
 
@@ -213,15 +370,18 @@ void GtcEncoder::buildGrammar(
         size_t i = 0;
 
         while (i < sequence.size()) {
+
             if (i + 1 < sequence.size() &&
                 sequence[i] == best.left &&
                 sequence[i + 1] == best.right) {
 
-                next.push_back(newToken);
+                next.push_back(
+                    newToken);
 
                 i += 2;
             }
             else {
+
                 next.push_back(
                     sequence[i]);
 
@@ -232,6 +392,7 @@ void GtcEncoder::buildGrammar(
         sequence.swap(next);
     }
 }
+
 
 void GtcEncoder::buildGrammarMultiFile(
     const std::vector<std::vector<uint8_t>>& files,
@@ -268,6 +429,7 @@ void GtcEncoder::buildGrammarMultiFile(
     }
 
     while (sequence.size() >= 2) {
+
         std::unordered_map<
             uint64_t,
             PairInfo> pairs;
@@ -300,6 +462,7 @@ void GtcEncoder::buildGrammarMultiFile(
                 pairs.find(key);
 
             if (it == pairs.end()) {
+
                 PairInfo info;
 
                 info.left = a;
@@ -318,6 +481,7 @@ void GtcEncoder::buildGrammarMultiFile(
         PairInfo best;
 
         for (const auto& item : pairs) {
+
             const PairInfo& info =
                 item.second;
 
@@ -342,6 +506,7 @@ void GtcEncoder::buildGrammarMultiFile(
         size_t i = 0;
 
         while (i < sequence.size()) {
+
             if (i + 1 < sequence.size() &&
                 sequence[i] != GTC_FILE_BOUNDARY &&
                 sequence[i + 1] != GTC_FILE_BOUNDARY &&
@@ -354,6 +519,7 @@ void GtcEncoder::buildGrammarMultiFile(
                 i += 2;
             }
             else {
+
                 next.push_back(
                     sequence[i]);
 
@@ -364,6 +530,7 @@ void GtcEncoder::buildGrammarMultiFile(
         sequence.swap(next);
     }
 }
+
 
 bool GtcEncoder::writeGtc(
     const std::string& filename,
@@ -381,6 +548,7 @@ bool GtcEncoder::writeGtc(
         0);
 
     for (uint32_t token : sequence) {
+
         if (token >= tokenCount)
             return false;
 
@@ -404,17 +572,18 @@ bool GtcEncoder::writeGtc(
         compressed =
             writer.data();
 
-GtcLengthTable table;
+    GtcLengthTable table;
 
-std::vector<uint8_t> tableData;
-GtcTableStats tableStats;
+    std::vector<uint8_t> tableData;
 
-if (!table.encode(
-        huffman.codeLengths(),
-        tableData,
-        tableStats)) {
-    return false;
-}
+    GtcTableStats tableStats;
+
+    if (!table.encode(
+            huffman.codeLengths(),
+            tableData,
+            tableStats))
+        return false;
+
     std::ofstream out(
         filename,
         std::ios::binary);
@@ -445,9 +614,6 @@ if (!table.encode(
     header.compressed_size =
         compressed.size();
 
-    /*
-     * Header.
-     */
     writeU32(
         out,
         header.magic);
@@ -476,16 +642,13 @@ if (!table.encode(
         out,
         header.compressed_size);
 
-    /*
-     * Grammar.
-     */
     for (uint32_t i = 0;
          i < dictionary.size();
          ++i) {
 
         const GtcRule& rule =
             dictionary.rule(
-                256u + i);
+                GTC_BASE_TOKENS + i);
 
         writeU16(
             out,
@@ -496,34 +659,26 @@ if (!table.encode(
             rule.right);
     }
 
-/*
- * Compact Huffman code-length table.
- */
-
-writeU32(
-    out,
-    static_cast<uint32_t>(
-        tableData.size()));
-
-if (!tableData.empty()) {
-    out.write(
-        reinterpret_cast<const char*>(
-            tableData.data()),
-        static_cast<std::streamsize>(
+    writeU32(
+        out,
+        static_cast<uint32_t>(
             tableData.size()));
-}
 
-    /*
-     * Number of valid bits in the final byte.
-     */
+    if (!tableData.empty()) {
+
+        out.write(
+            reinterpret_cast<const char*>(
+                tableData.data()),
+            static_cast<std::streamsize>(
+                tableData.size()));
+    }
+
     writeU64(
         out,
         writer.bitCount());
 
-    /*
-     * Compressed token stream.
-     */
     if (!compressed.empty()) {
+
         out.write(
             reinterpret_cast<const char*>(
                 compressed.data()),
@@ -555,42 +710,1039 @@ if (!tableData.empty()) {
     return true;
 }
 
-bool GtcEncoder::writeArchive( const std::string& filename, const std::vector<GtcArchiveFile>& files, const GtcDictionary& dictionary, const std::vector<uint32_t>& sequence, bool perFileHuffman, GtcArchiveStats& stats) { const uint32_t tokenCount = GTC_BASE_TOKENS + dictionary.size(); /* * The sequence still contains internal file * boundary markers. Remove them while creating * the final token stream. */ std::vector<uint32_t> tokens; tokens.reserve( sequence.size()); for (uint32_t token : sequence) { if (token == GTC_FILE_BOUNDARY) continue; if (token >= tokenCount) return false; tokens.push_back(token); } /* * Number of Huffman models stored in the archive. * * Normal mode: * * one global model * * Experimental mode: * * one model per file */ const uint32_t huffmanModelCount = perFileHuffman ? static_cast<uint32_t>(files.size()) : 1u; if (huffmanModelCount == 0) return false; /* * Build Huffman models. */ std::vector<GtcHuffman> huffmans; huffmans.resize( huffmanModelCount); if (!perFileHuffman) { /* * One global Huffman model. */ std::vector<uint64_t> frequencies( tokenCount, 0); for (uint32_t token : tokens) ++frequencies[token]; if (!huffmans[0].build( frequencies)) { return false; } } else { /* * One independent Huffman model * for each file. */ size_t tokenPosition = 0; for (size_t fileIndex = 0; fileIndex < files.size(); ++fileIndex) { const GtcArchiveFile& entry = files[fileIndex]; if (entry.tokenCount > tokens.size() - tokenPosition) { return false; } std::vector<uint64_t> frequencies( tokenCount, 0); for (uint64_t i = 0; i < entry.tokenCount; ++i) { ++frequencies[ tokens[tokenPosition + i]]; } if (!huffmans[fileIndex].build( frequencies)) { return false; } tokenPosition += static_cast<size_t>( entry.tokenCount); } if (tokenPosition != tokens.size()) { return false; } } /* * Encode the complete token stream. * * Every file starts at a precisely recorded * bit offset. */ BitWriter writer; std::vector<GtcArchiveFile> index = files; size_t tokenPosition = 0; for (size_t fileIndex = 0; fileIndex < index.size(); ++fileIndex) { GtcArchiveFile& entry = index[fileIndex]; entry.tokenStart = tokenPosition; entry.bitOffset = writer.bitCount(); if (entry.tokenCount > tokens.size() - tokenPosition) { return false; } const size_t count = static_cast<size_t>( entry.tokenCount); std::vector<uint32_t> fileTokens; fileTokens.reserve(count); for (size_t i = 0; i < count; ++i) { fileTokens.push_back( tokens[tokenPosition + i]); } /* * Normal mode: * * huffmans[0] * * Per-file mode: * * huffmans[fileIndex] */ const GtcHuffman& huffman = perFileHuffman ? huffmans[fileIndex] : huffmans[0]; huffman.encode( fileTokens, writer); tokenPosition += count; } if (tokenPosition != tokens.size()) { return false; } writer.flush(); const std::vector<uint8_t>& compressed = writer.data(); /* * Encode all Huffman code-length tables. * * There is one table for the global mode, * or one table per file in per-file mode. */ std::vector< std::vector<uint8_t>> tableData; tableData.resize( huffmanModelCount); GtcLengthTable table; for (uint32_t modelIndex = 0; modelIndex < huffmanModelCount; ++modelIndex) { GtcTableStats tableStats; if (!table.encode( huffmans[modelIndex].codeLengths(), tableData[modelIndex], tableStats)) { return false; } } /* * Build the filename table. */ std::vector<uint8_t> names; for (const GtcArchiveFile& entry : index) { names.insert( names.end(), entry.name.begin(), entry.name.end()); names.push_back(0); } /* * Archive index entry: * * nameOffset u32 * nameLength u32 * originalSize u64 * tokenStart u64 * tokenCount u64 * bitOffset u64 * * 40 bytes per file. */ const uint32_t indexEntrySize = 40; const uint64_t indexSize64 = static_cast<uint64_t>( index.size()) * indexEntrySize; if (indexSize64 > UINT32_MAX || names.size() > UINT32_MAX) { return false; } std::ofstream out( filename, std::ios::binary); if (!out) return false; GtcArchiveHeader header{}; header.magic = GTC_MAGIC; header.version = GTC_ARCHIVE_VERSION; for (const GtcArchiveFile& entry : index) header.original_size += entry.originalSize; header.token_count = tokenCount; header.grammar_count = dictionary.size(); header.token_count_in_stream = tokens.size(); header.compressed_size = compressed.size(); header.file_count = static_cast<uint32_t>( index.size()); header.index_size = static_cast<uint32_t>( indexSize64); header.names_size = static_cast<uint32_t>( names.size()); header.huffman_model_count = huffmanModelCount; /* * Header. */ writeU32( out, header.magic); writeU32( out, header.version); writeU64( out, header.original_size); writeU32( out, header.token_count); writeU32( out, header.grammar_count); writeU64( out, header.token_count_in_stream); writeU64( out, header.compressed_size); writeU32( out, header.file_count); writeU32( out, header.index_size); writeU32( out, header.names_size); writeU32( out, header.huffman_model_count); /* * Index. */ uint32_t nameOffset = 0; for (const GtcArchiveFile& entry : index) { writeU32( out, nameOffset); writeU32( out, static_cast<uint32_t>( entry.name.size())); writeU64( out, entry.originalSize); writeU64( out, entry.tokenStart); writeU64( out, entry.tokenCount); writeU64( out, entry.bitOffset); nameOffset += static_cast<uint32_t>( entry.name.size() + 1); } /* * Names. */ if (!names.empty()) { out.write( reinterpret_cast<const char*>( names.data()), static_cast<std::streamsize>( names.size())); } /* * Global grammar. */ for (uint32_t i = 0; i < dictionary.size(); ++i) { const GtcRule& rule = dictionary.rule( 256u + i); writeU16( out, rule.left); writeU16( out, rule.right); } /* * Huffman code-length tables. * * Format: * * u32 tableSize * tableData * * repeated huffman_model_count times. */
-uint64_t totalTableBytes = 0;
 
-for (uint32_t modelIndex = 0;
-     modelIndex < huffmanModelCount;
-     ++modelIndex) {
+bool GtcEncoder::writeArchive(
+    const std::string& filename,
+    const std::vector<GtcArchiveFile>& files,
+    const GtcDictionary& dictionary,
+    const std::vector<uint32_t>& sequence,
+    GtcArchiveStats& stats)
+{
+    const uint32_t tokenCount =
+        GTC_BASE_TOKENS +
+        dictionary.size();
 
-    const std::vector<uint8_t>& data =
-        tableData[modelIndex];
+    if (files.empty())
+        return false;
 
-    std::cerr
-        << "Huffman table "
-        << modelIndex
-        << ": "
-        << data.size()
-        << " bytes\n";
+    /*
+     * Remove internal file-boundary markers.
+     */
+    std::vector<uint32_t> tokens;
 
-    totalTableBytes += data.size();
+    tokens.reserve(
+        sequence.size());
 
-    writeU32(
-        out,
-        static_cast<uint32_t>(data.size()));
+    for (uint32_t token : sequence) {
 
-    if (!data.empty()) {
-        out.write(
-            reinterpret_cast<const char*>(data.data()),
-            static_cast<std::streamsize>(data.size()));
+        if (token == GTC_FILE_BOUNDARY)
+            continue;
+
+        if (token >= tokenCount)
+            return false;
+
+        tokens.push_back(token);
     }
+
+    /*
+     * Build filename table.
+     */
+    std::vector<uint8_t> names;
+
+    for (const GtcArchiveFile& entry : files) {
+
+        names.insert(
+            names.end(),
+            entry.name.begin(),
+            entry.name.end());
+
+        names.push_back(0);
+    }
+
+    const uint32_t indexEntrySize = 40;
+
+    const uint64_t indexSize64 =
+        static_cast<uint64_t>(
+            files.size()) *
+        indexEntrySize;
+
+    if (indexSize64 > UINT32_MAX ||
+        names.size() > UINT32_MAX)
+        return false;
+
+    /*
+     * --------------------------------------------------------
+     * Candidate A: global Huffman, archive v6
+     * --------------------------------------------------------
+     */
+    GtcHuffman globalHuffman;
+
+    std::vector<uint64_t> globalFrequencies(
+        tokenCount,
+        0);
+
+    for (uint32_t token : tokens)
+        ++globalFrequencies[token];
+
+    if (!globalHuffman.build(
+            globalFrequencies))
+        return false;
+
+    BitWriter globalWriter;
+
+    std::vector<GtcArchiveFile> globalIndex =
+        files;
+
+    size_t tokenPosition = 0;
+
+    for (size_t fileIndex = 0;
+         fileIndex < globalIndex.size();
+         ++fileIndex) {
+
+        GtcArchiveFile& entry =
+            globalIndex[fileIndex];
+
+        entry.tokenStart =
+            tokenPosition;
+
+        entry.bitOffset =
+            globalWriter.bitCount();
+
+        if (entry.tokenCount >
+            tokens.size() - tokenPosition)
+            return false;
+
+        const size_t count =
+            static_cast<size_t>(
+                entry.tokenCount);
+
+        std::vector<uint32_t> fileTokens;
+
+        fileTokens.reserve(count);
+
+        for (size_t i = 0;
+             i < count;
+             ++i) {
+
+            fileTokens.push_back(
+                tokens[tokenPosition + i]);
+        }
+
+        globalHuffman.encode(
+            fileTokens,
+            globalWriter);
+
+        tokenPosition += count;
+    }
+
+    if (tokenPosition != tokens.size())
+        return false;
+
+    globalWriter.flush();
+
+    GtcLengthTable lengthTable;
+
+    std::vector<uint8_t> globalTableData;
+    GtcTableStats globalTableStats;
+
+    if (!lengthTable.encode(
+            globalHuffman.codeLengths(),
+            globalTableData,
+            globalTableStats))
+        return false;
+
+    /*
+     * Exact v6 archive size.
+     *
+     * Header = 56 bytes.
+     */
+    const uint64_t globalFixed =
+        archiveFixedSize(
+            56,
+            indexSize64,
+            names.size(),
+            dictionary.size());
+
+    if (globalFixed == UINT64_MAX)
+        return false;
+
+    uint64_t globalArchiveSize =
+        globalFixed;
+
+    if (!addArchiveSize(
+            globalArchiveSize,
+            4ULL +
+                globalTableData.size(),
+            globalArchiveSize))
+        return false;
+
+    if (!addArchiveSize(
+            globalArchiveSize,
+            8ULL,
+            globalArchiveSize))
+        return false;
+
+    if (!addArchiveSize(
+            globalArchiveSize,
+            globalWriter.data().size(),
+            globalArchiveSize))
+        return false;
+
+    /*
+     * --------------------------------------------------------
+     * Candidate B: compact per-file Huffman, archive v7
+     * --------------------------------------------------------
+     *
+     * v7 stores:
+     *
+     *     global code lengths
+     *     delta alphabet
+     *     delta Huffman table
+     *     delta stream
+     *
+     * The main token stream is still one continuous stream
+     * and the existing 40-byte index keeps exact bit offsets.
+     */
+    bool deltaCandidateValid = true;
+
+    std::vector<GtcHuffman> fileHuffmans;
+
+    BitWriter deltaMainWriter;
+
+    std::vector<GtcArchiveFile> deltaIndex =
+        files;
+
+    /*
+     * An empty file cannot have an independent Huffman
+     * model. In that case simply disable the delta candidate.
+     */
+    for (const GtcArchiveFile& entry : files) {
+
+        if (entry.tokenCount == 0) {
+            deltaCandidateValid = false;
+            break;
+        }
+    }
+
+    if (deltaCandidateValid) {
+
+        fileHuffmans.resize(
+            files.size());
+
+        tokenPosition = 0;
+
+        for (size_t fileIndex = 0;
+             fileIndex < files.size();
+             ++fileIndex) {
+
+            const GtcArchiveFile& entry =
+                files[fileIndex];
+
+            std::vector<uint64_t> frequencies(
+                tokenCount,
+                0);
+
+            if (entry.tokenCount >
+                tokens.size() - tokenPosition) {
+
+                deltaCandidateValid = false;
+                break;
+            }
+
+            for (uint64_t i = 0;
+                 i < entry.tokenCount;
+                 ++i) {
+
+                ++frequencies[
+                    tokens[
+                        tokenPosition +
+                        static_cast<size_t>(i)]];
+            }
+
+            if (!fileHuffmans[fileIndex].build(
+                    frequencies)) {
+
+                deltaCandidateValid = false;
+                break;
+            }
+
+            tokenPosition +=
+                static_cast<size_t>(
+                    entry.tokenCount);
+        }
+
+        if (tokenPosition != tokens.size())
+            deltaCandidateValid = false;
+    }
+
+    std::vector<int8_t> deltaValues;
+
+    std::vector<uint8_t> deltaSymbols;
+
+    GtcHuffman deltaHuffman;
+
+    std::vector<uint8_t> deltaTableData;
+
+    BitWriter deltaWriter;
+
+    if (deltaCandidateValid) {
+
+        /*
+         * Map every distinct signed code-length delta
+         * to a compact Huffman symbol.
+         *
+         * The measured project data has very small deltas
+         * (maximum absolute value 13).
+         *
+         * We deliberately use int8 here. If a pathological
+         * input produces a delta outside [-128,127], this
+         * candidate is simply rejected and global Huffman
+         * remains available.
+         */
+        std::map<int, uint32_t> deltaMap;
+
+        for (size_t fileIndex = 0;
+             fileIndex < fileHuffmans.size();
+             ++fileIndex) {
+
+            const std::vector<uint16_t>&
+                globalLengths =
+                    globalHuffman.codeLengths();
+
+            const std::vector<uint16_t>&
+                fileLengths =
+                    fileHuffmans[fileIndex].codeLengths();
+
+            if (globalLengths.size() !=
+                    tokenCount ||
+                fileLengths.size() !=
+                    tokenCount) {
+
+                deltaCandidateValid = false;
+                break;
+            }
+
+            for (uint32_t symbol = 0;
+                 symbol < tokenCount;
+                 ++symbol) {
+
+                const int delta =
+                    static_cast<int>(
+                        fileLengths[symbol]) -
+                    static_cast<int>(
+                        globalLengths[symbol]);
+
+                if (delta < -128 ||
+                    delta > 127) {
+
+                    deltaCandidateValid = false;
+                    break;
+                }
+
+                if (deltaMap.find(delta) ==
+                    deltaMap.end()) {
+
+                    const uint32_t index =
+                        static_cast<uint32_t>(
+                            deltaValues.size());
+
+                    deltaMap.emplace(
+                        delta,
+                        index);
+
+                    deltaValues.push_back(
+                        static_cast<int8_t>(
+                            delta));
+                }
+            }
+
+            if (!deltaCandidateValid)
+                break;
+        }
+
+        if (deltaValues.empty())
+            deltaCandidateValid = false;
+
+        if (deltaValues.size() > 256)
+            deltaCandidateValid = false;
+
+        /*
+         * Convert the per-file code-length arrays to the
+         * compact delta alphabet.
+         *
+         * Layout is:
+         *
+         *     file 0: token 0..tokenCount-1
+         *     file 1: token 0..tokenCount-1
+         *     ...
+         */
+        if (deltaCandidateValid) {
+
+            deltaSymbols.reserve(
+                files.size() *
+                static_cast<size_t>(
+                    tokenCount));
+
+            for (size_t fileIndex = 0;
+                 fileIndex < fileHuffmans.size();
+                 ++fileIndex) {
+
+                const std::vector<uint16_t>&
+                    globalLengths =
+                        globalHuffman.codeLengths();
+
+                const std::vector<uint16_t>&
+                    fileLengths =
+                        fileHuffmans[fileIndex].codeLengths();
+
+                for (uint32_t symbol = 0;
+                     symbol < tokenCount;
+                     ++symbol) {
+
+                    const int delta =
+                        static_cast<int>(
+                            fileLengths[symbol]) -
+                        static_cast<int>(
+                            globalLengths[symbol]);
+
+                    auto it =
+                        deltaMap.find(delta);
+
+                    if (it == deltaMap.end()) {
+                        deltaCandidateValid = false;
+                        break;
+                    }
+
+                    deltaSymbols.push_back(
+                        static_cast<uint8_t>(
+                            it->second));
+                }
+
+                if (!deltaCandidateValid)
+                    break;
+            }
+        }
+    }
+
+    if (deltaCandidateValid) {
+
+        std::vector<uint64_t>
+            deltaFrequencies(
+                deltaValues.size(),
+                0);
+
+        for (uint8_t symbol :
+             deltaSymbols) {
+
+            if (symbol >=
+                deltaFrequencies.size()) {
+
+                deltaCandidateValid = false;
+                break;
+            }
+
+            ++deltaFrequencies[symbol];
+        }
+
+        if (deltaCandidateValid) {
+
+            if (!deltaHuffman.build(
+                    deltaFrequencies)) {
+
+                deltaCandidateValid = false;
+            }
+        }
+    }
+
+    if (deltaCandidateValid) {
+
+        /*
+         * Encode the compact delta stream.
+         */
+std::vector<uint32_t> deltaHuffmanSymbols;
+deltaHuffmanSymbols.reserve(deltaSymbols.size());
+
+for (uint8_t symbol : deltaSymbols) {
+    deltaHuffmanSymbols.push_back(static_cast<uint32_t>(symbol));
 }
 
-std::cerr
-    << "Huffman tables total: "
-    << totalTableBytes
-    << " bytes\n";
+deltaHuffman.encode(
+    deltaHuffmanSymbols,
+    deltaWriter);
 
- /* * Valid bit count of the complete stream. */ writeU64( out, writer.bitCount()); /* * Compressed stream. */ if (!compressed.empty()) { out.write( reinterpret_cast<const char*>( compressed.data()), static_cast<std::streamsize>( compressed.size())); } if (!out) return false; stats.originalSize = header.original_size; stats.finalTokenCount = tokens.size(); stats.tokenCount = tokenCount; stats.grammarCount = dictionary.size(); stats.compressedBits = writer.bitCount(); stats.compressedBytes = compressed.size(); stats.fileCount = static_cast<uint32_t>( index.size()); return true; }
+        deltaWriter.flush();
+
+        GtcTableStats deltaTableStats;
+
+        if (!lengthTable.encode(
+                deltaHuffman.codeLengths(),
+                deltaTableData,
+                deltaTableStats)) {
+
+            deltaCandidateValid = false;
+        }
+    }
+
+    if (deltaCandidateValid) {
+
+        /*
+         * Encode the main token stream with the selected
+         * Huffman model of each file.
+         */
+        tokenPosition = 0;
+
+        for (size_t fileIndex = 0;
+             fileIndex < files.size();
+             ++fileIndex) {
+
+            GtcArchiveFile& entry =
+                deltaIndex[fileIndex];
+
+            entry.tokenStart =
+                tokenPosition;
+
+            entry.bitOffset =
+                deltaMainWriter.bitCount();
+
+            if (entry.tokenCount >
+                tokens.size() - tokenPosition) {
+
+                deltaCandidateValid = false;
+                break;
+            }
+
+            const size_t count =
+                static_cast<size_t>(
+                    entry.tokenCount);
+
+            std::vector<uint32_t> fileTokens;
+
+            fileTokens.reserve(count);
+
+            for (size_t i = 0;
+                 i < count;
+                 ++i) {
+
+                fileTokens.push_back(
+                    tokens[tokenPosition + i]);
+            }
+
+            fileHuffmans[fileIndex].encode(
+                fileTokens,
+                deltaMainWriter);
+
+            tokenPosition += count;
+        }
+
+        if (tokenPosition != tokens.size())
+            deltaCandidateValid = false;
+    }
+
+    if (deltaCandidateValid)
+        deltaMainWriter.flush();
+
+    uint64_t deltaArchiveSize =
+        UINT64_MAX;
+
+    if (deltaCandidateValid) {
+
+        /*
+         * v7 header = 60 bytes.
+         *
+         * After grammar:
+         *
+         *     u32 global table size
+         *     global table
+         *
+         *     u16 delta alphabet count
+         *     int8 delta alphabet[count]
+         *
+         *     u32 delta table size
+         *     delta table
+         *
+         *     delta compressed bytes
+         *
+         *     u64 main bit count
+         *
+         *     main compressed bytes
+         *
+         * The main compressed size is already stored
+         * in the archive header, so the decoder can find
+         * the end of the delta stream without another
+         * delta-size field.
+         */
+        const uint64_t deltaFixed =
+            archiveFixedSize(
+                60,
+                indexSize64,
+                names.size(),
+                dictionary.size());
+
+        if (deltaFixed != UINT64_MAX) {
+
+            deltaArchiveSize =
+                deltaFixed;
+
+            if (!addArchiveSize(
+                    deltaArchiveSize,
+                    4ULL +
+                        globalTableData.size(),
+                    deltaArchiveSize))
+                deltaArchiveSize = UINT64_MAX;
+
+            if (deltaArchiveSize != UINT64_MAX) {
+
+                if (!addArchiveSize(
+                        deltaArchiveSize,
+                        2ULL +
+                            deltaValues.size(),
+                        deltaArchiveSize))
+                    deltaArchiveSize = UINT64_MAX;
+            }
+
+            if (deltaArchiveSize != UINT64_MAX) {
+
+                if (!addArchiveSize(
+                        deltaArchiveSize,
+                        4ULL +
+                            deltaTableData.size(),
+                        deltaArchiveSize))
+                    deltaArchiveSize = UINT64_MAX;
+            }
+
+            if (deltaArchiveSize != UINT64_MAX) {
+
+                if (!addArchiveSize(
+                        deltaArchiveSize,
+                        deltaWriter.data().size(),
+                        deltaArchiveSize))
+                    deltaArchiveSize = UINT64_MAX;
+            }
+
+            if (deltaArchiveSize != UINT64_MAX) {
+
+                if (!addArchiveSize(
+                        deltaArchiveSize,
+                        8ULL,
+                        deltaArchiveSize))
+                    deltaArchiveSize = UINT64_MAX;
+            }
+
+            if (deltaArchiveSize != UINT64_MAX) {
+
+                if (!addArchiveSize(
+                        deltaArchiveSize,
+                        deltaMainWriter.data().size(),
+                        deltaArchiveSize))
+                    deltaArchiveSize = UINT64_MAX;
+            }
+        }
+    }
+
+    /*
+     * Automatic selection.
+     *
+     * Equal size -> global v6.
+     *
+     * This also means the new model is used only when
+     * it really produces a smaller complete archive.
+     */
+    const bool useDelta =
+        deltaCandidateValid &&
+        deltaArchiveSize < globalArchiveSize;
+
+    std::ofstream out(
+        filename,
+        std::ios::binary);
+
+    if (!out)
+        return false;
+
+    uint64_t archiveOriginalSize = 0;
+
+    for (const GtcArchiveFile& entry : files) {
+
+        if (!addArchiveSize(
+                archiveOriginalSize,
+                entry.originalSize,
+                archiveOriginalSize)) {
+
+            return false;
+        }
+    }
+
+    if (!useDelta) {
+
+        /*
+         * ----------------------------------------------------
+         * Write v6 global archive.
+         * ----------------------------------------------------
+         */
+        const std::vector<GtcArchiveFile>& index =
+            globalIndex;
+
+        GtcArchiveHeader header{};
+
+        header.magic =
+            GTC_MAGIC;
+
+        header.version =
+            GTC_ARCHIVE_VERSION_LEGACY;
+
+        header.original_size =
+            archiveOriginalSize;
+
+        header.token_count =
+            tokenCount;
+
+        header.grammar_count =
+            dictionary.size();
+
+        header.token_count_in_stream =
+            tokens.size();
+
+        header.compressed_size =
+            globalWriter.data().size();
+
+        header.file_count =
+            static_cast<uint32_t>(
+                index.size());
+
+        header.index_size =
+            static_cast<uint32_t>(
+                indexSize64);
+
+        header.names_size =
+            static_cast<uint32_t>(
+                names.size());
+
+        header.huffman_model_count =
+            1;
+
+        /*
+         * v6 header: exactly 56 bytes.
+         */
+        writeU32(
+            out,
+            header.magic);
+
+        writeU32(
+            out,
+            header.version);
+
+        writeU64(
+            out,
+            header.original_size);
+
+        writeU32(
+            out,
+            header.token_count);
+
+        writeU32(
+            out,
+            header.grammar_count);
+
+        writeU64(
+            out,
+            header.token_count_in_stream);
+
+        writeU64(
+            out,
+            header.compressed_size);
+
+        writeU32(
+            out,
+            header.file_count);
+
+        writeU32(
+            out,
+            header.index_size);
+
+        writeU32(
+            out,
+            header.names_size);
+
+        writeU32(
+            out,
+            header.huffman_model_count);
+
+        if (!writeArchiveCommon(
+                out,
+                index,
+                names,
+                dictionary))
+            return false;
+
+        writeU32(
+            out,
+            static_cast<uint32_t>(
+                globalTableData.size()));
+
+        if (!globalTableData.empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    globalTableData.data()),
+                static_cast<std::streamsize>(
+                    globalTableData.size()));
+        }
+
+        writeU64(
+            out,
+            globalWriter.bitCount());
+
+        if (!globalWriter.data().empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    globalWriter.data().data()),
+                static_cast<std::streamsize>(
+                    globalWriter.data().size()));
+        }
+
+        if (!out)
+            return false;
+
+        stats.compressedBits =
+            globalWriter.bitCount();
+
+        stats.compressedBytes =
+            globalWriter.data().size();
+    }
+    else {
+
+        /*
+         * ----------------------------------------------------
+         * Write v7 compact delta archive.
+         * ----------------------------------------------------
+         */
+        const std::vector<GtcArchiveFile>& index =
+            deltaIndex;
+
+        GtcArchiveHeader header{};
+
+        header.magic =
+            GTC_MAGIC;
+
+        header.version =
+            GTC_ARCHIVE_VERSION;
+
+        header.original_size =
+            archiveOriginalSize;
+
+        header.token_count =
+            tokenCount;
+
+        header.grammar_count =
+            dictionary.size();
+
+        header.token_count_in_stream =
+            tokens.size();
+
+        header.compressed_size =
+            deltaMainWriter.data().size();
+
+        header.file_count =
+            static_cast<uint32_t>(
+                index.size());
+
+        header.index_size =
+            static_cast<uint32_t>(
+                indexSize64);
+
+        header.names_size =
+            static_cast<uint32_t>(
+                names.size());
+
+        /*
+         * Only one global model is stored.
+         */
+        header.huffman_model_count =
+            1;
+
+        header.huffman_model_mode =
+            GTC_HUFFMAN_MODE_DELTA;
+
+        /*
+         * v7 header: 60 bytes.
+         */
+        writeU32(
+            out,
+            header.magic);
+
+        writeU32(
+            out,
+            header.version);
+
+        writeU64(
+            out,
+            header.original_size);
+
+        writeU32(
+            out,
+            header.token_count);
+
+        writeU32(
+            out,
+            header.grammar_count);
+
+        writeU64(
+            out,
+            header.token_count_in_stream);
+
+        writeU64(
+            out,
+            header.compressed_size);
+
+        writeU32(
+            out,
+            header.file_count);
+
+        writeU32(
+            out,
+            header.index_size);
+
+        writeU32(
+            out,
+            header.names_size);
+
+        writeU32(
+            out,
+            header.huffman_model_count);
+
+        writeU32(
+            out,
+            header.huffman_model_mode);
+
+        if (!writeArchiveCommon(
+                out,
+                index,
+                names,
+                dictionary))
+            return false;
+
+        /*
+         * Global Huffman code-length table.
+         */
+        writeU32(
+            out,
+            static_cast<uint32_t>(
+                globalTableData.size()));
+
+        if (!globalTableData.empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    globalTableData.data()),
+                static_cast<std::streamsize>(
+                    globalTableData.size()));
+        }
+
+        /*
+         * Delta alphabet.
+         *
+         * u16 count
+         * count signed int8 values
+         */
+        writeU16(
+            out,
+            static_cast<uint16_t>(
+                deltaValues.size()));
+
+        for (int8_t value :
+             deltaValues) {
+
+            const uint8_t byte =
+                static_cast<uint8_t>(
+                    value);
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    &byte),
+                1);
+        }
+
+        /*
+         * Delta Huffman table.
+         */
+        writeU32(
+            out,
+            static_cast<uint32_t>(
+                deltaTableData.size()));
+
+        if (!deltaTableData.empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    deltaTableData.data()),
+                static_cast<std::streamsize>(
+                    deltaTableData.size()));
+        }
+
+        /*
+         * Delta stream.
+         */
+        if (!deltaWriter.data().empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    deltaWriter.data().data()),
+                static_cast<std::streamsize>(
+                    deltaWriter.data().size()));
+        }
+
+        /*
+         * Main token stream bit count.
+         *
+         * The decoder uses the main compressed_size
+         * from the header to locate the main stream at
+         * the end of the archive.
+         */
+        writeU64(
+            out,
+            deltaMainWriter.bitCount());
+
+        /*
+         * Main token stream.
+         */
+        if (!deltaMainWriter.data().empty()) {
+
+            out.write(
+                reinterpret_cast<const char*>(
+                    deltaMainWriter.data().data()),
+                static_cast<std::streamsize>(
+                    deltaMainWriter.data().size()));
+        }
+
+        if (!out)
+            return false;
+
+        stats.compressedBits =
+            deltaMainWriter.bitCount();
+
+        stats.compressedBytes =
+            deltaMainWriter.data().size();
+    }
+
+    stats.originalSize =
+        archiveOriginalSize;
+
+    stats.finalTokenCount =
+        tokens.size();
+
+    stats.tokenCount =
+        tokenCount;
+
+    stats.grammarCount =
+        dictionary.size();
+
+    stats.fileCount =
+        static_cast<uint32_t>(
+            files.size());
+
+    return true;
+}
+
 
 bool GtcEncoder::encodeFile(
     const std::string& inputName,
@@ -637,13 +1789,15 @@ bool GtcEncoder::encodeFile(
 
     return true;
 }
+
+
 bool GtcEncoder::encodeArchive(
     const std::vector<std::string>& inputNames,
     const std::string& outputName,
-    GtcArchiveStats& stats,
-    bool perFileHuffman)
+    GtcArchiveStats& stats)
 {
     if (inputNames.empty()) {
+
         std::fprintf(
             stderr,
             "error: no input files\n");
@@ -733,7 +1887,7 @@ bool GtcEncoder::encodeArchive(
          * Skip the internal boundary.
          */
         if (sequencePosition <
-            sequence.size() &&
+                sequence.size() &&
             sequence[sequencePosition] ==
                 GTC_FILE_BOUNDARY) {
 
@@ -751,13 +1905,12 @@ bool GtcEncoder::encodeArchive(
         return false;
     }
 
-if (!writeArchive(
-        outputName,
-        files,
-        dictionary,
-        sequence,
-        perFileHuffman,
-        stats)) {
+    if (!writeArchive(
+            outputName,
+            files,
+            dictionary,
+            sequence,
+            stats)) {
 
         std::fprintf(
             stderr,

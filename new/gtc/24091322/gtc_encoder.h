@@ -53,11 +53,15 @@ public:
         const std::string& outputName,
         GtcEncodeStats& stats);
 
+    /*
+     * Archive encoder automatically selects the Huffman model.
+     *
+     * No user-visible "-p" mode is required.
+     */
     bool encodeArchive(
         const std::vector<std::string>& inputNames,
         const std::string& outputName,
-        GtcArchiveStats& stats,
-        bool perFileHuffman = false);
+        GtcArchiveStats& stats);
 
 private:
     bool readFile(
@@ -86,7 +90,6 @@ private:
         const std::vector<GtcArchiveFile>& files,
         const GtcDictionary& dictionary,
         const std::vector<uint32_t>& sequence,
-        bool perFileHuffman,
         GtcArchiveStats& stats);
 };
 
