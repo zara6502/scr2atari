@@ -1,1805 +1,1824 @@
 input 6912 bytes
 
 CURRENT GREEDY
-rules=202 tokens=2809 bits=22355
+rules=202 tokens=2809 bits=22355 total=28819
 
 INITIAL SHANNON
-rules=202 tokens=2784 bits=22220
+rules=202 tokens=2784 bits=22220 total=28684
 
 ROUND 1
- parent 0: rules=202 tokens=2784 bits=22220 candidates=16
-  NEW BEST: bits 22220 -> 22193 (-27)
+ parent 0: rules=202 tokens=2784 bits=22220 total=28684 candidates=16
+  NEW BEST PAYLOAD: bits 22220 -> 22193 (-27)
     rule T361 + T282 -> T458  occ=3  new-token=used
-  NEW BEST: bits 22193 -> 22185 (-8)
+  NEW BEST PAYLOAD: bits 22193 -> 22185 (-8)
     rule T369 + T69 -> T458  occ=3  new-token=used
+  NEW BEST TOTAL: 28684 -> 28681 (-3 bits)
+    total = payload 22185 + rules 203 * 32
 beam after pruning: 4 states
-  state 0  : rules=203 tokens=2780 bits=22185
-  state 1  : rules=203 tokens=2780 bits=22193
-  state 2  : rules=203 tokens=2780 bits=22195
-  state 3  : rules=203 tokens=2780 bits=22195
+  state 0  : rules=203 tokens=2780 bits=22185 total=28681
+  state 1  : rules=203 tokens=2780 bits=22193 total=28689
+  state 2  : rules=203 tokens=2780 bits=22195 total=28691
+  state 3  : rules=203 tokens=2780 bits=22195 total=28691
 
 ROUND 2
- parent 0: rules=203 tokens=2780 bits=22185 candidates=16
-  NEW BEST: bits 22185 -> 22162 (-23)
+ parent 0: rules=203 tokens=2780 bits=22185 total=28681 candidates=16
+  NEW BEST PAYLOAD: bits 22185 -> 22162 (-23)
     rule T361 + T282 -> T459  occ=3  new-token=used
- parent 1: rules=203 tokens=2780 bits=22193 candidates=16
- parent 2: rules=203 tokens=2780 bits=22195 candidates=16
- parent 3: rules=203 tokens=2780 bits=22195 candidates=16
+ parent 1: rules=203 tokens=2780 bits=22193 total=28689 candidates=16
+ parent 2: rules=203 tokens=2780 bits=22195 total=28691 candidates=16
+ parent 3: rules=203 tokens=2780 bits=22195 total=28691 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=204 tokens=2777 bits=22162
-  state 1  : rules=204 tokens=2777 bits=22162
-  state 2  : rules=204 tokens=2777 bits=22164
-  state 3  : rules=204 tokens=2777 bits=22164
+  state 0  : rules=204 tokens=2777 bits=22162 total=28690
+  state 1  : rules=204 tokens=2777 bits=22162 total=28690
+  state 2  : rules=204 tokens=2777 bits=22164 total=28692
+  state 3  : rules=204 tokens=2777 bits=22164 total=28692
 
 ROUND 3
- parent 0: rules=204 tokens=2777 bits=22162 candidates=16
-  NEW BEST: bits 22162 -> 22147 (-15)
+ parent 0: rules=204 tokens=2777 bits=22162 total=28690 candidates=16
+  NEW BEST PAYLOAD: bits 22162 -> 22147 (-15)
     rule T252 + T298 -> T460  occ=3  new-token=used
-  NEW BEST: bits 22147 -> 22146 (-1)
+  NEW BEST PAYLOAD: bits 22147 -> 22146 (-1)
     rule T281 + T249 -> T460  occ=3  new-token=used
- parent 1: rules=204 tokens=2777 bits=22162 candidates=16
- parent 2: rules=204 tokens=2777 bits=22164 candidates=16
- parent 3: rules=204 tokens=2777 bits=22164 candidates=16
+ parent 1: rules=204 tokens=2777 bits=22162 total=28690 candidates=16
+ parent 2: rules=204 tokens=2777 bits=22164 total=28692 candidates=16
+ parent 3: rules=204 tokens=2777 bits=22164 total=28692 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=205 tokens=2774 bits=22146
-  state 1  : rules=205 tokens=2774 bits=22146
-  state 2  : rules=205 tokens=2774 bits=22146
-  state 3  : rules=205 tokens=2774 bits=22146
+  state 0  : rules=205 tokens=2774 bits=22146 total=28706
+  state 1  : rules=205 tokens=2774 bits=22146 total=28706
+  state 2  : rules=205 tokens=2774 bits=22146 total=28706
+  state 3  : rules=205 tokens=2774 bits=22146 total=28706
 
 ROUND 4
- parent 0: rules=205 tokens=2774 bits=22146 candidates=16
-  NEW BEST: bits 22146 -> 22131 (-15)
+ parent 0: rules=205 tokens=2774 bits=22146 total=28706 candidates=16
+  NEW BEST PAYLOAD: bits 22146 -> 22131 (-15)
     rule T252 + T298 -> T461  occ=3  new-token=used
-  NEW BEST: bits 22131 -> 22130 (-1)
+  NEW BEST PAYLOAD: bits 22131 -> 22130 (-1)
     rule T318 + T65 -> T461  occ=3  new-token=used
- parent 1: rules=205 tokens=2774 bits=22146 candidates=16
- parent 2: rules=205 tokens=2774 bits=22146 candidates=16
- parent 3: rules=205 tokens=2774 bits=22146 candidates=16
+ parent 1: rules=205 tokens=2774 bits=22146 total=28706 candidates=16
+ parent 2: rules=205 tokens=2774 bits=22146 total=28706 candidates=16
+ parent 3: rules=205 tokens=2774 bits=22146 total=28706 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=206 tokens=2771 bits=22130
-  state 1  : rules=206 tokens=2771 bits=22130
-  state 2  : rules=206 tokens=2771 bits=22130
-  state 3  : rules=206 tokens=2771 bits=22130
+  state 0  : rules=206 tokens=2771 bits=22130 total=28722
+  state 1  : rules=206 tokens=2771 bits=22130 total=28722
+  state 2  : rules=206 tokens=2771 bits=22130 total=28722
+  state 3  : rules=206 tokens=2771 bits=22130 total=28722
 
 ROUND 5
- parent 0: rules=206 tokens=2771 bits=22130 candidates=16
-  NEW BEST: bits 22130 -> 22115 (-15)
+ parent 0: rules=206 tokens=2771 bits=22130 total=28722 candidates=16
+  NEW BEST PAYLOAD: bits 22130 -> 22115 (-15)
     rule T252 + T298 -> T462  occ=3  new-token=used
- parent 1: rules=206 tokens=2771 bits=22130 candidates=16
- parent 2: rules=206 tokens=2771 bits=22130 candidates=16
- parent 3: rules=206 tokens=2771 bits=22130 candidates=16
+ parent 1: rules=206 tokens=2771 bits=22130 total=28722 candidates=16
+ parent 2: rules=206 tokens=2771 bits=22130 total=28722 candidates=16
+ parent 3: rules=206 tokens=2771 bits=22130 total=28722 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=207 tokens=2766 bits=22115
-  state 1  : rules=207 tokens=2766 bits=22115
-  state 2  : rules=207 tokens=2766 bits=22115
-  state 3  : rules=207 tokens=2766 bits=22115
+  state 0  : rules=207 tokens=2766 bits=22115 total=28739
+  state 1  : rules=207 tokens=2766 bits=22115 total=28739
+  state 2  : rules=207 tokens=2766 bits=22115 total=28739
+  state 3  : rules=207 tokens=2766 bits=22115 total=28739
 
 ROUND 6
- parent 0: rules=207 tokens=2766 bits=22115 candidates=16
-  NEW BEST: bits 22115 -> 22107 (-8)
+ parent 0: rules=207 tokens=2766 bits=22115 total=28739 candidates=16
+  NEW BEST PAYLOAD: bits 22115 -> 22107 (-8)
     rule T2 + T32 -> T463  occ=3  new-token=used
-  NEW BEST: bits 22107 -> 22100 (-7)
+  NEW BEST PAYLOAD: bits 22107 -> 22100 (-7)
     rule T268 + T300 -> T463  occ=2  new-token=used
- parent 1: rules=207 tokens=2766 bits=22115 candidates=16
- parent 2: rules=207 tokens=2766 bits=22115 candidates=16
- parent 3: rules=207 tokens=2766 bits=22115 candidates=16
+ parent 1: rules=207 tokens=2766 bits=22115 total=28739 candidates=16
+ parent 2: rules=207 tokens=2766 bits=22115 total=28739 candidates=16
+ parent 3: rules=207 tokens=2766 bits=22115 total=28739 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=208 tokens=2764 bits=22100
-  state 1  : rules=208 tokens=2764 bits=22100
-  state 2  : rules=208 tokens=2764 bits=22100
-  state 3  : rules=208 tokens=2764 bits=22100
+  state 0  : rules=208 tokens=2764 bits=22100 total=28756
+  state 1  : rules=208 tokens=2764 bits=22100 total=28756
+  state 2  : rules=208 tokens=2764 bits=22100 total=28756
+  state 3  : rules=208 tokens=2764 bits=22100 total=28756
 
 ROUND 7
- parent 0: rules=208 tokens=2764 bits=22100 candidates=16
-  NEW BEST: bits 22100 -> 22092 (-8)
+ parent 0: rules=208 tokens=2764 bits=22100 total=28756 candidates=16
+  NEW BEST PAYLOAD: bits 22100 -> 22092 (-8)
     rule T2 + T32 -> T464  occ=3  new-token=used
-  NEW BEST: bits 22092 -> 22091 (-1)
+  NEW BEST PAYLOAD: bits 22092 -> 22091 (-1)
     rule T269 + T346 -> T464  occ=2  new-token=used
- parent 1: rules=208 tokens=2764 bits=22100 candidates=16
- parent 2: rules=208 tokens=2764 bits=22100 candidates=16
- parent 3: rules=208 tokens=2764 bits=22100 candidates=16
+ parent 1: rules=208 tokens=2764 bits=22100 total=28756 candidates=16
+ parent 2: rules=208 tokens=2764 bits=22100 total=28756 candidates=16
+ parent 3: rules=208 tokens=2764 bits=22100 total=28756 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=209 tokens=2762 bits=22091
-  state 1  : rules=209 tokens=2762 bits=22091
-  state 2  : rules=209 tokens=2762 bits=22091
-  state 3  : rules=209 tokens=2762 bits=22091
+  state 0  : rules=209 tokens=2762 bits=22091 total=28779
+  state 1  : rules=209 tokens=2762 bits=22091 total=28779
+  state 2  : rules=209 tokens=2762 bits=22091 total=28779
+  state 3  : rules=209 tokens=2762 bits=22091 total=28779
 
 ROUND 8
- parent 0: rules=209 tokens=2762 bits=22091 candidates=16
-  NEW BEST: bits 22091 -> 22082 (-9)
+ parent 0: rules=209 tokens=2762 bits=22091 total=28779 candidates=16
+  NEW BEST PAYLOAD: bits 22091 -> 22082 (-9)
     rule T2 + T32 -> T465  occ=3  new-token=used
-  NEW BEST: bits 22082 -> 22081 (-1)
+  NEW BEST PAYLOAD: bits 22082 -> 22081 (-1)
     rule T276 + T358 -> T465  occ=2  new-token=used
-  NEW BEST: bits 22081 -> 22076 (-5)
+  NEW BEST PAYLOAD: bits 22081 -> 22076 (-5)
     rule T289 + T282 -> T465  occ=2  new-token=used
- parent 1: rules=209 tokens=2762 bits=22091 candidates=16
- parent 2: rules=209 tokens=2762 bits=22091 candidates=16
- parent 3: rules=209 tokens=2762 bits=22091 candidates=16
+ parent 1: rules=209 tokens=2762 bits=22091 total=28779 candidates=16
+ parent 2: rules=209 tokens=2762 bits=22091 total=28779 candidates=16
+ parent 3: rules=209 tokens=2762 bits=22091 total=28779 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=210 tokens=2760 bits=22076
-  state 1  : rules=210 tokens=2760 bits=22076
-  state 2  : rules=210 tokens=2760 bits=22077
-  state 3  : rules=210 tokens=2760 bits=22077
+  state 0  : rules=210 tokens=2760 bits=22076 total=28796
+  state 1  : rules=210 tokens=2760 bits=22076 total=28796
+  state 2  : rules=210 tokens=2760 bits=22077 total=28797
+  state 3  : rules=210 tokens=2760 bits=22077 total=28797
 
 ROUND 9
- parent 0: rules=210 tokens=2760 bits=22076 candidates=16
-  NEW BEST: bits 22076 -> 22068 (-8)
+ parent 0: rules=210 tokens=2760 bits=22076 total=28796 candidates=16
+  NEW BEST PAYLOAD: bits 22076 -> 22068 (-8)
     rule T2 + T32 -> T466  occ=3  new-token=used
-  NEW BEST: bits 22068 -> 22067 (-1)
+  NEW BEST PAYLOAD: bits 22068 -> 22067 (-1)
     rule T276 + T358 -> T466  occ=2  new-token=used
-  NEW BEST: bits 22067 -> 22065 (-2)
+  NEW BEST PAYLOAD: bits 22067 -> 22065 (-2)
     rule T293 + T329 -> T466  occ=2  new-token=used
- parent 1: rules=210 tokens=2760 bits=22076 candidates=16
- parent 2: rules=210 tokens=2760 bits=22077 candidates=16
- parent 3: rules=210 tokens=2760 bits=22077 candidates=16
+ parent 1: rules=210 tokens=2760 bits=22076 total=28796 candidates=16
+ parent 2: rules=210 tokens=2760 bits=22077 total=28797 candidates=16
+ parent 3: rules=210 tokens=2760 bits=22077 total=28797 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=211 tokens=2758 bits=22065
-  state 1  : rules=211 tokens=2758 bits=22065
-  state 2  : rules=211 tokens=2758 bits=22066
-  state 3  : rules=211 tokens=2758 bits=22066
+  state 0  : rules=211 tokens=2758 bits=22065 total=28817
+  state 1  : rules=211 tokens=2758 bits=22065 total=28817
+  state 2  : rules=211 tokens=2758 bits=22066 total=28818
+  state 3  : rules=211 tokens=2758 bits=22066 total=28818
 
 ROUND 10
- parent 0: rules=211 tokens=2758 bits=22065 candidates=16
-  NEW BEST: bits 22065 -> 22057 (-8)
+ parent 0: rules=211 tokens=2758 bits=22065 total=28817 candidates=16
+  NEW BEST PAYLOAD: bits 22065 -> 22057 (-8)
     rule T2 + T32 -> T467  occ=3  new-token=used
-  NEW BEST: bits 22057 -> 22056 (-1)
+  NEW BEST PAYLOAD: bits 22057 -> 22056 (-1)
     rule T276 + T358 -> T467  occ=2  new-token=used
- parent 1: rules=211 tokens=2758 bits=22065 candidates=16
- parent 2: rules=211 tokens=2758 bits=22066 candidates=16
- parent 3: rules=211 tokens=2758 bits=22066 candidates=16
+ parent 1: rules=211 tokens=2758 bits=22065 total=28817 candidates=16
+ parent 2: rules=211 tokens=2758 bits=22066 total=28818 candidates=16
+ parent 3: rules=211 tokens=2758 bits=22066 total=28818 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=212 tokens=2756 bits=22056
-  state 1  : rules=212 tokens=2756 bits=22056
-  state 2  : rules=212 tokens=2756 bits=22056
-  state 3  : rules=212 tokens=2756 bits=22056
+  state 0  : rules=212 tokens=2756 bits=22056 total=28840
+  state 1  : rules=212 tokens=2756 bits=22056 total=28840
+  state 2  : rules=212 tokens=2756 bits=22056 total=28840
+  state 3  : rules=212 tokens=2756 bits=22056 total=28840
 
 ROUND 11
- parent 0: rules=212 tokens=2756 bits=22056 candidates=16
-  NEW BEST: bits 22056 -> 22048 (-8)
+ parent 0: rules=212 tokens=2756 bits=22056 total=28840 candidates=16
+  NEW BEST PAYLOAD: bits 22056 -> 22048 (-8)
     rule T2 + T32 -> T468  occ=3  new-token=used
-  NEW BEST: bits 22048 -> 22046 (-2)
+  NEW BEST PAYLOAD: bits 22048 -> 22046 (-2)
     rule T258 + T358 -> T468  occ=2  new-token=used
- parent 1: rules=212 tokens=2756 bits=22056 candidates=16
- parent 2: rules=212 tokens=2756 bits=22056 candidates=16
- parent 3: rules=212 tokens=2756 bits=22056 candidates=16
+ parent 1: rules=212 tokens=2756 bits=22056 total=28840 candidates=16
+ parent 2: rules=212 tokens=2756 bits=22056 total=28840 candidates=16
+ parent 3: rules=212 tokens=2756 bits=22056 total=28840 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=213 tokens=2754 bits=22046
-  state 1  : rules=213 tokens=2754 bits=22046
-  state 2  : rules=213 tokens=2754 bits=22046
-  state 3  : rules=213 tokens=2754 bits=22046
+  state 0  : rules=213 tokens=2754 bits=22046 total=28862
+  state 1  : rules=213 tokens=2754 bits=22046 total=28862
+  state 2  : rules=213 tokens=2754 bits=22046 total=28862
+  state 3  : rules=213 tokens=2754 bits=22046 total=28862
 
 ROUND 12
- parent 0: rules=213 tokens=2754 bits=22046 candidates=16
-  NEW BEST: bits 22046 -> 22038 (-8)
+ parent 0: rules=213 tokens=2754 bits=22046 total=28862 candidates=16
+  NEW BEST PAYLOAD: bits 22046 -> 22038 (-8)
     rule T2 + T32 -> T469  occ=3  new-token=used
-  NEW BEST: bits 22038 -> 22036 (-2)
+  NEW BEST PAYLOAD: bits 22038 -> 22036 (-2)
     rule T295 + T290 -> T469  occ=2  new-token=used
- parent 1: rules=213 tokens=2754 bits=22046 candidates=16
- parent 2: rules=213 tokens=2754 bits=22046 candidates=16
-  NEW BEST: bits 22036 -> 22035 (-1)
+ parent 1: rules=213 tokens=2754 bits=22046 total=28862 candidates=16
+ parent 2: rules=213 tokens=2754 bits=22046 total=28862 candidates=16
+  NEW BEST PAYLOAD: bits 22036 -> 22035 (-1)
     rule T258 + T358 -> T469  occ=2  new-token=used
- parent 3: rules=213 tokens=2754 bits=22046 candidates=16
+ parent 3: rules=213 tokens=2754 bits=22046 total=28862 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=214 tokens=2752 bits=22035
-  state 1  : rules=214 tokens=2752 bits=22036
-  state 2  : rules=214 tokens=2752 bits=22036
-  state 3  : rules=214 tokens=2752 bits=22036
+  state 0  : rules=214 tokens=2752 bits=22035 total=28883
+  state 1  : rules=214 tokens=2752 bits=22036 total=28884
+  state 2  : rules=214 tokens=2752 bits=22036 total=28884
+  state 3  : rules=214 tokens=2752 bits=22036 total=28884
 
 ROUND 13
- parent 0: rules=214 tokens=2752 bits=22035 candidates=16
-  NEW BEST: bits 22035 -> 22027 (-8)
+ parent 0: rules=214 tokens=2752 bits=22035 total=28883 candidates=16
+  NEW BEST PAYLOAD: bits 22035 -> 22027 (-8)
     rule T2 + T32 -> T470  occ=3  new-token=used
- parent 1: rules=214 tokens=2752 bits=22036 candidates=16
- parent 2: rules=214 tokens=2752 bits=22036 candidates=16
-  NEW BEST: bits 22027 -> 22026 (-1)
+ parent 1: rules=214 tokens=2752 bits=22036 total=28884 candidates=16
+ parent 2: rules=214 tokens=2752 bits=22036 total=28884 candidates=16
+  NEW BEST PAYLOAD: bits 22027 -> 22026 (-1)
     rule T2 + T32 -> T470  occ=3  new-token=used
- parent 3: rules=214 tokens=2752 bits=22036 candidates=16
+ parent 3: rules=214 tokens=2752 bits=22036 total=28884 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=215 tokens=2749 bits=22026
-  state 1  : rules=215 tokens=2750 bits=22026
-  state 2  : rules=215 tokens=2750 bits=22026
-  state 3  : rules=215 tokens=2750 bits=22026
+  state 0  : rules=215 tokens=2749 bits=22026 total=28906
+  state 1  : rules=215 tokens=2750 bits=22026 total=28906
+  state 2  : rules=215 tokens=2750 bits=22026 total=28906
+  state 3  : rules=215 tokens=2750 bits=22026 total=28906
 
 ROUND 14
- parent 0: rules=215 tokens=2749 bits=22026 candidates=16
-  NEW BEST: bits 22026 -> 22023 (-3)
+ parent 0: rules=215 tokens=2749 bits=22026 total=28906 candidates=16
+  NEW BEST PAYLOAD: bits 22026 -> 22023 (-3)
     rule T256 + T272 -> T471  occ=2  new-token=used
-  NEW BEST: bits 22023 -> 22020 (-3)
+  NEW BEST PAYLOAD: bits 22023 -> 22020 (-3)
     rule T256 + T310 -> T471  occ=2  new-token=used
-  NEW BEST: bits 22020 -> 22019 (-1)
+  NEW BEST PAYLOAD: bits 22020 -> 22019 (-1)
     rule T259 + T330 -> T471  occ=2  new-token=used
-  NEW BEST: bits 22019 -> 22018 (-1)
+  NEW BEST PAYLOAD: bits 22019 -> 22018 (-1)
     rule T266 + T385 -> T471  occ=2  new-token=used
-  NEW BEST: bits 22018 -> 22014 (-4)
+  NEW BEST PAYLOAD: bits 22018 -> 22014 (-4)
     rule T311 + T437 -> T471  occ=2  new-token=used
- parent 1: rules=215 tokens=2750 bits=22026 candidates=16
- parent 2: rules=215 tokens=2750 bits=22026 candidates=16
-  NEW BEST: bits 22014 -> 22012 (-2)
+ parent 1: rules=215 tokens=2750 bits=22026 total=28906 candidates=16
+ parent 2: rules=215 tokens=2750 bits=22026 total=28906 candidates=16
+  NEW BEST PAYLOAD: bits 22014 -> 22012 (-2)
     rule T311 + T437 -> T471  occ=2  new-token=used
- parent 3: rules=215 tokens=2750 bits=22026 candidates=16
+ parent 3: rules=215 tokens=2750 bits=22026 total=28906 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=216 tokens=2748 bits=22012
-  state 1  : rules=216 tokens=2747 bits=22014
-  state 2  : rules=216 tokens=2748 bits=22014
-  state 3  : rules=216 tokens=2748 bits=22014
+  state 0  : rules=216 tokens=2748 bits=22012 total=28924
+  state 1  : rules=216 tokens=2747 bits=22014 total=28926
+  state 2  : rules=216 tokens=2748 bits=22014 total=28926
+  state 3  : rules=216 tokens=2748 bits=22014 total=28926
 
 ROUND 15
- parent 0: rules=216 tokens=2748 bits=22012 candidates=16
-  NEW BEST: bits 22012 -> 22001 (-11)
+ parent 0: rules=216 tokens=2748 bits=22012 total=28924 candidates=16
+  NEW BEST PAYLOAD: bits 22012 -> 22001 (-11)
     rule T248 + T286 -> T472  occ=3  new-token=used
- parent 1: rules=216 tokens=2747 bits=22014 candidates=16
- parent 2: rules=216 tokens=2748 bits=22014 candidates=16
- parent 3: rules=216 tokens=2748 bits=22014 candidates=16
+ parent 1: rules=216 tokens=2747 bits=22014 total=28926 candidates=16
+ parent 2: rules=216 tokens=2748 bits=22014 total=28926 candidates=16
+ parent 3: rules=216 tokens=2748 bits=22014 total=28926 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=217 tokens=2744 bits=22001
-  state 1  : rules=217 tokens=2745 bits=22004
-  state 2  : rules=217 tokens=2745 bits=22004
-  state 3  : rules=217 tokens=2746 bits=22004
+  state 0  : rules=217 tokens=2744 bits=22001 total=28945
+  state 1  : rules=217 tokens=2745 bits=22004 total=28948
+  state 2  : rules=217 tokens=2745 bits=22004 total=28948
+  state 3  : rules=217 tokens=2746 bits=22004 total=28948
 
 ROUND 16
- parent 0: rules=217 tokens=2744 bits=22001 candidates=16
-  NEW BEST: bits 22001 -> 21993 (-8)
+ parent 0: rules=217 tokens=2744 bits=22001 total=28945 candidates=16
+  NEW BEST PAYLOAD: bits 22001 -> 21993 (-8)
     rule T2 + T32 -> T473  occ=3  new-token=used
-  NEW BEST: bits 21993 -> 21983 (-10)
+  NEW BEST PAYLOAD: bits 21993 -> 21983 (-10)
     rule T319 + T470 -> T473  occ=2  new-token=used
- parent 1: rules=217 tokens=2745 bits=22004 candidates=16
- parent 2: rules=217 tokens=2745 bits=22004 candidates=16
- parent 3: rules=217 tokens=2746 bits=22004 candidates=16
+ parent 1: rules=217 tokens=2745 bits=22004 total=28948 candidates=16
+ parent 2: rules=217 tokens=2745 bits=22004 total=28948 candidates=16
+ parent 3: rules=217 tokens=2746 bits=22004 total=28948 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=218 tokens=2742 bits=21983
-  state 1  : rules=218 tokens=2743 bits=21984
-  state 2  : rules=218 tokens=2744 bits=21984
-  state 3  : rules=218 tokens=2743 bits=21986
+  state 0  : rules=218 tokens=2742 bits=21983 total=28959
+  state 1  : rules=218 tokens=2743 bits=21984 total=28960
+  state 2  : rules=218 tokens=2744 bits=21984 total=28960
+  state 3  : rules=218 tokens=2743 bits=21986 total=28962
 
 ROUND 17
- parent 0: rules=218 tokens=2742 bits=21983 candidates=16
-  NEW BEST: bits 21983 -> 21975 (-8)
+ parent 0: rules=218 tokens=2742 bits=21983 total=28959 candidates=16
+  NEW BEST PAYLOAD: bits 21983 -> 21975 (-8)
     rule T2 + T32 -> T474  occ=3  new-token=used
-  NEW BEST: bits 21975 -> 21967 (-8)
+  NEW BEST PAYLOAD: bits 21975 -> 21967 (-8)
     rule T320 + T415 -> T474  occ=2  new-token=used
- parent 1: rules=218 tokens=2743 bits=21984 candidates=16
- parent 2: rules=218 tokens=2744 bits=21984 candidates=16
- parent 3: rules=218 tokens=2743 bits=21986 candidates=16
+ parent 1: rules=218 tokens=2743 bits=21984 total=28960 candidates=16
+ parent 2: rules=218 tokens=2744 bits=21984 total=28960 candidates=16
+ parent 3: rules=218 tokens=2743 bits=21986 total=28962 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=219 tokens=2740 bits=21967
-  state 1  : rules=219 tokens=2741 bits=21968
-  state 2  : rules=219 tokens=2742 bits=21968
-  state 3  : rules=219 tokens=2741 bits=21970
+  state 0  : rules=219 tokens=2740 bits=21967 total=28975
+  state 1  : rules=219 tokens=2741 bits=21968 total=28976
+  state 2  : rules=219 tokens=2742 bits=21968 total=28976
+  state 3  : rules=219 tokens=2741 bits=21970 total=28978
 
 ROUND 18
- parent 0: rules=219 tokens=2740 bits=21967 candidates=16
-  NEW BEST: bits 21967 -> 21959 (-8)
+ parent 0: rules=219 tokens=2740 bits=21967 total=28975 candidates=16
+  NEW BEST PAYLOAD: bits 21967 -> 21959 (-8)
     rule T2 + T32 -> T475  occ=3  new-token=used
-  NEW BEST: bits 21959 -> 21949 (-10)
+  NEW BEST PAYLOAD: bits 21959 -> 21949 (-10)
     rule T324 + T264 -> T475  occ=2  new-token=used
- parent 1: rules=219 tokens=2741 bits=21968 candidates=16
-  NEW BEST: bits 21949 -> 21948 (-1)
+ parent 1: rules=219 tokens=2741 bits=21968 total=28976 candidates=16
+  NEW BEST PAYLOAD: bits 21949 -> 21948 (-1)
     rule T325 + T325 -> T475  occ=2  new-token=used
- parent 2: rules=219 tokens=2742 bits=21968 candidates=16
- parent 3: rules=219 tokens=2741 bits=21970 candidates=16
+ parent 2: rules=219 tokens=2742 bits=21968 total=28976 candidates=16
+ parent 3: rules=219 tokens=2741 bits=21970 total=28978 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=220 tokens=2739 bits=21948
-  state 1  : rules=220 tokens=2740 bits=21948
-  state 2  : rules=220 tokens=2738 bits=21949
-  state 3  : rules=220 tokens=2739 bits=21952
+  state 0  : rules=220 tokens=2739 bits=21948 total=28988
+  state 1  : rules=220 tokens=2740 bits=21948 total=28988
+  state 2  : rules=220 tokens=2738 bits=21949 total=28989
+  state 3  : rules=220 tokens=2739 bits=21952 total=28992
 
 ROUND 19
- parent 0: rules=220 tokens=2739 bits=21948 candidates=16
-  NEW BEST: bits 21948 -> 21937 (-11)
+ parent 0: rules=220 tokens=2739 bits=21948 total=28988 candidates=16
+  NEW BEST PAYLOAD: bits 21948 -> 21937 (-11)
     rule T248 + T286 -> T476  occ=3  new-token=used
- parent 1: rules=220 tokens=2740 bits=21948 candidates=16
- parent 2: rules=220 tokens=2738 bits=21949 candidates=16
-  NEW BEST: bits 21937 -> 21929 (-8)
+ parent 1: rules=220 tokens=2740 bits=21948 total=28988 candidates=16
+ parent 2: rules=220 tokens=2738 bits=21949 total=28989 candidates=16
+  NEW BEST PAYLOAD: bits 21937 -> 21929 (-8)
     rule T325 + T325 -> T476  occ=2  new-token=used
- parent 3: rules=220 tokens=2739 bits=21952 candidates=16
+ parent 3: rules=220 tokens=2739 bits=21952 total=28992 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=221 tokens=2736 bits=21929
-  state 1  : rules=221 tokens=2737 bits=21932
-  state 2  : rules=221 tokens=2735 bits=21937
-  state 3  : rules=221 tokens=2736 bits=21937
+  state 0  : rules=221 tokens=2736 bits=21929 total=29001
+  state 1  : rules=221 tokens=2737 bits=21932 total=29004
+  state 2  : rules=221 tokens=2735 bits=21937 total=29009
+  state 3  : rules=221 tokens=2736 bits=21937 total=29009
 
 ROUND 20
- parent 0: rules=221 tokens=2736 bits=21929 candidates=16
-  NEW BEST: bits 21929 -> 21921 (-8)
+ parent 0: rules=221 tokens=2736 bits=21929 total=29001 candidates=16
+  NEW BEST PAYLOAD: bits 21929 -> 21921 (-8)
     rule T2 + T32 -> T477  occ=3  new-token=used
- parent 1: rules=221 tokens=2737 bits=21932 candidates=16
- parent 2: rules=221 tokens=2735 bits=21937 candidates=16
- parent 3: rules=221 tokens=2736 bits=21937 candidates=16
+ parent 1: rules=221 tokens=2737 bits=21932 total=29004 candidates=16
+ parent 2: rules=221 tokens=2735 bits=21937 total=29009 candidates=16
+ parent 3: rules=221 tokens=2736 bits=21937 total=29009 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=222 tokens=2733 bits=21921
-  state 1  : rules=222 tokens=2733 bits=21921
-  state 2  : rules=222 tokens=2734 bits=21921
-  state 3  : rules=222 tokens=2734 bits=21921
+  state 0  : rules=222 tokens=2733 bits=21921 total=29025
+  state 1  : rules=222 tokens=2733 bits=21921 total=29025
+  state 2  : rules=222 tokens=2734 bits=21921 total=29025
+  state 3  : rules=222 tokens=2734 bits=21921 total=29025
 
 ROUND 21
- parent 0: rules=222 tokens=2733 bits=21921 candidates=16
-  NEW BEST: bits 21921 -> 21918 (-3)
+ parent 0: rules=222 tokens=2733 bits=21921 total=29025 candidates=16
+  NEW BEST PAYLOAD: bits 21921 -> 21918 (-3)
     rule T256 + T272 -> T478  occ=2  new-token=used
-  NEW BEST: bits 21918 -> 21915 (-3)
+  NEW BEST PAYLOAD: bits 21918 -> 21915 (-3)
     rule T256 + T310 -> T478  occ=2  new-token=used
-  NEW BEST: bits 21915 -> 21914 (-1)
+  NEW BEST PAYLOAD: bits 21915 -> 21914 (-1)
     rule T259 + T330 -> T478  occ=2  new-token=used
-  NEW BEST: bits 21914 -> 21913 (-1)
+  NEW BEST PAYLOAD: bits 21914 -> 21913 (-1)
     rule T266 + T385 -> T478  occ=2  new-token=used
-  NEW BEST: bits 21913 -> 21907 (-6)
+  NEW BEST PAYLOAD: bits 21913 -> 21907 (-6)
     rule T328 + T376 -> T478  occ=2  new-token=used
- parent 1: rules=222 tokens=2733 bits=21921 candidates=16
- parent 2: rules=222 tokens=2734 bits=21921 candidates=16
-  NEW BEST: bits 21907 -> 21905 (-2)
+ parent 1: rules=222 tokens=2733 bits=21921 total=29025 candidates=16
+ parent 2: rules=222 tokens=2734 bits=21921 total=29025 candidates=16
+  NEW BEST PAYLOAD: bits 21907 -> 21905 (-2)
     rule T328 + T376 -> T478  occ=2  new-token=used
- parent 3: rules=222 tokens=2734 bits=21921 candidates=16
+ parent 3: rules=222 tokens=2734 bits=21921 total=29025 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=223 tokens=2732 bits=21905
-  state 1  : rules=223 tokens=2731 bits=21907
-  state 2  : rules=223 tokens=2731 bits=21907
-  state 3  : rules=223 tokens=2732 bits=21907
+  state 0  : rules=223 tokens=2732 bits=21905 total=29041
+  state 1  : rules=223 tokens=2731 bits=21907 total=29043
+  state 2  : rules=223 tokens=2731 bits=21907 total=29043
+  state 3  : rules=223 tokens=2732 bits=21907 total=29043
 
 ROUND 22
- parent 0: rules=223 tokens=2732 bits=21905 candidates=16
-  NEW BEST: bits 21905 -> 21895 (-10)
+ parent 0: rules=223 tokens=2732 bits=21905 total=29041 candidates=16
+  NEW BEST PAYLOAD: bits 21905 -> 21895 (-10)
     rule T2 + T32 -> T479  occ=3  new-token=used
-  NEW BEST: bits 21895 -> 21888 (-7)
+  NEW BEST PAYLOAD: bits 21895 -> 21888 (-7)
     rule T340 + T392 -> T479  occ=2  new-token=used
- parent 1: rules=223 tokens=2731 bits=21907 candidates=16
- parent 2: rules=223 tokens=2731 bits=21907 candidates=16
- parent 3: rules=223 tokens=2732 bits=21907 candidates=16
+ parent 1: rules=223 tokens=2731 bits=21907 total=29043 candidates=16
+ parent 2: rules=223 tokens=2731 bits=21907 total=29043 candidates=16
+ parent 3: rules=223 tokens=2732 bits=21907 total=29043 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=224 tokens=2730 bits=21888
-  state 1  : rules=224 tokens=2729 bits=21895
-  state 2  : rules=224 tokens=2730 bits=21895
-  state 3  : rules=224 tokens=2730 bits=21895
+  state 0  : rules=224 tokens=2730 bits=21888 total=29056
+  state 1  : rules=224 tokens=2729 bits=21895 total=29063
+  state 2  : rules=224 tokens=2730 bits=21895 total=29063
+  state 3  : rules=224 tokens=2730 bits=21895 total=29063
 
 ROUND 23
- parent 0: rules=224 tokens=2730 bits=21888 candidates=16
-  NEW BEST: bits 21888 -> 21880 (-8)
+ parent 0: rules=224 tokens=2730 bits=21888 total=29056 candidates=16
+  NEW BEST PAYLOAD: bits 21888 -> 21880 (-8)
     rule T2 + T32 -> T480  occ=3  new-token=used
-  NEW BEST: bits 21880 -> 21872 (-8)
+  NEW BEST PAYLOAD: bits 21880 -> 21872 (-8)
     rule T347 + T434 -> T480  occ=2  new-token=used
- parent 1: rules=224 tokens=2729 bits=21895 candidates=16
- parent 2: rules=224 tokens=2730 bits=21895 candidates=16
- parent 3: rules=224 tokens=2730 bits=21895 candidates=16
+ parent 1: rules=224 tokens=2729 bits=21895 total=29063 candidates=16
+ parent 2: rules=224 tokens=2730 bits=21895 total=29063 candidates=16
+ parent 3: rules=224 tokens=2730 bits=21895 total=29063 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=225 tokens=2728 bits=21872
-  state 1  : rules=225 tokens=2727 bits=21879
-  state 2  : rules=225 tokens=2728 bits=21879
-  state 3  : rules=225 tokens=2728 bits=21879
+  state 0  : rules=225 tokens=2728 bits=21872 total=29072
+  state 1  : rules=225 tokens=2727 bits=21879 total=29079
+  state 2  : rules=225 tokens=2728 bits=21879 total=29079
+  state 3  : rules=225 tokens=2728 bits=21879 total=29079
 
 ROUND 24
- parent 0: rules=225 tokens=2728 bits=21872 candidates=16
-  NEW BEST: bits 21872 -> 21864 (-8)
+ parent 0: rules=225 tokens=2728 bits=21872 total=29072 candidates=16
+  NEW BEST PAYLOAD: bits 21872 -> 21864 (-8)
     rule T2 + T32 -> T481  occ=3  new-token=used
-  NEW BEST: bits 21864 -> 21857 (-7)
+  NEW BEST PAYLOAD: bits 21864 -> 21857 (-7)
     rule T349 + T373 -> T481  occ=2  new-token=used
- parent 1: rules=225 tokens=2727 bits=21879 candidates=16
- parent 2: rules=225 tokens=2728 bits=21879 candidates=16
- parent 3: rules=225 tokens=2728 bits=21879 candidates=16
+ parent 1: rules=225 tokens=2727 bits=21879 total=29079 candidates=16
+ parent 2: rules=225 tokens=2728 bits=21879 total=29079 candidates=16
+ parent 3: rules=225 tokens=2728 bits=21879 total=29079 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=226 tokens=2726 bits=21857
-  state 1  : rules=226 tokens=2725 bits=21863
-  state 2  : rules=226 tokens=2726 bits=21863
-  state 3  : rules=226 tokens=2726 bits=21863
+  state 0  : rules=226 tokens=2726 bits=21857 total=29089
+  state 1  : rules=226 tokens=2725 bits=21863 total=29095
+  state 2  : rules=226 tokens=2726 bits=21863 total=29095
+  state 3  : rules=226 tokens=2726 bits=21863 total=29095
 
 ROUND 25
- parent 0: rules=226 tokens=2726 bits=21857 candidates=16
-  NEW BEST: bits 21857 -> 21849 (-8)
+ parent 0: rules=226 tokens=2726 bits=21857 total=29089 candidates=16
+  NEW BEST PAYLOAD: bits 21857 -> 21849 (-8)
     rule T2 + T32 -> T482  occ=3  new-token=used
-  NEW BEST: bits 21849 -> 21837 (-12)
+  NEW BEST PAYLOAD: bits 21849 -> 21837 (-12)
     rule T390 + T323 -> T482  occ=2  new-token=used
- parent 1: rules=226 tokens=2725 bits=21863 candidates=16
- parent 2: rules=226 tokens=2726 bits=21863 candidates=16
- parent 3: rules=226 tokens=2726 bits=21863 candidates=16
+ parent 1: rules=226 tokens=2725 bits=21863 total=29095 candidates=16
+ parent 2: rules=226 tokens=2726 bits=21863 total=29095 candidates=16
+ parent 3: rules=226 tokens=2726 bits=21863 total=29095 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=227 tokens=2724 bits=21837
-  state 1  : rules=227 tokens=2723 bits=21842
-  state 2  : rules=227 tokens=2724 bits=21842
-  state 3  : rules=227 tokens=2724 bits=21842
+  state 0  : rules=227 tokens=2724 bits=21837 total=29101
+  state 1  : rules=227 tokens=2723 bits=21842 total=29106
+  state 2  : rules=227 tokens=2724 bits=21842 total=29106
+  state 3  : rules=227 tokens=2724 bits=21842 total=29106
 
 ROUND 26
- parent 0: rules=227 tokens=2724 bits=21837 candidates=16
-  NEW BEST: bits 21837 -> 21829 (-8)
+ parent 0: rules=227 tokens=2724 bits=21837 total=29101 candidates=16
+  NEW BEST PAYLOAD: bits 21837 -> 21829 (-8)
     rule T2 + T32 -> T483  occ=3  new-token=used
-  NEW BEST: bits 21829 -> 21819 (-10)
+  NEW BEST PAYLOAD: bits 21829 -> 21819 (-10)
     rule T406 + T327 -> T483  occ=2  new-token=used
- parent 1: rules=227 tokens=2723 bits=21842 candidates=16
- parent 2: rules=227 tokens=2724 bits=21842 candidates=16
- parent 3: rules=227 tokens=2724 bits=21842 candidates=16
+ parent 1: rules=227 tokens=2723 bits=21842 total=29106 candidates=16
+ parent 2: rules=227 tokens=2724 bits=21842 total=29106 candidates=16
+ parent 3: rules=227 tokens=2724 bits=21842 total=29106 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=228 tokens=2722 bits=21819
-  state 1  : rules=228 tokens=2721 bits=21824
-  state 2  : rules=228 tokens=2722 bits=21824
-  state 3  : rules=228 tokens=2722 bits=21824
+  state 0  : rules=228 tokens=2722 bits=21819 total=29115
+  state 1  : rules=228 tokens=2721 bits=21824 total=29120
+  state 2  : rules=228 tokens=2722 bits=21824 total=29120
+  state 3  : rules=228 tokens=2722 bits=21824 total=29120
 
 ROUND 27
- parent 0: rules=228 tokens=2722 bits=21819 candidates=16
-  NEW BEST: bits 21819 -> 21811 (-8)
+ parent 0: rules=228 tokens=2722 bits=21819 total=29115 candidates=16
+  NEW BEST PAYLOAD: bits 21819 -> 21811 (-8)
     rule T2 + T32 -> T484  occ=3  new-token=used
-  NEW BEST: bits 21811 -> 21805 (-6)
+  NEW BEST PAYLOAD: bits 21811 -> 21805 (-6)
     rule T409 + T352 -> T484  occ=2  new-token=used
- parent 1: rules=228 tokens=2721 bits=21824 candidates=16
- parent 2: rules=228 tokens=2722 bits=21824 candidates=16
- parent 3: rules=228 tokens=2722 bits=21824 candidates=16
+ parent 1: rules=228 tokens=2721 bits=21824 total=29120 candidates=16
+ parent 2: rules=228 tokens=2722 bits=21824 total=29120 candidates=16
+ parent 3: rules=228 tokens=2722 bits=21824 total=29120 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=229 tokens=2720 bits=21805
-  state 1  : rules=229 tokens=2719 bits=21809
-  state 2  : rules=229 tokens=2720 bits=21809
-  state 3  : rules=229 tokens=2720 bits=21809
+  state 0  : rules=229 tokens=2720 bits=21805 total=29133
+  state 1  : rules=229 tokens=2719 bits=21809 total=29137
+  state 2  : rules=229 tokens=2720 bits=21809 total=29137
+  state 3  : rules=229 tokens=2720 bits=21809 total=29137
 
 ROUND 28
- parent 0: rules=229 tokens=2720 bits=21805 candidates=16
-  NEW BEST: bits 21805 -> 21797 (-8)
+ parent 0: rules=229 tokens=2720 bits=21805 total=29133 candidates=16
+  NEW BEST PAYLOAD: bits 21805 -> 21797 (-8)
     rule T2 + T32 -> T485  occ=3  new-token=used
-  NEW BEST: bits 21797 -> 21793 (-4)
+  NEW BEST PAYLOAD: bits 21797 -> 21793 (-4)
     rule T431 + T311 -> T485  occ=2  new-token=used
- parent 1: rules=229 tokens=2719 bits=21809 candidates=16
- parent 2: rules=229 tokens=2720 bits=21809 candidates=16
- parent 3: rules=229 tokens=2720 bits=21809 candidates=16
+ parent 1: rules=229 tokens=2719 bits=21809 total=29137 candidates=16
+ parent 2: rules=229 tokens=2720 bits=21809 total=29137 candidates=16
+ parent 3: rules=229 tokens=2720 bits=21809 total=29137 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=230 tokens=2718 bits=21793
-  state 1  : rules=230 tokens=2717 bits=21795
-  state 2  : rules=230 tokens=2718 bits=21795
-  state 3  : rules=230 tokens=2718 bits=21795
+  state 0  : rules=230 tokens=2718 bits=21793 total=29153
+  state 1  : rules=230 tokens=2717 bits=21795 total=29155
+  state 2  : rules=230 tokens=2718 bits=21795 total=29155
+  state 3  : rules=230 tokens=2718 bits=21795 total=29155
 
 ROUND 29
- parent 0: rules=230 tokens=2718 bits=21793 candidates=16
-  NEW BEST: bits 21793 -> 21785 (-8)
+ parent 0: rules=230 tokens=2718 bits=21793 total=29153 candidates=16
+  NEW BEST PAYLOAD: bits 21793 -> 21785 (-8)
     rule T2 + T32 -> T486  occ=3  new-token=used
-  NEW BEST: bits 21785 -> 21781 (-4)
+  NEW BEST PAYLOAD: bits 21785 -> 21781 (-4)
     rule T438 + T265 -> T486  occ=2  new-token=used
- parent 1: rules=230 tokens=2717 bits=21795 candidates=16
- parent 2: rules=230 tokens=2718 bits=21795 candidates=16
- parent 3: rules=230 tokens=2718 bits=21795 candidates=16
+ parent 1: rules=230 tokens=2717 bits=21795 total=29155 candidates=16
+ parent 2: rules=230 tokens=2718 bits=21795 total=29155 candidates=16
+ parent 3: rules=230 tokens=2718 bits=21795 total=29155 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=231 tokens=2716 bits=21781
-  state 1  : rules=231 tokens=2715 bits=21783
-  state 2  : rules=231 tokens=2715 bits=21783
-  state 3  : rules=231 tokens=2716 bits=21783
+  state 0  : rules=231 tokens=2716 bits=21781 total=29173
+  state 1  : rules=231 tokens=2715 bits=21783 total=29175
+  state 2  : rules=231 tokens=2715 bits=21783 total=29175
+  state 3  : rules=231 tokens=2716 bits=21783 total=29175
 
 ROUND 30
- parent 0: rules=231 tokens=2716 bits=21781 candidates=16
-  NEW BEST: bits 21781 -> 21772 (-9)
+ parent 0: rules=231 tokens=2716 bits=21781 total=29173 candidates=16
+  NEW BEST PAYLOAD: bits 21781 -> 21772 (-9)
     rule T2 + T32 -> T487  occ=3  new-token=used
-  NEW BEST: bits 21772 -> 21763 (-9)
+  NEW BEST PAYLOAD: bits 21772 -> 21763 (-9)
     rule T477 + T330 -> T487  occ=2  new-token=used
- parent 1: rules=231 tokens=2715 bits=21783 candidates=16
- parent 2: rules=231 tokens=2715 bits=21783 candidates=16
- parent 3: rules=231 tokens=2716 bits=21783 candidates=16
+ parent 1: rules=231 tokens=2715 bits=21783 total=29175 candidates=16
+ parent 2: rules=231 tokens=2715 bits=21783 total=29175 candidates=16
+ parent 3: rules=231 tokens=2716 bits=21783 total=29175 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=232 tokens=2714 bits=21763
-  state 1  : rules=232 tokens=2713 bits=21765
-  state 2  : rules=232 tokens=2713 bits=21766
-  state 3  : rules=232 tokens=2714 bits=21766
+  state 0  : rules=232 tokens=2714 bits=21763 total=29187
+  state 1  : rules=232 tokens=2713 bits=21765 total=29189
+  state 2  : rules=232 tokens=2713 bits=21766 total=29190
+  state 3  : rules=232 tokens=2714 bits=21766 total=29190
 
 ROUND 31
- parent 0: rules=232 tokens=2714 bits=21763 candidates=16
-  NEW BEST: bits 21763 -> 21753 (-10)
+ parent 0: rules=232 tokens=2714 bits=21763 total=29187 candidates=16
+  NEW BEST PAYLOAD: bits 21763 -> 21753 (-10)
     rule T2 + T32 -> T488  occ=3  new-token=used
- parent 1: rules=232 tokens=2713 bits=21765 candidates=16
-  NEW BEST: bits 21753 -> 21751 (-2)
+ parent 1: rules=232 tokens=2713 bits=21765 total=29189 candidates=16
+  NEW BEST PAYLOAD: bits 21753 -> 21751 (-2)
     rule T431 + T311 -> T488  occ=2  new-token=used
- parent 2: rules=232 tokens=2713 bits=21766 candidates=16
- parent 3: rules=232 tokens=2714 bits=21766 candidates=16
+ parent 2: rules=232 tokens=2713 bits=21766 total=29190 candidates=16
+ parent 3: rules=232 tokens=2714 bits=21766 total=29190 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=233 tokens=2711 bits=21751
-  state 1  : rules=233 tokens=2711 bits=21752
-  state 2  : rules=233 tokens=2712 bits=21752
-  state 3  : rules=233 tokens=2711 bits=21753
+  state 0  : rules=233 tokens=2711 bits=21751 total=29207
+  state 1  : rules=233 tokens=2711 bits=21752 total=29208
+  state 2  : rules=233 tokens=2712 bits=21752 total=29208
+  state 3  : rules=233 tokens=2711 bits=21753 total=29209
 
 ROUND 32
- parent 0: rules=233 tokens=2711 bits=21751 candidates=16
-  NEW BEST: bits 21751 -> 21749 (-2)
+ parent 0: rules=233 tokens=2711 bits=21751 total=29207 candidates=16
+  NEW BEST PAYLOAD: bits 21751 -> 21749 (-2)
     rule T256 + T272 -> T489  occ=2  new-token=used
-  NEW BEST: bits 21749 -> 21746 (-3)
+  NEW BEST PAYLOAD: bits 21749 -> 21746 (-3)
     rule T256 + T310 -> T489  occ=2  new-token=used
-  NEW BEST: bits 21746 -> 21743 (-3)
+  NEW BEST PAYLOAD: bits 21746 -> 21743 (-3)
     rule T266 + T385 -> T489  occ=2  new-token=used
- parent 1: rules=233 tokens=2711 bits=21752 candidates=16
- parent 2: rules=233 tokens=2712 bits=21752 candidates=16
- parent 3: rules=233 tokens=2711 bits=21753 candidates=16
+ parent 1: rules=233 tokens=2711 bits=21752 total=29208 candidates=16
+ parent 2: rules=233 tokens=2712 bits=21752 total=29208 candidates=16
+ parent 3: rules=233 tokens=2711 bits=21753 total=29209 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=234 tokens=2709 bits=21743
-  state 1  : rules=234 tokens=2709 bits=21743
-  state 2  : rules=234 tokens=2709 bits=21743
-  state 3  : rules=234 tokens=2709 bits=21743
+  state 0  : rules=234 tokens=2709 bits=21743 total=29231
+  state 1  : rules=234 tokens=2709 bits=21743 total=29231
+  state 2  : rules=234 tokens=2709 bits=21743 total=29231
+  state 3  : rules=234 tokens=2709 bits=21743 total=29231
 
 ROUND 33
- parent 0: rules=234 tokens=2709 bits=21743 candidates=16
-  NEW BEST: bits 21743 -> 21740 (-3)
+ parent 0: rules=234 tokens=2709 bits=21743 total=29231 candidates=16
+  NEW BEST PAYLOAD: bits 21743 -> 21740 (-3)
     rule T256 + T272 -> T490  occ=2  new-token=used
-  NEW BEST: bits 21740 -> 21737 (-3)
+  NEW BEST PAYLOAD: bits 21740 -> 21737 (-3)
     rule T256 + T310 -> T490  occ=2  new-token=used
-  NEW BEST: bits 21737 -> 21736 (-1)
+  NEW BEST PAYLOAD: bits 21737 -> 21736 (-1)
     rule T269 + T303 -> T490  occ=2  new-token=used
-  NEW BEST: bits 21736 -> 21735 (-1)
+  NEW BEST PAYLOAD: bits 21736 -> 21735 (-1)
     rule T307 + T293 -> T490  occ=2  new-token=used
-  NEW BEST: bits 21735 -> 21725 (-10)
+  NEW BEST PAYLOAD: bits 21735 -> 21725 (-10)
     rule T0 + T374 -> T490  occ=2  new-token=used
- parent 1: rules=234 tokens=2709 bits=21743 candidates=16
- parent 2: rules=234 tokens=2709 bits=21743 candidates=16
- parent 3: rules=234 tokens=2709 bits=21743 candidates=16
+ parent 1: rules=234 tokens=2709 bits=21743 total=29231 candidates=16
+ parent 2: rules=234 tokens=2709 bits=21743 total=29231 candidates=16
+ parent 3: rules=234 tokens=2709 bits=21743 total=29231 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=235 tokens=2705 bits=21725
-  state 1  : rules=235 tokens=2705 bits=21725
-  state 2  : rules=235 tokens=2705 bits=21725
-  state 3  : rules=235 tokens=2705 bits=21725
+  state 0  : rules=235 tokens=2705 bits=21725 total=29245
+  state 1  : rules=235 tokens=2705 bits=21725 total=29245
+  state 2  : rules=235 tokens=2705 bits=21725 total=29245
+  state 3  : rules=235 tokens=2705 bits=21725 total=29245
 
 ROUND 34
- parent 0: rules=235 tokens=2705 bits=21725 candidates=16
-  NEW BEST: bits 21725 -> 21722 (-3)
+ parent 0: rules=235 tokens=2705 bits=21725 total=29245 candidates=16
+  NEW BEST PAYLOAD: bits 21725 -> 21722 (-3)
     rule T256 + T272 -> T491  occ=2  new-token=used
-  NEW BEST: bits 21722 -> 21719 (-3)
+  NEW BEST PAYLOAD: bits 21722 -> 21719 (-3)
     rule T256 + T310 -> T491  occ=2  new-token=used
-  NEW BEST: bits 21719 -> 21716 (-3)
+  NEW BEST PAYLOAD: bits 21719 -> 21716 (-3)
     rule T266 + T385 -> T491  occ=2  new-token=used
- parent 1: rules=235 tokens=2705 bits=21725 candidates=16
- parent 2: rules=235 tokens=2705 bits=21725 candidates=16
- parent 3: rules=235 tokens=2705 bits=21725 candidates=16
+ parent 1: rules=235 tokens=2705 bits=21725 total=29245 candidates=16
+ parent 2: rules=235 tokens=2705 bits=21725 total=29245 candidates=16
+ parent 3: rules=235 tokens=2705 bits=21725 total=29245 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=236 tokens=2703 bits=21716
-  state 1  : rules=236 tokens=2703 bits=21716
-  state 2  : rules=236 tokens=2703 bits=21716
-  state 3  : rules=236 tokens=2703 bits=21716
+  state 0  : rules=236 tokens=2703 bits=21716 total=29268
+  state 1  : rules=236 tokens=2703 bits=21716 total=29268
+  state 2  : rules=236 tokens=2703 bits=21716 total=29268
+  state 3  : rules=236 tokens=2703 bits=21716 total=29268
 
 ROUND 35
- parent 0: rules=236 tokens=2703 bits=21716 candidates=16
-  NEW BEST: bits 21716 -> 21714 (-2)
+ parent 0: rules=236 tokens=2703 bits=21716 total=29268 candidates=16
+  NEW BEST PAYLOAD: bits 21716 -> 21714 (-2)
     rule T256 + T272 -> T492  occ=2  new-token=used
-  NEW BEST: bits 21714 -> 21711 (-3)
+  NEW BEST PAYLOAD: bits 21714 -> 21711 (-3)
     rule T256 + T310 -> T492  occ=2  new-token=used
-  NEW BEST: bits 21711 -> 21709 (-2)
+  NEW BEST PAYLOAD: bits 21711 -> 21709 (-2)
     rule T269 + T303 -> T492  occ=2  new-token=used
-  NEW BEST: bits 21709 -> 21708 (-1)
+  NEW BEST PAYLOAD: bits 21709 -> 21708 (-1)
     rule T307 + T293 -> T492  occ=2  new-token=used
- parent 1: rules=236 tokens=2703 bits=21716 candidates=16
- parent 2: rules=236 tokens=2703 bits=21716 candidates=16
- parent 3: rules=236 tokens=2703 bits=21716 candidates=16
+ parent 1: rules=236 tokens=2703 bits=21716 total=29268 candidates=16
+ parent 2: rules=236 tokens=2703 bits=21716 total=29268 candidates=16
+ parent 3: rules=236 tokens=2703 bits=21716 total=29268 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=237 tokens=2701 bits=21708
-  state 1  : rules=237 tokens=2701 bits=21708
-  state 2  : rules=237 tokens=2701 bits=21708
-  state 3  : rules=237 tokens=2701 bits=21708
+  state 0  : rules=237 tokens=2701 bits=21708 total=29292
+  state 1  : rules=237 tokens=2701 bits=21708 total=29292
+  state 2  : rules=237 tokens=2701 bits=21708 total=29292
+  state 3  : rules=237 tokens=2701 bits=21708 total=29292
 
 ROUND 36
- parent 0: rules=237 tokens=2701 bits=21708 candidates=16
-  NEW BEST: bits 21708 -> 21706 (-2)
+ parent 0: rules=237 tokens=2701 bits=21708 total=29292 candidates=16
+  NEW BEST PAYLOAD: bits 21708 -> 21706 (-2)
     rule T256 + T272 -> T493  occ=2  new-token=used
-  NEW BEST: bits 21706 -> 21703 (-3)
+  NEW BEST PAYLOAD: bits 21706 -> 21703 (-3)
     rule T256 + T310 -> T493  occ=2  new-token=used
-  NEW BEST: bits 21703 -> 21701 (-2)
+  NEW BEST PAYLOAD: bits 21703 -> 21701 (-2)
     rule T269 + T303 -> T493  occ=2  new-token=used
- parent 1: rules=237 tokens=2701 bits=21708 candidates=16
- parent 2: rules=237 tokens=2701 bits=21708 candidates=16
- parent 3: rules=237 tokens=2701 bits=21708 candidates=16
+ parent 1: rules=237 tokens=2701 bits=21708 total=29292 candidates=16
+ parent 2: rules=237 tokens=2701 bits=21708 total=29292 candidates=16
+ parent 3: rules=237 tokens=2701 bits=21708 total=29292 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=238 tokens=2699 bits=21701
-  state 1  : rules=238 tokens=2699 bits=21701
-  state 2  : rules=238 tokens=2699 bits=21701
-  state 3  : rules=238 tokens=2699 bits=21701
+  state 0  : rules=238 tokens=2699 bits=21701 total=29317
+  state 1  : rules=238 tokens=2699 bits=21701 total=29317
+  state 2  : rules=238 tokens=2699 bits=21701 total=29317
+  state 3  : rules=238 tokens=2699 bits=21701 total=29317
 
 ROUND 37
- parent 0: rules=238 tokens=2699 bits=21701 candidates=16
-  NEW BEST: bits 21701 -> 21698 (-3)
+ parent 0: rules=238 tokens=2699 bits=21701 total=29317 candidates=16
+  NEW BEST PAYLOAD: bits 21701 -> 21698 (-3)
     rule T256 + T272 -> T494  occ=2  new-token=used
-  NEW BEST: bits 21698 -> 21694 (-4)
+  NEW BEST PAYLOAD: bits 21698 -> 21694 (-4)
     rule T256 + T310 -> T494  occ=2  new-token=used
-  NEW BEST: bits 21694 -> 21693 (-1)
+  NEW BEST PAYLOAD: bits 21694 -> 21693 (-1)
     rule T269 + T303 -> T494  occ=2  new-token=used
-  NEW BEST: bits 21693 -> 21690 (-3)
+  NEW BEST PAYLOAD: bits 21693 -> 21690 (-3)
     rule T7 + T372 -> T494  occ=2  new-token=used
- parent 1: rules=238 tokens=2699 bits=21701 candidates=16
- parent 2: rules=238 tokens=2699 bits=21701 candidates=16
- parent 3: rules=238 tokens=2699 bits=21701 candidates=16
+ parent 1: rules=238 tokens=2699 bits=21701 total=29317 candidates=16
+ parent 2: rules=238 tokens=2699 bits=21701 total=29317 candidates=16
+ parent 3: rules=238 tokens=2699 bits=21701 total=29317 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=239 tokens=2697 bits=21690
-  state 1  : rules=239 tokens=2697 bits=21691
-  state 2  : rules=239 tokens=2697 bits=21691
-  state 3  : rules=239 tokens=2697 bits=21691
+  state 0  : rules=239 tokens=2697 bits=21690 total=29338
+  state 1  : rules=239 tokens=2697 bits=21691 total=29339
+  state 2  : rules=239 tokens=2697 bits=21691 total=29339
+  state 3  : rules=239 tokens=2697 bits=21691 total=29339
 
 ROUND 38
- parent 0: rules=239 tokens=2697 bits=21690 candidates=16
-  NEW BEST: bits 21690 -> 21688 (-2)
+ parent 0: rules=239 tokens=2697 bits=21690 total=29338 candidates=16
+  NEW BEST PAYLOAD: bits 21690 -> 21688 (-2)
     rule T256 + T272 -> T495  occ=2  new-token=used
-  NEW BEST: bits 21688 -> 21684 (-4)
+  NEW BEST PAYLOAD: bits 21688 -> 21684 (-4)
     rule T256 + T310 -> T495  occ=2  new-token=used
-  NEW BEST: bits 21684 -> 21683 (-1)
+  NEW BEST PAYLOAD: bits 21684 -> 21683 (-1)
     rule T269 + T303 -> T495  occ=2  new-token=used
-  NEW BEST: bits 21683 -> 21676 (-7)
+  NEW BEST PAYLOAD: bits 21683 -> 21676 (-7)
     rule T7 + T376 -> T495  occ=2  new-token=used
- parent 1: rules=239 tokens=2697 bits=21691 candidates=16
- parent 2: rules=239 tokens=2697 bits=21691 candidates=16
- parent 3: rules=239 tokens=2697 bits=21691 candidates=16
+ parent 1: rules=239 tokens=2697 bits=21691 total=29339 candidates=16
+ parent 2: rules=239 tokens=2697 bits=21691 total=29339 candidates=16
+ parent 3: rules=239 tokens=2697 bits=21691 total=29339 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=240 tokens=2695 bits=21676
-  state 1  : rules=240 tokens=2695 bits=21677
-  state 2  : rules=240 tokens=2695 bits=21677
-  state 3  : rules=240 tokens=2695 bits=21677
+  state 0  : rules=240 tokens=2695 bits=21676 total=29356
+  state 1  : rules=240 tokens=2695 bits=21677 total=29357
+  state 2  : rules=240 tokens=2695 bits=21677 total=29357
+  state 3  : rules=240 tokens=2695 bits=21677 total=29357
 
 ROUND 39
- parent 0: rules=240 tokens=2695 bits=21676 candidates=16
-  NEW BEST: bits 21676 -> 21673 (-3)
+ parent 0: rules=240 tokens=2695 bits=21676 total=29356 candidates=16
+  NEW BEST PAYLOAD: bits 21676 -> 21673 (-3)
     rule T256 + T272 -> T496  occ=2  new-token=used
-  NEW BEST: bits 21673 -> 21669 (-4)
+  NEW BEST PAYLOAD: bits 21673 -> 21669 (-4)
     rule T256 + T310 -> T496  occ=2  new-token=used
-  NEW BEST: bits 21669 -> 21668 (-1)
+  NEW BEST PAYLOAD: bits 21669 -> 21668 (-1)
     rule T269 + T303 -> T496  occ=2  new-token=used
-  NEW BEST: bits 21668 -> 21667 (-1)
+  NEW BEST PAYLOAD: bits 21668 -> 21667 (-1)
     rule T8 + T351 -> T496  occ=2  new-token=used
- parent 1: rules=240 tokens=2695 bits=21677 candidates=16
- parent 2: rules=240 tokens=2695 bits=21677 candidates=16
- parent 3: rules=240 tokens=2695 bits=21677 candidates=16
+ parent 1: rules=240 tokens=2695 bits=21677 total=29357 candidates=16
+ parent 2: rules=240 tokens=2695 bits=21677 total=29357 candidates=16
+ parent 3: rules=240 tokens=2695 bits=21677 total=29357 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=241 tokens=2693 bits=21667
-  state 1  : rules=241 tokens=2693 bits=21668
-  state 2  : rules=241 tokens=2693 bits=21668
-  state 3  : rules=241 tokens=2693 bits=21668
+  state 0  : rules=241 tokens=2693 bits=21667 total=29379
+  state 1  : rules=241 tokens=2693 bits=21668 total=29380
+  state 2  : rules=241 tokens=2693 bits=21668 total=29380
+  state 3  : rules=241 tokens=2693 bits=21668 total=29380
 
 ROUND 40
- parent 0: rules=241 tokens=2693 bits=21667 candidates=16
-  NEW BEST: bits 21667 -> 21665 (-2)
+ parent 0: rules=241 tokens=2693 bits=21667 total=29379 candidates=16
+  NEW BEST PAYLOAD: bits 21667 -> 21665 (-2)
     rule T256 + T272 -> T497  occ=2  new-token=used
-  NEW BEST: bits 21665 -> 21661 (-4)
+  NEW BEST PAYLOAD: bits 21665 -> 21661 (-4)
     rule T256 + T310 -> T497  occ=2  new-token=used
-  NEW BEST: bits 21661 -> 21660 (-1)
+  NEW BEST PAYLOAD: bits 21661 -> 21660 (-1)
     rule T269 + T303 -> T497  occ=2  new-token=used
-  NEW BEST: bits 21660 -> 21659 (-1)
+  NEW BEST PAYLOAD: bits 21660 -> 21659 (-1)
     rule T11 + T259 -> T497  occ=2  new-token=used
- parent 1: rules=241 tokens=2693 bits=21668 candidates=16
- parent 2: rules=241 tokens=2693 bits=21668 candidates=16
- parent 3: rules=241 tokens=2693 bits=21668 candidates=16
+ parent 1: rules=241 tokens=2693 bits=21668 total=29380 candidates=16
+ parent 2: rules=241 tokens=2693 bits=21668 total=29380 candidates=16
+ parent 3: rules=241 tokens=2693 bits=21668 total=29380 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=242 tokens=2691 bits=21659
-  state 1  : rules=242 tokens=2691 bits=21660
-  state 2  : rules=242 tokens=2691 bits=21660
-  state 3  : rules=242 tokens=2691 bits=21660
+  state 0  : rules=242 tokens=2691 bits=21659 total=29403
+  state 1  : rules=242 tokens=2691 bits=21660 total=29404
+  state 2  : rules=242 tokens=2691 bits=21660 total=29404
+  state 3  : rules=242 tokens=2691 bits=21660 total=29404
 
 ROUND 41
- parent 0: rules=242 tokens=2691 bits=21659 candidates=16
-  NEW BEST: bits 21659 -> 21657 (-2)
+ parent 0: rules=242 tokens=2691 bits=21659 total=29403 candidates=16
+  NEW BEST PAYLOAD: bits 21659 -> 21657 (-2)
     rule T256 + T272 -> T498  occ=2  new-token=used
-  NEW BEST: bits 21657 -> 21653 (-4)
+  NEW BEST PAYLOAD: bits 21657 -> 21653 (-4)
     rule T256 + T310 -> T498  occ=2  new-token=used
-  NEW BEST: bits 21653 -> 21652 (-1)
+  NEW BEST PAYLOAD: bits 21653 -> 21652 (-1)
     rule T269 + T303 -> T498  occ=2  new-token=used
- parent 1: rules=242 tokens=2691 bits=21660 candidates=16
- parent 2: rules=242 tokens=2691 bits=21660 candidates=16
- parent 3: rules=242 tokens=2691 bits=21660 candidates=16
+ parent 1: rules=242 tokens=2691 bits=21660 total=29404 candidates=16
+ parent 2: rules=242 tokens=2691 bits=21660 total=29404 candidates=16
+ parent 3: rules=242 tokens=2691 bits=21660 total=29404 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=243 tokens=2689 bits=21652
-  state 1  : rules=243 tokens=2689 bits=21652
-  state 2  : rules=243 tokens=2689 bits=21652
-  state 3  : rules=243 tokens=2689 bits=21652
+  state 0  : rules=243 tokens=2689 bits=21652 total=29428
+  state 1  : rules=243 tokens=2689 bits=21652 total=29428
+  state 2  : rules=243 tokens=2689 bits=21652 total=29428
+  state 3  : rules=243 tokens=2689 bits=21652 total=29428
 
 ROUND 42
- parent 0: rules=243 tokens=2689 bits=21652 candidates=16
-  NEW BEST: bits 21652 -> 21650 (-2)
+ parent 0: rules=243 tokens=2689 bits=21652 total=29428 candidates=16
+  NEW BEST PAYLOAD: bits 21652 -> 21650 (-2)
     rule T256 + T272 -> T499  occ=2  new-token=used
-  NEW BEST: bits 21650 -> 21646 (-4)
+  NEW BEST PAYLOAD: bits 21650 -> 21646 (-4)
     rule T256 + T310 -> T499  occ=2  new-token=used
-  NEW BEST: bits 21646 -> 21644 (-2)
+  NEW BEST PAYLOAD: bits 21646 -> 21644 (-2)
     rule T332 + T269 -> T499  occ=2  new-token=used
- parent 1: rules=243 tokens=2689 bits=21652 candidates=16
- parent 2: rules=243 tokens=2689 bits=21652 candidates=16
- parent 3: rules=243 tokens=2689 bits=21652 candidates=16
+ parent 1: rules=243 tokens=2689 bits=21652 total=29428 candidates=16
+ parent 2: rules=243 tokens=2689 bits=21652 total=29428 candidates=16
+ parent 3: rules=243 tokens=2689 bits=21652 total=29428 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=244 tokens=2687 bits=21644
-  state 1  : rules=244 tokens=2687 bits=21644
-  state 2  : rules=244 tokens=2687 bits=21645
-  state 3  : rules=244 tokens=2687 bits=21645
+  state 0  : rules=244 tokens=2687 bits=21644 total=29452
+  state 1  : rules=244 tokens=2687 bits=21644 total=29452
+  state 2  : rules=244 tokens=2687 bits=21645 total=29453
+  state 3  : rules=244 tokens=2687 bits=21645 total=29453
 
 ROUND 43
- parent 0: rules=244 tokens=2687 bits=21644 candidates=16
-  NEW BEST: bits 21644 -> 21642 (-2)
+ parent 0: rules=244 tokens=2687 bits=21644 total=29452 candidates=16
+  NEW BEST PAYLOAD: bits 21644 -> 21642 (-2)
     rule T256 + T272 -> T500  occ=2  new-token=used
-  NEW BEST: bits 21642 -> 21638 (-4)
+  NEW BEST PAYLOAD: bits 21642 -> 21638 (-4)
     rule T256 + T310 -> T500  occ=2  new-token=used
-  NEW BEST: bits 21638 -> 21637 (-1)
+  NEW BEST PAYLOAD: bits 21638 -> 21637 (-1)
     rule T3 + T462 -> T500  occ=2  new-token=used
-  NEW BEST: bits 21637 -> 21632 (-5)
+  NEW BEST PAYLOAD: bits 21637 -> 21632 (-5)
     rule T15 + T372 -> T500  occ=2  new-token=used
- parent 1: rules=244 tokens=2687 bits=21644 candidates=16
- parent 2: rules=244 tokens=2687 bits=21645 candidates=16
- parent 3: rules=244 tokens=2687 bits=21645 candidates=16
+ parent 1: rules=244 tokens=2687 bits=21644 total=29452 candidates=16
+ parent 2: rules=244 tokens=2687 bits=21645 total=29453 candidates=16
+ parent 3: rules=244 tokens=2687 bits=21645 total=29453 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=245 tokens=2685 bits=21632
-  state 1  : rules=245 tokens=2685 bits=21632
-  state 2  : rules=245 tokens=2685 bits=21633
-  state 3  : rules=245 tokens=2685 bits=21633
+  state 0  : rules=245 tokens=2685 bits=21632 total=29472
+  state 1  : rules=245 tokens=2685 bits=21632 total=29472
+  state 2  : rules=245 tokens=2685 bits=21633 total=29473
+  state 3  : rules=245 tokens=2685 bits=21633 total=29473
 
 ROUND 44
- parent 0: rules=245 tokens=2685 bits=21632 candidates=16
-  NEW BEST: bits 21632 -> 21630 (-2)
+ parent 0: rules=245 tokens=2685 bits=21632 total=29472 candidates=16
+  NEW BEST PAYLOAD: bits 21632 -> 21630 (-2)
     rule T256 + T272 -> T501  occ=2  new-token=used
-  NEW BEST: bits 21630 -> 21626 (-4)
+  NEW BEST PAYLOAD: bits 21630 -> 21626 (-4)
     rule T256 + T310 -> T501  occ=2  new-token=used
-  NEW BEST: bits 21626 -> 21625 (-1)
+  NEW BEST PAYLOAD: bits 21626 -> 21625 (-1)
     rule T3 + T462 -> T501  occ=2  new-token=used
- parent 1: rules=245 tokens=2685 bits=21632 candidates=16
- parent 2: rules=245 tokens=2685 bits=21633 candidates=16
- parent 3: rules=245 tokens=2685 bits=21633 candidates=16
+ parent 1: rules=245 tokens=2685 bits=21632 total=29472 candidates=16
+ parent 2: rules=245 tokens=2685 bits=21633 total=29473 candidates=16
+ parent 3: rules=245 tokens=2685 bits=21633 total=29473 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=246 tokens=2683 bits=21625
-  state 1  : rules=246 tokens=2683 bits=21625
-  state 2  : rules=246 tokens=2683 bits=21625
-  state 3  : rules=246 tokens=2683 bits=21626
+  state 0  : rules=246 tokens=2683 bits=21625 total=29497
+  state 1  : rules=246 tokens=2683 bits=21625 total=29497
+  state 2  : rules=246 tokens=2683 bits=21625 total=29497
+  state 3  : rules=246 tokens=2683 bits=21626 total=29498
 
 ROUND 45
- parent 0: rules=246 tokens=2683 bits=21625 candidates=16
-  NEW BEST: bits 21625 -> 21623 (-2)
+ parent 0: rules=246 tokens=2683 bits=21625 total=29497 candidates=16
+  NEW BEST PAYLOAD: bits 21625 -> 21623 (-2)
     rule T256 + T272 -> T502  occ=2  new-token=used
-  NEW BEST: bits 21623 -> 21619 (-4)
+  NEW BEST PAYLOAD: bits 21623 -> 21619 (-4)
     rule T256 + T310 -> T502  occ=2  new-token=used
- parent 1: rules=246 tokens=2683 bits=21625 candidates=16
- parent 2: rules=246 tokens=2683 bits=21625 candidates=16
- parent 3: rules=246 tokens=2683 bits=21626 candidates=16
+ parent 1: rules=246 tokens=2683 bits=21625 total=29497 candidates=16
+ parent 2: rules=246 tokens=2683 bits=21625 total=29497 candidates=16
+ parent 3: rules=246 tokens=2683 bits=21626 total=29498 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=247 tokens=2681 bits=21619
-  state 1  : rules=247 tokens=2681 bits=21619
-  state 2  : rules=247 tokens=2681 bits=21619
-  state 3  : rules=247 tokens=2681 bits=21619
+  state 0  : rules=247 tokens=2681 bits=21619 total=29523
+  state 1  : rules=247 tokens=2681 bits=21619 total=29523
+  state 2  : rules=247 tokens=2681 bits=21619 total=29523
+  state 3  : rules=247 tokens=2681 bits=21619 total=29523
 
 ROUND 46
- parent 0: rules=247 tokens=2681 bits=21619 candidates=16
-  NEW BEST: bits 21619 -> 21615 (-4)
+ parent 0: rules=247 tokens=2681 bits=21619 total=29523 candidates=16
+  NEW BEST PAYLOAD: bits 21619 -> 21615 (-4)
     rule T256 + T272 -> T503  occ=2  new-token=used
-  NEW BEST: bits 21615 -> 21614 (-1)
+  NEW BEST PAYLOAD: bits 21615 -> 21614 (-1)
     rule T266 + T286 -> T503  occ=2  new-token=used
-  NEW BEST: bits 21614 -> 21613 (-1)
+  NEW BEST PAYLOAD: bits 21614 -> 21613 (-1)
     rule T270 + T258 -> T503  occ=2  new-token=used
-  NEW BEST: bits 21613 -> 21612 (-1)
+  NEW BEST PAYLOAD: bits 21613 -> 21612 (-1)
     rule T47 + T266 -> T503  occ=2  new-token=used
- parent 1: rules=247 tokens=2681 bits=21619 candidates=16
-  NEW BEST: bits 21612 -> 21611 (-1)
+ parent 1: rules=247 tokens=2681 bits=21619 total=29523 candidates=16
+  NEW BEST PAYLOAD: bits 21612 -> 21611 (-1)
     rule T47 + T266 -> T503  occ=2  new-token=used
- parent 2: rules=247 tokens=2681 bits=21619 candidates=16
- parent 3: rules=247 tokens=2681 bits=21619 candidates=16
-  NEW BEST: bits 21611 -> 21610 (-1)
+ parent 2: rules=247 tokens=2681 bits=21619 total=29523 candidates=16
+ parent 3: rules=247 tokens=2681 bits=21619 total=29523 candidates=16
+  NEW BEST PAYLOAD: bits 21611 -> 21610 (-1)
     rule T256 + T310 -> T503  occ=2  new-token=used
-  NEW BEST: bits 21610 -> 21609 (-1)
+  NEW BEST PAYLOAD: bits 21610 -> 21609 (-1)
     rule T47 + T266 -> T503  occ=2  new-token=used
 beam after pruning: 4 states
-  state 0  : rules=248 tokens=2679 bits=21609
-  state 1  : rules=248 tokens=2679 bits=21610
-  state 2  : rules=248 tokens=2679 bits=21610
-  state 3  : rules=248 tokens=2679 bits=21610
+  state 0  : rules=248 tokens=2679 bits=21609 total=29545
+  state 1  : rules=248 tokens=2679 bits=21610 total=29546
+  state 2  : rules=248 tokens=2679 bits=21610 total=29546
+  state 3  : rules=248 tokens=2679 bits=21610 total=29546
 
 ROUND 47
- parent 0: rules=248 tokens=2679 bits=21609 candidates=16
-  NEW BEST: bits 21609 -> 21607 (-2)
+ parent 0: rules=248 tokens=2679 bits=21609 total=29545 candidates=16
+  NEW BEST PAYLOAD: bits 21609 -> 21607 (-2)
     rule T256 + T272 -> T504  occ=2  new-token=used
-  NEW BEST: bits 21607 -> 21603 (-4)
+  NEW BEST PAYLOAD: bits 21607 -> 21603 (-4)
     rule T256 + T310 -> T504  occ=2  new-token=used
- parent 1: rules=248 tokens=2679 bits=21610 candidates=16
- parent 2: rules=248 tokens=2679 bits=21610 candidates=16
-  NEW BEST: bits 21603 -> 21602 (-1)
+ parent 1: rules=248 tokens=2679 bits=21610 total=29546 candidates=16
+ parent 2: rules=248 tokens=2679 bits=21610 total=29546 candidates=16
+  NEW BEST PAYLOAD: bits 21603 -> 21602 (-1)
     rule T47 + T266 -> T504  occ=2  new-token=used
- parent 3: rules=248 tokens=2679 bits=21610 candidates=16
+ parent 3: rules=248 tokens=2679 bits=21610 total=29546 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=249 tokens=2677 bits=21602
-  state 1  : rules=249 tokens=2677 bits=21602
-  state 2  : rules=249 tokens=2677 bits=21603
-  state 3  : rules=249 tokens=2677 bits=21603
+  state 0  : rules=249 tokens=2677 bits=21602 total=29570
+  state 1  : rules=249 tokens=2677 bits=21602 total=29570
+  state 2  : rules=249 tokens=2677 bits=21603 total=29571
+  state 3  : rules=249 tokens=2677 bits=21603 total=29571
 
 ROUND 48
- parent 0: rules=249 tokens=2677 bits=21602 candidates=16
-  NEW BEST: bits 21602 -> 21600 (-2)
+ parent 0: rules=249 tokens=2677 bits=21602 total=29570 candidates=16
+  NEW BEST PAYLOAD: bits 21602 -> 21600 (-2)
     rule T256 + T272 -> T505  occ=2  new-token=used
-  NEW BEST: bits 21600 -> 21596 (-4)
+  NEW BEST PAYLOAD: bits 21600 -> 21596 (-4)
     rule T256 + T310 -> T505  occ=2  new-token=used
-  NEW BEST: bits 21596 -> 21595 (-1)
+  NEW BEST PAYLOAD: bits 21596 -> 21595 (-1)
     rule T48 + T276 -> T505  occ=2  new-token=used
- parent 1: rules=249 tokens=2677 bits=21602 candidates=16
- parent 2: rules=249 tokens=2677 bits=21603 candidates=16
- parent 3: rules=249 tokens=2677 bits=21603 candidates=16
-  NEW BEST: bits 21595 -> 21594 (-1)
+ parent 1: rules=249 tokens=2677 bits=21602 total=29570 candidates=16
+ parent 2: rules=249 tokens=2677 bits=21603 total=29571 candidates=16
+ parent 3: rules=249 tokens=2677 bits=21603 total=29571 candidates=16
+  NEW BEST PAYLOAD: bits 21595 -> 21594 (-1)
     rule T65 + T334 -> T505  occ=2  new-token=used
-  NEW BEST: bits 21594 -> 21583 (-11)
+  NEW BEST PAYLOAD: bits 21594 -> 21583 (-11)
     rule T66 + T309 -> T505  occ=2  new-token=used
 beam after pruning: 4 states
-  state 0  : rules=250 tokens=2674 bits=21583
-  state 1  : rules=250 tokens=2675 bits=21594
-  state 2  : rules=250 tokens=2674 bits=21595
-  state 3  : rules=250 tokens=2674 bits=21595
+  state 0  : rules=250 tokens=2674 bits=21583 total=29583
+  state 1  : rules=250 tokens=2675 bits=21594 total=29594
+  state 2  : rules=250 tokens=2674 bits=21595 total=29595
+  state 3  : rules=250 tokens=2674 bits=21595 total=29595
 
 ROUND 49
- parent 0: rules=250 tokens=2674 bits=21583 candidates=16
-  NEW BEST: bits 21583 -> 21581 (-2)
+ parent 0: rules=250 tokens=2674 bits=21583 total=29583 candidates=16
+  NEW BEST PAYLOAD: bits 21583 -> 21581 (-2)
     rule T256 + T272 -> T506  occ=2  new-token=used
-  NEW BEST: bits 21581 -> 21577 (-4)
+  NEW BEST PAYLOAD: bits 21581 -> 21577 (-4)
     rule T256 + T310 -> T506  occ=2  new-token=used
-  NEW BEST: bits 21577 -> 21576 (-1)
+  NEW BEST PAYLOAD: bits 21577 -> 21576 (-1)
     rule T47 + T266 -> T506  occ=2  new-token=used
-  NEW BEST: bits 21576 -> 21574 (-2)
+  NEW BEST PAYLOAD: bits 21576 -> 21574 (-2)
     rule T65 + T334 -> T506  occ=2  new-token=used
-  NEW BEST: bits 21574 -> 21568 (-6)
+  NEW BEST PAYLOAD: bits 21574 -> 21568 (-6)
     rule T66 + T480 -> T506  occ=2  new-token=used
- parent 1: rules=250 tokens=2675 bits=21594 candidates=16
- parent 2: rules=250 tokens=2674 bits=21595 candidates=16
- parent 3: rules=250 tokens=2674 bits=21595 candidates=16
+ parent 1: rules=250 tokens=2675 bits=21594 total=29594 candidates=16
+ parent 2: rules=250 tokens=2674 bits=21595 total=29595 candidates=16
+ parent 3: rules=250 tokens=2674 bits=21595 total=29595 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=251 tokens=2672 bits=21568
-  state 1  : rules=251 tokens=2672 bits=21574
-  state 2  : rules=251 tokens=2672 bits=21574
-  state 3  : rules=251 tokens=2671 bits=21575
+  state 0  : rules=251 tokens=2672 bits=21568 total=29600
+  state 1  : rules=251 tokens=2672 bits=21574 total=29606
+  state 2  : rules=251 tokens=2672 bits=21574 total=29606
+  state 3  : rules=251 tokens=2671 bits=21575 total=29607
 
 ROUND 50
- parent 0: rules=251 tokens=2672 bits=21568 candidates=16
-  NEW BEST: bits 21568 -> 21566 (-2)
+ parent 0: rules=251 tokens=2672 bits=21568 total=29600 candidates=16
+  NEW BEST PAYLOAD: bits 21568 -> 21566 (-2)
     rule T256 + T272 -> T507  occ=2  new-token=used
-  NEW BEST: bits 21566 -> 21562 (-4)
+  NEW BEST PAYLOAD: bits 21566 -> 21562 (-4)
     rule T256 + T310 -> T507  occ=2  new-token=used
-  NEW BEST: bits 21562 -> 21561 (-1)
+  NEW BEST PAYLOAD: bits 21562 -> 21561 (-1)
     rule T47 + T266 -> T507  occ=2  new-token=used
-  NEW BEST: bits 21561 -> 21559 (-2)
+  NEW BEST PAYLOAD: bits 21561 -> 21559 (-2)
     rule T65 + T334 -> T507  occ=2  new-token=used
- parent 1: rules=251 tokens=2672 bits=21574 candidates=16
- parent 2: rules=251 tokens=2672 bits=21574 candidates=16
- parent 3: rules=251 tokens=2671 bits=21575 candidates=16
+ parent 1: rules=251 tokens=2672 bits=21574 total=29606 candidates=16
+ parent 2: rules=251 tokens=2672 bits=21574 total=29606 candidates=16
+ parent 3: rules=251 tokens=2671 bits=21575 total=29607 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=252 tokens=2670 bits=21559
-  state 1  : rules=252 tokens=2670 bits=21559
-  state 2  : rules=252 tokens=2670 bits=21559
-  state 3  : rules=252 tokens=2669 bits=21560
+  state 0  : rules=252 tokens=2670 bits=21559 total=29623
+  state 1  : rules=252 tokens=2670 bits=21559 total=29623
+  state 2  : rules=252 tokens=2670 bits=21559 total=29623
+  state 3  : rules=252 tokens=2669 bits=21560 total=29624
 
 ROUND 51
- parent 0: rules=252 tokens=2670 bits=21559 candidates=16
-  NEW BEST: bits 21559 -> 21557 (-2)
+ parent 0: rules=252 tokens=2670 bits=21559 total=29623 candidates=16
+  NEW BEST PAYLOAD: bits 21559 -> 21557 (-2)
     rule T256 + T272 -> T508  occ=2  new-token=used
-  NEW BEST: bits 21557 -> 21553 (-4)
+  NEW BEST PAYLOAD: bits 21557 -> 21553 (-4)
     rule T256 + T310 -> T508  occ=2  new-token=used
-  NEW BEST: bits 21553 -> 21552 (-1)
+  NEW BEST PAYLOAD: bits 21553 -> 21552 (-1)
     rule T48 + T276 -> T508  occ=2  new-token=used
-  NEW BEST: bits 21552 -> 21551 (-1)
+  NEW BEST PAYLOAD: bits 21552 -> 21551 (-1)
     rule T72 + T270 -> T508  occ=2  new-token=used
-  NEW BEST: bits 21551 -> 21547 (-4)
+  NEW BEST PAYLOAD: bits 21551 -> 21547 (-4)
     rule T77 + T275 -> T508  occ=2  new-token=used
- parent 1: rules=252 tokens=2670 bits=21559 candidates=16
- parent 2: rules=252 tokens=2670 bits=21559 candidates=16
- parent 3: rules=252 tokens=2669 bits=21560 candidates=16
+ parent 1: rules=252 tokens=2670 bits=21559 total=29623 candidates=16
+ parent 2: rules=252 tokens=2670 bits=21559 total=29623 candidates=16
+ parent 3: rules=252 tokens=2669 bits=21560 total=29624 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=253 tokens=2668 bits=21547
-  state 1  : rules=253 tokens=2668 bits=21547
-  state 2  : rules=253 tokens=2668 bits=21547
-  state 3  : rules=253 tokens=2668 bits=21551
+  state 0  : rules=253 tokens=2668 bits=21547 total=29643
+  state 1  : rules=253 tokens=2668 bits=21547 total=29643
+  state 2  : rules=253 tokens=2668 bits=21547 total=29643
+  state 3  : rules=253 tokens=2668 bits=21551 total=29647
 
 ROUND 52
- parent 0: rules=253 tokens=2668 bits=21547 candidates=16
-  NEW BEST: bits 21547 -> 21544 (-3)
+ parent 0: rules=253 tokens=2668 bits=21547 total=29643 candidates=16
+  NEW BEST PAYLOAD: bits 21547 -> 21544 (-3)
     rule T256 + T272 -> T509  occ=2  new-token=used
-  NEW BEST: bits 21544 -> 21540 (-4)
+  NEW BEST PAYLOAD: bits 21544 -> 21540 (-4)
     rule T256 + T310 -> T509  occ=2  new-token=used
-  NEW BEST: bits 21540 -> 21539 (-1)
+  NEW BEST PAYLOAD: bits 21540 -> 21539 (-1)
     rule T48 + T276 -> T509  occ=2  new-token=used
-  NEW BEST: bits 21539 -> 21538 (-1)
+  NEW BEST PAYLOAD: bits 21539 -> 21538 (-1)
     rule T72 + T270 -> T509  occ=2  new-token=used
-  NEW BEST: bits 21538 -> 21535 (-3)
+  NEW BEST PAYLOAD: bits 21538 -> 21535 (-3)
     rule T95 + T269 -> T509  occ=2  new-token=used
- parent 1: rules=253 tokens=2668 bits=21547 candidates=16
- parent 2: rules=253 tokens=2668 bits=21547 candidates=16
- parent 3: rules=253 tokens=2668 bits=21551 candidates=16
+ parent 1: rules=253 tokens=2668 bits=21547 total=29643 candidates=16
+ parent 2: rules=253 tokens=2668 bits=21547 total=29643 candidates=16
+ parent 3: rules=253 tokens=2668 bits=21551 total=29647 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=254 tokens=2666 bits=21535
-  state 1  : rules=254 tokens=2666 bits=21535
-  state 2  : rules=254 tokens=2666 bits=21535
-  state 3  : rules=254 tokens=2666 bits=21538
+  state 0  : rules=254 tokens=2666 bits=21535 total=29663
+  state 1  : rules=254 tokens=2666 bits=21535 total=29663
+  state 2  : rules=254 tokens=2666 bits=21535 total=29663
+  state 3  : rules=254 tokens=2666 bits=21538 total=29666
 
 ROUND 53
- parent 0: rules=254 tokens=2666 bits=21535 candidates=16
-  NEW BEST: bits 21535 -> 21533 (-2)
+ parent 0: rules=254 tokens=2666 bits=21535 total=29663 candidates=16
+  NEW BEST PAYLOAD: bits 21535 -> 21533 (-2)
     rule T256 + T272 -> T510  occ=2  new-token=used
-  NEW BEST: bits 21533 -> 21529 (-4)
+  NEW BEST PAYLOAD: bits 21533 -> 21529 (-4)
     rule T256 + T310 -> T510  occ=2  new-token=used
-  NEW BEST: bits 21529 -> 21528 (-1)
+  NEW BEST PAYLOAD: bits 21529 -> 21528 (-1)
     rule T48 + T276 -> T510  occ=2  new-token=used
-  NEW BEST: bits 21528 -> 21527 (-1)
+  NEW BEST PAYLOAD: bits 21528 -> 21527 (-1)
     rule T72 + T270 -> T510  occ=2  new-token=used
- parent 1: rules=254 tokens=2666 bits=21535 candidates=16
- parent 2: rules=254 tokens=2666 bits=21535 candidates=16
- parent 3: rules=254 tokens=2666 bits=21538 candidates=16
-  NEW BEST: bits 21527 -> 21523 (-4)
+ parent 1: rules=254 tokens=2666 bits=21535 total=29663 candidates=16
+ parent 2: rules=254 tokens=2666 bits=21535 total=29663 candidates=16
+ parent 3: rules=254 tokens=2666 bits=21538 total=29666 candidates=16
+  NEW BEST PAYLOAD: bits 21527 -> 21523 (-4)
     rule T111 + T341 -> T510  occ=2  new-token=used
 beam after pruning: 4 states
-  state 0  : rules=255 tokens=2664 bits=21523
-  state 1  : rules=255 tokens=2664 bits=21527
-  state 2  : rules=255 tokens=2664 bits=21527
-  state 3  : rules=255 tokens=2664 bits=21527
+  state 0  : rules=255 tokens=2664 bits=21523 total=29683
+  state 1  : rules=255 tokens=2664 bits=21527 total=29687
+  state 2  : rules=255 tokens=2664 bits=21527 total=29687
+  state 3  : rules=255 tokens=2664 bits=21527 total=29687
 
 ROUND 54
- parent 0: rules=255 tokens=2664 bits=21523 candidates=16
-  NEW BEST: bits 21523 -> 21521 (-2)
+ parent 0: rules=255 tokens=2664 bits=21523 total=29683 candidates=16
+  NEW BEST PAYLOAD: bits 21523 -> 21521 (-2)
     rule T256 + T272 -> T511  occ=2  new-token=used
-  NEW BEST: bits 21521 -> 21517 (-4)
+  NEW BEST PAYLOAD: bits 21521 -> 21517 (-4)
     rule T256 + T310 -> T511  occ=2  new-token=used
-  NEW BEST: bits 21517 -> 21516 (-1)
+  NEW BEST PAYLOAD: bits 21517 -> 21516 (-1)
     rule T48 + T276 -> T511  occ=2  new-token=used
-  NEW BEST: bits 21516 -> 21512 (-4)
+  NEW BEST PAYLOAD: bits 21516 -> 21512 (-4)
     rule T95 + T269 -> T511  occ=2  new-token=used
- parent 1: rules=255 tokens=2664 bits=21527 candidates=16
- parent 2: rules=255 tokens=2664 bits=21527 candidates=16
- parent 3: rules=255 tokens=2664 bits=21527 candidates=16
+ parent 1: rules=255 tokens=2664 bits=21527 total=29687 candidates=16
+ parent 2: rules=255 tokens=2664 bits=21527 total=29687 candidates=16
+ parent 3: rules=255 tokens=2664 bits=21527 total=29687 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=256 tokens=2662 bits=21512
-  state 1  : rules=256 tokens=2662 bits=21512
-  state 2  : rules=256 tokens=2662 bits=21512
-  state 3  : rules=256 tokens=2662 bits=21512
+  state 0  : rules=256 tokens=2662 bits=21512 total=29704
+  state 1  : rules=256 tokens=2662 bits=21512 total=29704
+  state 2  : rules=256 tokens=2662 bits=21512 total=29704
+  state 3  : rules=256 tokens=2662 bits=21512 total=29704
 
 ROUND 55
- parent 0: rules=256 tokens=2662 bits=21512 candidates=16
-  NEW BEST: bits 21512 -> 21510 (-2)
+ parent 0: rules=256 tokens=2662 bits=21512 total=29704 candidates=16
+  NEW BEST PAYLOAD: bits 21512 -> 21510 (-2)
     rule T256 + T272 -> T512  occ=2  new-token=used
-  NEW BEST: bits 21510 -> 21506 (-4)
+  NEW BEST PAYLOAD: bits 21510 -> 21506 (-4)
     rule T256 + T310 -> T512  occ=2  new-token=used
-  NEW BEST: bits 21506 -> 21505 (-1)
+  NEW BEST PAYLOAD: bits 21506 -> 21505 (-1)
     rule T48 + T276 -> T512  occ=2  new-token=used
-  NEW BEST: bits 21505 -> 21504 (-1)
+  NEW BEST PAYLOAD: bits 21505 -> 21504 (-1)
     rule T112 + T270 -> T512  occ=2  new-token=used
-  NEW BEST: bits 21504 -> 21503 (-1)
+  NEW BEST PAYLOAD: bits 21504 -> 21503 (-1)
     rule T127 + T400 -> T512  occ=2  new-token=used
- parent 1: rules=256 tokens=2662 bits=21512 candidates=16
- parent 2: rules=256 tokens=2662 bits=21512 candidates=16
- parent 3: rules=256 tokens=2662 bits=21512 candidates=16
+ parent 1: rules=256 tokens=2662 bits=21512 total=29704 candidates=16
+ parent 2: rules=256 tokens=2662 bits=21512 total=29704 candidates=16
+ parent 3: rules=256 tokens=2662 bits=21512 total=29704 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=257 tokens=2660 bits=21503
-  state 1  : rules=257 tokens=2660 bits=21503
-  state 2  : rules=257 tokens=2660 bits=21503
-  state 3  : rules=257 tokens=2660 bits=21503
+  state 0  : rules=257 tokens=2660 bits=21503 total=29727
+  state 1  : rules=257 tokens=2660 bits=21503 total=29727
+  state 2  : rules=257 tokens=2660 bits=21503 total=29727
+  state 3  : rules=257 tokens=2660 bits=21503 total=29727
 
 ROUND 56
- parent 0: rules=257 tokens=2660 bits=21503 candidates=16
-  NEW BEST: bits 21503 -> 21501 (-2)
+ parent 0: rules=257 tokens=2660 bits=21503 total=29727 candidates=16
+  NEW BEST PAYLOAD: bits 21503 -> 21501 (-2)
     rule T256 + T272 -> T513  occ=2  new-token=used
-  NEW BEST: bits 21501 -> 21497 (-4)
+  NEW BEST PAYLOAD: bits 21501 -> 21497 (-4)
     rule T256 + T310 -> T513  occ=2  new-token=used
-  NEW BEST: bits 21497 -> 21496 (-1)
+  NEW BEST PAYLOAD: bits 21497 -> 21496 (-1)
     rule T48 + T276 -> T513  occ=2  new-token=used
-  NEW BEST: bits 21496 -> 21495 (-1)
+  NEW BEST PAYLOAD: bits 21496 -> 21495 (-1)
     rule T112 + T270 -> T513  occ=2  new-token=used
- parent 1: rules=257 tokens=2660 bits=21503 candidates=16
- parent 2: rules=257 tokens=2660 bits=21503 candidates=16
- parent 3: rules=257 tokens=2660 bits=21503 candidates=16
+ parent 1: rules=257 tokens=2660 bits=21503 total=29727 candidates=16
+ parent 2: rules=257 tokens=2660 bits=21503 total=29727 candidates=16
+ parent 3: rules=257 tokens=2660 bits=21503 total=29727 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=258 tokens=2658 bits=21495
-  state 1  : rules=258 tokens=2658 bits=21495
-  state 2  : rules=258 tokens=2658 bits=21495
-  state 3  : rules=258 tokens=2658 bits=21495
+  state 0  : rules=258 tokens=2658 bits=21495 total=29751
+  state 1  : rules=258 tokens=2658 bits=21495 total=29751
+  state 2  : rules=258 tokens=2658 bits=21495 total=29751
+  state 3  : rules=258 tokens=2658 bits=21495 total=29751
 
 ROUND 57
- parent 0: rules=258 tokens=2658 bits=21495 candidates=16
-  NEW BEST: bits 21495 -> 21493 (-2)
+ parent 0: rules=258 tokens=2658 bits=21495 total=29751 candidates=16
+  NEW BEST PAYLOAD: bits 21495 -> 21493 (-2)
     rule T256 + T272 -> T514  occ=2  new-token=used
-  NEW BEST: bits 21493 -> 21489 (-4)
+  NEW BEST PAYLOAD: bits 21493 -> 21489 (-4)
     rule T256 + T310 -> T514  occ=2  new-token=used
-  NEW BEST: bits 21489 -> 21488 (-1)
+  NEW BEST PAYLOAD: bits 21489 -> 21488 (-1)
     rule T48 + T276 -> T514  occ=2  new-token=used
-  NEW BEST: bits 21488 -> 21485 (-3)
+  NEW BEST PAYLOAD: bits 21488 -> 21485 (-3)
     rule T135 + T319 -> T514  occ=2  new-token=used
- parent 1: rules=258 tokens=2658 bits=21495 candidates=16
- parent 2: rules=258 tokens=2658 bits=21495 candidates=16
- parent 3: rules=258 tokens=2658 bits=21495 candidates=16
+ parent 1: rules=258 tokens=2658 bits=21495 total=29751 candidates=16
+ parent 2: rules=258 tokens=2658 bits=21495 total=29751 candidates=16
+ parent 3: rules=258 tokens=2658 bits=21495 total=29751 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=259 tokens=2656 bits=21485
-  state 1  : rules=259 tokens=2656 bits=21485
-  state 2  : rules=259 tokens=2656 bits=21485
-  state 3  : rules=259 tokens=2656 bits=21485
+  state 0  : rules=259 tokens=2656 bits=21485 total=29773
+  state 1  : rules=259 tokens=2656 bits=21485 total=29773
+  state 2  : rules=259 tokens=2656 bits=21485 total=29773
+  state 3  : rules=259 tokens=2656 bits=21485 total=29773
 
 ROUND 58
- parent 0: rules=259 tokens=2656 bits=21485 candidates=16
-  NEW BEST: bits 21485 -> 21483 (-2)
+ parent 0: rules=259 tokens=2656 bits=21485 total=29773 candidates=16
+  NEW BEST PAYLOAD: bits 21485 -> 21483 (-2)
     rule T256 + T272 -> T515  occ=2  new-token=used
-  NEW BEST: bits 21483 -> 21479 (-4)
+  NEW BEST PAYLOAD: bits 21483 -> 21479 (-4)
     rule T256 + T310 -> T515  occ=2  new-token=used
-  NEW BEST: bits 21479 -> 21478 (-1)
+  NEW BEST PAYLOAD: bits 21479 -> 21478 (-1)
     rule T48 + T276 -> T515  occ=2  new-token=used
-  NEW BEST: bits 21478 -> 21472 (-6)
+  NEW BEST PAYLOAD: bits 21478 -> 21472 (-6)
     rule T135 + T396 -> T515  occ=2  new-token=used
- parent 1: rules=259 tokens=2656 bits=21485 candidates=16
- parent 2: rules=259 tokens=2656 bits=21485 candidates=16
- parent 3: rules=259 tokens=2656 bits=21485 candidates=16
+ parent 1: rules=259 tokens=2656 bits=21485 total=29773 candidates=16
+ parent 2: rules=259 tokens=2656 bits=21485 total=29773 candidates=16
+ parent 3: rules=259 tokens=2656 bits=21485 total=29773 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=260 tokens=2654 bits=21472
-  state 1  : rules=260 tokens=2654 bits=21472
-  state 2  : rules=260 tokens=2654 bits=21472
-  state 3  : rules=260 tokens=2654 bits=21472
+  state 0  : rules=260 tokens=2654 bits=21472 total=29792
+  state 1  : rules=260 tokens=2654 bits=21472 total=29792
+  state 2  : rules=260 tokens=2654 bits=21472 total=29792
+  state 3  : rules=260 tokens=2654 bits=21472 total=29792
 
 ROUND 59
- parent 0: rules=260 tokens=2654 bits=21472 candidates=16
-  NEW BEST: bits 21472 -> 21470 (-2)
+ parent 0: rules=260 tokens=2654 bits=21472 total=29792 candidates=16
+  NEW BEST PAYLOAD: bits 21472 -> 21470 (-2)
     rule T256 + T272 -> T516  occ=2  new-token=used
-  NEW BEST: bits 21470 -> 21466 (-4)
+  NEW BEST PAYLOAD: bits 21470 -> 21466 (-4)
     rule T256 + T310 -> T516  occ=2  new-token=used
-  NEW BEST: bits 21466 -> 21455 (-11)
+  NEW BEST PAYLOAD: bits 21466 -> 21455 (-11)
     rule T306 + T515 -> T516  occ=2  new-token=used
- parent 1: rules=260 tokens=2654 bits=21472 candidates=16
- parent 2: rules=260 tokens=2654 bits=21472 candidates=16
- parent 3: rules=260 tokens=2654 bits=21472 candidates=16
+ parent 1: rules=260 tokens=2654 bits=21472 total=29792 candidates=16
+ parent 2: rules=260 tokens=2654 bits=21472 total=29792 candidates=16
+ parent 3: rules=260 tokens=2654 bits=21472 total=29792 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=261 tokens=2652 bits=21455
-  state 1  : rules=261 tokens=2652 bits=21455
-  state 2  : rules=261 tokens=2652 bits=21455
-  state 3  : rules=261 tokens=2652 bits=21455
+  state 0  : rules=261 tokens=2652 bits=21455 total=29807
+  state 1  : rules=261 tokens=2652 bits=21455 total=29807
+  state 2  : rules=261 tokens=2652 bits=21455 total=29807
+  state 3  : rules=261 tokens=2652 bits=21455 total=29807
 
 ROUND 60
- parent 0: rules=261 tokens=2652 bits=21455 candidates=16
-  NEW BEST: bits 21455 -> 21453 (-2)
+ parent 0: rules=261 tokens=2652 bits=21455 total=29807 candidates=16
+  NEW BEST PAYLOAD: bits 21455 -> 21453 (-2)
     rule T256 + T272 -> T517  occ=2  new-token=used
-  NEW BEST: bits 21453 -> 21449 (-4)
+  NEW BEST PAYLOAD: bits 21453 -> 21449 (-4)
     rule T256 + T310 -> T517  occ=2  new-token=used
-  NEW BEST: bits 21449 -> 21448 (-1)
+  NEW BEST PAYLOAD: bits 21449 -> 21448 (-1)
     rule T48 + T276 -> T517  occ=2  new-token=used
-  NEW BEST: bits 21448 -> 21442 (-6)
+  NEW BEST PAYLOAD: bits 21448 -> 21442 (-6)
     rule T136 + T270 -> T517  occ=2  new-token=used
- parent 1: rules=261 tokens=2652 bits=21455 candidates=16
- parent 2: rules=261 tokens=2652 bits=21455 candidates=16
- parent 3: rules=261 tokens=2652 bits=21455 candidates=16
+ parent 1: rules=261 tokens=2652 bits=21455 total=29807 candidates=16
+ parent 2: rules=261 tokens=2652 bits=21455 total=29807 candidates=16
+ parent 3: rules=261 tokens=2652 bits=21455 total=29807 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=262 tokens=2650 bits=21442
-  state 1  : rules=262 tokens=2650 bits=21442
-  state 2  : rules=262 tokens=2650 bits=21442
-  state 3  : rules=262 tokens=2650 bits=21442
+  state 0  : rules=262 tokens=2650 bits=21442 total=29826
+  state 1  : rules=262 tokens=2650 bits=21442 total=29826
+  state 2  : rules=262 tokens=2650 bits=21442 total=29826
+  state 3  : rules=262 tokens=2650 bits=21442 total=29826
 
 ROUND 61
- parent 0: rules=262 tokens=2650 bits=21442 candidates=16
-  NEW BEST: bits 21442 -> 21440 (-2)
+ parent 0: rules=262 tokens=2650 bits=21442 total=29826 candidates=16
+  NEW BEST PAYLOAD: bits 21442 -> 21440 (-2)
     rule T256 + T272 -> T518  occ=2  new-token=used
-  NEW BEST: bits 21440 -> 21436 (-4)
+  NEW BEST PAYLOAD: bits 21440 -> 21436 (-4)
     rule T256 + T310 -> T518  occ=2  new-token=used
-  NEW BEST: bits 21436 -> 21435 (-1)
+  NEW BEST PAYLOAD: bits 21436 -> 21435 (-1)
     rule T256 + T314 -> T518  occ=2  new-token=used
-  NEW BEST: bits 21435 -> 21434 (-1)
+  NEW BEST PAYLOAD: bits 21435 -> 21434 (-1)
     rule T48 + T276 -> T518  occ=2  new-token=used
- parent 1: rules=262 tokens=2650 bits=21442 candidates=16
- parent 2: rules=262 tokens=2650 bits=21442 candidates=16
- parent 3: rules=262 tokens=2650 bits=21442 candidates=16
+ parent 1: rules=262 tokens=2650 bits=21442 total=29826 candidates=16
+ parent 2: rules=262 tokens=2650 bits=21442 total=29826 candidates=16
+ parent 3: rules=262 tokens=2650 bits=21442 total=29826 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=263 tokens=2647 bits=21434
-  state 1  : rules=263 tokens=2647 bits=21434
-  state 2  : rules=263 tokens=2647 bits=21434
-  state 3  : rules=263 tokens=2647 bits=21434
+  state 0  : rules=263 tokens=2647 bits=21434 total=29850
+  state 1  : rules=263 tokens=2647 bits=21434 total=29850
+  state 2  : rules=263 tokens=2647 bits=21434 total=29850
+  state 3  : rules=263 tokens=2647 bits=21434 total=29850
 
 ROUND 62
- parent 0: rules=263 tokens=2647 bits=21434 candidates=16
-  NEW BEST: bits 21434 -> 21432 (-2)
+ parent 0: rules=263 tokens=2647 bits=21434 total=29850 candidates=16
+  NEW BEST PAYLOAD: bits 21434 -> 21432 (-2)
     rule T256 + T272 -> T519  occ=2  new-token=used
-  NEW BEST: bits 21432 -> 21428 (-4)
+  NEW BEST PAYLOAD: bits 21432 -> 21428 (-4)
     rule T256 + T310 -> T519  occ=2  new-token=used
-  NEW BEST: bits 21428 -> 21427 (-1)
+  NEW BEST PAYLOAD: bits 21428 -> 21427 (-1)
     rule T256 + T314 -> T519  occ=2  new-token=used
-  NEW BEST: bits 21427 -> 21424 (-3)
+  NEW BEST PAYLOAD: bits 21427 -> 21424 (-3)
     rule T191 + T313 -> T519  occ=2  new-token=used
- parent 1: rules=263 tokens=2647 bits=21434 candidates=16
- parent 2: rules=263 tokens=2647 bits=21434 candidates=16
- parent 3: rules=263 tokens=2647 bits=21434 candidates=16
+ parent 1: rules=263 tokens=2647 bits=21434 total=29850 candidates=16
+ parent 2: rules=263 tokens=2647 bits=21434 total=29850 candidates=16
+ parent 3: rules=263 tokens=2647 bits=21434 total=29850 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=264 tokens=2645 bits=21424
-  state 1  : rules=264 tokens=2645 bits=21424
-  state 2  : rules=264 tokens=2645 bits=21424
-  state 3  : rules=264 tokens=2645 bits=21424
+  state 0  : rules=264 tokens=2645 bits=21424 total=29872
+  state 1  : rules=264 tokens=2645 bits=21424 total=29872
+  state 2  : rules=264 tokens=2645 bits=21424 total=29872
+  state 3  : rules=264 tokens=2645 bits=21424 total=29872
 
 ROUND 63
- parent 0: rules=264 tokens=2645 bits=21424 candidates=16
-  NEW BEST: bits 21424 -> 21422 (-2)
+ parent 0: rules=264 tokens=2645 bits=21424 total=29872 candidates=16
+  NEW BEST PAYLOAD: bits 21424 -> 21422 (-2)
     rule T256 + T272 -> T520  occ=2  new-token=used
-  NEW BEST: bits 21422 -> 21418 (-4)
+  NEW BEST PAYLOAD: bits 21422 -> 21418 (-4)
     rule T256 + T310 -> T520  occ=2  new-token=used
-  NEW BEST: bits 21418 -> 21417 (-1)
+  NEW BEST PAYLOAD: bits 21418 -> 21417 (-1)
     rule T256 + T314 -> T520  occ=2  new-token=used
-  NEW BEST: bits 21417 -> 21411 (-6)
+  NEW BEST PAYLOAD: bits 21417 -> 21411 (-6)
     rule T195 + T408 -> T520  occ=2  new-token=used
- parent 1: rules=264 tokens=2645 bits=21424 candidates=16
- parent 2: rules=264 tokens=2645 bits=21424 candidates=16
- parent 3: rules=264 tokens=2645 bits=21424 candidates=16
+ parent 1: rules=264 tokens=2645 bits=21424 total=29872 candidates=16
+ parent 2: rules=264 tokens=2645 bits=21424 total=29872 candidates=16
+ parent 3: rules=264 tokens=2645 bits=21424 total=29872 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=265 tokens=2643 bits=21411
-  state 1  : rules=265 tokens=2643 bits=21411
-  state 2  : rules=265 tokens=2643 bits=21411
-  state 3  : rules=265 tokens=2643 bits=21411
+  state 0  : rules=265 tokens=2643 bits=21411 total=29891
+  state 1  : rules=265 tokens=2643 bits=21411 total=29891
+  state 2  : rules=265 tokens=2643 bits=21411 total=29891
+  state 3  : rules=265 tokens=2643 bits=21411 total=29891
 
 ROUND 64
- parent 0: rules=265 tokens=2643 bits=21411 candidates=16
-  NEW BEST: bits 21411 -> 21409 (-2)
+ parent 0: rules=265 tokens=2643 bits=21411 total=29891 candidates=16
+  NEW BEST PAYLOAD: bits 21411 -> 21409 (-2)
     rule T256 + T272 -> T521  occ=2  new-token=used
-  NEW BEST: bits 21409 -> 21405 (-4)
+  NEW BEST PAYLOAD: bits 21409 -> 21405 (-4)
     rule T256 + T310 -> T521  occ=2  new-token=used
-  NEW BEST: bits 21405 -> 21404 (-1)
+  NEW BEST PAYLOAD: bits 21405 -> 21404 (-1)
     rule T256 + T314 -> T521  occ=2  new-token=used
-  NEW BEST: bits 21404 -> 21388 (-16)
+  NEW BEST PAYLOAD: bits 21404 -> 21388 (-16)
     rule T346 + T520 -> T521  occ=2  new-token=used
- parent 1: rules=265 tokens=2643 bits=21411 candidates=16
- parent 2: rules=265 tokens=2643 bits=21411 candidates=16
- parent 3: rules=265 tokens=2643 bits=21411 candidates=16
+ parent 1: rules=265 tokens=2643 bits=21411 total=29891 candidates=16
+ parent 2: rules=265 tokens=2643 bits=21411 total=29891 candidates=16
+ parent 3: rules=265 tokens=2643 bits=21411 total=29891 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=266 tokens=2641 bits=21388
-  state 1  : rules=266 tokens=2641 bits=21388
-  state 2  : rules=266 tokens=2641 bits=21388
-  state 3  : rules=266 tokens=2641 bits=21388
+  state 0  : rules=266 tokens=2641 bits=21388 total=29900
+  state 1  : rules=266 tokens=2641 bits=21388 total=29900
+  state 2  : rules=266 tokens=2641 bits=21388 total=29900
+  state 3  : rules=266 tokens=2641 bits=21388 total=29900
 
 ROUND 65
- parent 0: rules=266 tokens=2641 bits=21388 candidates=16
-  NEW BEST: bits 21388 -> 21385 (-3)
+ parent 0: rules=266 tokens=2641 bits=21388 total=29900 candidates=16
+  NEW BEST PAYLOAD: bits 21388 -> 21385 (-3)
     rule T256 + T272 -> T522  occ=2  new-token=used
-  NEW BEST: bits 21385 -> 21381 (-4)
+  NEW BEST PAYLOAD: bits 21385 -> 21381 (-4)
     rule T256 + T310 -> T522  occ=2  new-token=used
-  NEW BEST: bits 21381 -> 21380 (-1)
+  NEW BEST PAYLOAD: bits 21381 -> 21380 (-1)
     rule T256 + T314 -> T522  occ=2  new-token=used
- parent 1: rules=266 tokens=2641 bits=21388 candidates=16
- parent 2: rules=266 tokens=2641 bits=21388 candidates=16
- parent 3: rules=266 tokens=2641 bits=21388 candidates=16
+ parent 1: rules=266 tokens=2641 bits=21388 total=29900 candidates=16
+ parent 2: rules=266 tokens=2641 bits=21388 total=29900 candidates=16
+ parent 3: rules=266 tokens=2641 bits=21388 total=29900 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=267 tokens=2639 bits=21380
-  state 1  : rules=267 tokens=2639 bits=21380
-  state 2  : rules=267 tokens=2639 bits=21380
-  state 3  : rules=267 tokens=2639 bits=21380
+  state 0  : rules=267 tokens=2639 bits=21380 total=29924
+  state 1  : rules=267 tokens=2639 bits=21380 total=29924
+  state 2  : rules=267 tokens=2639 bits=21380 total=29924
+  state 3  : rules=267 tokens=2639 bits=21380 total=29924
 
 ROUND 66
- parent 0: rules=267 tokens=2639 bits=21380 candidates=16
-  NEW BEST: bits 21380 -> 21378 (-2)
+ parent 0: rules=267 tokens=2639 bits=21380 total=29924 candidates=16
+  NEW BEST PAYLOAD: bits 21380 -> 21378 (-2)
     rule T256 + T272 -> T523  occ=2  new-token=used
-  NEW BEST: bits 21378 -> 21374 (-4)
+  NEW BEST PAYLOAD: bits 21378 -> 21374 (-4)
     rule T256 + T310 -> T523  occ=2  new-token=used
- parent 1: rules=267 tokens=2639 bits=21380 candidates=16
- parent 2: rules=267 tokens=2639 bits=21380 candidates=16
- parent 3: rules=267 tokens=2639 bits=21380 candidates=16
+ parent 1: rules=267 tokens=2639 bits=21380 total=29924 candidates=16
+ parent 2: rules=267 tokens=2639 bits=21380 total=29924 candidates=16
+ parent 3: rules=267 tokens=2639 bits=21380 total=29924 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=268 tokens=2636 bits=21374
-  state 1  : rules=268 tokens=2636 bits=21374
-  state 2  : rules=268 tokens=2636 bits=21374
-  state 3  : rules=268 tokens=2636 bits=21374
+  state 0  : rules=268 tokens=2636 bits=21374 total=29950
+  state 1  : rules=268 tokens=2636 bits=21374 total=29950
+  state 2  : rules=268 tokens=2636 bits=21374 total=29950
+  state 3  : rules=268 tokens=2636 bits=21374 total=29950
 
 ROUND 67
- parent 0: rules=268 tokens=2636 bits=21374 candidates=16
-  NEW BEST: bits 21374 -> 21367 (-7)
+ parent 0: rules=268 tokens=2636 bits=21374 total=29950 candidates=16
+  NEW BEST PAYLOAD: bits 21374 -> 21367 (-7)
     rule T256 + T310 -> T524  occ=2  new-token=used
- parent 1: rules=268 tokens=2636 bits=21374 candidates=16
- parent 2: rules=268 tokens=2636 bits=21374 candidates=16
- parent 3: rules=268 tokens=2636 bits=21374 candidates=16
+ parent 1: rules=268 tokens=2636 bits=21374 total=29950 candidates=16
+ parent 2: rules=268 tokens=2636 bits=21374 total=29950 candidates=16
+ parent 3: rules=268 tokens=2636 bits=21374 total=29950 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=269 tokens=2634 bits=21367
-  state 1  : rules=269 tokens=2634 bits=21367
-  state 2  : rules=269 tokens=2634 bits=21367
-  state 3  : rules=269 tokens=2634 bits=21367
+  state 0  : rules=269 tokens=2634 bits=21367 total=29975
+  state 1  : rules=269 tokens=2634 bits=21367 total=29975
+  state 2  : rules=269 tokens=2634 bits=21367 total=29975
+  state 3  : rules=269 tokens=2634 bits=21367 total=29975
 
 ROUND 68
- parent 0: rules=269 tokens=2634 bits=21367 candidates=16
-  NEW BEST: bits 21367 -> 21365 (-2)
+ parent 0: rules=269 tokens=2634 bits=21367 total=29975 candidates=16
+  NEW BEST PAYLOAD: bits 21367 -> 21365 (-2)
     rule T266 + T272 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21365 -> 21364 (-1)
+  NEW BEST PAYLOAD: bits 21365 -> 21364 (-1)
     rule T266 + T286 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21364 -> 21363 (-1)
+  NEW BEST PAYLOAD: bits 21364 -> 21363 (-1)
     rule T266 + T290 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21363 -> 21362 (-1)
+  NEW BEST PAYLOAD: bits 21363 -> 21362 (-1)
     rule T286 + T256 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21362 -> 21361 (-1)
+  NEW BEST PAYLOAD: bits 21362 -> 21361 (-1)
     rule T1 + T338 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21361 -> 21360 (-1)
+  NEW BEST PAYLOAD: bits 21361 -> 21360 (-1)
     rule T224 + T365 -> T525  occ=2  new-token=used
-  NEW BEST: bits 21360 -> 21359 (-1)
+  NEW BEST PAYLOAD: bits 21360 -> 21359 (-1)
     rule T225 + T273 -> T525  occ=2  new-token=used
- parent 1: rules=269 tokens=2634 bits=21367 candidates=16
- parent 2: rules=269 tokens=2634 bits=21367 candidates=16
- parent 3: rules=269 tokens=2634 bits=21367 candidates=16
+ parent 1: rules=269 tokens=2634 bits=21367 total=29975 candidates=16
+ parent 2: rules=269 tokens=2634 bits=21367 total=29975 candidates=16
+ parent 3: rules=269 tokens=2634 bits=21367 total=29975 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=270 tokens=2632 bits=21359
-  state 1  : rules=270 tokens=2632 bits=21359
-  state 2  : rules=270 tokens=2632 bits=21359
-  state 3  : rules=270 tokens=2632 bits=21359
+  state 0  : rules=270 tokens=2632 bits=21359 total=29999
+  state 1  : rules=270 tokens=2632 bits=21359 total=29999
+  state 2  : rules=270 tokens=2632 bits=21359 total=29999
+  state 3  : rules=270 tokens=2632 bits=21359 total=29999
 
 ROUND 69
- parent 0: rules=270 tokens=2632 bits=21359 candidates=16
-  NEW BEST: bits 21359 -> 21356 (-3)
+ parent 0: rules=270 tokens=2632 bits=21359 total=29999 candidates=16
+  NEW BEST PAYLOAD: bits 21359 -> 21356 (-3)
     rule T266 + T272 -> T526  occ=2  new-token=used
-  NEW BEST: bits 21356 -> 21355 (-1)
+  NEW BEST PAYLOAD: bits 21356 -> 21355 (-1)
     rule T266 + T286 -> T526  occ=2  new-token=used
-  NEW BEST: bits 21355 -> 21354 (-1)
+  NEW BEST PAYLOAD: bits 21355 -> 21354 (-1)
     rule T266 + T290 -> T526  occ=2  new-token=used
-  NEW BEST: bits 21354 -> 21353 (-1)
+  NEW BEST PAYLOAD: bits 21354 -> 21353 (-1)
     rule T286 + T256 -> T526  occ=2  new-token=used
-  NEW BEST: bits 21353 -> 21352 (-1)
+  NEW BEST PAYLOAD: bits 21353 -> 21352 (-1)
     rule T16 + T276 -> T526  occ=2  new-token=used
-  NEW BEST: bits 21352 -> 21348 (-4)
+  NEW BEST PAYLOAD: bits 21352 -> 21348 (-4)
     rule T231 + T274 -> T526  occ=2  new-token=used
- parent 1: rules=270 tokens=2632 bits=21359 candidates=16
- parent 2: rules=270 tokens=2632 bits=21359 candidates=16
- parent 3: rules=270 tokens=2632 bits=21359 candidates=16
+ parent 1: rules=270 tokens=2632 bits=21359 total=29999 candidates=16
+ parent 2: rules=270 tokens=2632 bits=21359 total=29999 candidates=16
+ parent 3: rules=270 tokens=2632 bits=21359 total=29999 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=271 tokens=2630 bits=21348
-  state 1  : rules=271 tokens=2630 bits=21348
-  state 2  : rules=271 tokens=2630 bits=21348
-  state 3  : rules=271 tokens=2630 bits=21348
+  state 0  : rules=271 tokens=2630 bits=21348 total=30020
+  state 1  : rules=271 tokens=2630 bits=21348 total=30020
+  state 2  : rules=271 tokens=2630 bits=21348 total=30020
+  state 3  : rules=271 tokens=2630 bits=21348 total=30020
 
 ROUND 70
- parent 0: rules=271 tokens=2630 bits=21348 candidates=16
-  NEW BEST: bits 21348 -> 21346 (-2)
+ parent 0: rules=271 tokens=2630 bits=21348 total=30020 candidates=16
+  NEW BEST PAYLOAD: bits 21348 -> 21346 (-2)
     rule T266 + T272 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21346 -> 21345 (-1)
+  NEW BEST PAYLOAD: bits 21346 -> 21345 (-1)
     rule T266 + T286 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21345 -> 21344 (-1)
+  NEW BEST PAYLOAD: bits 21345 -> 21344 (-1)
     rule T266 + T290 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21344 -> 21343 (-1)
+  NEW BEST PAYLOAD: bits 21344 -> 21343 (-1)
     rule T286 + T256 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21343 -> 21342 (-1)
+  NEW BEST PAYLOAD: bits 21343 -> 21342 (-1)
     rule T1 + T338 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21342 -> 21341 (-1)
+  NEW BEST PAYLOAD: bits 21342 -> 21341 (-1)
     rule T224 + T365 -> T527  occ=2  new-token=used
-  NEW BEST: bits 21341 -> 21340 (-1)
+  NEW BEST PAYLOAD: bits 21341 -> 21340 (-1)
     rule T232 + T286 -> T527  occ=2  new-token=used
- parent 1: rules=271 tokens=2630 bits=21348 candidates=16
- parent 2: rules=271 tokens=2630 bits=21348 candidates=16
- parent 3: rules=271 tokens=2630 bits=21348 candidates=16
+ parent 1: rules=271 tokens=2630 bits=21348 total=30020 candidates=16
+ parent 2: rules=271 tokens=2630 bits=21348 total=30020 candidates=16
+ parent 3: rules=271 tokens=2630 bits=21348 total=30020 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=272 tokens=2628 bits=21340
-  state 1  : rules=272 tokens=2628 bits=21340
-  state 2  : rules=272 tokens=2628 bits=21340
-  state 3  : rules=272 tokens=2628 bits=21340
+  state 0  : rules=272 tokens=2628 bits=21340 total=30044
+  state 1  : rules=272 tokens=2628 bits=21340 total=30044
+  state 2  : rules=272 tokens=2628 bits=21340 total=30044
+  state 3  : rules=272 tokens=2628 bits=21340 total=30044
 
 ROUND 71
- parent 0: rules=272 tokens=2628 bits=21340 candidates=16
-  NEW BEST: bits 21340 -> 21337 (-3)
+ parent 0: rules=272 tokens=2628 bits=21340 total=30044 candidates=16
+  NEW BEST PAYLOAD: bits 21340 -> 21337 (-3)
     rule T266 + T272 -> T528  occ=2  new-token=used
-  NEW BEST: bits 21337 -> 21335 (-2)
+  NEW BEST PAYLOAD: bits 21337 -> 21335 (-2)
     rule T266 + T286 -> T528  occ=2  new-token=used
-  NEW BEST: bits 21335 -> 21333 (-2)
+  NEW BEST PAYLOAD: bits 21335 -> 21333 (-2)
     rule T286 + T256 -> T528  occ=2  new-token=used
-  NEW BEST: bits 21333 -> 21332 (-1)
+  NEW BEST PAYLOAD: bits 21333 -> 21332 (-1)
     rule T224 + T365 -> T528  occ=2  new-token=used
-  NEW BEST: bits 21332 -> 21329 (-3)
+  NEW BEST PAYLOAD: bits 21332 -> 21329 (-3)
     rule T239 + T296 -> T528  occ=2  new-token=used
- parent 1: rules=272 tokens=2628 bits=21340 candidates=16
- parent 2: rules=272 tokens=2628 bits=21340 candidates=16
- parent 3: rules=272 tokens=2628 bits=21340 candidates=16
+ parent 1: rules=272 tokens=2628 bits=21340 total=30044 candidates=16
+ parent 2: rules=272 tokens=2628 bits=21340 total=30044 candidates=16
+ parent 3: rules=272 tokens=2628 bits=21340 total=30044 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=273 tokens=2626 bits=21329
-  state 1  : rules=273 tokens=2626 bits=21329
-  state 2  : rules=273 tokens=2626 bits=21329
-  state 3  : rules=273 tokens=2626 bits=21329
+  state 0  : rules=273 tokens=2626 bits=21329 total=30065
+  state 1  : rules=273 tokens=2626 bits=21329 total=30065
+  state 2  : rules=273 tokens=2626 bits=21329 total=30065
+  state 3  : rules=273 tokens=2626 bits=21329 total=30065
 
 ROUND 72
- parent 0: rules=273 tokens=2626 bits=21329 candidates=16
-  NEW BEST: bits 21329 -> 21327 (-2)
+ parent 0: rules=273 tokens=2626 bits=21329 total=30065 candidates=16
+  NEW BEST PAYLOAD: bits 21329 -> 21327 (-2)
     rule T266 + T272 -> T529  occ=2  new-token=used
-  NEW BEST: bits 21327 -> 21325 (-2)
+  NEW BEST PAYLOAD: bits 21327 -> 21325 (-2)
     rule T266 + T286 -> T529  occ=2  new-token=used
-  NEW BEST: bits 21325 -> 21323 (-2)
+  NEW BEST PAYLOAD: bits 21325 -> 21323 (-2)
     rule T286 + T256 -> T529  occ=2  new-token=used
-  NEW BEST: bits 21323 -> 21314 (-9)
+  NEW BEST PAYLOAD: bits 21323 -> 21314 (-9)
     rule T383 + T528 -> T529  occ=2  new-token=used
- parent 1: rules=273 tokens=2626 bits=21329 candidates=16
- parent 2: rules=273 tokens=2626 bits=21329 candidates=16
- parent 3: rules=273 tokens=2626 bits=21329 candidates=16
+ parent 1: rules=273 tokens=2626 bits=21329 total=30065 candidates=16
+ parent 2: rules=273 tokens=2626 bits=21329 total=30065 candidates=16
+ parent 3: rules=273 tokens=2626 bits=21329 total=30065 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=274 tokens=2624 bits=21314
-  state 1  : rules=274 tokens=2624 bits=21314
-  state 2  : rules=274 tokens=2624 bits=21314
-  state 3  : rules=274 tokens=2624 bits=21314
+  state 0  : rules=274 tokens=2624 bits=21314 total=30082
+  state 1  : rules=274 tokens=2624 bits=21314 total=30082
+  state 2  : rules=274 tokens=2624 bits=21314 total=30082
+  state 3  : rules=274 tokens=2624 bits=21314 total=30082
 
 ROUND 73
- parent 0: rules=274 tokens=2624 bits=21314 candidates=16
-  NEW BEST: bits 21314 -> 21312 (-2)
+ parent 0: rules=274 tokens=2624 bits=21314 total=30082 candidates=16
+  NEW BEST PAYLOAD: bits 21314 -> 21312 (-2)
     rule T266 + T272 -> T530  occ=2  new-token=used
-  NEW BEST: bits 21312 -> 21310 (-2)
+  NEW BEST PAYLOAD: bits 21312 -> 21310 (-2)
     rule T266 + T286 -> T530  occ=2  new-token=used
-  NEW BEST: bits 21310 -> 21308 (-2)
+  NEW BEST PAYLOAD: bits 21310 -> 21308 (-2)
     rule T286 + T256 -> T530  occ=2  new-token=used
-  NEW BEST: bits 21308 -> 21307 (-1)
+  NEW BEST PAYLOAD: bits 21308 -> 21307 (-1)
     rule T224 + T365 -> T530  occ=2  new-token=used
-  NEW BEST: bits 21307 -> 21301 (-6)
+  NEW BEST PAYLOAD: bits 21307 -> 21301 (-6)
     rule T228 + T360 -> T530  occ=2  new-token=used
- parent 1: rules=274 tokens=2624 bits=21314 candidates=16
- parent 2: rules=274 tokens=2624 bits=21314 candidates=16
- parent 3: rules=274 tokens=2624 bits=21314 candidates=16
+ parent 1: rules=274 tokens=2624 bits=21314 total=30082 candidates=16
+ parent 2: rules=274 tokens=2624 bits=21314 total=30082 candidates=16
+ parent 3: rules=274 tokens=2624 bits=21314 total=30082 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=275 tokens=2622 bits=21301
-  state 1  : rules=275 tokens=2622 bits=21301
-  state 2  : rules=275 tokens=2622 bits=21301
-  state 3  : rules=275 tokens=2622 bits=21301
+  state 0  : rules=275 tokens=2622 bits=21301 total=30101
+  state 1  : rules=275 tokens=2622 bits=21301 total=30101
+  state 2  : rules=275 tokens=2622 bits=21301 total=30101
+  state 3  : rules=275 tokens=2622 bits=21301 total=30101
 
 ROUND 74
- parent 0: rules=275 tokens=2622 bits=21301 candidates=16
-  NEW BEST: bits 21301 -> 21298 (-3)
+ parent 0: rules=275 tokens=2622 bits=21301 total=30101 candidates=16
+  NEW BEST PAYLOAD: bits 21301 -> 21298 (-3)
     rule T266 + T272 -> T531  occ=2  new-token=used
-  NEW BEST: bits 21298 -> 21297 (-1)
+  NEW BEST PAYLOAD: bits 21298 -> 21297 (-1)
     rule T266 + T286 -> T531  occ=2  new-token=used
-  NEW BEST: bits 21297 -> 21295 (-2)
+  NEW BEST PAYLOAD: bits 21297 -> 21295 (-2)
     rule T286 + T256 -> T531  occ=2  new-token=used
-  NEW BEST: bits 21295 -> 21285 (-10)
+  NEW BEST PAYLOAD: bits 21295 -> 21285 (-10)
     rule T286 + T530 -> T531  occ=2  new-token=used
- parent 1: rules=275 tokens=2622 bits=21301 candidates=16
- parent 2: rules=275 tokens=2622 bits=21301 candidates=16
- parent 3: rules=275 tokens=2622 bits=21301 candidates=16
+ parent 1: rules=275 tokens=2622 bits=21301 total=30101 candidates=16
+ parent 2: rules=275 tokens=2622 bits=21301 total=30101 candidates=16
+ parent 3: rules=275 tokens=2622 bits=21301 total=30101 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=276 tokens=2620 bits=21285
-  state 1  : rules=276 tokens=2620 bits=21285
-  state 2  : rules=276 tokens=2620 bits=21285
-  state 3  : rules=276 tokens=2620 bits=21285
+  state 0  : rules=276 tokens=2620 bits=21285 total=30117
+  state 1  : rules=276 tokens=2620 bits=21285 total=30117
+  state 2  : rules=276 tokens=2620 bits=21285 total=30117
+  state 3  : rules=276 tokens=2620 bits=21285 total=30117
 
 ROUND 75
- parent 0: rules=276 tokens=2620 bits=21285 candidates=16
-  NEW BEST: bits 21285 -> 21282 (-3)
+ parent 0: rules=276 tokens=2620 bits=21285 total=30117 candidates=16
+  NEW BEST PAYLOAD: bits 21285 -> 21282 (-3)
     rule T266 + T272 -> T532  occ=2  new-token=used
-  NEW BEST: bits 21282 -> 21281 (-1)
+  NEW BEST PAYLOAD: bits 21282 -> 21281 (-1)
     rule T266 + T290 -> T532  occ=2  new-token=used
-  NEW BEST: bits 21281 -> 21273 (-8)
+  NEW BEST PAYLOAD: bits 21281 -> 21273 (-8)
     rule T266 + T531 -> T532  occ=2  new-token=used
- parent 1: rules=276 tokens=2620 bits=21285 candidates=16
- parent 2: rules=276 tokens=2620 bits=21285 candidates=16
- parent 3: rules=276 tokens=2620 bits=21285 candidates=16
+ parent 1: rules=276 tokens=2620 bits=21285 total=30117 candidates=16
+ parent 2: rules=276 tokens=2620 bits=21285 total=30117 candidates=16
+ parent 3: rules=276 tokens=2620 bits=21285 total=30117 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=277 tokens=2618 bits=21273
-  state 1  : rules=277 tokens=2618 bits=21273
-  state 2  : rules=277 tokens=2618 bits=21273
-  state 3  : rules=277 tokens=2618 bits=21273
+  state 0  : rules=277 tokens=2618 bits=21273 total=30137
+  state 1  : rules=277 tokens=2618 bits=21273 total=30137
+  state 2  : rules=277 tokens=2618 bits=21273 total=30137
+  state 3  : rules=277 tokens=2618 bits=21273 total=30137
 
 ROUND 76
- parent 0: rules=277 tokens=2618 bits=21273 candidates=16
-  NEW BEST: bits 21273 -> 21270 (-3)
+ parent 0: rules=277 tokens=2618 bits=21273 total=30137 candidates=16
+  NEW BEST PAYLOAD: bits 21273 -> 21270 (-3)
     rule T266 + T272 -> T533  occ=2  new-token=used
-  NEW BEST: bits 21270 -> 21269 (-1)
+  NEW BEST PAYLOAD: bits 21270 -> 21269 (-1)
     rule T266 + T290 -> T533  occ=2  new-token=used
-  NEW BEST: bits 21269 -> 21267 (-2)
+  NEW BEST PAYLOAD: bits 21269 -> 21267 (-2)
     rule T286 + T256 -> T533  occ=2  new-token=used
-  NEW BEST: bits 21267 -> 21257 (-10)
+  NEW BEST PAYLOAD: bits 21267 -> 21257 (-10)
     rule T208 + T532 -> T533  occ=2  new-token=used
- parent 1: rules=277 tokens=2618 bits=21273 candidates=16
- parent 2: rules=277 tokens=2618 bits=21273 candidates=16
- parent 3: rules=277 tokens=2618 bits=21273 candidates=16
+ parent 1: rules=277 tokens=2618 bits=21273 total=30137 candidates=16
+ parent 2: rules=277 tokens=2618 bits=21273 total=30137 candidates=16
+ parent 3: rules=277 tokens=2618 bits=21273 total=30137 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=278 tokens=2616 bits=21257
-  state 1  : rules=278 tokens=2616 bits=21257
-  state 2  : rules=278 tokens=2616 bits=21257
-  state 3  : rules=278 tokens=2616 bits=21257
+  state 0  : rules=278 tokens=2616 bits=21257 total=30153
+  state 1  : rules=278 tokens=2616 bits=21257 total=30153
+  state 2  : rules=278 tokens=2616 bits=21257 total=30153
+  state 3  : rules=278 tokens=2616 bits=21257 total=30153
 
 ROUND 77
- parent 0: rules=278 tokens=2616 bits=21257 candidates=16
-  NEW BEST: bits 21257 -> 21254 (-3)
+ parent 0: rules=278 tokens=2616 bits=21257 total=30153 candidates=16
+  NEW BEST PAYLOAD: bits 21257 -> 21254 (-3)
     rule T266 + T272 -> T534  occ=2  new-token=used
-  NEW BEST: bits 21254 -> 21253 (-1)
+  NEW BEST PAYLOAD: bits 21254 -> 21253 (-1)
     rule T266 + T290 -> T534  occ=2  new-token=used
-  NEW BEST: bits 21253 -> 21251 (-2)
+  NEW BEST PAYLOAD: bits 21253 -> 21251 (-2)
     rule T286 + T256 -> T534  occ=2  new-token=used
-  NEW BEST: bits 21251 -> 21241 (-10)
+  NEW BEST PAYLOAD: bits 21251 -> 21241 (-10)
     rule T24 + T533 -> T534  occ=2  new-token=used
- parent 1: rules=278 tokens=2616 bits=21257 candidates=16
- parent 2: rules=278 tokens=2616 bits=21257 candidates=16
- parent 3: rules=278 tokens=2616 bits=21257 candidates=16
+ parent 1: rules=278 tokens=2616 bits=21257 total=30153 candidates=16
+ parent 2: rules=278 tokens=2616 bits=21257 total=30153 candidates=16
+ parent 3: rules=278 tokens=2616 bits=21257 total=30153 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=279 tokens=2614 bits=21241
-  state 1  : rules=279 tokens=2614 bits=21241
-  state 2  : rules=279 tokens=2614 bits=21241
-  state 3  : rules=279 tokens=2614 bits=21241
+  state 0  : rules=279 tokens=2614 bits=21241 total=30169
+  state 1  : rules=279 tokens=2614 bits=21241 total=30169
+  state 2  : rules=279 tokens=2614 bits=21241 total=30169
+  state 3  : rules=279 tokens=2614 bits=21241 total=30169
 
 ROUND 78
- parent 0: rules=279 tokens=2614 bits=21241 candidates=16
-  NEW BEST: bits 21241 -> 21238 (-3)
+ parent 0: rules=279 tokens=2614 bits=21241 total=30169 candidates=16
+  NEW BEST PAYLOAD: bits 21241 -> 21238 (-3)
     rule T266 + T272 -> T535  occ=2  new-token=used
-  NEW BEST: bits 21238 -> 21237 (-1)
+  NEW BEST PAYLOAD: bits 21238 -> 21237 (-1)
     rule T266 + T290 -> T535  occ=2  new-token=used
-  NEW BEST: bits 21237 -> 21235 (-2)
+  NEW BEST PAYLOAD: bits 21237 -> 21235 (-2)
     rule T286 + T256 -> T535  occ=2  new-token=used
-  NEW BEST: bits 21235 -> 21234 (-1)
+  NEW BEST PAYLOAD: bits 21235 -> 21234 (-1)
     rule T224 + T365 -> T535  occ=2  new-token=used
-  NEW BEST: bits 21234 -> 21233 (-1)
+  NEW BEST PAYLOAD: bits 21234 -> 21233 (-1)
     rule T240 + T288 -> T535  occ=2  new-token=used
-  NEW BEST: bits 21233 -> 21227 (-6)
+  NEW BEST PAYLOAD: bits 21233 -> 21227 (-6)
     rule T240 + T483 -> T535  occ=2  new-token=used
- parent 1: rules=279 tokens=2614 bits=21241 candidates=16
- parent 2: rules=279 tokens=2614 bits=21241 candidates=16
- parent 3: rules=279 tokens=2614 bits=21241 candidates=16
+ parent 1: rules=279 tokens=2614 bits=21241 total=30169 candidates=16
+ parent 2: rules=279 tokens=2614 bits=21241 total=30169 candidates=16
+ parent 3: rules=279 tokens=2614 bits=21241 total=30169 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=280 tokens=2612 bits=21227
-  state 1  : rules=280 tokens=2612 bits=21227
-  state 2  : rules=280 tokens=2612 bits=21227
-  state 3  : rules=280 tokens=2612 bits=21227
+  state 0  : rules=280 tokens=2612 bits=21227 total=30187
+  state 1  : rules=280 tokens=2612 bits=21227 total=30187
+  state 2  : rules=280 tokens=2612 bits=21227 total=30187
+  state 3  : rules=280 tokens=2612 bits=21227 total=30187
 
 ROUND 79
- parent 0: rules=280 tokens=2612 bits=21227 candidates=16
-  NEW BEST: bits 21227 -> 21224 (-3)
+ parent 0: rules=280 tokens=2612 bits=21227 total=30187 candidates=16
+  NEW BEST PAYLOAD: bits 21227 -> 21224 (-3)
     rule T266 + T272 -> T536  occ=2  new-token=used
-  NEW BEST: bits 21224 -> 21223 (-1)
+  NEW BEST PAYLOAD: bits 21224 -> 21223 (-1)
     rule T266 + T290 -> T536  occ=2  new-token=used
-  NEW BEST: bits 21223 -> 21211 (-12)
+  NEW BEST PAYLOAD: bits 21223 -> 21211 (-12)
     rule T269 + T535 -> T536  occ=2  new-token=used
- parent 1: rules=280 tokens=2612 bits=21227 candidates=16
- parent 2: rules=280 tokens=2612 bits=21227 candidates=16
- parent 3: rules=280 tokens=2612 bits=21227 candidates=16
+ parent 1: rules=280 tokens=2612 bits=21227 total=30187 candidates=16
+ parent 2: rules=280 tokens=2612 bits=21227 total=30187 candidates=16
+ parent 3: rules=280 tokens=2612 bits=21227 total=30187 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=281 tokens=2610 bits=21211
-  state 1  : rules=281 tokens=2610 bits=21211
-  state 2  : rules=281 tokens=2610 bits=21211
-  state 3  : rules=281 tokens=2610 bits=21211
+  state 0  : rules=281 tokens=2610 bits=21211 total=30203
+  state 1  : rules=281 tokens=2610 bits=21211 total=30203
+  state 2  : rules=281 tokens=2610 bits=21211 total=30203
+  state 3  : rules=281 tokens=2610 bits=21211 total=30203
 
 ROUND 80
- parent 0: rules=281 tokens=2610 bits=21211 candidates=16
-  NEW BEST: bits 21211 -> 21208 (-3)
+ parent 0: rules=281 tokens=2610 bits=21211 total=30203 candidates=16
+  NEW BEST PAYLOAD: bits 21211 -> 21208 (-3)
     rule T266 + T272 -> T537  occ=2  new-token=used
-  NEW BEST: bits 21208 -> 21207 (-1)
+  NEW BEST PAYLOAD: bits 21208 -> 21207 (-1)
     rule T266 + T290 -> T537  occ=2  new-token=used
-  NEW BEST: bits 21207 -> 21205 (-2)
+  NEW BEST PAYLOAD: bits 21207 -> 21205 (-2)
     rule T286 + T256 -> T537  occ=2  new-token=used
-  NEW BEST: bits 21205 -> 21204 (-1)
+  NEW BEST PAYLOAD: bits 21205 -> 21204 (-1)
     rule T224 + T365 -> T537  occ=2  new-token=used
-  NEW BEST: bits 21204 -> 21203 (-1)
+  NEW BEST PAYLOAD: bits 21204 -> 21203 (-1)
     rule T240 + T288 -> T537  occ=2  new-token=used
-  NEW BEST: bits 21203 -> 21195 (-8)
+  NEW BEST PAYLOAD: bits 21203 -> 21195 (-8)
     rule T241 + T536 -> T537  occ=2  new-token=used
- parent 1: rules=281 tokens=2610 bits=21211 candidates=16
- parent 2: rules=281 tokens=2610 bits=21211 candidates=16
- parent 3: rules=281 tokens=2610 bits=21211 candidates=16
+ parent 1: rules=281 tokens=2610 bits=21211 total=30203 candidates=16
+ parent 2: rules=281 tokens=2610 bits=21211 total=30203 candidates=16
+ parent 3: rules=281 tokens=2610 bits=21211 total=30203 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=282 tokens=2608 bits=21195
-  state 1  : rules=282 tokens=2608 bits=21195
-  state 2  : rules=282 tokens=2608 bits=21195
-  state 3  : rules=282 tokens=2608 bits=21195
+  state 0  : rules=282 tokens=2608 bits=21195 total=30219
+  state 1  : rules=282 tokens=2608 bits=21195 total=30219
+  state 2  : rules=282 tokens=2608 bits=21195 total=30219
+  state 3  : rules=282 tokens=2608 bits=21195 total=30219
 
 ROUND 81
- parent 0: rules=282 tokens=2608 bits=21195 candidates=16
-  NEW BEST: bits 21195 -> 21192 (-3)
+ parent 0: rules=282 tokens=2608 bits=21195 total=30219 candidates=16
+  NEW BEST PAYLOAD: bits 21195 -> 21192 (-3)
     rule T266 + T272 -> T538  occ=2  new-token=used
-  NEW BEST: bits 21192 -> 21191 (-1)
+  NEW BEST PAYLOAD: bits 21192 -> 21191 (-1)
     rule T266 + T290 -> T538  occ=2  new-token=used
-  NEW BEST: bits 21191 -> 21189 (-2)
+  NEW BEST PAYLOAD: bits 21191 -> 21189 (-2)
     rule T286 + T256 -> T538  occ=2  new-token=used
-  NEW BEST: bits 21189 -> 21188 (-1)
+  NEW BEST PAYLOAD: bits 21189 -> 21188 (-1)
     rule T224 + T365 -> T538  occ=2  new-token=used
-  NEW BEST: bits 21188 -> 21187 (-1)
+  NEW BEST PAYLOAD: bits 21188 -> 21187 (-1)
     rule T240 + T288 -> T538  occ=2  new-token=used
- parent 1: rules=282 tokens=2608 bits=21195 candidates=16
- parent 2: rules=282 tokens=2608 bits=21195 candidates=16
- parent 3: rules=282 tokens=2608 bits=21195 candidates=16
+ parent 1: rules=282 tokens=2608 bits=21195 total=30219 candidates=16
+ parent 2: rules=282 tokens=2608 bits=21195 total=30219 candidates=16
+ parent 3: rules=282 tokens=2608 bits=21195 total=30219 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=283 tokens=2606 bits=21187
-  state 1  : rules=283 tokens=2606 bits=21187
-  state 2  : rules=283 tokens=2606 bits=21187
-  state 3  : rules=283 tokens=2606 bits=21187
+  state 0  : rules=283 tokens=2606 bits=21187 total=30243
+  state 1  : rules=283 tokens=2606 bits=21187 total=30243
+  state 2  : rules=283 tokens=2606 bits=21187 total=30243
+  state 3  : rules=283 tokens=2606 bits=21187 total=30243
 
 ROUND 82
- parent 0: rules=283 tokens=2606 bits=21187 candidates=16
-  NEW BEST: bits 21187 -> 21184 (-3)
+ parent 0: rules=283 tokens=2606 bits=21187 total=30243 candidates=16
+  NEW BEST PAYLOAD: bits 21187 -> 21184 (-3)
     rule T266 + T272 -> T539  occ=2  new-token=used
-  NEW BEST: bits 21184 -> 21183 (-1)
+  NEW BEST PAYLOAD: bits 21184 -> 21183 (-1)
     rule T266 + T290 -> T539  occ=2  new-token=used
-  NEW BEST: bits 21183 -> 21181 (-2)
+  NEW BEST PAYLOAD: bits 21183 -> 21181 (-2)
     rule T286 + T256 -> T539  occ=2  new-token=used
-  NEW BEST: bits 21181 -> 21169 (-12)
+  NEW BEST PAYLOAD: bits 21181 -> 21169 (-12)
     rule T423 + T538 -> T539  occ=2  new-token=used
- parent 1: rules=283 tokens=2606 bits=21187 candidates=16
- parent 2: rules=283 tokens=2606 bits=21187 candidates=16
- parent 3: rules=283 tokens=2606 bits=21187 candidates=16
+ parent 1: rules=283 tokens=2606 bits=21187 total=30243 candidates=16
+ parent 2: rules=283 tokens=2606 bits=21187 total=30243 candidates=16
+ parent 3: rules=283 tokens=2606 bits=21187 total=30243 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=284 tokens=2604 bits=21169
-  state 1  : rules=284 tokens=2604 bits=21169
-  state 2  : rules=284 tokens=2604 bits=21177
-  state 3  : rules=284 tokens=2604 bits=21177
+  state 0  : rules=284 tokens=2604 bits=21169 total=30257
+  state 1  : rules=284 tokens=2604 bits=21169 total=30257
+  state 2  : rules=284 tokens=2604 bits=21177 total=30265
+  state 3  : rules=284 tokens=2604 bits=21177 total=30265
 
 ROUND 83
- parent 0: rules=284 tokens=2604 bits=21169 candidates=16
-  NEW BEST: bits 21169 -> 21166 (-3)
+ parent 0: rules=284 tokens=2604 bits=21169 total=30257 candidates=16
+  NEW BEST PAYLOAD: bits 21169 -> 21166 (-3)
     rule T266 + T272 -> T540  occ=2  new-token=used
-  NEW BEST: bits 21166 -> 21165 (-1)
+  NEW BEST PAYLOAD: bits 21166 -> 21165 (-1)
     rule T266 + T290 -> T540  occ=2  new-token=used
-  NEW BEST: bits 21165 -> 21163 (-2)
+  NEW BEST PAYLOAD: bits 21165 -> 21163 (-2)
     rule T286 + T256 -> T540  occ=2  new-token=used
-  NEW BEST: bits 21163 -> 21162 (-1)
+  NEW BEST PAYLOAD: bits 21163 -> 21162 (-1)
     rule T224 + T365 -> T540  occ=2  new-token=used
-  NEW BEST: bits 21162 -> 21161 (-1)
+  NEW BEST PAYLOAD: bits 21162 -> 21161 (-1)
     rule T247 + T296 -> T540  occ=2  new-token=used
-  NEW BEST: bits 21161 -> 21159 (-2)
+  NEW BEST PAYLOAD: bits 21161 -> 21159 (-2)
     rule T248 + T518 -> T540  occ=2  new-token=used
- parent 1: rules=284 tokens=2604 bits=21169 candidates=16
- parent 2: rules=284 tokens=2604 bits=21177 candidates=16
- parent 3: rules=284 tokens=2604 bits=21177 candidates=16
+ parent 1: rules=284 tokens=2604 bits=21169 total=30257 candidates=16
+ parent 2: rules=284 tokens=2604 bits=21177 total=30265 candidates=16
+ parent 3: rules=284 tokens=2604 bits=21177 total=30265 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=285 tokens=2602 bits=21159
-  state 1  : rules=285 tokens=2602 bits=21159
-  state 2  : rules=285 tokens=2602 bits=21161
-  state 3  : rules=285 tokens=2602 bits=21161
+  state 0  : rules=285 tokens=2602 bits=21159 total=30279
+  state 1  : rules=285 tokens=2602 bits=21159 total=30279
+  state 2  : rules=285 tokens=2602 bits=21161 total=30281
+  state 3  : rules=285 tokens=2602 bits=21161 total=30281
 
 ROUND 84
- parent 0: rules=285 tokens=2602 bits=21159 candidates=16
-  NEW BEST: bits 21159 -> 21156 (-3)
+ parent 0: rules=285 tokens=2602 bits=21159 total=30279 candidates=16
+  NEW BEST PAYLOAD: bits 21159 -> 21156 (-3)
     rule T266 + T272 -> T541  occ=2  new-token=used
-  NEW BEST: bits 21156 -> 21155 (-1)
+  NEW BEST PAYLOAD: bits 21156 -> 21155 (-1)
     rule T266 + T290 -> T541  occ=2  new-token=used
-  NEW BEST: bits 21155 -> 21153 (-2)
+  NEW BEST PAYLOAD: bits 21155 -> 21153 (-2)
     rule T286 + T256 -> T541  occ=2  new-token=used
-  NEW BEST: bits 21153 -> 21152 (-1)
+  NEW BEST PAYLOAD: bits 21153 -> 21152 (-1)
     rule T224 + T365 -> T541  occ=2  new-token=used
-  NEW BEST: bits 21152 -> 21151 (-1)
+  NEW BEST PAYLOAD: bits 21152 -> 21151 (-1)
     rule T247 + T296 -> T541  occ=2  new-token=used
- parent 1: rules=285 tokens=2602 bits=21159 candidates=16
- parent 2: rules=285 tokens=2602 bits=21161 candidates=16
- parent 3: rules=285 tokens=2602 bits=21161 candidates=16
+ parent 1: rules=285 tokens=2602 bits=21159 total=30279 candidates=16
+ parent 2: rules=285 tokens=2602 bits=21161 total=30281 candidates=16
+ parent 3: rules=285 tokens=2602 bits=21161 total=30281 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=286 tokens=2600 bits=21151
-  state 1  : rules=286 tokens=2600 bits=21151
-  state 2  : rules=286 tokens=2600 bits=21151
-  state 3  : rules=286 tokens=2600 bits=21151
+  state 0  : rules=286 tokens=2600 bits=21151 total=30303
+  state 1  : rules=286 tokens=2600 bits=21151 total=30303
+  state 2  : rules=286 tokens=2600 bits=21151 total=30303
+  state 3  : rules=286 tokens=2600 bits=21151 total=30303
 
 ROUND 85
- parent 0: rules=286 tokens=2600 bits=21151 candidates=16
-  NEW BEST: bits 21151 -> 21148 (-3)
+ parent 0: rules=286 tokens=2600 bits=21151 total=30303 candidates=16
+  NEW BEST PAYLOAD: bits 21151 -> 21148 (-3)
     rule T266 + T272 -> T542  occ=2  new-token=used
-  NEW BEST: bits 21148 -> 21147 (-1)
+  NEW BEST PAYLOAD: bits 21148 -> 21147 (-1)
     rule T266 + T290 -> T542  occ=2  new-token=used
-  NEW BEST: bits 21147 -> 21145 (-2)
+  NEW BEST PAYLOAD: bits 21147 -> 21145 (-2)
     rule T286 + T256 -> T542  occ=2  new-token=used
-  NEW BEST: bits 21145 -> 21144 (-1)
+  NEW BEST PAYLOAD: bits 21145 -> 21144 (-1)
     rule T224 + T365 -> T542  occ=2  new-token=used
-  NEW BEST: bits 21144 -> 21143 (-1)
+  NEW BEST PAYLOAD: bits 21144 -> 21143 (-1)
     rule T247 + T296 -> T542  occ=2  new-token=used
-  NEW BEST: bits 21143 -> 21139 (-4)
+  NEW BEST PAYLOAD: bits 21143 -> 21139 (-4)
     rule T252 + T410 -> T542  occ=2  new-token=used
- parent 1: rules=286 tokens=2600 bits=21151 candidates=16
- parent 2: rules=286 tokens=2600 bits=21151 candidates=16
- parent 3: rules=286 tokens=2600 bits=21151 candidates=16
+ parent 1: rules=286 tokens=2600 bits=21151 total=30303 candidates=16
+ parent 2: rules=286 tokens=2600 bits=21151 total=30303 candidates=16
+ parent 3: rules=286 tokens=2600 bits=21151 total=30303 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=287 tokens=2598 bits=21139
-  state 1  : rules=287 tokens=2598 bits=21139
-  state 2  : rules=287 tokens=2598 bits=21139
-  state 3  : rules=287 tokens=2598 bits=21139
+  state 0  : rules=287 tokens=2598 bits=21139 total=30323
+  state 1  : rules=287 tokens=2598 bits=21139 total=30323
+  state 2  : rules=287 tokens=2598 bits=21139 total=30323
+  state 3  : rules=287 tokens=2598 bits=21139 total=30323
 
 ROUND 86
- parent 0: rules=287 tokens=2598 bits=21139 candidates=16
-  NEW BEST: bits 21139 -> 21135 (-4)
+ parent 0: rules=287 tokens=2598 bits=21139 total=30323 candidates=16
+  NEW BEST PAYLOAD: bits 21139 -> 21135 (-4)
     rule T266 + T272 -> T543  occ=2  new-token=used
-  NEW BEST: bits 21135 -> 21133 (-2)
+  NEW BEST PAYLOAD: bits 21135 -> 21133 (-2)
     rule T286 + T256 -> T543  occ=2  new-token=used
-  NEW BEST: bits 21133 -> 21132 (-1)
+  NEW BEST PAYLOAD: bits 21133 -> 21132 (-1)
     rule T224 + T365 -> T543  occ=2  new-token=used
-  NEW BEST: bits 21132 -> 21131 (-1)
+  NEW BEST PAYLOAD: bits 21132 -> 21131 (-1)
     rule T252 + T330 -> T543  occ=2  new-token=used
- parent 1: rules=287 tokens=2598 bits=21139 candidates=16
- parent 2: rules=287 tokens=2598 bits=21139 candidates=16
- parent 3: rules=287 tokens=2598 bits=21139 candidates=16
+ parent 1: rules=287 tokens=2598 bits=21139 total=30323 candidates=16
+ parent 2: rules=287 tokens=2598 bits=21139 total=30323 candidates=16
+ parent 3: rules=287 tokens=2598 bits=21139 total=30323 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=288 tokens=2596 bits=21131
-  state 1  : rules=288 tokens=2596 bits=21131
-  state 2  : rules=288 tokens=2596 bits=21131
-  state 3  : rules=288 tokens=2596 bits=21131
+  state 0  : rules=288 tokens=2596 bits=21131 total=30347
+  state 1  : rules=288 tokens=2596 bits=21131 total=30347
+  state 2  : rules=288 tokens=2596 bits=21131 total=30347
+  state 3  : rules=288 tokens=2596 bits=21131 total=30347
 
 ROUND 87
- parent 0: rules=288 tokens=2596 bits=21131 candidates=16
-  NEW BEST: bits 21131 -> 21127 (-4)
+ parent 0: rules=288 tokens=2596 bits=21131 total=30347 candidates=16
+  NEW BEST PAYLOAD: bits 21131 -> 21127 (-4)
     rule T266 + T272 -> T544  occ=2  new-token=used
-  NEW BEST: bits 21127 -> 21125 (-2)
+  NEW BEST PAYLOAD: bits 21127 -> 21125 (-2)
     rule T286 + T256 -> T544  occ=2  new-token=used
-  NEW BEST: bits 21125 -> 21124 (-1)
+  NEW BEST PAYLOAD: bits 21125 -> 21124 (-1)
     rule T224 + T365 -> T544  occ=2  new-token=used
- parent 1: rules=288 tokens=2596 bits=21131 candidates=16
- parent 2: rules=288 tokens=2596 bits=21131 candidates=16
- parent 3: rules=288 tokens=2596 bits=21131 candidates=16
+ parent 1: rules=288 tokens=2596 bits=21131 total=30347 candidates=16
+ parent 2: rules=288 tokens=2596 bits=21131 total=30347 candidates=16
+ parent 3: rules=288 tokens=2596 bits=21131 total=30347 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=289 tokens=2594 bits=21124
-  state 1  : rules=289 tokens=2594 bits=21124
-  state 2  : rules=289 tokens=2594 bits=21124
-  state 3  : rules=289 tokens=2594 bits=21124
+  state 0  : rules=289 tokens=2594 bits=21124 total=30372
+  state 1  : rules=289 tokens=2594 bits=21124 total=30372
+  state 2  : rules=289 tokens=2594 bits=21124 total=30372
+  state 3  : rules=289 tokens=2594 bits=21124 total=30372
 
 ROUND 88
- parent 0: rules=289 tokens=2594 bits=21124 candidates=16
-  NEW BEST: bits 21124 -> 21120 (-4)
+ parent 0: rules=289 tokens=2594 bits=21124 total=30372 candidates=16
+  NEW BEST PAYLOAD: bits 21124 -> 21120 (-4)
     rule T266 + T272 -> T545  occ=2  new-token=used
-  NEW BEST: bits 21120 -> 21118 (-2)
+  NEW BEST PAYLOAD: bits 21120 -> 21118 (-2)
     rule T286 + T256 -> T545  occ=2  new-token=used
-  NEW BEST: bits 21118 -> 21117 (-1)
+  NEW BEST PAYLOAD: bits 21118 -> 21117 (-1)
     rule T224 + T365 -> T545  occ=2  new-token=used
-  NEW BEST: bits 21117 -> 21115 (-2)
+  NEW BEST PAYLOAD: bits 21117 -> 21115 (-2)
     rule T255 + T305 -> T545  occ=2  new-token=used
- parent 1: rules=289 tokens=2594 bits=21124 candidates=16
- parent 2: rules=289 tokens=2594 bits=21124 candidates=16
- parent 3: rules=289 tokens=2594 bits=21124 candidates=16
+ parent 1: rules=289 tokens=2594 bits=21124 total=30372 candidates=16
+ parent 2: rules=289 tokens=2594 bits=21124 total=30372 candidates=16
+ parent 3: rules=289 tokens=2594 bits=21124 total=30372 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=290 tokens=2592 bits=21115
-  state 1  : rules=290 tokens=2592 bits=21115
-  state 2  : rules=290 tokens=2592 bits=21115
-  state 3  : rules=290 tokens=2592 bits=21115
+  state 0  : rules=290 tokens=2592 bits=21115 total=30395
+  state 1  : rules=290 tokens=2592 bits=21115 total=30395
+  state 2  : rules=290 tokens=2592 bits=21115 total=30395
+  state 3  : rules=290 tokens=2592 bits=21115 total=30395
 
 ROUND 89
- parent 0: rules=290 tokens=2592 bits=21115 candidates=16
-  NEW BEST: bits 21115 -> 21111 (-4)
+ parent 0: rules=290 tokens=2592 bits=21115 total=30395 candidates=16
+  NEW BEST PAYLOAD: bits 21115 -> 21111 (-4)
     rule T266 + T272 -> T546  occ=2  new-token=used
-  NEW BEST: bits 21111 -> 21108 (-3)
+  NEW BEST PAYLOAD: bits 21111 -> 21108 (-3)
     rule T286 + T256 -> T546  occ=2  new-token=used
- parent 1: rules=290 tokens=2592 bits=21115 candidates=16
- parent 2: rules=290 tokens=2592 bits=21115 candidates=16
- parent 3: rules=290 tokens=2592 bits=21115 candidates=16
+ parent 1: rules=290 tokens=2592 bits=21115 total=30395 candidates=16
+ parent 2: rules=290 tokens=2592 bits=21115 total=30395 candidates=16
+ parent 3: rules=290 tokens=2592 bits=21115 total=30395 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=291 tokens=2590 bits=21108
-  state 1  : rules=291 tokens=2590 bits=21108
-  state 2  : rules=291 tokens=2590 bits=21108
-  state 3  : rules=291 tokens=2590 bits=21108
+  state 0  : rules=291 tokens=2590 bits=21108 total=30420
+  state 1  : rules=291 tokens=2590 bits=21108 total=30420
+  state 2  : rules=291 tokens=2590 bits=21108 total=30420
+  state 3  : rules=291 tokens=2590 bits=21108 total=30420
 
 ROUND 90
- parent 0: rules=291 tokens=2590 bits=21108 candidates=16
-  NEW BEST: bits 21108 -> 21104 (-4)
+ parent 0: rules=291 tokens=2590 bits=21108 total=30420 candidates=16
+  NEW BEST PAYLOAD: bits 21108 -> 21104 (-4)
     rule T266 + T272 -> T547  occ=2  new-token=used
-  NEW BEST: bits 21104 -> 21101 (-3)
+  NEW BEST PAYLOAD: bits 21104 -> 21101 (-3)
     rule T286 + T256 -> T547  occ=2  new-token=used
-  NEW BEST: bits 21101 -> 21096 (-5)
+  NEW BEST PAYLOAD: bits 21101 -> 21096 (-5)
     rule T255 + T525 -> T547  occ=2  new-token=used
- parent 1: rules=291 tokens=2590 bits=21108 candidates=16
- parent 2: rules=291 tokens=2590 bits=21108 candidates=16
- parent 3: rules=291 tokens=2590 bits=21108 candidates=16
+ parent 1: rules=291 tokens=2590 bits=21108 total=30420 candidates=16
+ parent 2: rules=291 tokens=2590 bits=21108 total=30420 candidates=16
+ parent 3: rules=291 tokens=2590 bits=21108 total=30420 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=292 tokens=2588 bits=21096
-  state 1  : rules=292 tokens=2588 bits=21096
-  state 2  : rules=292 tokens=2588 bits=21096
-  state 3  : rules=292 tokens=2588 bits=21096
+  state 0  : rules=292 tokens=2588 bits=21096 total=30440
+  state 1  : rules=292 tokens=2588 bits=21096 total=30440
+  state 2  : rules=292 tokens=2588 bits=21096 total=30440
+  state 3  : rules=292 tokens=2588 bits=21096 total=30440
 
 ROUND 91
- parent 0: rules=292 tokens=2588 bits=21096 candidates=16
-  NEW BEST: bits 21096 -> 21092 (-4)
+ parent 0: rules=292 tokens=2588 bits=21096 total=30440 candidates=16
+  NEW BEST PAYLOAD: bits 21096 -> 21092 (-4)
     rule T266 + T272 -> T548  occ=2  new-token=used
-  NEW BEST: bits 21092 -> 21089 (-3)
+  NEW BEST PAYLOAD: bits 21092 -> 21089 (-3)
     rule T286 + T256 -> T548  occ=2  new-token=used
- parent 1: rules=292 tokens=2588 bits=21096 candidates=16
- parent 2: rules=292 tokens=2588 bits=21096 candidates=16
-  NEW BEST: bits 21089 -> 21086 (-3)
+ parent 1: rules=292 tokens=2588 bits=21096 total=30440 candidates=16
+ parent 2: rules=292 tokens=2588 bits=21096 total=30440 candidates=16
+  NEW BEST PAYLOAD: bits 21089 -> 21086 (-3)
     rule T257 + T48 -> T548  occ=2  new-token=used
- parent 3: rules=292 tokens=2588 bits=21096 candidates=16
+ parent 3: rules=292 tokens=2588 bits=21096 total=30440 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=293 tokens=2586 bits=21086
-  state 1  : rules=293 tokens=2586 bits=21089
-  state 2  : rules=293 tokens=2586 bits=21089
-  state 3  : rules=293 tokens=2586 bits=21089
+  state 0  : rules=293 tokens=2586 bits=21086 total=30462
+  state 1  : rules=293 tokens=2586 bits=21089 total=30465
+  state 2  : rules=293 tokens=2586 bits=21089 total=30465
+  state 3  : rules=293 tokens=2586 bits=21089 total=30465
 
 ROUND 92
- parent 0: rules=293 tokens=2586 bits=21086 candidates=16
-  NEW BEST: bits 21086 -> 21082 (-4)
+ parent 0: rules=293 tokens=2586 bits=21086 total=30462 candidates=16
+  NEW BEST PAYLOAD: bits 21086 -> 21082 (-4)
     rule T266 + T272 -> T549  occ=2  new-token=used
-  NEW BEST: bits 21082 -> 21080 (-2)
+  NEW BEST PAYLOAD: bits 21082 -> 21080 (-2)
     rule T1 + T338 -> T549  occ=2  new-token=used
-  NEW BEST: bits 21080 -> 21079 (-1)
+  NEW BEST PAYLOAD: bits 21080 -> 21079 (-1)
     rule T224 + T365 -> T549  occ=2  new-token=used
- parent 1: rules=293 tokens=2586 bits=21089 candidates=16
- parent 2: rules=293 tokens=2586 bits=21089 candidates=16
- parent 3: rules=293 tokens=2586 bits=21089 candidates=16
+ parent 1: rules=293 tokens=2586 bits=21089 total=30465 candidates=16
+ parent 2: rules=293 tokens=2586 bits=21089 total=30465 candidates=16
+ parent 3: rules=293 tokens=2586 bits=21089 total=30465 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=294 tokens=2584 bits=21079
-  state 1  : rules=294 tokens=2584 bits=21079
-  state 2  : rules=294 tokens=2584 bits=21079
-  state 3  : rules=294 tokens=2584 bits=21079
+  state 0  : rules=294 tokens=2584 bits=21079 total=30487
+  state 1  : rules=294 tokens=2584 bits=21079 total=30487
+  state 2  : rules=294 tokens=2584 bits=21079 total=30487
+  state 3  : rules=294 tokens=2584 bits=21079 total=30487
 
 ROUND 93
- parent 0: rules=294 tokens=2584 bits=21079 candidates=16
-  NEW BEST: bits 21079 -> 21075 (-4)
+ parent 0: rules=294 tokens=2584 bits=21079 total=30487 candidates=16
+  NEW BEST PAYLOAD: bits 21079 -> 21075 (-4)
     rule T266 + T272 -> T550  occ=2  new-token=used
-  NEW BEST: bits 21075 -> 21073 (-2)
+  NEW BEST PAYLOAD: bits 21075 -> 21073 (-2)
     rule T1 + T338 -> T550  occ=2  new-token=used
- parent 1: rules=294 tokens=2584 bits=21079 candidates=16
- parent 2: rules=294 tokens=2584 bits=21079 candidates=16
- parent 3: rules=294 tokens=2584 bits=21079 candidates=16
+ parent 1: rules=294 tokens=2584 bits=21079 total=30487 candidates=16
+ parent 2: rules=294 tokens=2584 bits=21079 total=30487 candidates=16
+ parent 3: rules=294 tokens=2584 bits=21079 total=30487 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=295 tokens=2582 bits=21073
-  state 1  : rules=295 tokens=2582 bits=21073
-  state 2  : rules=295 tokens=2582 bits=21073
-  state 3  : rules=295 tokens=2582 bits=21073
+  state 0  : rules=295 tokens=2582 bits=21073 total=30513
+  state 1  : rules=295 tokens=2582 bits=21073 total=30513
+  state 2  : rules=295 tokens=2582 bits=21073 total=30513
+  state 3  : rules=295 tokens=2582 bits=21073 total=30513
 
 ROUND 94
- parent 0: rules=295 tokens=2582 bits=21073 candidates=16
-  NEW BEST: bits 21073 -> 21069 (-4)
+ parent 0: rules=295 tokens=2582 bits=21073 total=30513 candidates=16
+  NEW BEST PAYLOAD: bits 21073 -> 21069 (-4)
     rule T266 + T272 -> T551  occ=2  new-token=used
-  NEW BEST: bits 21069 -> 21067 (-2)
+  NEW BEST PAYLOAD: bits 21069 -> 21067 (-2)
     rule T1 + T338 -> T551  occ=2  new-token=used
-  NEW BEST: bits 21067 -> 21063 (-4)
+  NEW BEST PAYLOAD: bits 21067 -> 21063 (-4)
     rule T265 + T9 -> T551  occ=2  new-token=used
- parent 1: rules=295 tokens=2582 bits=21073 candidates=16
- parent 2: rules=295 tokens=2582 bits=21073 candidates=16
- parent 3: rules=295 tokens=2582 bits=21073 candidates=16
+ parent 1: rules=295 tokens=2582 bits=21073 total=30513 candidates=16
+ parent 2: rules=295 tokens=2582 bits=21073 total=30513 candidates=16
+ parent 3: rules=295 tokens=2582 bits=21073 total=30513 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=296 tokens=2580 bits=21063
-  state 1  : rules=296 tokens=2580 bits=21063
-  state 2  : rules=296 tokens=2580 bits=21063
-  state 3  : rules=296 tokens=2580 bits=21064
+  state 0  : rules=296 tokens=2580 bits=21063 total=30535
+  state 1  : rules=296 tokens=2580 bits=21063 total=30535
+  state 2  : rules=296 tokens=2580 bits=21063 total=30535
+  state 3  : rules=296 tokens=2580 bits=21064 total=30536
 
 ROUND 95
- parent 0: rules=296 tokens=2580 bits=21063 candidates=16
-  NEW BEST: bits 21063 -> 21059 (-4)
+ parent 0: rules=296 tokens=2580 bits=21063 total=30535 candidates=16
+  NEW BEST PAYLOAD: bits 21063 -> 21059 (-4)
     rule T266 + T272 -> T552  occ=2  new-token=used
-  NEW BEST: bits 21059 -> 21057 (-2)
+  NEW BEST PAYLOAD: bits 21059 -> 21057 (-2)
     rule T1 + T338 -> T552  occ=2  new-token=used
-  NEW BEST: bits 21057 -> 21049 (-8)
+  NEW BEST PAYLOAD: bits 21057 -> 21049 (-8)
     rule T265 + T35 -> T552  occ=2  new-token=used
- parent 1: rules=296 tokens=2580 bits=21063 candidates=16
- parent 2: rules=296 tokens=2580 bits=21063 candidates=16
- parent 3: rules=296 tokens=2580 bits=21064 candidates=16
+ parent 1: rules=296 tokens=2580 bits=21063 total=30535 candidates=16
+ parent 2: rules=296 tokens=2580 bits=21063 total=30535 candidates=16
+ parent 3: rules=296 tokens=2580 bits=21064 total=30536 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=297 tokens=2578 bits=21049
-  state 1  : rules=297 tokens=2578 bits=21049
-  state 2  : rules=297 tokens=2578 bits=21049
-  state 3  : rules=297 tokens=2578 bits=21050
+  state 0  : rules=297 tokens=2578 bits=21049 total=30553
+  state 1  : rules=297 tokens=2578 bits=21049 total=30553
+  state 2  : rules=297 tokens=2578 bits=21049 total=30553
+  state 3  : rules=297 tokens=2578 bits=21050 total=30554
 
 ROUND 96
- parent 0: rules=297 tokens=2578 bits=21049 candidates=16
-  NEW BEST: bits 21049 -> 21045 (-4)
+ parent 0: rules=297 tokens=2578 bits=21049 total=30553 candidates=16
+  NEW BEST PAYLOAD: bits 21049 -> 21045 (-4)
     rule T266 + T272 -> T553  occ=2  new-token=used
-  NEW BEST: bits 21045 -> 21043 (-2)
+  NEW BEST PAYLOAD: bits 21045 -> 21043 (-2)
     rule T1 + T338 -> T553  occ=2  new-token=used
- parent 1: rules=297 tokens=2578 bits=21049 candidates=16
- parent 2: rules=297 tokens=2578 bits=21049 candidates=16
- parent 3: rules=297 tokens=2578 bits=21050 candidates=16
+ parent 1: rules=297 tokens=2578 bits=21049 total=30553 candidates=16
+ parent 2: rules=297 tokens=2578 bits=21049 total=30553 candidates=16
+ parent 3: rules=297 tokens=2578 bits=21050 total=30554 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=298 tokens=2576 bits=21043
-  state 1  : rules=298 tokens=2576 bits=21043
-  state 2  : rules=298 tokens=2576 bits=21043
-  state 3  : rules=298 tokens=2576 bits=21043
+  state 0  : rules=298 tokens=2576 bits=21043 total=30579
+  state 1  : rules=298 tokens=2576 bits=21043 total=30579
+  state 2  : rules=298 tokens=2576 bits=21043 total=30579
+  state 3  : rules=298 tokens=2576 bits=21043 total=30579
 
 ROUND 97
- parent 0: rules=298 tokens=2576 bits=21043 candidates=16
-  NEW BEST: bits 21043 -> 21040 (-3)
+ parent 0: rules=298 tokens=2576 bits=21043 total=30579 candidates=16
+  NEW BEST PAYLOAD: bits 21043 -> 21040 (-3)
     rule T266 + T272 -> T554  occ=2  new-token=used
-  NEW BEST: bits 21040 -> 21039 (-1)
+  NEW BEST PAYLOAD: bits 21040 -> 21039 (-1)
     rule T266 + T290 -> T554  occ=2  new-token=used
-  NEW BEST: bits 21039 -> 21037 (-2)
+  NEW BEST PAYLOAD: bits 21039 -> 21037 (-2)
     rule T16 + T276 -> T554  occ=2  new-token=used
-  NEW BEST: bits 21037 -> 21032 (-5)
+  NEW BEST PAYLOAD: bits 21037 -> 21032 (-5)
     rule T270 + T18 -> T554  occ=2  new-token=used
- parent 1: rules=298 tokens=2576 bits=21043 candidates=16
- parent 2: rules=298 tokens=2576 bits=21043 candidates=16
- parent 3: rules=298 tokens=2576 bits=21043 candidates=16
-  NEW BEST: bits 21032 -> 21031 (-1)
+ parent 1: rules=298 tokens=2576 bits=21043 total=30579 candidates=16
+ parent 2: rules=298 tokens=2576 bits=21043 total=30579 candidates=16
+ parent 3: rules=298 tokens=2576 bits=21043 total=30579 candidates=16
+  NEW BEST PAYLOAD: bits 21032 -> 21031 (-1)
     rule T1 + T553 -> T554  occ=2  new-token=used
 beam after pruning: 4 states
-  state 0  : rules=299 tokens=2574 bits=21031
-  state 1  : rules=299 tokens=2574 bits=21032
-  state 2  : rules=299 tokens=2574 bits=21032
-  state 3  : rules=299 tokens=2574 bits=21032
+  state 0  : rules=299 tokens=2574 bits=21031 total=30599
+  state 1  : rules=299 tokens=2574 bits=21032 total=30600
+  state 2  : rules=299 tokens=2574 bits=21032 total=30600
+  state 3  : rules=299 tokens=2574 bits=21032 total=30600
 
 ROUND 98
- parent 0: rules=299 tokens=2574 bits=21031 candidates=16
-  NEW BEST: bits 21031 -> 21027 (-4)
+ parent 0: rules=299 tokens=2574 bits=21031 total=30599 candidates=16
+  NEW BEST PAYLOAD: bits 21031 -> 21027 (-4)
     rule T266 + T272 -> T555  occ=2  new-token=used
-  NEW BEST: bits 21027 -> 21025 (-2)
+  NEW BEST PAYLOAD: bits 21027 -> 21025 (-2)
     rule T1 + T338 -> T555  occ=2  new-token=used
-  NEW BEST: bits 21025 -> 21020 (-5)
+  NEW BEST PAYLOAD: bits 21025 -> 21020 (-5)
     rule T270 + T18 -> T555  occ=2  new-token=used
- parent 1: rules=299 tokens=2574 bits=21032 candidates=16
- parent 2: rules=299 tokens=2574 bits=21032 candidates=16
- parent 3: rules=299 tokens=2574 bits=21032 candidates=16
+ parent 1: rules=299 tokens=2574 bits=21032 total=30600 candidates=16
+ parent 2: rules=299 tokens=2574 bits=21032 total=30600 candidates=16
+ parent 3: rules=299 tokens=2574 bits=21032 total=30600 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=300 tokens=2572 bits=21020
-  state 1  : rules=300 tokens=2572 bits=21025
-  state 2  : rules=300 tokens=2572 bits=21025
-  state 3  : rules=300 tokens=2572 bits=21025
+  state 0  : rules=300 tokens=2572 bits=21020 total=30620
+  state 1  : rules=300 tokens=2572 bits=21025 total=30625
+  state 2  : rules=300 tokens=2572 bits=21025 total=30625
+  state 3  : rules=300 tokens=2572 bits=21025 total=30625
 
 ROUND 99
- parent 0: rules=300 tokens=2572 bits=21020 candidates=16
-  NEW BEST: bits 21020 -> 21016 (-4)
+ parent 0: rules=300 tokens=2572 bits=21020 total=30620 candidates=16
+  NEW BEST PAYLOAD: bits 21020 -> 21016 (-4)
     rule T266 + T272 -> T556  occ=2  new-token=used
-  NEW BEST: bits 21016 -> 21014 (-2)
+  NEW BEST PAYLOAD: bits 21016 -> 21014 (-2)
     rule T1 + T338 -> T556  occ=2  new-token=used
- parent 1: rules=300 tokens=2572 bits=21025 candidates=16
- parent 2: rules=300 tokens=2572 bits=21025 candidates=16
- parent 3: rules=300 tokens=2572 bits=21025 candidates=16
+ parent 1: rules=300 tokens=2572 bits=21025 total=30625 candidates=16
+ parent 2: rules=300 tokens=2572 bits=21025 total=30625 candidates=16
+ parent 3: rules=300 tokens=2572 bits=21025 total=30625 candidates=16
 beam after pruning: 4 states
-  state 0  : rules=301 tokens=2570 bits=21014
-  state 1  : rules=301 tokens=2570 bits=21014
-  state 2  : rules=301 tokens=2570 bits=21014
-  state 3  : rules=301 tokens=2570 bits=21014
+  state 0  : rules=301 tokens=2570 bits=21014 total=30646
+  state 1  : rules=301 tokens=2570 bits=21014 total=30646
+  state 2  : rules=301 tokens=2570 bits=21014 total=30646
+  state 3  : rules=301 tokens=2570 bits=21014 total=30646
 
 ROUND 100
- parent 0: rules=301 tokens=2570 bits=21014 candidates=16
-  NEW BEST: bits 21014 -> 21010 (-4)
+ parent 0: rules=301 tokens=2570 bits=21014 total=30646 candidates=16
+  NEW BEST PAYLOAD: bits 21014 -> 21010 (-4)
     rule T266 + T272 -> T557  occ=2  new-token=used
-  NEW BEST: bits 21010 -> 21008 (-2)
+  NEW BEST PAYLOAD: bits 21010 -> 21008 (-2)
     rule T47 + T266 -> T557  occ=2  new-token=used
- parent 1: rules=301 tokens=2570 bits=21014 candidates=16
-  NEW BEST: bits 21008 -> 21007 (-1)
+ parent 1: rules=301 tokens=2570 bits=21014 total=30646 candidates=16
+  NEW BEST PAYLOAD: bits 21008 -> 21007 (-1)
     rule T248 + T285 -> T557  occ=2  new-token=used
- parent 2: rules=301 tokens=2570 bits=21014 candidates=16
- parent 3: rules=301 tokens=2570 bits=21014 candidates=16
-  NEW BEST: bits 21007 -> 21004 (-3)
+ parent 2: rules=301 tokens=2570 bits=21014 total=30646 candidates=16
+ parent 3: rules=301 tokens=2570 bits=21014 total=30646 candidates=16
+  NEW BEST PAYLOAD: bits 21007 -> 21004 (-3)
     rule T255 + T307 -> T557  occ=2  new-token=used
 beam after pruning: 4 states
-  state 0  : rules=302 tokens=2567 bits=21004
-  state 1  : rules=302 tokens=2568 bits=21007
-  state 2  : rules=302 tokens=2568 bits=21007
-  state 3  : rules=302 tokens=2568 bits=21007
+  state 0  : rules=302 tokens=2567 bits=21004 total=30668
+  state 1  : rules=302 tokens=2568 bits=21007 total=30671
+  state 2  : rules=302 tokens=2568 bits=21007 total=30671
+  state 3  : rules=302 tokens=2568 bits=21007 total=30671
 
-BEST:
+BEST PAYLOAD:
 - rules 302
 - tokens 2567
 - Huffman bits 21004
 - Huffman bytes 2626
 - rule bytes 1208
+- approximate total bits 30668
+- approximate total bytes 3834
 - largest rule 96
 - best round 100
 - saving 1351 bits vs greedy
 - reduction 6.04339%
 - saving 1216 bits vs initial Shannon
+- reconstruction OK
+
+BEST TOTAL:
+- rules 203
+- tokens 2780
+- Huffman bits 22185
+- Huffman bytes 2774
+- rule bytes 812
+- approximate total bits 28681
+- approximate total bytes 3586
+- largest rule 96
+- best round 1
+- saving 138 bits vs greedy total
+- reduction 0.478851% vs greedy total
+- saving 3 bits vs initial Shannon total
 - reconstruction OK
