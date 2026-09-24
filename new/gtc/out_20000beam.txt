@@ -328,4 +328,1025 @@ ROUND 30
  generated states : 228
  next beam        : 4
  best payload     : 5410 rules, 40366 tokens, 455055 bits, total 628175
- best total       : 5410 rules, 40366 toke
+ best total       : 5410 rules, 40366 tokens, 455055 bits, total 628175
+
+ROUND 31
+ state: rules=5410 tokens=40366 candidates=32
+ state: rules=5410 tokens=40367 candidates=32
+ state: rules=5410 tokens=40365 candidates=32
+ state: rules=5410 tokens=40367 candidates=32
+ generated states : 132
+ next beam        : 4
+ best payload     : 5411 rules, 40363 tokens, 455020 bits, total 628172
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 132
+ next beam        : 8
+ best payload     : 5412 rules, 40357 tokens, 454993 bits, total 628177
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 33
+ state: rules=5412 tokens=40357 candidates=32
+ state: rules=5412 tokens=40357 candidates=32
+ state: rules=5412 tokens=40357 candidates=32
+ state: rules=5412 tokens=40357 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 260
+ next beam        : 8
+ best payload     : 5413 rules, 40353 tokens, 454967 bits, total 628183
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 34
+ state: rules=5413 tokens=40353 candidates=32
+ state: rules=5413 tokens=40353 candidates=32
+ state: rules=5413 tokens=40353 candidates=32
+ state: rules=5413 tokens=40353 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5414 rules, 40349 tokens, 454942 bits, total 628190
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 35
+ state: rules=5414 tokens=40349 candidates=32
+ state: rules=5414 tokens=40349 candidates=32
+ state: rules=5414 tokens=40349 candidates=32
+ state: rules=5414 tokens=40349 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5415 rules, 40344 tokens, 454915 bits, total 628195
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 36
+ state: rules=5415 tokens=40344 candidates=32
+ state: rules=5415 tokens=40344 candidates=32
+ state: rules=5415 tokens=40344 candidates=32
+ state: rules=5415 tokens=40344 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5416 rules, 40338 tokens, 454891 bits, total 628203
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 37
+ state: rules=5416 tokens=40338 candidates=32
+ state: rules=5416 tokens=40338 candidates=32
+ state: rules=5416 tokens=40339 candidates=32
+ state: rules=5416 tokens=40340 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5417 rules, 40333 tokens, 454868 bits, total 628212
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 38
+ state: rules=5417 tokens=40334 candidates=32
+ state: rules=5417 tokens=40335 candidates=32
+ state: rules=5417 tokens=40334 candidates=32
+ state: rules=5417 tokens=40334 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5418 rules, 40330 tokens, 454829 bits, total 628205
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 39
+ state: rules=5418 tokens=40330 candidates=32
+ state: rules=5418 tokens=40330 candidates=32
+ state: rules=5418 tokens=40330 candidates=32
+ state: rules=5418 tokens=40331 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5419 rules, 40325 tokens, 454796 bits, total 628204
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 40
+ state: rules=5419 tokens=40325 candidates=32
+ state: rules=5419 tokens=40325 candidates=32
+ state: rules=5419 tokens=40325 candidates=32
+ state: rules=5419 tokens=40326 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5420 rules, 40321 tokens, 454768 bits, total 628208
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 41
+ state: rules=5420 tokens=40321 candidates=32
+ state: rules=5420 tokens=40321 candidates=32
+ state: rules=5420 tokens=40321 candidates=32
+ state: rules=5420 tokens=40322 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5421 rules, 40317 tokens, 454740 bits, total 628212
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 42
+ state: rules=5421 tokens=40317 candidates=32
+ state: rules=5421 tokens=40317 candidates=32
+ state: rules=5421 tokens=40317 candidates=32
+ state: rules=5421 tokens=40318 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5422 rules, 40313 tokens, 454717 bits, total 628221
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 43
+ state: rules=5422 tokens=40313 candidates=32
+ state: rules=5422 tokens=40313 candidates=32
+ state: rules=5422 tokens=40313 candidates=32
+ state: rules=5422 tokens=40313 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5423 rules, 40309 tokens, 454695 bits, total 628231
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 44
+ state: rules=5423 tokens=40309 candidates=32
+ state: rules=5423 tokens=40309 candidates=32
+ state: rules=5423 tokens=40309 candidates=32
+ state: rules=5423 tokens=40309 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5424 rules, 40305 tokens, 454672 bits, total 628240
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 45
+ state: rules=5424 tokens=40305 candidates=32
+ state: rules=5424 tokens=40305 candidates=32
+ state: rules=5424 tokens=40305 candidates=32
+ state: rules=5424 tokens=40305 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5425 rules, 40301 tokens, 454596 bits, total 628196
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 46
+ state: rules=5425 tokens=40301 candidates=32
+ state: rules=5425 tokens=40301 candidates=32
+ state: rules=5425 tokens=40301 candidates=32
+ state: rules=5425 tokens=40301 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5426 rules, 40297 tokens, 454570 bits, total 628202
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 47
+ state: rules=5426 tokens=40297 candidates=32
+ state: rules=5426 tokens=40297 candidates=32
+ state: rules=5426 tokens=40297 candidates=32
+ state: rules=5426 tokens=40297 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5427 rules, 40293 tokens, 454547 bits, total 628211
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 48
+ state: rules=5427 tokens=40293 candidates=32
+ state: rules=5427 tokens=40293 candidates=32
+ state: rules=5427 tokens=40293 candidates=32
+ state: rules=5427 tokens=40293 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5428 rules, 40289 tokens, 454499 bits, total 628195
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 49
+ state: rules=5428 tokens=40289 candidates=32
+ state: rules=5428 tokens=40289 candidates=32
+ state: rules=5428 tokens=40289 candidates=32
+ state: rules=5428 tokens=40289 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5429 rules, 40285 tokens, 454457 bits, total 628185
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 50
+ state: rules=5429 tokens=40285 candidates=32
+ state: rules=5429 tokens=40285 candidates=32
+ state: rules=5429 tokens=40285 candidates=32
+ state: rules=5429 tokens=40285 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5430 rules, 40282 tokens, 454430 bits, total 628190
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 51
+ state: rules=5430 tokens=40282 candidates=32
+ state: rules=5430 tokens=40282 candidates=32
+ state: rules=5430 tokens=40282 candidates=32
+ state: rules=5430 tokens=40278 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5431 rules, 40278 tokens, 454386 bits, total 628178
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 52
+ state: rules=5431 tokens=40278 candidates=32
+ state: rules=5431 tokens=40278 candidates=32
+ state: rules=5431 tokens=40278 candidates=32
+ state: rules=5431 tokens=40274 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 7
+ best payload     : 5432 rules, 40274 tokens, 454349 bits, total 628173
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 53
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5432 tokens=40270 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 231
+ next beam        : 8
+ best payload     : 5433 rules, 40270 tokens, 454327 bits, total 628183
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 54
+ state: rules=5433 tokens=40270 candidates=32
+ state: rules=5433 tokens=40270 candidates=32
+ state: rules=5433 tokens=40270 candidates=32
+ state: rules=5433 tokens=40270 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 262
+ next beam        : 8
+ best payload     : 5434 rules, 40266 tokens, 454306 bits, total 628194
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 55
+ state: rules=5434 tokens=40266 candidates=32
+ state: rules=5434 tokens=40266 candidates=32
+ state: rules=5434 tokens=40266 candidates=32
+ state: rules=5434 tokens=40266 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5435 rules, 40262 tokens, 454267 bits, total 628187
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 56
+ state: rules=5435 tokens=40262 candidates=32
+ state: rules=5435 tokens=40262 candidates=32
+ state: rules=5435 tokens=40262 candidates=32
+ state: rules=5435 tokens=40262 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5436 rules, 40258 tokens, 454227 bits, total 628179
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 57
+ state: rules=5436 tokens=40258 candidates=32
+ state: rules=5436 tokens=40258 candidates=32
+ state: rules=5436 tokens=40258 candidates=32
+ state: rules=5436 tokens=40258 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5437 rules, 40254 tokens, 454196 bits, total 628180
+ best total       : 5411 rules, 40363 tokens, 455020 bits, total 628172
+
+ROUND 58
+ state: rules=5437 tokens=40254 candidates=32
+ state: rules=5437 tokens=40254 candidates=32
+ state: rules=5437 tokens=40254 candidates=32
+ state: rules=5437 tokens=40254 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5411 tokens=40363 candidates=32
+ state: rules=5432 tokens=40274 candidates=32
+ state: rules=5411 tokens=40361 candidates=32
+ generated states : 264
+ next beam        : 4
+ best payload     : 5438 rules, 40250 tokens, 454145 bits, total 628161
+ best total       : 5438 rules, 40250 tokens, 454145 bits, total 628161
+
+ROUND 59
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ generated states : 132
+ next beam        : 8
+ best payload     : 5439 rules, 40242 tokens, 454125 bits, total 628173
+ best total       : 5438 rules, 40250 tokens, 454145 bits, total 628161
+
+ROUND 60
+ state: rules=5439 tokens=40242 candidates=32
+ state: rules=5439 tokens=40242 candidates=32
+ state: rules=5439 tokens=40242 candidates=32
+ state: rules=5439 tokens=40242 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ state: rules=5438 tokens=40250 candidates=32
+ generated states : 260
+ next beam        : 4
+ best payload     : 5440 rules, 40237 tokens, 454078 bits, total 628158
+ best total       : 5440 rules, 40237 tokens, 454078 bits, total 628158
+
+ROUND 61
+ state: rules=5440 tokens=40237 candidates=32
+ state: rules=5440 tokens=40237 candidates=32
+ state: rules=5440 tokens=40237 candidates=32
+ state: rules=5440 tokens=40237 candidates=32
+ generated states : 132
+ next beam        : 4
+ best payload     : 5441 rules, 40233 tokens, 454035 bits, total 628147
+ best total       : 5441 rules, 40233 tokens, 454035 bits, total 628147
+
+ROUND 62
+ state: rules=5441 tokens=40233 candidates=32
+ state: rules=5441 tokens=40233 candidates=32
+ state: rules=5441 tokens=40233 candidates=32
+ state: rules=5441 tokens=40233 candidates=32
+ generated states : 132
+ next beam        : 4
+ best payload     : 5442 rules, 40229 tokens, 453995 bits, total 628139
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 63
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 132
+ next beam        : 8
+ best payload     : 5443 rules, 40224 tokens, 453974 bits, total 628150
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 64
+ state: rules=5443 tokens=40225 candidates=32
+ state: rules=5443 tokens=40224 candidates=32
+ state: rules=5443 tokens=40225 candidates=32
+ state: rules=5443 tokens=40225 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 260
+ next beam        : 8
+ best payload     : 5444 rules, 40221 tokens, 453940 bits, total 628148
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 65
+ state: rules=5444 tokens=40221 candidates=32
+ state: rules=5444 tokens=40221 candidates=32
+ state: rules=5444 tokens=40221 candidates=32
+ state: rules=5444 tokens=40220 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5445 rules, 40216 tokens, 453918 bits, total 628158
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 66
+ state: rules=5445 tokens=40216 candidates=32
+ state: rules=5445 tokens=40216 candidates=32
+ state: rules=5445 tokens=40217 candidates=32
+ state: rules=5445 tokens=40217 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5446 rules, 40212 tokens, 453887 bits, total 628159
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 67
+ state: rules=5446 tokens=40212 candidates=32
+ state: rules=5446 tokens=40212 candidates=32
+ state: rules=5446 tokens=40213 candidates=32
+ state: rules=5446 tokens=40213 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5447 rules, 40208 tokens, 453865 bits, total 628169
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 68
+ state: rules=5447 tokens=40208 candidates=32
+ state: rules=5447 tokens=40208 candidates=32
+ state: rules=5447 tokens=40209 candidates=32
+ state: rules=5447 tokens=40208 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5448 rules, 40204 tokens, 453822 bits, total 628158
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 69
+ state: rules=5448 tokens=40204 candidates=32
+ state: rules=5448 tokens=40204 candidates=32
+ state: rules=5448 tokens=40205 candidates=32
+ state: rules=5448 tokens=40204 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5449 rules, 40201 tokens, 453801 bits, total 628169
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 70
+ state: rules=5449 tokens=40201 candidates=32
+ state: rules=5449 tokens=40201 candidates=32
+ state: rules=5449 tokens=40201 candidates=32
+ state: rules=5449 tokens=40201 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5450 rules, 40197 tokens, 453771 bits, total 628171
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 71
+ state: rules=5450 tokens=40197 candidates=32
+ state: rules=5450 tokens=40197 candidates=32
+ state: rules=5450 tokens=40197 candidates=32
+ state: rules=5450 tokens=40197 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5451 rules, 40193 tokens, 453751 bits, total 628183
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 72
+ state: rules=5451 tokens=40193 candidates=32
+ state: rules=5451 tokens=40193 candidates=32
+ state: rules=5451 tokens=40193 candidates=32
+ state: rules=5451 tokens=40193 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5452 rules, 40189 tokens, 453726 bits, total 628190
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 73
+ state: rules=5452 tokens=40189 candidates=32
+ state: rules=5452 tokens=40189 candidates=32
+ state: rules=5452 tokens=40189 candidates=32
+ state: rules=5452 tokens=40189 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5453 rules, 40184 tokens, 453685 bits, total 628181
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 74
+ state: rules=5453 tokens=40184 candidates=32
+ state: rules=5453 tokens=40184 candidates=32
+ state: rules=5453 tokens=40184 candidates=32
+ state: rules=5453 tokens=40184 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5454 rules, 40180 tokens, 453644 bits, total 628172
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 75
+ state: rules=5454 tokens=40180 candidates=32
+ state: rules=5454 tokens=40180 candidates=32
+ state: rules=5454 tokens=40180 candidates=32
+ state: rules=5454 tokens=40180 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5455 rules, 40175 tokens, 453600 bits, total 628160
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 76
+ state: rules=5455 tokens=40175 candidates=32
+ state: rules=5455 tokens=40175 candidates=32
+ state: rules=5455 tokens=40175 candidates=32
+ state: rules=5455 tokens=40175 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5456 rules, 40170 tokens, 453565 bits, total 628157
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 77
+ state: rules=5456 tokens=40170 candidates=32
+ state: rules=5456 tokens=40170 candidates=32
+ state: rules=5456 tokens=40170 candidates=32
+ state: rules=5456 tokens=40170 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5457 rules, 40166 tokens, 453538 bits, total 628162
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 78
+ state: rules=5457 tokens=40166 candidates=32
+ state: rules=5457 tokens=40166 candidates=32
+ state: rules=5457 tokens=40166 candidates=32
+ state: rules=5457 tokens=40166 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5458 rules, 40162 tokens, 453499 bits, total 628155
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 79
+ state: rules=5458 tokens=40162 candidates=32
+ state: rules=5458 tokens=40162 candidates=32
+ state: rules=5458 tokens=40162 candidates=32
+ state: rules=5458 tokens=40162 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5459 rules, 40158 tokens, 453479 bits, total 628167
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 80
+ state: rules=5459 tokens=40158 candidates=32
+ state: rules=5459 tokens=40158 candidates=32
+ state: rules=5459 tokens=40158 candidates=32
+ state: rules=5459 tokens=40158 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5460 rules, 40154 tokens, 453444 bits, total 628164
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 81
+ state: rules=5460 tokens=40154 candidates=32
+ state: rules=5460 tokens=40154 candidates=32
+ state: rules=5460 tokens=40154 candidates=32
+ state: rules=5460 tokens=40154 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5461 rules, 40147 tokens, 453423 bits, total 628175
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 82
+ state: rules=5461 tokens=40147 candidates=32
+ state: rules=5461 tokens=40147 candidates=32
+ state: rules=5461 tokens=40147 candidates=32
+ state: rules=5461 tokens=40147 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5462 rules, 40140 tokens, 453403 bits, total 628187
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 83
+ state: rules=5462 tokens=40142 candidates=32
+ state: rules=5462 tokens=40142 candidates=32
+ state: rules=5462 tokens=40142 candidates=32
+ state: rules=5462 tokens=40140 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5463 rules, 40136 tokens, 453372 bits, total 628188
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 84
+ state: rules=5463 tokens=40136 candidates=32
+ state: rules=5463 tokens=40138 candidates=32
+ state: rules=5463 tokens=40138 candidates=32
+ state: rules=5463 tokens=40138 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5464 rules, 40132 tokens, 453326 bits, total 628174
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 85
+ state: rules=5464 tokens=40132 candidates=32
+ state: rules=5464 tokens=40134 candidates=32
+ state: rules=5464 tokens=40134 candidates=32
+ state: rules=5464 tokens=40134 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5465 rules, 40128 tokens, 453305 bits, total 628185
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 86
+ state: rules=5465 tokens=40128 candidates=32
+ state: rules=5465 tokens=40130 candidates=32
+ state: rules=5465 tokens=40130 candidates=32
+ state: rules=5465 tokens=40130 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5466 rules, 40124 tokens, 453259 bits, total 628171
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 87
+ state: rules=5466 tokens=40124 candidates=32
+ state: rules=5466 tokens=40126 candidates=32
+ state: rules=5466 tokens=40126 candidates=32
+ state: rules=5466 tokens=40126 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5467 rules, 40120 tokens, 453235 bits, total 628179
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 88
+ state: rules=5467 tokens=40120 candidates=32
+ state: rules=5467 tokens=40122 candidates=32
+ state: rules=5467 tokens=40122 candidates=32
+ state: rules=5467 tokens=40122 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5468 rules, 40116 tokens, 453189 bits, total 628165
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 89
+ state: rules=5468 tokens=40116 candidates=32
+ state: rules=5468 tokens=40118 candidates=32
+ state: rules=5468 tokens=40118 candidates=32
+ state: rules=5468 tokens=40118 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5469 rules, 40112 tokens, 453140 bits, total 628148
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 90
+ state: rules=5469 tokens=40112 candidates=32
+ state: rules=5469 tokens=40114 candidates=32
+ state: rules=5469 tokens=40114 candidates=32
+ state: rules=5469 tokens=40114 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5470 rules, 40108 tokens, 453120 bits, total 628160
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 91
+ state: rules=5470 tokens=40108 candidates=32
+ state: rules=5470 tokens=40108 candidates=32
+ state: rules=5470 tokens=40108 candidates=32
+ state: rules=5470 tokens=40110 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5471 rules, 40104 tokens, 453099 bits, total 628171
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 92
+ state: rules=5471 tokens=40104 candidates=32
+ state: rules=5471 tokens=40104 candidates=32
+ state: rules=5471 tokens=40104 candidates=32
+ state: rules=5471 tokens=40106 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5472 rules, 40100 tokens, 453054 bits, total 628158
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 93
+ state: rules=5472 tokens=40100 candidates=32
+ state: rules=5472 tokens=40100 candidates=32
+ state: rules=5472 tokens=40100 candidates=32
+ state: rules=5472 tokens=40102 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5473 rules, 40096 tokens, 453035 bits, total 628171
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 94
+ state: rules=5473 tokens=40096 candidates=32
+ state: rules=5473 tokens=40096 candidates=32
+ state: rules=5473 tokens=40096 candidates=32
+ state: rules=5473 tokens=40096 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5474 rules, 40092 tokens, 453016 bits, total 628184
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 95
+ state: rules=5474 tokens=40092 candidates=32
+ state: rules=5474 tokens=40092 candidates=32
+ state: rules=5474 tokens=40092 candidates=32
+ state: rules=5474 tokens=40092 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5475 rules, 40088 tokens, 452987 bits, total 628187
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 96
+ state: rules=5475 tokens=40088 candidates=32
+ state: rules=5475 tokens=40088 candidates=32
+ state: rules=5475 tokens=40088 candidates=32
+ state: rules=5475 tokens=40088 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5476 rules, 40084 tokens, 452958 bits, total 628190
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 97
+ state: rules=5476 tokens=40084 candidates=32
+ state: rules=5476 tokens=40084 candidates=32
+ state: rules=5476 tokens=40084 candidates=32
+ state: rules=5476 tokens=40084 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5477 rules, 40079 tokens, 452900 bits, total 628164
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 98
+ state: rules=5477 tokens=40079 candidates=32
+ state: rules=5477 tokens=40079 candidates=32
+ state: rules=5477 tokens=40079 candidates=32
+ state: rules=5477 tokens=40079 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5478 rules, 40077 tokens, 452866 bits, total 628162
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 99
+ state: rules=5478 tokens=40077 candidates=32
+ state: rules=5478 tokens=40077 candidates=32
+ state: rules=5478 tokens=40077 candidates=32
+ state: rules=5478 tokens=40077 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5479 rules, 40073 tokens, 452846 bits, total 628174
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+ROUND 100
+ state: rules=5479 tokens=40073 candidates=32
+ state: rules=5479 tokens=40073 candidates=32
+ state: rules=5479 tokens=40073 candidates=32
+ state: rules=5479 tokens=40073 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ state: rules=5442 tokens=40229 candidates=32
+ generated states : 264
+ next beam        : 8
+ best payload     : 5480 rules, 40067 tokens, 452828 bits, total 628188
+ best total       : 5442 rules, 40229 tokens, 453995 bits, total 628139
+
+========================================
+RESULTS
+========================================
+
+GREEDY BASELINE:
+- rules 5380
+- tokens 41854
+- Huffman bits 481383
+- Huffman bytes 60173
+- rule bytes 21520
+- approximate total bits 653543
+- approximate total bytes 81693
+- best round 0
+- largest rule 27
+
+INITIAL SHANNON:
+- rules 5380
+- tokens 40447
+- Huffman bits 460022
+- Huffman bytes 57503
+- rule bytes 21520
+- approximate total bits 632182
+- approximate total bytes 79023
+- best round 0
+- largest rule 27
+
+BEST PAYLOAD:
+- rules 5480
+- tokens 40067
+- Huffman bits 452828
+- Huffman bytes 56604
+- rule bytes 21920
+- approximate total bits 628188
+- approximate total bytes 78524
+- best round 100
+- largest rule 27
+- saving 28555 bits vs greedy
+- reduction 5.931867%
+- saving 7194 bits vs initial Shannon
+- saving 25355 bits vs greedy total
+- reduction 3.879622% vs greedy total
+
+BEST TOTAL:
+- rules 5442
+- tokens 40229
+- Huffman bits 453995
+- Huffman bytes 56750
+- rule bytes 21768
+- approximate total bits 628139
+- approximate total bytes 78518
+- best round 62
+- largest rule 27
+- saving 25404 bits vs greedy
+- reduction 3.887120%
+- saving 4043 bits vs initial Shannon total
+- payload saving 27388 bits vs greedy
+
+COMPARISON:
+greedy:          5380 rules, 41854 tokens, 481383 bits, total 653543
+initial Shannon: 5380 rules, 40447 tokens, 460022 bits, total 632182
+best payload:    5480 rules, 40067 tokens, 452828 bits, total 628188
+best total:      5442 rules, 40229 tokens, 453995 bits, total 628139
+
+PAYLOAD RECONSTRUCTION: OK
+TOTAL RECONSTRUCTION: OK
