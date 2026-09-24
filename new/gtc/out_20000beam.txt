@@ -1,0 +1,2003 @@
+input 198856 bytes
+
+CURRENT GREEDY
+rules=5380 tokens=41854 bits=481383
+
+INITIAL SHANNON
+rules=5380 tokens=40447 bits=460022
+
+ROUND 1
+ parent 0: rules=5380 tokens=40447 bits=460022 candidates=16
+  NEW BEST: bits 460022 -> 457337 (-2685)
+    rule T551 + T340 -> T5636  occ=7  new-token=used
+  NEW BEST: bits 457337 -> 457332 (-5)
+    rule T257 + T3585 -> T5636  occ=5  new-token=used
+  NEW BEST: bits 457332 -> 457321 (-11)
+    rule T612 + T3089 -> T5636  occ=5  new-token=used
+  NEW BEST: bits 457321 -> 457300 (-21)
+    rule T1379 + T883 -> T5636  occ=5  new-token=used
+beam after pruning: 4 states
+  state 0  : rules=5381 tokens=40458 bits=457300
+  state 1  : rules=5381 tokens=40458 bits=457312
+  state 2  : rules=5381 tokens=40459 bits=457321
+  state 3  : rules=5381 tokens=40459 bits=457332
+
+ROUND 2
+ parent 0: rules=5381 tokens=40458 bits=457300 candidates=16
+  NEW BEST: bits 457300 -> 456608 (-692)
+    rule T551 + T340 -> T5637  occ=7  new-token=used
+  NEW BEST: bits 456608 -> 456592 (-16)
+    rule T2360 + T569 -> T5637  occ=6  new-token=used
+  NEW BEST: bits 456592 -> 456571 (-21)
+    rule T115 + T3267 -> T5637  occ=6  new-token=used
+ parent 1: rules=5381 tokens=40458 bits=457312 candidates=16
+ parent 2: rules=5381 tokens=40459 bits=457321 candidates=16
+ parent 3: rules=5381 tokens=40459 bits=457332 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5382 tokens=40477 bits=456571
+  state 1  : rules=5382 tokens=40477 bits=456576
+  state 2  : rules=5382 tokens=40478 bits=456580
+  state 3  : rules=5382 tokens=40478 bits=456587
+
+ROUND 3
+ parent 0: rules=5382 tokens=40477 bits=456571 candidates=16
+  NEW BEST: bits 456571 -> 456329 (-242)
+    rule T551 + T340 -> T5638  occ=7  new-token=used
+  NEW BEST: bits 456329 -> 456313 (-16)
+    rule T2360 + T569 -> T5638  occ=6  new-token=used
+  NEW BEST: bits 456313 -> 456289 (-24)
+    rule T3096 + T800 -> T5638  occ=5  new-token=used
+ parent 1: rules=5382 tokens=40477 bits=456576 candidates=16
+ parent 2: rules=5382 tokens=40478 bits=456580 candidates=16
+ parent 3: rules=5382 tokens=40478 bits=456587 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5383 tokens=40482 bits=456289
+  state 1  : rules=5383 tokens=40482 bits=456302
+  state 2  : rules=5383 tokens=40482 bits=456303
+  state 3  : rules=5383 tokens=40483 bits=456305
+
+ROUND 4
+ parent 0: rules=5383 tokens=40482 bits=456289 candidates=16
+  NEW BEST: bits 456289 -> 456195 (-94)
+    rule T551 + T340 -> T5639  occ=7  new-token=used
+  NEW BEST: bits 456195 -> 456193 (-2)
+    rule T4117 + T32 -> T5639  occ=7  new-token=used
+  NEW BEST: bits 456193 -> 456179 (-14)
+    rule T2360 + T569 -> T5639  occ=6  new-token=used
+  NEW BEST: bits 456179 -> 456178 (-1)
+    rule T612 + T3089 -> T5639  occ=5  new-token=used
+ parent 1: rules=5383 tokens=40482 bits=456302 candidates=16
+ parent 2: rules=5383 tokens=40482 bits=456303 candidates=16
+ parent 3: rules=5383 tokens=40483 bits=456305 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5384 tokens=40478 bits=456178
+  state 1  : rules=5384 tokens=40477 bits=456179
+  state 2  : rules=5384 tokens=40478 bits=456180
+  state 3  : rules=5384 tokens=40478 bits=456182
+
+ROUND 5
+ parent 0: rules=5384 tokens=40478 bits=456178 candidates=16
+  NEW BEST: bits 456178 -> 456129 (-49)
+    rule T551 + T340 -> T5640  occ=7  new-token=used
+  NEW BEST: bits 456129 -> 456128 (-1)
+    rule T4117 + T32 -> T5640  occ=7  new-token=used
+  NEW BEST: bits 456128 -> 456114 (-14)
+    rule T2360 + T569 -> T5640  occ=6  new-token=used
+ parent 1: rules=5384 tokens=40477 bits=456179 candidates=16
+ parent 2: rules=5384 tokens=40478 bits=456180 candidates=16
+ parent 3: rules=5384 tokens=40478 bits=456182 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5385 tokens=40474 bits=456114
+  state 1  : rules=5385 tokens=40474 bits=456116
+  state 2  : rules=5385 tokens=40474 bits=456117
+  state 3  : rules=5385 tokens=40475 bits=456118
+
+ROUND 6
+ parent 0: rules=5385 tokens=40474 bits=456114 candidates=16
+  NEW BEST: bits 456114 -> 456075 (-39)
+    rule T265 + T485 -> T5641  occ=7  new-token=used
+  NEW BEST: bits 456075 -> 456061 (-14)
+    rule T551 + T340 -> T5641  occ=7  new-token=used
+  NEW BEST: bits 456061 -> 456060 (-1)
+    rule T4117 + T32 -> T5641  occ=7  new-token=used
+  NEW BEST: bits 456060 -> 456058 (-2)
+    rule T2153 + T32 -> T5641  occ=6  new-token=used
+  NEW BEST: bits 456058 -> 456055 (-3)
+    rule T257 + T3585 -> T5641  occ=5  new-token=used
+  NEW BEST: bits 456055 -> 456050 (-5)
+    rule T2221 + T445 -> T5641  occ=5  new-token=used
+ parent 1: rules=5385 tokens=40474 bits=456116 candidates=16
+ parent 2: rules=5385 tokens=40474 bits=456117 candidates=16
+ parent 3: rules=5385 tokens=40475 bits=456118 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5386 tokens=40474 bits=456050
+  state 1  : rules=5386 tokens=40474 bits=456051
+  state 2  : rules=5386 tokens=40473 bits=456052
+  state 3  : rules=5386 tokens=40473 bits=456054
+
+ROUND 7
+ parent 0: rules=5386 tokens=40474 bits=456050 candidates=16
+  NEW BEST: bits 456050 -> 456029 (-21)
+    rule T265 + T485 -> T5642  occ=8  new-token=used
+  NEW BEST: bits 456029 -> 456015 (-14)
+    rule T551 + T340 -> T5642  occ=7  new-token=used
+  NEW BEST: bits 456015 -> 456013 (-2)
+    rule T4117 + T32 -> T5642  occ=7  new-token=used
+  NEW BEST: bits 456013 -> 456012 (-1)
+    rule T2153 + T32 -> T5642  occ=6  new-token=used
+  NEW BEST: bits 456012 -> 456009 (-3)
+    rule T257 + T3585 -> T5642  occ=5  new-token=used
+  NEW BEST: bits 456009 -> 455991 (-18)
+    rule T1389 + T2363 -> T5642  occ=5  new-token=used
+ parent 1: rules=5386 tokens=40474 bits=456051 candidates=16
+ parent 2: rules=5386 tokens=40473 bits=456052 candidates=16
+ parent 3: rules=5386 tokens=40473 bits=456054 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5387 tokens=40471 bits=455991
+  state 1  : rules=5387 tokens=40471 bits=455991
+  state 2  : rules=5387 tokens=40470 bits=455992
+  state 3  : rules=5387 tokens=40470 bits=455995
+
+ROUND 8
+ parent 0: rules=5387 tokens=40471 bits=455991 candidates=16
+  NEW BEST: bits 455991 -> 455970 (-21)
+    rule T265 + T485 -> T5643  occ=8  new-token=used
+  NEW BEST: bits 455970 -> 455956 (-14)
+    rule T551 + T340 -> T5643  occ=7  new-token=used
+  NEW BEST: bits 455956 -> 455955 (-1)
+    rule T4117 + T32 -> T5643  occ=7  new-token=used
+  NEW BEST: bits 455955 -> 455953 (-2)
+    rule T2153 + T32 -> T5643  occ=6  new-token=used
+  NEW BEST: bits 455953 -> 455950 (-3)
+    rule T257 + T3585 -> T5643  occ=5  new-token=used
+ parent 1: rules=5387 tokens=40471 bits=455991 candidates=16
+ parent 2: rules=5387 tokens=40470 bits=455992 candidates=16
+ parent 3: rules=5387 tokens=40470 bits=455995 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5388 tokens=40466 bits=455950
+  state 1  : rules=5388 tokens=40466 bits=455950
+  state 2  : rules=5388 tokens=40465 bits=455952
+  state 3  : rules=5388 tokens=40466 bits=455952
+
+ROUND 9
+ parent 0: rules=5388 tokens=40466 bits=455950 candidates=16
+  NEW BEST: bits 455950 -> 455930 (-20)
+    rule T265 + T485 -> T5644  occ=8  new-token=used
+  NEW BEST: bits 455930 -> 455916 (-14)
+    rule T551 + T340 -> T5644  occ=7  new-token=used
+  NEW BEST: bits 455916 -> 455915 (-1)
+    rule T4117 + T32 -> T5644  occ=7  new-token=used
+  NEW BEST: bits 455915 -> 455914 (-1)
+    rule T2153 + T32 -> T5644  occ=6  new-token=used
+  NEW BEST: bits 455914 -> 455912 (-2)
+    rule T278 + T2147 -> T5644  occ=5  new-token=used
+ parent 1: rules=5388 tokens=40466 bits=455950 candidates=16
+ parent 2: rules=5388 tokens=40465 bits=455952 candidates=16
+ parent 3: rules=5388 tokens=40466 bits=455952 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5389 tokens=40461 bits=455912
+  state 1  : rules=5389 tokens=40461 bits=455912
+  state 2  : rules=5389 tokens=40461 bits=455912
+  state 3  : rules=5389 tokens=40460 bits=455914
+
+ROUND 10
+ parent 0: rules=5389 tokens=40461 bits=455912 candidates=16
+  NEW BEST: bits 455912 -> 455892 (-20)
+    rule T265 + T485 -> T5645  occ=8  new-token=used
+  NEW BEST: bits 455892 -> 455878 (-14)
+    rule T551 + T340 -> T5645  occ=7  new-token=used
+  NEW BEST: bits 455878 -> 455877 (-1)
+    rule T4117 + T32 -> T5645  occ=7  new-token=used
+  NEW BEST: bits 455877 -> 455876 (-1)
+    rule T2153 + T32 -> T5645  occ=6  new-token=used
+  NEW BEST: bits 455876 -> 455871 (-5)
+    rule T115 + T1600 -> T5645  occ=5  new-token=used
+ parent 1: rules=5389 tokens=40461 bits=455912 candidates=16
+ parent 2: rules=5389 tokens=40461 bits=455912 candidates=16
+ parent 3: rules=5389 tokens=40460 bits=455914 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5390 tokens=40455 bits=455871
+  state 1  : rules=5390 tokens=40455 bits=455871
+  state 2  : rules=5390 tokens=40455 bits=455871
+  state 3  : rules=5390 tokens=40454 bits=455873
+
+ROUND 11
+ parent 0: rules=5390 tokens=40455 bits=455871 candidates=16
+  NEW BEST: bits 455871 -> 455851 (-20)
+    rule T265 + T485 -> T5646  occ=8  new-token=used
+  NEW BEST: bits 455851 -> 455837 (-14)
+    rule T551 + T340 -> T5646  occ=7  new-token=used
+  NEW BEST: bits 455837 -> 455835 (-2)
+    rule T4117 + T32 -> T5646  occ=7  new-token=used
+  NEW BEST: bits 455835 -> 455834 (-1)
+    rule T2153 + T32 -> T5646  occ=6  new-token=used
+ parent 1: rules=5390 tokens=40455 bits=455871 candidates=16
+ parent 2: rules=5390 tokens=40455 bits=455871 candidates=16
+ parent 3: rules=5390 tokens=40454 bits=455873 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5391 tokens=40450 bits=455834
+  state 1  : rules=5391 tokens=40450 bits=455834
+  state 2  : rules=5391 tokens=40450 bits=455834
+  state 3  : rules=5391 tokens=40450 bits=455834
+
+ROUND 12
+ parent 0: rules=5391 tokens=40450 bits=455834 candidates=16
+  NEW BEST: bits 455834 -> 455811 (-23)
+    rule T265 + T485 -> T5647  occ=8  new-token=used
+  NEW BEST: bits 455811 -> 455797 (-14)
+    rule T551 + T340 -> T5647  occ=7  new-token=used
+  NEW BEST: bits 455797 -> 455795 (-2)
+    rule T4117 + T32 -> T5647  occ=7  new-token=used
+  NEW BEST: bits 455795 -> 455794 (-1)
+    rule T2714 + T340 -> T5647  occ=5  new-token=used
+ parent 1: rules=5391 tokens=40450 bits=455834 candidates=16
+ parent 2: rules=5391 tokens=40450 bits=455834 candidates=16
+ parent 3: rules=5391 tokens=40450 bits=455834 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5392 tokens=40445 bits=455794
+  state 1  : rules=5392 tokens=40445 bits=455794
+  state 2  : rules=5392 tokens=40445 bits=455794
+  state 3  : rules=5392 tokens=40445 bits=455794
+
+ROUND 13
+ parent 0: rules=5392 tokens=40445 bits=455794 candidates=16
+  NEW BEST: bits 455794 -> 455769 (-25)
+    rule T265 + T485 -> T5648  occ=8  new-token=used
+  NEW BEST: bits 455769 -> 455755 (-14)
+    rule T551 + T340 -> T5648  occ=7  new-token=used
+  NEW BEST: bits 455755 -> 455754 (-1)
+    rule T4117 + T32 -> T5648  occ=7  new-token=used
+  NEW BEST: bits 455754 -> 455753 (-1)
+    rule T2714 + T340 -> T5648  occ=5  new-token=used
+  NEW BEST: bits 455753 -> 455750 (-3)
+    rule T1090 + T101 -> T5648  occ=5  new-token=used
+ parent 1: rules=5392 tokens=40445 bits=455794 candidates=16
+ parent 2: rules=5392 tokens=40445 bits=455794 candidates=16
+ parent 3: rules=5392 tokens=40445 bits=455794 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5393 tokens=40440 bits=455750
+  state 1  : rules=5393 tokens=40440 bits=455750
+  state 2  : rules=5393 tokens=40440 bits=455750
+  state 3  : rules=5393 tokens=40440 bits=455750
+
+ROUND 14
+ parent 0: rules=5393 tokens=40440 bits=455750 candidates=16
+  NEW BEST: bits 455750 -> 455726 (-24)
+    rule T265 + T485 -> T5649  occ=8  new-token=used
+  NEW BEST: bits 455726 -> 455712 (-14)
+    rule T551 + T340 -> T5649  occ=7  new-token=used
+  NEW BEST: bits 455712 -> 455711 (-1)
+    rule T4117 + T32 -> T5649  occ=7  new-token=used
+  NEW BEST: bits 455711 -> 455710 (-1)
+    rule T2714 + T340 -> T5649  occ=5  new-token=used
+ parent 1: rules=5393 tokens=40440 bits=455750 candidates=16
+ parent 2: rules=5393 tokens=40440 bits=455750 candidates=16
+ parent 3: rules=5393 tokens=40440 bits=455750 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5394 tokens=40436 bits=455710
+  state 1  : rules=5394 tokens=40436 bits=455710
+  state 2  : rules=5394 tokens=40436 bits=455710
+  state 3  : rules=5394 tokens=40436 bits=455710
+
+ROUND 15
+ parent 0: rules=5394 tokens=40436 bits=455710 candidates=16
+  NEW BEST: bits 455710 -> 455686 (-24)
+    rule T265 + T485 -> T5650  occ=8  new-token=used
+  NEW BEST: bits 455686 -> 455672 (-14)
+    rule T551 + T340 -> T5650  occ=7  new-token=used
+  NEW BEST: bits 455672 -> 455671 (-1)
+    rule T4117 + T32 -> T5650  occ=7  new-token=used
+ parent 1: rules=5394 tokens=40436 bits=455710 candidates=16
+ parent 2: rules=5394 tokens=40436 bits=455710 candidates=16
+ parent 3: rules=5394 tokens=40436 bits=455710 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5395 tokens=40429 bits=455671
+  state 1  : rules=5395 tokens=40429 bits=455671
+  state 2  : rules=5395 tokens=40429 bits=455671
+  state 3  : rules=5395 tokens=40429 bits=455671
+
+ROUND 16
+ parent 0: rules=5395 tokens=40429 bits=455671 candidates=16
+  NEW BEST: bits 455671 -> 455651 (-20)
+    rule T265 + T485 -> T5651  occ=8  new-token=used
+  NEW BEST: bits 455651 -> 455637 (-14)
+    rule T551 + T340 -> T5651  occ=7  new-token=used
+  NEW BEST: bits 455637 -> 455620 (-17)
+    rule T1782 + T32 -> T5651  occ=5  new-token=used
+ parent 1: rules=5395 tokens=40429 bits=455671 candidates=16
+ parent 2: rules=5395 tokens=40429 bits=455671 candidates=16
+ parent 3: rules=5395 tokens=40429 bits=455671 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5396 tokens=40424 bits=455620
+  state 1  : rules=5396 tokens=40424 bits=455620
+  state 2  : rules=5396 tokens=40424 bits=455620
+  state 3  : rules=5396 tokens=40424 bits=455620
+
+ROUND 17
+ parent 0: rules=5396 tokens=40424 bits=455620 candidates=16
+  NEW BEST: bits 455620 -> 455598 (-22)
+    rule T265 + T485 -> T5652  occ=8  new-token=used
+  NEW BEST: bits 455598 -> 455584 (-14)
+    rule T551 + T340 -> T5652  occ=7  new-token=used
+ parent 1: rules=5396 tokens=40424 bits=455620 candidates=16
+ parent 2: rules=5396 tokens=40424 bits=455620 candidates=16
+ parent 3: rules=5396 tokens=40424 bits=455620 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5397 tokens=40418 bits=455584
+  state 1  : rules=5397 tokens=40418 bits=455584
+  state 2  : rules=5397 tokens=40418 bits=455584
+  state 3  : rules=5397 tokens=40418 bits=455584
+
+ROUND 18
+ parent 0: rules=5397 tokens=40418 bits=455584 candidates=16
+  NEW BEST: bits 455584 -> 455563 (-21)
+    rule T265 + T485 -> T5653  occ=8  new-token=used
+  NEW BEST: bits 455563 -> 455560 (-3)
+    rule T397 + T115 -> T5653  occ=6  new-token=used
+  NEW BEST: bits 455560 -> 455553 (-7)
+    rule T109 + T307 -> T5653  occ=5  new-token=used
+  NEW BEST: bits 455553 -> 455549 (-4)
+    rule T2522 + T32 -> T5653  occ=5  new-token=used
+ parent 1: rules=5397 tokens=40418 bits=455584 candidates=16
+ parent 2: rules=5397 tokens=40418 bits=455584 candidates=16
+ parent 3: rules=5397 tokens=40418 bits=455584 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5398 tokens=40413 bits=455549
+  state 1  : rules=5398 tokens=40413 bits=455549
+  state 2  : rules=5398 tokens=40413 bits=455549
+  state 3  : rules=5398 tokens=40413 bits=455549
+
+ROUND 19
+ parent 0: rules=5398 tokens=40413 bits=455549 candidates=16
+  NEW BEST: bits 455549 -> 455521 (-28)
+    rule T265 + T485 -> T5654  occ=8  new-token=used
+  NEW BEST: bits 455521 -> 455518 (-3)
+    rule T397 + T115 -> T5654  occ=6  new-token=used
+  NEW BEST: bits 455518 -> 455511 (-7)
+    rule T109 + T307 -> T5654  occ=5  new-token=used
+  NEW BEST: bits 455511 -> 455510 (-1)
+    rule T1197 + T32 -> T5654  occ=5  new-token=used
+ parent 1: rules=5398 tokens=40413 bits=455549 candidates=16
+ parent 2: rules=5398 tokens=40413 bits=455549 candidates=16
+ parent 3: rules=5398 tokens=40413 bits=455549 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5399 tokens=40408 bits=455510
+  state 1  : rules=5399 tokens=40408 bits=455510
+  state 2  : rules=5399 tokens=40408 bits=455510
+  state 3  : rules=5399 tokens=40408 bits=455510
+
+ROUND 20
+ parent 0: rules=5399 tokens=40408 bits=455510 candidates=16
+  NEW BEST: bits 455510 -> 455482 (-28)
+    rule T265 + T485 -> T5655  occ=8  new-token=used
+  NEW BEST: bits 455482 -> 455479 (-3)
+    rule T397 + T115 -> T5655  occ=6  new-token=used
+  NEW BEST: bits 455479 -> 455472 (-7)
+    rule T109 + T307 -> T5655  occ=5  new-token=used
+ parent 1: rules=5399 tokens=40408 bits=455510 candidates=16
+ parent 2: rules=5399 tokens=40408 bits=455510 candidates=16
+ parent 3: rules=5399 tokens=40408 bits=455510 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5400 tokens=40402 bits=455472
+  state 1  : rules=5400 tokens=40402 bits=455472
+  state 2  : rules=5400 tokens=40402 bits=455472
+  state 3  : rules=5400 tokens=40402 bits=455472
+
+ROUND 21
+ parent 0: rules=5400 tokens=40402 bits=455472 candidates=16
+  NEW BEST: bits 455472 -> 455445 (-27)
+    rule T265 + T485 -> T5656  occ=8  new-token=used
+  NEW BEST: bits 455445 -> 455440 (-5)
+    rule T397 + T115 -> T5656  occ=6  new-token=used
+  NEW BEST: bits 455440 -> 455437 (-3)
+    rule T944 + T32 -> T5656  occ=5  new-token=used
+  NEW BEST: bits 455437 -> 455434 (-3)
+    rule T1431 + T32 -> T5656  occ=5  new-token=used
+ parent 1: rules=5400 tokens=40402 bits=455472 candidates=16
+ parent 2: rules=5400 tokens=40402 bits=455472 candidates=16
+ parent 3: rules=5400 tokens=40402 bits=455472 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5401 tokens=40397 bits=455434
+  state 1  : rules=5401 tokens=40397 bits=455434
+  state 2  : rules=5401 tokens=40397 bits=455434
+  state 3  : rules=5401 tokens=40397 bits=455434
+
+ROUND 22
+ parent 0: rules=5401 tokens=40397 bits=455434 candidates=16
+  NEW BEST: bits 455434 -> 455412 (-22)
+    rule T265 + T485 -> T5657  occ=8  new-token=used
+  NEW BEST: bits 455412 -> 455409 (-3)
+    rule T397 + T115 -> T5657  occ=6  new-token=used
+  NEW BEST: bits 455409 -> 455406 (-3)
+    rule T944 + T32 -> T5657  occ=5  new-token=used
+ parent 1: rules=5401 tokens=40397 bits=455434 candidates=16
+ parent 2: rules=5401 tokens=40397 bits=455434 candidates=16
+ parent 3: rules=5401 tokens=40397 bits=455434 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5402 tokens=40389 bits=455406
+  state 1  : rules=5402 tokens=40389 bits=455406
+  state 2  : rules=5402 tokens=40389 bits=455406
+  state 3  : rules=5402 tokens=40389 bits=455406
+
+ROUND 23
+ parent 0: rules=5402 tokens=40389 bits=455406 candidates=16
+  NEW BEST: bits 455406 -> 455373 (-33)
+    rule T265 + T485 -> T5658  occ=8  new-token=used
+  NEW BEST: bits 455373 -> 455370 (-3)
+    rule T397 + T115 -> T5658  occ=6  new-token=used
+  NEW BEST: bits 455370 -> 455355 (-15)
+    rule T2290 + T32 -> T5658  occ=5  new-token=used
+ parent 1: rules=5402 tokens=40389 bits=455406 candidates=16
+ parent 2: rules=5402 tokens=40389 bits=455406 candidates=16
+ parent 3: rules=5402 tokens=40389 bits=455406 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5403 tokens=40385 bits=455355
+  state 1  : rules=5403 tokens=40385 bits=455355
+  state 2  : rules=5403 tokens=40385 bits=455355
+  state 3  : rules=5403 tokens=40385 bits=455355
+
+ROUND 24
+ parent 0: rules=5403 tokens=40385 bits=455355 candidates=16
+  NEW BEST: bits 455355 -> 455319 (-36)
+    rule T265 + T485 -> T5659  occ=8  new-token=used
+  NEW BEST: bits 455319 -> 455316 (-3)
+    rule T397 + T115 -> T5659  occ=6  new-token=used
+ parent 1: rules=5403 tokens=40385 bits=455355 candidates=16
+ parent 2: rules=5403 tokens=40385 bits=455355 candidates=16
+ parent 3: rules=5403 tokens=40385 bits=455355 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5404 tokens=40385 bits=455316
+  state 1  : rules=5404 tokens=40385 bits=455316
+  state 2  : rules=5404 tokens=40385 bits=455316
+  state 3  : rules=5404 tokens=40385 bits=455316
+
+ROUND 25
+ parent 0: rules=5404 tokens=40385 bits=455316 candidates=16
+  NEW BEST: bits 455316 -> 455296 (-20)
+    rule T265 + T485 -> T5660  occ=8  new-token=used
+  NEW BEST: bits 455296 -> 455293 (-3)
+    rule T685 + T379 -> T5660  occ=5  new-token=used
+ parent 1: rules=5404 tokens=40385 bits=455316 candidates=16
+ parent 2: rules=5404 tokens=40385 bits=455316 candidates=16
+ parent 3: rules=5404 tokens=40385 bits=455316 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5405 tokens=40381 bits=455293
+  state 1  : rules=5405 tokens=40381 bits=455293
+  state 2  : rules=5405 tokens=40381 bits=455293
+  state 3  : rules=5405 tokens=40381 bits=455293
+
+ROUND 26
+ parent 0: rules=5405 tokens=40381 bits=455293 candidates=16
+  NEW BEST: bits 455293 -> 455270 (-23)
+    rule T265 + T485 -> T5661  occ=8  new-token=used
+  NEW BEST: bits 455270 -> 455268 (-2)
+    rule T258 + T1098 -> T5661  occ=4  new-token=used
+ parent 1: rules=5405 tokens=40381 bits=455293 candidates=16
+ parent 2: rules=5405 tokens=40381 bits=455293 candidates=16
+ parent 3: rules=5405 tokens=40381 bits=455293 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5406 tokens=40378 bits=455268
+  state 1  : rules=5406 tokens=40378 bits=455268
+  state 2  : rules=5406 tokens=40378 bits=455268
+  state 3  : rules=5406 tokens=40378 bits=455268
+
+ROUND 27
+ parent 0: rules=5406 tokens=40378 bits=455268 candidates=16
+  NEW BEST: bits 455268 -> 455245 (-23)
+    rule T265 + T485 -> T5662  occ=8  new-token=used
+  NEW BEST: bits 455245 -> 455243 (-2)
+    rule T258 + T1098 -> T5662  occ=4  new-token=used
+ parent 1: rules=5406 tokens=40378 bits=455268 candidates=16
+ parent 2: rules=5406 tokens=40378 bits=455268 candidates=16
+ parent 3: rules=5406 tokens=40378 bits=455268 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5407 tokens=40375 bits=455243
+  state 1  : rules=5407 tokens=40375 bits=455243
+  state 2  : rules=5407 tokens=40375 bits=455243
+  state 3  : rules=5407 tokens=40375 bits=455243
+
+ROUND 28
+ parent 0: rules=5407 tokens=40375 bits=455243 candidates=16
+  NEW BEST: bits 455243 -> 455222 (-21)
+    rule T265 + T485 -> T5663  occ=8  new-token=used
+  NEW BEST: bits 455222 -> 455215 (-7)
+    rule T290 + T618 -> T5663  occ=4  new-token=used
+ parent 1: rules=5407 tokens=40375 bits=455243 candidates=16
+ parent 2: rules=5407 tokens=40375 bits=455243 candidates=16
+ parent 3: rules=5407 tokens=40375 bits=455243 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5408 tokens=40369 bits=455215
+  state 1  : rules=5408 tokens=40369 bits=455215
+  state 2  : rules=5408 tokens=40369 bits=455215
+  state 3  : rules=5408 tokens=40369 bits=455215
+
+ROUND 29
+ parent 0: rules=5408 tokens=40369 bits=455215 candidates=16
+  NEW BEST: bits 455215 -> 455195 (-20)
+    rule T265 + T485 -> T5664  occ=8  new-token=used
+ parent 1: rules=5408 tokens=40369 bits=455215 candidates=16
+ parent 2: rules=5408 tokens=40369 bits=455215 candidates=16
+ parent 3: rules=5408 tokens=40369 bits=455215 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5409 tokens=40361 bits=455195
+  state 1  : rules=5409 tokens=40361 bits=455195
+  state 2  : rules=5409 tokens=40361 bits=455195
+  state 3  : rules=5409 tokens=40361 bits=455195
+
+ROUND 30
+ parent 0: rules=5409 tokens=40361 bits=455195 candidates=16
+  NEW BEST: bits 455195 -> 455184 (-11)
+    rule T265 + T520 -> T5665  occ=6  new-token=used
+  NEW BEST: bits 455184 -> 455182 (-2)
+    rule T265 + T1327 -> T5665  occ=5  new-token=used
+  NEW BEST: bits 455182 -> 455180 (-2)
+    rule T265 + T1417 -> T5665  occ=5  new-token=used
+  NEW BEST: bits 455180 -> 455175 (-5)
+    rule T697 + T425 -> T5665  occ=5  new-token=used
+ parent 1: rules=5409 tokens=40361 bits=455195 candidates=16
+ parent 2: rules=5409 tokens=40361 bits=455195 candidates=16
+ parent 3: rules=5409 tokens=40361 bits=455195 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5410 tokens=40356 bits=455175
+  state 1  : rules=5410 tokens=40356 bits=455175
+  state 2  : rules=5410 tokens=40356 bits=455175
+  state 3  : rules=5410 tokens=40356 bits=455175
+
+ROUND 31
+ parent 0: rules=5410 tokens=40356 bits=455175 candidates=16
+  NEW BEST: bits 455175 -> 455164 (-11)
+    rule T265 + T520 -> T5666  occ=6  new-token=used
+  NEW BEST: bits 455164 -> 455162 (-2)
+    rule T265 + T1327 -> T5666  occ=5  new-token=used
+  NEW BEST: bits 455162 -> 455160 (-2)
+    rule T265 + T1417 -> T5666  occ=5  new-token=used
+  NEW BEST: bits 455160 -> 455159 (-1)
+    rule T32 + T460 -> T5666  occ=5  new-token=used
+  NEW BEST: bits 455159 -> 455157 (-2)
+    rule T265 + T1128 -> T5666  occ=4  new-token=used
+  NEW BEST: bits 455157 -> 455154 (-3)
+    rule T319 + T2272 -> T5666  occ=4  new-token=used
+ parent 1: rules=5410 tokens=40356 bits=455175 candidates=16
+ parent 2: rules=5410 tokens=40356 bits=455175 candidates=16
+ parent 3: rules=5410 tokens=40356 bits=455175 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5411 tokens=40352 bits=455154
+  state 1  : rules=5411 tokens=40352 bits=455154
+  state 2  : rules=5411 tokens=40352 bits=455154
+  state 3  : rules=5411 tokens=40352 bits=455154
+
+ROUND 32
+ parent 0: rules=5411 tokens=40352 bits=455154 candidates=16
+  NEW BEST: bits 455154 -> 455143 (-11)
+    rule T265 + T520 -> T5667  occ=6  new-token=used
+  NEW BEST: bits 455143 -> 455141 (-2)
+    rule T265 + T1327 -> T5667  occ=5  new-token=used
+  NEW BEST: bits 455141 -> 455139 (-2)
+    rule T265 + T1417 -> T5667  occ=5  new-token=used
+  NEW BEST: bits 455139 -> 455138 (-1)
+    rule T32 + T460 -> T5667  occ=5  new-token=used
+  NEW BEST: bits 455138 -> 455136 (-2)
+    rule T265 + T1128 -> T5667  occ=4  new-token=used
+  NEW BEST: bits 455136 -> 455135 (-1)
+    rule T337 + T543 -> T5667  occ=4  new-token=used
+ parent 1: rules=5411 tokens=40352 bits=455154 candidates=16
+ parent 2: rules=5411 tokens=40352 bits=455154 candidates=16
+ parent 3: rules=5411 tokens=40352 bits=455154 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5412 tokens=40348 bits=455135
+  state 1  : rules=5412 tokens=40348 bits=455135
+  state 2  : rules=5412 tokens=40348 bits=455135
+  state 3  : rules=5412 tokens=40348 bits=455135
+
+ROUND 33
+ parent 0: rules=5412 tokens=40348 bits=455135 candidates=16
+  NEW BEST: bits 455135 -> 455124 (-11)
+    rule T265 + T520 -> T5668  occ=6  new-token=used
+  NEW BEST: bits 455124 -> 455122 (-2)
+    rule T265 + T1327 -> T5668  occ=5  new-token=used
+  NEW BEST: bits 455122 -> 455120 (-2)
+    rule T265 + T1417 -> T5668  occ=5  new-token=used
+  NEW BEST: bits 455120 -> 455119 (-1)
+    rule T32 + T460 -> T5668  occ=5  new-token=used
+  NEW BEST: bits 455119 -> 455117 (-2)
+    rule T265 + T1128 -> T5668  occ=4  new-token=used
+  NEW BEST: bits 455117 -> 455097 (-20)
+    rule T373 + T1127 -> T5668  occ=4  new-token=used
+ parent 1: rules=5412 tokens=40348 bits=455135 candidates=16
+ parent 2: rules=5412 tokens=40348 bits=455135 candidates=16
+ parent 3: rules=5412 tokens=40348 bits=455135 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5413 tokens=40344 bits=455097
+  state 1  : rules=5413 tokens=40344 bits=455097
+  state 2  : rules=5413 tokens=40344 bits=455097
+  state 3  : rules=5413 tokens=40344 bits=455097
+
+ROUND 34
+ parent 0: rules=5413 tokens=40344 bits=455097 candidates=16
+  NEW BEST: bits 455097 -> 455086 (-11)
+    rule T265 + T520 -> T5669  occ=6  new-token=used
+  NEW BEST: bits 455086 -> 455084 (-2)
+    rule T265 + T1327 -> T5669  occ=5  new-token=used
+  NEW BEST: bits 455084 -> 455082 (-2)
+    rule T265 + T1417 -> T5669  occ=5  new-token=used
+  NEW BEST: bits 455082 -> 455081 (-1)
+    rule T32 + T460 -> T5669  occ=5  new-token=used
+  NEW BEST: bits 455081 -> 455079 (-2)
+    rule T265 + T1128 -> T5669  occ=4  new-token=used
+ parent 1: rules=5413 tokens=40344 bits=455097 candidates=16
+ parent 2: rules=5413 tokens=40344 bits=455097 candidates=16
+ parent 3: rules=5413 tokens=40344 bits=455097 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5414 tokens=40338 bits=455079
+  state 1  : rules=5414 tokens=40338 bits=455079
+  state 2  : rules=5414 tokens=40338 bits=455079
+  state 3  : rules=5414 tokens=40338 bits=455079
+
+ROUND 35
+ parent 0: rules=5414 tokens=40338 bits=455079 candidates=16
+  NEW BEST: bits 455079 -> 455066 (-13)
+    rule T265 + T520 -> T5670  occ=6  new-token=used
+  NEW BEST: bits 455066 -> 455064 (-2)
+    rule T265 + T1327 -> T5670  occ=5  new-token=used
+  NEW BEST: bits 455064 -> 455062 (-2)
+    rule T265 + T1417 -> T5670  occ=5  new-token=used
+  NEW BEST: bits 455062 -> 455061 (-1)
+    rule T32 + T460 -> T5670  occ=5  new-token=used
+  NEW BEST: bits 455061 -> 455059 (-2)
+    rule T293 + T1588 -> T5670  occ=4  new-token=used
+  NEW BEST: bits 455059 -> 455049 (-10)
+    rule T408 + T1674 -> T5670  occ=4  new-token=used
+ parent 1: rules=5414 tokens=40338 bits=455079 candidates=16
+ parent 2: rules=5414 tokens=40338 bits=455079 candidates=16
+ parent 3: rules=5414 tokens=40338 bits=455079 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5415 tokens=40334 bits=455049
+  state 1  : rules=5415 tokens=40334 bits=455049
+  state 2  : rules=5415 tokens=40334 bits=455049
+  state 3  : rules=5415 tokens=40334 bits=455049
+
+ROUND 36
+ parent 0: rules=5415 tokens=40334 bits=455049 candidates=16
+  NEW BEST: bits 455049 -> 455038 (-11)
+    rule T265 + T520 -> T5671  occ=6  new-token=used
+  NEW BEST: bits 455038 -> 455036 (-2)
+    rule T265 + T1327 -> T5671  occ=5  new-token=used
+  NEW BEST: bits 455036 -> 455034 (-2)
+    rule T265 + T1417 -> T5671  occ=5  new-token=used
+  NEW BEST: bits 455034 -> 455033 (-1)
+    rule T32 + T460 -> T5671  occ=5  new-token=used
+  NEW BEST: bits 455033 -> 455031 (-2)
+    rule T293 + T1588 -> T5671  occ=4  new-token=used
+  NEW BEST: bits 455031 -> 455026 (-5)
+    rule T425 + T5184 -> T5671  occ=4  new-token=used
+ parent 1: rules=5415 tokens=40334 bits=455049 candidates=16
+ parent 2: rules=5415 tokens=40334 bits=455049 candidates=16
+ parent 3: rules=5415 tokens=40334 bits=455049 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5416 tokens=40330 bits=455026
+  state 1  : rules=5416 tokens=40330 bits=455026
+  state 2  : rules=5416 tokens=40330 bits=455026
+  state 3  : rules=5416 tokens=40330 bits=455026
+
+ROUND 37
+ parent 0: rules=5416 tokens=40330 bits=455026 candidates=16
+  NEW BEST: bits 455026 -> 455015 (-11)
+    rule T265 + T520 -> T5672  occ=6  new-token=used
+  NEW BEST: bits 455015 -> 455013 (-2)
+    rule T265 + T1327 -> T5672  occ=5  new-token=used
+  NEW BEST: bits 455013 -> 455011 (-2)
+    rule T265 + T1417 -> T5672  occ=5  new-token=used
+  NEW BEST: bits 455011 -> 455010 (-1)
+    rule T32 + T460 -> T5672  occ=5  new-token=used
+  NEW BEST: bits 455010 -> 455008 (-2)
+    rule T293 + T1588 -> T5672  occ=4  new-token=used
+ parent 1: rules=5416 tokens=40330 bits=455026 candidates=16
+ parent 2: rules=5416 tokens=40330 bits=455026 candidates=16
+ parent 3: rules=5416 tokens=40330 bits=455026 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5417 tokens=40326 bits=455008
+  state 1  : rules=5417 tokens=40326 bits=455008
+  state 2  : rules=5417 tokens=40326 bits=455008
+  state 3  : rules=5417 tokens=40326 bits=455008
+
+ROUND 38
+ parent 0: rules=5417 tokens=40326 bits=455008 candidates=16
+  NEW BEST: bits 455008 -> 454997 (-11)
+    rule T265 + T520 -> T5673  occ=6  new-token=used
+  NEW BEST: bits 454997 -> 454995 (-2)
+    rule T265 + T1327 -> T5673  occ=5  new-token=used
+  NEW BEST: bits 454995 -> 454993 (-2)
+    rule T265 + T1417 -> T5673  occ=5  new-token=used
+  NEW BEST: bits 454993 -> 454992 (-1)
+    rule T32 + T460 -> T5673  occ=5  new-token=used
+  NEW BEST: bits 454992 -> 454991 (-1)
+    rule T310 + T1176 -> T5673  occ=4  new-token=used
+  NEW BEST: bits 454991 -> 454985 (-6)
+    rule T477 + T289 -> T5673  occ=4  new-token=used
+ parent 1: rules=5417 tokens=40326 bits=455008 candidates=16
+ parent 2: rules=5417 tokens=40326 bits=455008 candidates=16
+ parent 3: rules=5417 tokens=40326 bits=455008 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5418 tokens=40322 bits=454985
+  state 1  : rules=5418 tokens=40322 bits=454985
+  state 2  : rules=5418 tokens=40322 bits=454985
+  state 3  : rules=5418 tokens=40322 bits=454985
+
+ROUND 39
+ parent 0: rules=5418 tokens=40322 bits=454985 candidates=16
+  NEW BEST: bits 454985 -> 454974 (-11)
+    rule T265 + T520 -> T5674  occ=6  new-token=used
+  NEW BEST: bits 454974 -> 454972 (-2)
+    rule T265 + T1327 -> T5674  occ=5  new-token=used
+  NEW BEST: bits 454972 -> 454970 (-2)
+    rule T265 + T1417 -> T5674  occ=5  new-token=used
+  NEW BEST: bits 454970 -> 454969 (-1)
+    rule T32 + T460 -> T5674  occ=5  new-token=used
+  NEW BEST: bits 454969 -> 454968 (-1)
+    rule T310 + T1176 -> T5674  occ=4  new-token=used
+  NEW BEST: bits 454968 -> 454908 (-60)
+    rule T478 + T5407 -> T5674  occ=4  new-token=used
+ parent 1: rules=5418 tokens=40322 bits=454985 candidates=16
+ parent 2: rules=5418 tokens=40322 bits=454985 candidates=16
+ parent 3: rules=5418 tokens=40322 bits=454985 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5419 tokens=40318 bits=454908
+  state 1  : rules=5419 tokens=40318 bits=454908
+  state 2  : rules=5419 tokens=40318 bits=454908
+  state 3  : rules=5419 tokens=40318 bits=454908
+
+ROUND 40
+ parent 0: rules=5419 tokens=40318 bits=454908 candidates=16
+  NEW BEST: bits 454908 -> 454895 (-13)
+    rule T265 + T520 -> T5675  occ=6  new-token=used
+  NEW BEST: bits 454895 -> 454893 (-2)
+    rule T265 + T1327 -> T5675  occ=5  new-token=used
+  NEW BEST: bits 454893 -> 454891 (-2)
+    rule T265 + T1417 -> T5675  occ=5  new-token=used
+  NEW BEST: bits 454891 -> 454890 (-1)
+    rule T32 + T460 -> T5675  occ=5  new-token=used
+  NEW BEST: bits 454890 -> 454889 (-1)
+    rule T310 + T1176 -> T5675  occ=4  new-token=used
+  NEW BEST: bits 454889 -> 454884 (-5)
+    rule T482 + T265 -> T5675  occ=4  new-token=used
+ parent 1: rules=5419 tokens=40318 bits=454908 candidates=16
+ parent 2: rules=5419 tokens=40318 bits=454908 candidates=16
+ parent 3: rules=5419 tokens=40318 bits=454908 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5420 tokens=40314 bits=454884
+  state 1  : rules=5420 tokens=40314 bits=454884
+  state 2  : rules=5420 tokens=40314 bits=454884
+  state 3  : rules=5420 tokens=40314 bits=454884
+
+ROUND 41
+ parent 0: rules=5420 tokens=40314 bits=454884 candidates=16
+  NEW BEST: bits 454884 -> 454864 (-20)
+    rule T265 + T520 -> T5676  occ=6  new-token=used
+  NEW BEST: bits 454864 -> 454862 (-2)
+    rule T265 + T1327 -> T5676  occ=5  new-token=used
+  NEW BEST: bits 454862 -> 454860 (-2)
+    rule T265 + T1417 -> T5676  occ=5  new-token=used
+  NEW BEST: bits 454860 -> 454859 (-1)
+    rule T32 + T460 -> T5676  occ=5  new-token=used
+  NEW BEST: bits 454859 -> 454858 (-1)
+    rule T310 + T1176 -> T5676  occ=4  new-token=used
+  NEW BEST: bits 454858 -> 454838 (-20)
+    rule T490 + T1722 -> T5676  occ=4  new-token=used
+ parent 1: rules=5420 tokens=40314 bits=454884 candidates=16
+ parent 2: rules=5420 tokens=40314 bits=454884 candidates=16
+ parent 3: rules=5420 tokens=40314 bits=454884 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5421 tokens=40310 bits=454838
+  state 1  : rules=5421 tokens=40310 bits=454838
+  state 2  : rules=5421 tokens=40310 bits=454838
+  state 3  : rules=5421 tokens=40310 bits=454838
+
+ROUND 42
+ parent 0: rules=5421 tokens=40310 bits=454838 candidates=16
+  NEW BEST: bits 454838 -> 454827 (-11)
+    rule T265 + T520 -> T5677  occ=6  new-token=used
+  NEW BEST: bits 454827 -> 454825 (-2)
+    rule T265 + T1327 -> T5677  occ=5  new-token=used
+  NEW BEST: bits 454825 -> 454823 (-2)
+    rule T265 + T1417 -> T5677  occ=5  new-token=used
+  NEW BEST: bits 454823 -> 454821 (-2)
+    rule T32 + T460 -> T5677  occ=5  new-token=used
+  NEW BEST: bits 454821 -> 454796 (-25)
+    rule T490 + T3855 -> T5677  occ=4  new-token=used
+ parent 1: rules=5421 tokens=40310 bits=454838 candidates=16
+ parent 2: rules=5421 tokens=40310 bits=454838 candidates=16
+ parent 3: rules=5421 tokens=40310 bits=454838 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5422 tokens=40306 bits=454796
+  state 1  : rules=5422 tokens=40306 bits=454796
+  state 2  : rules=5422 tokens=40306 bits=454796
+  state 3  : rules=5422 tokens=40306 bits=454796
+
+ROUND 43
+ parent 0: rules=5422 tokens=40306 bits=454796 candidates=16
+  NEW BEST: bits 454796 -> 454783 (-13)
+    rule T265 + T520 -> T5678  occ=6  new-token=used
+  NEW BEST: bits 454783 -> 454781 (-2)
+    rule T265 + T1327 -> T5678  occ=5  new-token=used
+  NEW BEST: bits 454781 -> 454779 (-2)
+    rule T265 + T1417 -> T5678  occ=5  new-token=used
+  NEW BEST: bits 454779 -> 454777 (-2)
+    rule T32 + T460 -> T5678  occ=5  new-token=used
+  NEW BEST: bits 454777 -> 454750 (-27)
+    rule T3052 + T107 -> T5678  occ=5  new-token=used
+ parent 1: rules=5422 tokens=40306 bits=454796 candidates=16
+ parent 2: rules=5422 tokens=40306 bits=454796 candidates=16
+ parent 3: rules=5422 tokens=40306 bits=454796 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5423 tokens=40302 bits=454750
+  state 1  : rules=5423 tokens=40302 bits=454750
+  state 2  : rules=5423 tokens=40302 bits=454750
+  state 3  : rules=5423 tokens=40302 bits=454750
+
+ROUND 44
+ parent 0: rules=5423 tokens=40302 bits=454750 candidates=16
+  NEW BEST: bits 454750 -> 454738 (-12)
+    rule T265 + T520 -> T5679  occ=6  new-token=used
+  NEW BEST: bits 454738 -> 454736 (-2)
+    rule T265 + T1327 -> T5679  occ=5  new-token=used
+  NEW BEST: bits 454736 -> 454734 (-2)
+    rule T265 + T1417 -> T5679  occ=5  new-token=used
+  NEW BEST: bits 454734 -> 454732 (-2)
+    rule T32 + T460 -> T5679  occ=5  new-token=used
+ parent 1: rules=5423 tokens=40302 bits=454750 candidates=16
+ parent 2: rules=5423 tokens=40302 bits=454750 candidates=16
+ parent 3: rules=5423 tokens=40302 bits=454750 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5424 tokens=40296 bits=454732
+  state 1  : rules=5424 tokens=40296 bits=454732
+  state 2  : rules=5424 tokens=40296 bits=454732
+  state 3  : rules=5424 tokens=40296 bits=454732
+
+ROUND 45
+ parent 0: rules=5424 tokens=40296 bits=454732 candidates=16
+  NEW BEST: bits 454732 -> 454720 (-12)
+    rule T265 + T520 -> T5680  occ=6  new-token=used
+  NEW BEST: bits 454720 -> 454718 (-2)
+    rule T265 + T1327 -> T5680  occ=5  new-token=used
+  NEW BEST: bits 454718 -> 454716 (-2)
+    rule T265 + T1417 -> T5680  occ=5  new-token=used
+  NEW BEST: bits 454716 -> 454715 (-1)
+    rule T270 + T835 -> T5680  occ=4  new-token=used
+  NEW BEST: bits 454715 -> 454714 (-1)
+    rule T310 + T1176 -> T5680  occ=4  new-token=used
+  NEW BEST: bits 454714 -> 454712 (-2)
+    rule T460 + T265 -> T5680  occ=4  new-token=used
+  NEW BEST: bits 454712 -> 454687 (-25)
+    rule T503 + T5197 -> T5680  occ=4  new-token=used
+ parent 1: rules=5424 tokens=40296 bits=454732 candidates=16
+ parent 2: rules=5424 tokens=40296 bits=454732 candidates=16
+ parent 3: rules=5424 tokens=40296 bits=454732 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5425 tokens=40292 bits=454687
+  state 1  : rules=5425 tokens=40292 bits=454687
+  state 2  : rules=5425 tokens=40292 bits=454687
+  state 3  : rules=5425 tokens=40292 bits=454687
+
+ROUND 46
+ parent 0: rules=5425 tokens=40292 bits=454687 candidates=16
+  NEW BEST: bits 454687 -> 454676 (-11)
+    rule T265 + T520 -> T5681  occ=6  new-token=used
+  NEW BEST: bits 454676 -> 454674 (-2)
+    rule T265 + T1327 -> T5681  occ=5  new-token=used
+  NEW BEST: bits 454674 -> 454672 (-2)
+    rule T265 + T1417 -> T5681  occ=5  new-token=used
+  NEW BEST: bits 454672 -> 454671 (-1)
+    rule T270 + T835 -> T5681  occ=4  new-token=used
+  NEW BEST: bits 454671 -> 454670 (-1)
+    rule T310 + T1176 -> T5681  occ=4  new-token=used
+  NEW BEST: bits 454670 -> 454668 (-2)
+    rule T460 + T265 -> T5681  occ=4  new-token=used
+  NEW BEST: bits 454668 -> 454650 (-18)
+    rule T508 + T4522 -> T5681  occ=4  new-token=used
+ parent 1: rules=5425 tokens=40292 bits=454687 candidates=16
+ parent 2: rules=5425 tokens=40292 bits=454687 candidates=16
+ parent 3: rules=5425 tokens=40292 bits=454687 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5426 tokens=40288 bits=454650
+  state 1  : rules=5426 tokens=40288 bits=454650
+  state 2  : rules=5426 tokens=40288 bits=454650
+  state 3  : rules=5426 tokens=40288 bits=454650
+
+ROUND 47
+ parent 0: rules=5426 tokens=40288 bits=454650 candidates=16
+  NEW BEST: bits 454650 -> 454639 (-11)
+    rule T265 + T520 -> T5682  occ=6  new-token=used
+  NEW BEST: bits 454639 -> 454637 (-2)
+    rule T265 + T1327 -> T5682  occ=5  new-token=used
+  NEW BEST: bits 454637 -> 454635 (-2)
+    rule T265 + T1417 -> T5682  occ=5  new-token=used
+  NEW BEST: bits 454635 -> 454634 (-1)
+    rule T270 + T835 -> T5682  occ=4  new-token=used
+  NEW BEST: bits 454634 -> 454633 (-1)
+    rule T310 + T1176 -> T5682  occ=4  new-token=used
+  NEW BEST: bits 454633 -> 454631 (-2)
+    rule T460 + T265 -> T5682  occ=4  new-token=used
+ parent 1: rules=5426 tokens=40288 bits=454650 candidates=16
+ parent 2: rules=5426 tokens=40288 bits=454650 candidates=16
+ parent 3: rules=5426 tokens=40288 bits=454650 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5427 tokens=40284 bits=454631
+  state 1  : rules=5427 tokens=40284 bits=454631
+  state 2  : rules=5427 tokens=40284 bits=454631
+  state 3  : rules=5427 tokens=40284 bits=454631
+
+ROUND 48
+ parent 0: rules=5427 tokens=40284 bits=454631 candidates=16
+  NEW BEST: bits 454631 -> 454619 (-12)
+    rule T265 + T520 -> T5683  occ=6  new-token=used
+  NEW BEST: bits 454619 -> 454617 (-2)
+    rule T265 + T1327 -> T5683  occ=5  new-token=used
+  NEW BEST: bits 454617 -> 454615 (-2)
+    rule T265 + T1417 -> T5683  occ=5  new-token=used
+  NEW BEST: bits 454615 -> 454614 (-1)
+    rule T270 + T835 -> T5683  occ=4  new-token=used
+  NEW BEST: bits 454614 -> 454613 (-1)
+    rule T310 + T1176 -> T5683  occ=4  new-token=used
+  NEW BEST: bits 454613 -> 454611 (-2)
+    rule T460 + T265 -> T5683  occ=4  new-token=used
+ parent 1: rules=5427 tokens=40284 bits=454631 candidates=16
+ parent 2: rules=5427 tokens=40284 bits=454631 candidates=16
+ parent 3: rules=5427 tokens=40284 bits=454631 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5428 tokens=40280 bits=454611
+  state 1  : rules=5428 tokens=40280 bits=454611
+  state 2  : rules=5428 tokens=40280 bits=454612
+  state 3  : rules=5428 tokens=40280 bits=454612
+
+ROUND 49
+ parent 0: rules=5428 tokens=40280 bits=454611 candidates=16
+  NEW BEST: bits 454611 -> 454600 (-11)
+    rule T340 + T425 -> T5684  occ=6  new-token=used
+  NEW BEST: bits 454600 -> 454598 (-2)
+    rule T265 + T1327 -> T5684  occ=5  new-token=used
+  NEW BEST: bits 454598 -> 454596 (-2)
+    rule T265 + T1417 -> T5684  occ=5  new-token=used
+  NEW BEST: bits 454596 -> 454595 (-1)
+    rule T270 + T835 -> T5684  occ=4  new-token=used
+  NEW BEST: bits 454595 -> 454594 (-1)
+    rule T310 + T1176 -> T5684  occ=4  new-token=used
+  NEW BEST: bits 454594 -> 454572 (-22)
+    rule T524 + T1573 -> T5684  occ=4  new-token=used
+ parent 1: rules=5428 tokens=40280 bits=454611 candidates=16
+ parent 2: rules=5428 tokens=40280 bits=454612 candidates=16
+ parent 3: rules=5428 tokens=40280 bits=454612 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5429 tokens=40276 bits=454572
+  state 1  : rules=5429 tokens=40276 bits=454572
+  state 2  : rules=5429 tokens=40276 bits=454572
+  state 3  : rules=5429 tokens=40276 bits=454572
+
+ROUND 50
+ parent 0: rules=5429 tokens=40276 bits=454572 candidates=16
+  NEW BEST: bits 454572 -> 454561 (-11)
+    rule T340 + T425 -> T5685  occ=6  new-token=used
+  NEW BEST: bits 454561 -> 454559 (-2)
+    rule T265 + T1327 -> T5685  occ=5  new-token=used
+  NEW BEST: bits 454559 -> 454557 (-2)
+    rule T265 + T1417 -> T5685  occ=5  new-token=used
+  NEW BEST: bits 454557 -> 454556 (-1)
+    rule T270 + T835 -> T5685  occ=4  new-token=used
+  NEW BEST: bits 454556 -> 454555 (-1)
+    rule T310 + T1176 -> T5685  occ=4  new-token=used
+  NEW BEST: bits 454555 -> 454532 (-23)
+    rule T574 + T878 -> T5685  occ=4  new-token=used
+ parent 1: rules=5429 tokens=40276 bits=454572 candidates=16
+ parent 2: rules=5429 tokens=40276 bits=454572 candidates=16
+ parent 3: rules=5429 tokens=40276 bits=454572 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5430 tokens=40272 bits=454532
+  state 1  : rules=5430 tokens=40272 bits=454532
+  state 2  : rules=5430 tokens=40272 bits=454532
+  state 3  : rules=5430 tokens=40272 bits=454532
+
+ROUND 51
+ parent 0: rules=5430 tokens=40272 bits=454532 candidates=16
+  NEW BEST: bits 454532 -> 454518 (-14)
+    rule T340 + T425 -> T5686  occ=6  new-token=used
+  NEW BEST: bits 454518 -> 454516 (-2)
+    rule T265 + T1327 -> T5686  occ=5  new-token=used
+  NEW BEST: bits 454516 -> 454514 (-2)
+    rule T265 + T1417 -> T5686  occ=5  new-token=used
+  NEW BEST: bits 454514 -> 454513 (-1)
+    rule T270 + T835 -> T5686  occ=4  new-token=used
+  NEW BEST: bits 454513 -> 454512 (-1)
+    rule T310 + T1176 -> T5686  occ=4  new-token=used
+  NEW BEST: bits 454512 -> 454501 (-11)
+    rule T592 + T5203 -> T5686  occ=4  new-token=used
+ parent 1: rules=5430 tokens=40272 bits=454532 candidates=16
+ parent 2: rules=5430 tokens=40272 bits=454532 candidates=16
+ parent 3: rules=5430 tokens=40272 bits=454532 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5431 tokens=40268 bits=454501
+  state 1  : rules=5431 tokens=40268 bits=454501
+  state 2  : rules=5431 tokens=40268 bits=454501
+  state 3  : rules=5431 tokens=40268 bits=454501
+
+ROUND 52
+ parent 0: rules=5431 tokens=40268 bits=454501 candidates=16
+  NEW BEST: bits 454501 -> 454490 (-11)
+    rule T340 + T425 -> T5687  occ=6  new-token=used
+  NEW BEST: bits 454490 -> 454488 (-2)
+    rule T265 + T1327 -> T5687  occ=5  new-token=used
+  NEW BEST: bits 454488 -> 454486 (-2)
+    rule T265 + T1417 -> T5687  occ=5  new-token=used
+  NEW BEST: bits 454486 -> 454485 (-1)
+    rule T270 + T835 -> T5687  occ=4  new-token=used
+  NEW BEST: bits 454485 -> 454484 (-1)
+    rule T310 + T1176 -> T5687  occ=4  new-token=used
+  NEW BEST: bits 454484 -> 454450 (-34)
+    rule T604 + T3452 -> T5687  occ=4  new-token=used
+ parent 1: rules=5431 tokens=40268 bits=454501 candidates=16
+ parent 2: rules=5431 tokens=40268 bits=454501 candidates=16
+ parent 3: rules=5431 tokens=40268 bits=454501 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5432 tokens=40264 bits=454450
+  state 1  : rules=5432 tokens=40264 bits=454450
+  state 2  : rules=5432 tokens=40264 bits=454450
+  state 3  : rules=5432 tokens=40264 bits=454450
+
+ROUND 53
+ parent 0: rules=5432 tokens=40264 bits=454450 candidates=16
+  NEW BEST: bits 454450 -> 454439 (-11)
+    rule T340 + T425 -> T5688  occ=6  new-token=used
+  NEW BEST: bits 454439 -> 454436 (-3)
+    rule T265 + T1327 -> T5688  occ=5  new-token=used
+  NEW BEST: bits 454436 -> 454434 (-2)
+    rule T265 + T1417 -> T5688  occ=5  new-token=used
+  NEW BEST: bits 454434 -> 454433 (-1)
+    rule T270 + T835 -> T5688  occ=4  new-token=used
+  NEW BEST: bits 454433 -> 454432 (-1)
+    rule T310 + T1176 -> T5688  occ=4  new-token=used
+ parent 1: rules=5432 tokens=40264 bits=454450 candidates=16
+ parent 2: rules=5432 tokens=40264 bits=454450 candidates=16
+ parent 3: rules=5432 tokens=40264 bits=454450 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5433 tokens=40261 bits=454432
+  state 1  : rules=5433 tokens=40261 bits=454432
+  state 2  : rules=5433 tokens=40261 bits=454432
+  state 3  : rules=5433 tokens=40261 bits=454432
+
+ROUND 54
+ parent 0: rules=5433 tokens=40261 bits=454432 candidates=16
+  NEW BEST: bits 454432 -> 454421 (-11)
+    rule T340 + T425 -> T5689  occ=6  new-token=used
+  NEW BEST: bits 454421 -> 454419 (-2)
+    rule T265 + T1327 -> T5689  occ=5  new-token=used
+  NEW BEST: bits 454419 -> 454417 (-2)
+    rule T265 + T1417 -> T5689  occ=5  new-token=used
+  NEW BEST: bits 454417 -> 454416 (-1)
+    rule T270 + T835 -> T5689  occ=4  new-token=used
+  NEW BEST: bits 454416 -> 454415 (-1)
+    rule T310 + T1176 -> T5689  occ=4  new-token=used
+ parent 1: rules=5433 tokens=40261 bits=454432 candidates=16
+ parent 2: rules=5433 tokens=40261 bits=454432 candidates=16
+  NEW BEST: bits 454415 -> 454384 (-31)
+    rule T655 + T2500 -> T5689  occ=4  new-token=used
+ parent 3: rules=5433 tokens=40261 bits=454432 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5434 tokens=40256 bits=454384
+  state 1  : rules=5434 tokens=40256 bits=454384
+  state 2  : rules=5434 tokens=40257 bits=454415
+  state 3  : rules=5434 tokens=40257 bits=454415
+
+ROUND 55
+ parent 0: rules=5434 tokens=40256 bits=454384 candidates=16
+  NEW BEST: bits 454384 -> 454372 (-12)
+    rule T340 + T425 -> T5690  occ=6  new-token=used
+  NEW BEST: bits 454372 -> 454370 (-2)
+    rule T265 + T1327 -> T5690  occ=5  new-token=used
+  NEW BEST: bits 454370 -> 454368 (-2)
+    rule T265 + T1417 -> T5690  occ=5  new-token=used
+  NEW BEST: bits 454368 -> 454367 (-1)
+    rule T270 + T835 -> T5690  occ=4  new-token=used
+  NEW BEST: bits 454367 -> 454340 (-27)
+    rule T657 + T567 -> T5690  occ=4  new-token=used
+ parent 1: rules=5434 tokens=40256 bits=454384 candidates=16
+ parent 2: rules=5434 tokens=40257 bits=454415 candidates=16
+ parent 3: rules=5434 tokens=40257 bits=454415 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5435 tokens=40252 bits=454340
+  state 1  : rules=5435 tokens=40252 bits=454340
+  state 2  : rules=5435 tokens=40252 bits=454367
+  state 3  : rules=5435 tokens=40252 bits=454367
+
+ROUND 56
+ parent 0: rules=5435 tokens=40252 bits=454340 candidates=16
+  NEW BEST: bits 454340 -> 454329 (-11)
+    rule T340 + T425 -> T5691  occ=6  new-token=used
+  NEW BEST: bits 454329 -> 454327 (-2)
+    rule T265 + T1327 -> T5691  occ=5  new-token=used
+  NEW BEST: bits 454327 -> 454325 (-2)
+    rule T265 + T1417 -> T5691  occ=5  new-token=used
+  NEW BEST: bits 454325 -> 454324 (-1)
+    rule T270 + T835 -> T5691  occ=4  new-token=used
+  NEW BEST: bits 454324 -> 454300 (-24)
+    rule T678 + T5582 -> T5691  occ=4  new-token=used
+ parent 1: rules=5435 tokens=40252 bits=454340 candidates=16
+ parent 2: rules=5435 tokens=40252 bits=454367 candidates=16
+ parent 3: rules=5435 tokens=40252 bits=454367 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5436 tokens=40248 bits=454300
+  state 1  : rules=5436 tokens=40248 bits=454300
+  state 2  : rules=5436 tokens=40248 bits=454324
+  state 3  : rules=5436 tokens=40248 bits=454324
+
+ROUND 57
+ parent 0: rules=5436 tokens=40248 bits=454300 candidates=16
+  NEW BEST: bits 454300 -> 454289 (-11)
+    rule T340 + T425 -> T5692  occ=6  new-token=used
+  NEW BEST: bits 454289 -> 454287 (-2)
+    rule T265 + T1327 -> T5692  occ=5  new-token=used
+  NEW BEST: bits 454287 -> 454285 (-2)
+    rule T265 + T1417 -> T5692  occ=5  new-token=used
+  NEW BEST: bits 454285 -> 454284 (-1)
+    rule T270 + T835 -> T5692  occ=4  new-token=used
+  NEW BEST: bits 454284 -> 454279 (-5)
+    rule T697 + T543 -> T5692  occ=4  new-token=used
+ parent 1: rules=5436 tokens=40248 bits=454300 candidates=16
+ parent 2: rules=5436 tokens=40248 bits=454324 candidates=16
+ parent 3: rules=5436 tokens=40248 bits=454324 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5437 tokens=40244 bits=454279
+  state 1  : rules=5437 tokens=40244 bits=454279
+  state 2  : rules=5437 tokens=40244 bits=454284
+  state 3  : rules=5437 tokens=40244 bits=454284
+
+ROUND 58
+ parent 0: rules=5437 tokens=40244 bits=454279 candidates=16
+  NEW BEST: bits 454279 -> 454268 (-11)
+    rule T340 + T425 -> T5693  occ=6  new-token=used
+  NEW BEST: bits 454268 -> 454266 (-2)
+    rule T265 + T1327 -> T5693  occ=5  new-token=used
+  NEW BEST: bits 454266 -> 454264 (-2)
+    rule T265 + T1417 -> T5693  occ=5  new-token=used
+  NEW BEST: bits 454264 -> 454263 (-1)
+    rule T270 + T835 -> T5693  occ=4  new-token=used
+  NEW BEST: bits 454263 -> 454250 (-13)
+    rule T723 + T752 -> T5693  occ=4  new-token=used
+ parent 1: rules=5437 tokens=40244 bits=454279 candidates=16
+ parent 2: rules=5437 tokens=40244 bits=454284 candidates=16
+ parent 3: rules=5437 tokens=40244 bits=454284 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5438 tokens=40240 bits=454250
+  state 1  : rules=5438 tokens=40240 bits=454250
+  state 2  : rules=5438 tokens=40240 bits=454255
+  state 3  : rules=5438 tokens=40240 bits=454263
+
+ROUND 59
+ parent 0: rules=5438 tokens=40240 bits=454250 candidates=16
+  NEW BEST: bits 454250 -> 454239 (-11)
+    rule T340 + T425 -> T5694  occ=6  new-token=used
+  NEW BEST: bits 454239 -> 454237 (-2)
+    rule T265 + T1327 -> T5694  occ=5  new-token=used
+  NEW BEST: bits 454237 -> 454235 (-2)
+    rule T265 + T1417 -> T5694  occ=5  new-token=used
+  NEW BEST: bits 454235 -> 454234 (-1)
+    rule T270 + T835 -> T5694  occ=4  new-token=used
+  NEW BEST: bits 454234 -> 454229 (-5)
+    rule T746 + T315 -> T5694  occ=4  new-token=used
+ parent 1: rules=5438 tokens=40240 bits=454250 candidates=16
+ parent 2: rules=5438 tokens=40240 bits=454255 candidates=16
+ parent 3: rules=5438 tokens=40240 bits=454263 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5439 tokens=40236 bits=454229
+  state 1  : rules=5439 tokens=40236 bits=454229
+  state 2  : rules=5439 tokens=40236 bits=454234
+  state 3  : rules=5439 tokens=40236 bits=454234
+
+ROUND 60
+ parent 0: rules=5439 tokens=40236 bits=454229 candidates=16
+  NEW BEST: bits 454229 -> 454218 (-11)
+    rule T340 + T425 -> T5695  occ=6  new-token=used
+  NEW BEST: bits 454218 -> 454216 (-2)
+    rule T265 + T1327 -> T5695  occ=5  new-token=used
+  NEW BEST: bits 454216 -> 454214 (-2)
+    rule T265 + T1417 -> T5695  occ=5  new-token=used
+  NEW BEST: bits 454214 -> 454213 (-1)
+    rule T270 + T835 -> T5695  occ=4  new-token=used
+  NEW BEST: bits 454213 -> 454186 (-27)
+    rule T755 + T3878 -> T5695  occ=4  new-token=used
+ parent 1: rules=5439 tokens=40236 bits=454229 candidates=16
+ parent 2: rules=5439 tokens=40236 bits=454234 candidates=16
+ parent 3: rules=5439 tokens=40236 bits=454234 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5440 tokens=40232 bits=454186
+  state 1  : rules=5440 tokens=40232 bits=454186
+  state 2  : rules=5440 tokens=40232 bits=454191
+  state 3  : rules=5440 tokens=40232 bits=454191
+
+ROUND 61
+ parent 0: rules=5440 tokens=40232 bits=454186 candidates=16
+  NEW BEST: bits 454186 -> 454173 (-13)
+    rule T340 + T425 -> T5696  occ=6  new-token=used
+  NEW BEST: bits 454173 -> 454171 (-2)
+    rule T265 + T1327 -> T5696  occ=5  new-token=used
+  NEW BEST: bits 454171 -> 454169 (-2)
+    rule T265 + T1417 -> T5696  occ=5  new-token=used
+  NEW BEST: bits 454169 -> 454168 (-1)
+    rule T270 + T835 -> T5696  occ=4  new-token=used
+  NEW BEST: bits 454168 -> 454167 (-1)
+    rule T398 + T379 -> T5696  occ=4  new-token=used
+ parent 1: rules=5440 tokens=40232 bits=454186 candidates=16
+ parent 2: rules=5440 tokens=40232 bits=454191 candidates=16
+ parent 3: rules=5440 tokens=40232 bits=454191 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5441 tokens=40229 bits=454167
+  state 1  : rules=5441 tokens=40229 bits=454167
+  state 2  : rules=5441 tokens=40229 bits=454167
+  state 3  : rules=5441 tokens=40229 bits=454167
+
+ROUND 62
+ parent 0: rules=5441 tokens=40229 bits=454167 candidates=16
+  NEW BEST: bits 454167 -> 454156 (-11)
+    rule T340 + T425 -> T5697  occ=6  new-token=used
+  NEW BEST: bits 454156 -> 454154 (-2)
+    rule T265 + T1327 -> T5697  occ=5  new-token=used
+  NEW BEST: bits 454154 -> 454152 (-2)
+    rule T265 + T1417 -> T5697  occ=5  new-token=used
+  NEW BEST: bits 454152 -> 454151 (-1)
+    rule T270 + T835 -> T5697  occ=4  new-token=used
+  NEW BEST: bits 454151 -> 454150 (-1)
+    rule T773 + T529 -> T5697  occ=4  new-token=used
+ parent 1: rules=5441 tokens=40229 bits=454167 candidates=16
+  NEW BEST: bits 454150 -> 454138 (-12)
+    rule T773 + T5203 -> T5697  occ=4  new-token=used
+ parent 2: rules=5441 tokens=40229 bits=454167 candidates=16
+ parent 3: rules=5441 tokens=40229 bits=454167 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5442 tokens=40225 bits=454138
+  state 1  : rules=5442 tokens=40225 bits=454138
+  state 2  : rules=5442 tokens=40225 bits=454150
+  state 3  : rules=5442 tokens=40225 bits=454150
+
+ROUND 63
+ parent 0: rules=5442 tokens=40225 bits=454138 candidates=16
+  NEW BEST: bits 454138 -> 454127 (-11)
+    rule T340 + T425 -> T5698  occ=6  new-token=used
+  NEW BEST: bits 454127 -> 454125 (-2)
+    rule T265 + T1327 -> T5698  occ=5  new-token=used
+  NEW BEST: bits 454125 -> 454123 (-2)
+    rule T265 + T1417 -> T5698  occ=5  new-token=used
+  NEW BEST: bits 454123 -> 454122 (-1)
+    rule T270 + T835 -> T5698  occ=4  new-token=used
+  NEW BEST: bits 454122 -> 454121 (-1)
+    rule T398 + T379 -> T5698  occ=4  new-token=used
+  NEW BEST: bits 454121 -> 454119 (-2)
+    rule T780 + T265 -> T5698  occ=4  new-token=used
+ parent 1: rules=5442 tokens=40225 bits=454138 candidates=16
+ parent 2: rules=5442 tokens=40225 bits=454150 candidates=16
+ parent 3: rules=5442 tokens=40225 bits=454150 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5443 tokens=40221 bits=454119
+  state 1  : rules=5443 tokens=40221 bits=454119
+  state 2  : rules=5443 tokens=40221 bits=454121
+  state 3  : rules=5443 tokens=40221 bits=454121
+
+ROUND 64
+ parent 0: rules=5443 tokens=40221 bits=454119 candidates=16
+  NEW BEST: bits 454119 -> 454108 (-11)
+    rule T340 + T425 -> T5699  occ=6  new-token=used
+  NEW BEST: bits 454108 -> 454106 (-2)
+    rule T265 + T1327 -> T5699  occ=5  new-token=used
+  NEW BEST: bits 454106 -> 454104 (-2)
+    rule T265 + T1417 -> T5699  occ=5  new-token=used
+  NEW BEST: bits 454104 -> 454103 (-1)
+    rule T270 + T835 -> T5699  occ=4  new-token=used
+  NEW BEST: bits 454103 -> 454102 (-1)
+    rule T398 + T379 -> T5699  occ=4  new-token=used
+  NEW BEST: bits 454102 -> 454094 (-8)
+    rule T885 + T379 -> T5699  occ=4  new-token=used
+ parent 1: rules=5443 tokens=40221 bits=454119 candidates=16
+ parent 2: rules=5443 tokens=40221 bits=454121 candidates=16
+ parent 3: rules=5443 tokens=40221 bits=454121 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5444 tokens=40217 bits=454094
+  state 1  : rules=5444 tokens=40217 bits=454094
+  state 2  : rules=5444 tokens=40217 bits=454102
+  state 3  : rules=5444 tokens=40217 bits=454102
+
+ROUND 65
+ parent 0: rules=5444 tokens=40217 bits=454094 candidates=16
+  NEW BEST: bits 454094 -> 454083 (-11)
+    rule T340 + T425 -> T5700  occ=6  new-token=used
+  NEW BEST: bits 454083 -> 454081 (-2)
+    rule T265 + T1327 -> T5700  occ=5  new-token=used
+  NEW BEST: bits 454081 -> 454079 (-2)
+    rule T265 + T1417 -> T5700  occ=5  new-token=used
+  NEW BEST: bits 454079 -> 454078 (-1)
+    rule T270 + T835 -> T5700  occ=4  new-token=used
+  NEW BEST: bits 454078 -> 454077 (-1)
+    rule T398 + T379 -> T5700  occ=4  new-token=used
+  NEW BEST: bits 454077 -> 454056 (-21)
+    rule T921 + T1437 -> T5700  occ=4  new-token=used
+ parent 1: rules=5444 tokens=40217 bits=454094 candidates=16
+ parent 2: rules=5444 tokens=40217 bits=454102 candidates=16
+ parent 3: rules=5444 tokens=40217 bits=454102 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5445 tokens=40213 bits=454056
+  state 1  : rules=5445 tokens=40213 bits=454056
+  state 2  : rules=5445 tokens=40213 bits=454077
+  state 3  : rules=5445 tokens=40213 bits=454077
+
+ROUND 66
+ parent 0: rules=5445 tokens=40213 bits=454056 candidates=16
+  NEW BEST: bits 454056 -> 454045 (-11)
+    rule T340 + T425 -> T5701  occ=6  new-token=used
+  NEW BEST: bits 454045 -> 454043 (-2)
+    rule T265 + T1327 -> T5701  occ=5  new-token=used
+  NEW BEST: bits 454043 -> 454041 (-2)
+    rule T265 + T1417 -> T5701  occ=5  new-token=used
+  NEW BEST: bits 454041 -> 454040 (-1)
+    rule T270 + T835 -> T5701  occ=4  new-token=used
+  NEW BEST: bits 454040 -> 454039 (-1)
+    rule T398 + T379 -> T5701  occ=4  new-token=used
+  NEW BEST: bits 454039 -> 454031 (-8)
+    rule T990 + T1207 -> T5701  occ=4  new-token=used
+ parent 1: rules=5445 tokens=40213 bits=454056 candidates=16
+ parent 2: rules=5445 tokens=40213 bits=454077 candidates=16
+ parent 3: rules=5445 tokens=40213 bits=454077 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5446 tokens=40209 bits=454031
+  state 1  : rules=5446 tokens=40209 bits=454031
+  state 2  : rules=5446 tokens=40209 bits=454039
+  state 3  : rules=5446 tokens=40209 bits=454039
+
+ROUND 67
+ parent 0: rules=5446 tokens=40209 bits=454031 candidates=16
+  NEW BEST: bits 454031 -> 454021 (-10)
+    rule T340 + T425 -> T5702  occ=6  new-token=used
+  NEW BEST: bits 454021 -> 454019 (-2)
+    rule T265 + T1327 -> T5702  occ=5  new-token=used
+  NEW BEST: bits 454019 -> 454017 (-2)
+    rule T265 + T1417 -> T5702  occ=5  new-token=used
+  NEW BEST: bits 454017 -> 454016 (-1)
+    rule T270 + T835 -> T5702  occ=4  new-token=used
+  NEW BEST: bits 454016 -> 454015 (-1)
+    rule T398 + T379 -> T5702  occ=4  new-token=used
+  NEW BEST: bits 454015 -> 453993 (-22)
+    rule T996 + T1216 -> T5702  occ=4  new-token=used
+ parent 1: rules=5446 tokens=40209 bits=454031 candidates=16
+ parent 2: rules=5446 tokens=40209 bits=454039 candidates=16
+ parent 3: rules=5446 tokens=40209 bits=454039 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5447 tokens=40205 bits=453993
+  state 1  : rules=5447 tokens=40205 bits=453993
+  state 2  : rules=5447 tokens=40205 bits=454014
+  state 3  : rules=5447 tokens=40205 bits=454015
+
+ROUND 68
+ parent 0: rules=5447 tokens=40205 bits=453993 candidates=16
+  NEW BEST: bits 453993 -> 453982 (-11)
+    rule T340 + T425 -> T5703  occ=6  new-token=used
+  NEW BEST: bits 453982 -> 453980 (-2)
+    rule T265 + T1327 -> T5703  occ=5  new-token=used
+  NEW BEST: bits 453980 -> 453978 (-2)
+    rule T265 + T1417 -> T5703  occ=5  new-token=used
+  NEW BEST: bits 453978 -> 453977 (-1)
+    rule T270 + T835 -> T5703  occ=4  new-token=used
+  NEW BEST: bits 453977 -> 453960 (-17)
+    rule T1133 + T387 -> T5703  occ=4  new-token=used
+ parent 1: rules=5447 tokens=40205 bits=453993 candidates=16
+ parent 2: rules=5447 tokens=40205 bits=454014 candidates=16
+ parent 3: rules=5447 tokens=40205 bits=454015 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5448 tokens=40201 bits=453960
+  state 1  : rules=5448 tokens=40201 bits=453960
+  state 2  : rules=5448 tokens=40201 bits=453977
+  state 3  : rules=5448 tokens=40201 bits=453977
+
+ROUND 69
+ parent 0: rules=5448 tokens=40201 bits=453960 candidates=16
+  NEW BEST: bits 453960 -> 453949 (-11)
+    rule T340 + T425 -> T5704  occ=6  new-token=used
+  NEW BEST: bits 453949 -> 453947 (-2)
+    rule T265 + T1327 -> T5704  occ=5  new-token=used
+  NEW BEST: bits 453947 -> 453945 (-2)
+    rule T265 + T1417 -> T5704  occ=5  new-token=used
+  NEW BEST: bits 453945 -> 453944 (-1)
+    rule T270 + T835 -> T5704  occ=4  new-token=used
+  NEW BEST: bits 453944 -> 453941 (-3)
+    rule T1151 + T758 -> T5704  occ=4  new-token=used
+ parent 1: rules=5448 tokens=40201 bits=453960 candidates=16
+ parent 2: rules=5448 tokens=40201 bits=453977 candidates=16
+ parent 3: rules=5448 tokens=40201 bits=453977 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5449 tokens=40197 bits=453941
+  state 1  : rules=5449 tokens=40197 bits=453941
+  state 2  : rules=5449 tokens=40197 bits=453944
+  state 3  : rules=5449 tokens=40197 bits=453944
+
+ROUND 70
+ parent 0: rules=5449 tokens=40197 bits=453941 candidates=16
+  NEW BEST: bits 453941 -> 453930 (-11)
+    rule T340 + T425 -> T5705  occ=6  new-token=used
+  NEW BEST: bits 453930 -> 453928 (-2)
+    rule T265 + T1327 -> T5705  occ=5  new-token=used
+  NEW BEST: bits 453928 -> 453926 (-2)
+    rule T265 + T1417 -> T5705  occ=5  new-token=used
+  NEW BEST: bits 453926 -> 453925 (-1)
+    rule T270 + T835 -> T5705  occ=4  new-token=used
+ parent 1: rules=5449 tokens=40197 bits=453941 candidates=16
+ parent 2: rules=5449 tokens=40197 bits=453944 candidates=16
+ parent 3: rules=5449 tokens=40197 bits=453944 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5450 tokens=40193 bits=453925
+  state 1  : rules=5450 tokens=40193 bits=453925
+  state 2  : rules=5450 tokens=40193 bits=453925
+  state 3  : rules=5450 tokens=40193 bits=453925
+
+ROUND 71
+ parent 0: rules=5450 tokens=40193 bits=453925 candidates=16
+  NEW BEST: bits 453925 -> 453914 (-11)
+    rule T340 + T425 -> T5706  occ=6  new-token=used
+  NEW BEST: bits 453914 -> 453912 (-2)
+    rule T265 + T1327 -> T5706  occ=5  new-token=used
+  NEW BEST: bits 453912 -> 453910 (-2)
+    rule T265 + T1417 -> T5706  occ=5  new-token=used
+  NEW BEST: bits 453910 -> 453909 (-1)
+    rule T270 + T835 -> T5706  occ=4  new-token=used
+ parent 1: rules=5450 tokens=40193 bits=453925 candidates=16
+  NEW BEST: bits 453909 -> 453896 (-13)
+    rule T1250 + T302 -> T5706  occ=4  new-token=used
+ parent 2: rules=5450 tokens=40193 bits=453925 candidates=16
+ parent 3: rules=5450 tokens=40193 bits=453925 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5451 tokens=40189 bits=453896
+  state 1  : rules=5451 tokens=40189 bits=453896
+  state 2  : rules=5451 tokens=40189 bits=453909
+  state 3  : rules=5451 tokens=40189 bits=453909
+
+ROUND 72
+ parent 0: rules=5451 tokens=40189 bits=453896 candidates=16
+  NEW BEST: bits 453896 -> 453885 (-11)
+    rule T340 + T425 -> T5707  occ=6  new-token=used
+  NEW BEST: bits 453885 -> 453883 (-2)
+    rule T265 + T1327 -> T5707  occ=5  new-token=used
+  NEW BEST: bits 453883 -> 453881 (-2)
+    rule T265 + T1417 -> T5707  occ=5  new-token=used
+  NEW BEST: bits 453881 -> 453880 (-1)
+    rule T398 + T379 -> T5707  occ=4  new-token=used
+  NEW BEST: bits 453880 -> 453852 (-28)
+    rule T1294 + T2818 -> T5707  occ=4  new-token=used
+ parent 1: rules=5451 tokens=40189 bits=453896 candidates=16
+ parent 2: rules=5451 tokens=40189 bits=453909 candidates=16
+ parent 3: rules=5451 tokens=40189 bits=453909 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5452 tokens=40185 bits=453852
+  state 1  : rules=5452 tokens=40185 bits=453852
+  state 2  : rules=5452 tokens=40185 bits=453880
+  state 3  : rules=5452 tokens=40185 bits=453880
+
+ROUND 73
+ parent 0: rules=5452 tokens=40185 bits=453852 candidates=16
+  NEW BEST: bits 453852 -> 453839 (-13)
+    rule T340 + T425 -> T5708  occ=6  new-token=used
+  NEW BEST: bits 453839 -> 453837 (-2)
+    rule T265 + T1327 -> T5708  occ=5  new-token=used
+  NEW BEST: bits 453837 -> 453835 (-2)
+    rule T265 + T1417 -> T5708  occ=5  new-token=used
+  NEW BEST: bits 453835 -> 453833 (-2)
+    rule T398 + T379 -> T5708  occ=4  new-token=used
+  NEW BEST: bits 453833 -> 453829 (-4)
+    rule T1327 + T773 -> T5708  occ=4  new-token=used
+ parent 1: rules=5452 tokens=40185 bits=453852 candidates=16
+ parent 2: rules=5452 tokens=40185 bits=453880 candidates=16
+ parent 3: rules=5452 tokens=40185 bits=453880 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5453 tokens=40181 bits=453829
+  state 1  : rules=5453 tokens=40181 bits=453829
+  state 2  : rules=5453 tokens=40181 bits=453833
+  state 3  : rules=5453 tokens=40181 bits=453833
+
+ROUND 74
+ parent 0: rules=5453 tokens=40181 bits=453829 candidates=16
+  NEW BEST: bits 453829 -> 453819 (-10)
+    rule T340 + T425 -> T5709  occ=6  new-token=used
+  NEW BEST: bits 453819 -> 453815 (-4)
+    rule T265 + T1417 -> T5709  occ=5  new-token=used
+  NEW BEST: bits 453815 -> 453813 (-2)
+    rule T398 + T379 -> T5709  occ=4  new-token=used
+  NEW BEST: bits 453813 -> 453784 (-29)
+    rule T1406 + T4121 -> T5709  occ=4  new-token=used
+ parent 1: rules=5453 tokens=40181 bits=453829 candidates=16
+ parent 2: rules=5453 tokens=40181 bits=453833 candidates=16
+ parent 3: rules=5453 tokens=40181 bits=453833 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5454 tokens=40177 bits=453784
+  state 1  : rules=5454 tokens=40177 bits=453784
+  state 2  : rules=5454 tokens=40177 bits=453813
+  state 3  : rules=5454 tokens=40177 bits=453813
+
+ROUND 75
+ parent 0: rules=5454 tokens=40177 bits=453784 candidates=16
+  NEW BEST: bits 453784 -> 453773 (-11)
+    rule T340 + T425 -> T5710  occ=6  new-token=used
+  NEW BEST: bits 453773 -> 453769 (-4)
+    rule T265 + T1417 -> T5710  occ=5  new-token=used
+  NEW BEST: bits 453769 -> 453767 (-2)
+    rule T398 + T379 -> T5710  occ=4  new-token=used
+  NEW BEST: bits 453767 -> 453740 (-27)
+    rule T1491 + T2033 -> T5710  occ=4  new-token=used
+ parent 1: rules=5454 tokens=40177 bits=453784 candidates=16
+ parent 2: rules=5454 tokens=40177 bits=453813 candidates=16
+ parent 3: rules=5454 tokens=40177 bits=453813 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5455 tokens=40173 bits=453740
+  state 1  : rules=5455 tokens=40173 bits=453740
+  state 2  : rules=5455 tokens=40173 bits=453767
+  state 3  : rules=5455 tokens=40173 bits=453767
+
+ROUND 76
+ parent 0: rules=5455 tokens=40173 bits=453740 candidates=16
+  NEW BEST: bits 453740 -> 453727 (-13)
+    rule T340 + T425 -> T5711  occ=6  new-token=used
+  NEW BEST: bits 453727 -> 453723 (-4)
+    rule T265 + T1417 -> T5711  occ=5  new-token=used
+  NEW BEST: bits 453723 -> 453721 (-2)
+    rule T398 + T379 -> T5711  occ=4  new-token=used
+  NEW BEST: bits 453721 -> 453691 (-30)
+    rule T1496 + T3019 -> T5711  occ=4  new-token=used
+ parent 1: rules=5455 tokens=40173 bits=453740 candidates=16
+ parent 2: rules=5455 tokens=40173 bits=453767 candidates=16
+ parent 3: rules=5455 tokens=40173 bits=453767 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5456 tokens=40169 bits=453691
+  state 1  : rules=5456 tokens=40169 bits=453691
+  state 2  : rules=5456 tokens=40169 bits=453721
+  state 3  : rules=5456 tokens=40169 bits=453721
+
+ROUND 77
+ parent 0: rules=5456 tokens=40169 bits=453691 candidates=16
+  NEW BEST: bits 453691 -> 453680 (-11)
+    rule T340 + T425 -> T5712  occ=6  new-token=used
+  NEW BEST: bits 453680 -> 453676 (-4)
+    rule T265 + T1417 -> T5712  occ=5  new-token=used
+  NEW BEST: bits 453676 -> 453674 (-2)
+    rule T398 + T379 -> T5712  occ=4  new-token=used
+  NEW BEST: bits 453674 -> 453672 (-2)
+    rule T1543 + T340 -> T5712  occ=4  new-token=used
+ parent 1: rules=5456 tokens=40169 bits=453691 candidates=16
+ parent 2: rules=5456 tokens=40169 bits=453721 candidates=16
+ parent 3: rules=5456 tokens=40169 bits=453721 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5457 tokens=40165 bits=453672
+  state 1  : rules=5457 tokens=40165 bits=453672
+  state 2  : rules=5457 tokens=40165 bits=453674
+  state 3  : rules=5457 tokens=40165 bits=453674
+
+ROUND 78
+ parent 0: rules=5457 tokens=40165 bits=453672 candidates=16
+  NEW BEST: bits 453672 -> 453661 (-11)
+    rule T340 + T425 -> T5713  occ=6  new-token=used
+  NEW BEST: bits 453661 -> 453657 (-4)
+    rule T265 + T1417 -> T5713  occ=5  new-token=used
+  NEW BEST: bits 453657 -> 453655 (-2)
+    rule T398 + T379 -> T5713  occ=4  new-token=used
+  NEW BEST: bits 453655 -> 453651 (-4)
+    rule T1570 + T265 -> T5713  occ=4  new-token=used
+ parent 1: rules=5457 tokens=40165 bits=453672 candidates=16
+ parent 2: rules=5457 tokens=40165 bits=453674 candidates=16
+ parent 3: rules=5457 tokens=40165 bits=453674 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5458 tokens=40161 bits=453651
+  state 1  : rules=5458 tokens=40161 bits=453651
+  state 2  : rules=5458 tokens=40161 bits=453655
+  state 3  : rules=5458 tokens=40161 bits=453655
+
+ROUND 79
+ parent 0: rules=5458 tokens=40161 bits=453651 candidates=16
+  NEW BEST: bits 453651 -> 453639 (-12)
+    rule T340 + T425 -> T5714  occ=6  new-token=used
+  NEW BEST: bits 453639 -> 453635 (-4)
+    rule T265 + T1417 -> T5714  occ=5  new-token=used
+  NEW BEST: bits 453635 -> 453633 (-2)
+    rule T398 + T379 -> T5714  occ=4  new-token=used
+  NEW BEST: bits 453633 -> 453606 (-27)
+    rule T1596 + T1989 -> T5714  occ=4  new-token=used
+ parent 1: rules=5458 tokens=40161 bits=453651 candidates=16
+ parent 2: rules=5458 tokens=40161 bits=453655 candidates=16
+ parent 3: rules=5458 tokens=40161 bits=453655 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5459 tokens=40157 bits=453606
+  state 1  : rules=5459 tokens=40157 bits=453606
+  state 2  : rules=5459 tokens=40157 bits=453633
+  state 3  : rules=5459 tokens=40157 bits=453633
+
+ROUND 80
+ parent 0: rules=5459 tokens=40157 bits=453606 candidates=16
+  NEW BEST: bits 453606 -> 453595 (-11)
+    rule T340 + T425 -> T5715  occ=6  new-token=used
+  NEW BEST: bits 453595 -> 453591 (-4)
+    rule T265 + T1417 -> T5715  occ=5  new-token=used
+  NEW BEST: bits 453591 -> 453589 (-2)
+    rule T398 + T379 -> T5715  occ=4  new-token=used
+ parent 1: rules=5459 tokens=40157 bits=453606 candidates=16
+ parent 2: rules=5459 tokens=40157 bits=453633 candidates=16
+ parent 3: rules=5459 tokens=40157 bits=453633 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5460 tokens=40153 bits=453589
+  state 1  : rules=5460 tokens=40153 bits=453589
+  state 2  : rules=5460 tokens=40153 bits=453589
+  state 3  : rules=5460 tokens=40153 bits=453589
+
+ROUND 81
+ parent 0: rules=5460 tokens=40153 bits=453589 candidates=16
+  NEW BEST: bits 453589 -> 453578 (-11)
+    rule T340 + T425 -> T5716  occ=6  new-token=used
+  NEW BEST: bits 453578 -> 453574 (-4)
+    rule T265 + T1417 -> T5716  occ=5  new-token=used
+ parent 1: rules=5460 tokens=40153 bits=453589 candidates=16
+ parent 2: rules=5460 tokens=40153 bits=453589 candidates=16
+ parent 3: rules=5460 tokens=40153 bits=453589 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5461 tokens=40148 bits=453574
+  state 1  : rules=5461 tokens=40148 bits=453574
+  state 2  : rules=5461 tokens=40148 bits=453574
+  state 3  : rules=5461 tokens=40148 bits=453574
+
+ROUND 82
+ parent 0: rules=5461 tokens=40148 bits=453574 candidates=16
+  NEW BEST: bits 453574 -> 453563 (-11)
+    rule T340 + T425 -> T5717  occ=6  new-token=used
+  NEW BEST: bits 453563 -> 453560 (-3)
+    rule T32 + T1138 -> T5717  occ=5  new-token=used
+  NEW BEST: bits 453560 -> 453559 (-1)
+    rule T289 + T678 -> T5717  occ=4  new-token=used
+  NEW BEST: bits 453559 -> 453557 (-2)
+    rule T1698 + T265 -> T5717  occ=4  new-token=used
+ parent 1: rules=5461 tokens=40148 bits=453574 candidates=16
+ parent 2: rules=5461 tokens=40148 bits=453574 candidates=16
+ parent 3: rules=5461 tokens=40148 bits=453574 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5462 tokens=40144 bits=453557
+  state 1  : rules=5462 tokens=40144 bits=453557
+  state 2  : rules=5462 tokens=40144 bits=453557
+  state 3  : rules=5462 tokens=40144 bits=453557
+
+ROUND 83
+ parent 0: rules=5462 tokens=40144 bits=453557 candidates=16
+  NEW BEST: bits 453557 -> 453546 (-11)
+    rule T340 + T425 -> T5718  occ=6  new-token=used
+  NEW BEST: bits 453546 -> 453542 (-4)
+    rule T265 + T1417 -> T5718  occ=5  new-token=used
+  NEW BEST: bits 453542 -> 453528 (-14)
+    rule T1706 + T424 -> T5718  occ=4  new-token=used
+ parent 1: rules=5462 tokens=40144 bits=453557 candidates=16
+ parent 2: rules=5462 tokens=40144 bits=453557 candidates=16
+  NEW BEST: bits 453528 -> 453527 (-1)
+    rule T1706 + T424 -> T5718  occ=4  new-token=used
+ parent 3: rules=5462 tokens=40144 bits=453557 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5463 tokens=40140 bits=453527
+  state 1  : rules=5463 tokens=40140 bits=453527
+  state 2  : rules=5463 tokens=40140 bits=453528
+  state 3  : rules=5463 tokens=40140 bits=453528
+
+ROUND 84
+ parent 0: rules=5463 tokens=40140 bits=453527 candidates=16
+  NEW BEST: bits 453527 -> 453515 (-12)
+    rule T340 + T425 -> T5719  occ=6  new-token=used
+  NEW BEST: bits 453515 -> 453512 (-3)
+    rule T32 + T1138 -> T5719  occ=5  new-token=used
+  NEW BEST: bits 453512 -> 453511 (-1)
+    rule T289 + T678 -> T5719  occ=4  new-token=used
+  NEW BEST: bits 453511 -> 453468 (-43)
+    rule T1769 + T1585 -> T5719  occ=4  new-token=used
+ parent 1: rules=5463 tokens=40140 bits=453527 candidates=16
+ parent 2: rules=5463 tokens=40140 bits=453528 candidates=16
+ parent 3: rules=5463 tokens=40140 bits=453528 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5464 tokens=40135 bits=453468
+  state 1  : rules=5464 tokens=40135 bits=453468
+  state 2  : rules=5464 tokens=40135 bits=453469
+  state 3  : rules=5464 tokens=40135 bits=453469
+
+ROUND 85
+ parent 0: rules=5464 tokens=40135 bits=453468 candidates=16
+  NEW BEST: bits 453468 -> 453455 (-13)
+    rule T340 + T425 -> T5720  occ=6  new-token=used
+  NEW BEST: bits 453455 -> 453452 (-3)
+    rule T32 + T1138 -> T5720  occ=5  new-token=used
+  NEW BEST: bits 453452 -> 453451 (-1)
+    rule T289 + T678 -> T5720  occ=4  new-token=used
+  NEW BEST: bits 453451 -> 453436 (-15)
+    rule T1771 + T976 -> T5720  occ=4  new-token=used
+ parent 1: rules=5464 tokens=40135 bits=453468 candidates=16
+ parent 2: rules=5464 tokens=40135 bits=453469 candidates=16
+ parent 3: rules=5464 tokens=40135 bits=453469 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5465 tokens=40132 bits=453436
+  state 1  : rules=5465 tokens=40132 bits=453436
+  state 2  : rules=5465 tokens=40132 bits=453437
+  state 3  : rules=5465 tokens=40132 bits=453437
+
+ROUND 86
+ parent 0: rules=5465 tokens=40132 bits=453436 candidates=16
+  NEW BEST: bits 453436 -> 453422 (-14)
+    rule T340 + T425 -> T5721  occ=6  new-token=used
+  NEW BEST: bits 453422 -> 453419 (-3)
+    rule T32 + T1138 -> T5721  occ=5  new-token=used
+  NEW BEST: bits 453419 -> 453418 (-1)
+    rule T289 + T678 -> T5721  occ=4  new-token=used
+  NEW BEST: bits 453418 -> 453416 (-2)
+    rule T1824 + T520 -> T5721  occ=4  new-token=used
+ parent 1: rules=5465 tokens=40132 bits=453436 candidates=16
+ parent 2: rules=5465 tokens=40132 bits=453437 candidates=16
+ parent 3: rules=5465 tokens=40132 bits=453437 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5466 tokens=40129 bits=453416
+  state 1  : rules=5466 tokens=40129 bits=453416
+  state 2  : rules=5466 tokens=40129 bits=453417
+  state 3  : rules=5466 tokens=40129 bits=453417
+
+ROUND 87
+ parent 0: rules=5466 tokens=40129 bits=453416 candidates=16
+  NEW BEST: bits 453416 -> 453405 (-11)
+    rule T340 + T425 -> T5722  occ=6  new-token=used
+  NEW BEST: bits 453405 -> 453402 (-3)
+    rule T32 + T1138 -> T5722  occ=5  new-token=used
+  NEW BEST: bits 453402 -> 453401 (-1)
+    rule T289 + T678 -> T5722  occ=4  new-token=used
+  NEW BEST: bits 453401 -> 453376 (-25)
+    rule T2244 + T593 -> T5722  occ=4  new-token=used
+ parent 1: rules=5466 tokens=40129 bits=453416 candidates=16
+ parent 2: rules=5466 tokens=40129 bits=453417 candidates=16
+ parent 3: rules=5466 tokens=40129 bits=453417 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5467 tokens=40125 bits=453376
+  state 1  : rules=5467 tokens=40125 bits=453376
+  state 2  : rules=5467 tokens=40125 bits=453376
+  state 3  : rules=5467 tokens=40125 bits=453376
+
+ROUND 88
+ parent 0: rules=5467 tokens=40125 bits=453376 candidates=16
+  NEW BEST: bits 453376 -> 453365 (-11)
+    rule T340 + T425 -> T5723  occ=6  new-token=used
+  NEW BEST: bits 453365 -> 453362 (-3)
+    rule T32 + T1138 -> T5723  occ=5  new-token=used
+  NEW BEST: bits 453362 -> 453361 (-1)
+    rule T289 + T678 -> T5723  occ=4  new-token=used
+  NEW BEST: bits 453361 -> 453338 (-23)
+    rule T2623 + T723 -> T5723  occ=4  new-token=used
+ parent 1: rules=5467 tokens=40125 bits=453376 candidates=16
+ parent 2: rules=5467 tokens=40125 bits=453376 candidates=16
+ parent 3: rules=5467 tokens=40125 bits=453376 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5468 tokens=40121 bits=453338
+  state 1  : rules=5468 tokens=40121 bits=453338
+  state 2  : rules=5468 tokens=40121 bits=453338
+  state 3  : rules=5468 tokens=40121 bits=453338
+
+ROUND 89
+ parent 0: rules=5468 tokens=40121 bits=453338 candidates=16
+  NEW BEST: bits 453338 -> 453326 (-12)
+    rule T340 + T425 -> T5724  occ=6  new-token=used
+  NEW BEST: bits 453326 -> 453322 (-4)
+    rule T265 + T1417 -> T5724  occ=5  new-token=used
+  NEW BEST: bits 453322 -> 453275 (-47)
+    rule T2723 + T3928 -> T5724  occ=4  new-token=used
+ parent 1: rules=5468 tokens=40121 bits=453338 candidates=16
+ parent 2: rules=5468 tokens=40121 bits=453338 candidates=16
+ parent 3: rules=5468 tokens=40121 bits=453338 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5469 tokens=40117 bits=453275
+  state 1  : rules=5469 tokens=40117 bits=453275
+  state 2  : rules=5469 tokens=40117 bits=453275
+  state 3  : rules=5469 tokens=40117 bits=453275
+
+ROUND 90
+ parent 0: rules=5469 tokens=40117 bits=453275 candidates=16
+  NEW BEST: bits 453275 -> 453264 (-11)
+    rule T340 + T425 -> T5725  occ=6  new-token=used
+  NEW BEST: bits 453264 -> 453261 (-3)
+    rule T32 + T1138 -> T5725  occ=5  new-token=used
+  NEW BEST: bits 453261 -> 453260 (-1)
+    rule T289 + T678 -> T5725  occ=4  new-token=used
+  NEW BEST: bits 453260 -> 453228 (-32)
+    rule T2763 + T2762 -> T5725  occ=4  new-token=used
+ parent 1: rules=5469 tokens=40117 bits=453275 candidates=16
+ parent 2: rules=5469 tokens=40117 bits=453275 candidates=16
+ parent 3: rules=5469 tokens=40117 bits=453275 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5470 tokens=40113 bits=453228
+  state 1  : rules=5470 tokens=40113 bits=453228
+  state 2  : rules=5470 tokens=40113 bits=453228
+  state 3  : rules=5470 tokens=40113 bits=453228
+
+ROUND 91
+ parent 0: rules=5470 tokens=40113 bits=453228 candidates=16
+  NEW BEST: bits 453228 -> 453217 (-11)
+    rule T340 + T425 -> T5726  occ=6  new-token=used
+  NEW BEST: bits 453217 -> 453213 (-4)
+    rule T265 + T1417 -> T5726  occ=5  new-token=used
+  NEW BEST: bits 453213 -> 453203 (-10)
+    rule T2775 + T279 -> T5726  occ=4  new-token=used
+ parent 1: rules=5470 tokens=40113 bits=453228 candidates=16
+ parent 2: rules=5470 tokens=40113 bits=453228 candidates=16
+ parent 3: rules=5470 tokens=40113 bits=453228 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5471 tokens=40109 bits=453203
+  state 1  : rules=5471 tokens=40109 bits=453203
+  state 2  : rules=5471 tokens=40109 bits=453203
+  state 3  : rules=5471 tokens=40109 bits=453203
+
+ROUND 92
+ parent 0: rules=5471 tokens=40109 bits=453203 candidates=16
+  NEW BEST: bits 453203 -> 453192 (-11)
+    rule T340 + T425 -> T5727  occ=6  new-token=used
+  NEW BEST: bits 453192 -> 453189 (-3)
+    rule T32 + T1138 -> T5727  occ=5  new-token=used
+  NEW BEST: bits 453189 -> 453188 (-1)
+    rule T289 + T678 -> T5727  occ=4  new-token=used
+  NEW BEST: bits 453188 -> 453154 (-34)
+    rule T2849 + T1567 -> T5727  occ=4  new-token=used
+ parent 1: rules=5471 tokens=40109 bits=453203 candidates=16
+ parent 2: rules=5471 tokens=40109 bits=453203 candidates=16
+ parent 3: rules=5471 tokens=40109 bits=453203 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5472 tokens=40105 bits=453154
+  state 1  : rules=5472 tokens=40105 bits=453154
+  state 2  : rules=5472 tokens=40105 bits=453154
+  state 3  : rules=5472 tokens=40105 bits=453154
+
+ROUND 93
+ parent 0: rules=5472 tokens=40105 bits=453154 candidates=16
+  NEW BEST: bits 453154 -> 453143 (-11)
+    rule T340 + T425 -> T5728  occ=6  new-token=used
+  NEW BEST: bits 453143 -> 453139 (-4)
+    rule T265 + T1417 -> T5728  occ=5  new-token=used
+  NEW BEST: bits 453139 -> 453105 (-34)
+    rule T2869 + T3570 -> T5728  occ=4  new-token=used
+ parent 1: rules=5472 tokens=40105 bits=453154 candidates=16
+ parent 2: rules=5472 tokens=40105 bits=453154 candidates=16
+ parent 3: rules=5472 tokens=40105 bits=453154 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5473 tokens=40101 bits=453105
+  state 1  : rules=5473 tokens=40101 bits=453105
+  state 2  : rules=5473 tokens=40101 bits=453105
+  state 3  : rules=5473 tokens=40101 bits=453105
+
+ROUND 94
+ parent 0: rules=5473 tokens=40101 bits=453105 candidates=16
+  NEW BEST: bits 453105 -> 453093 (-12)
+    rule T340 + T425 -> T5729  occ=6  new-token=used
+  NEW BEST: bits 453093 -> 453090 (-3)
+    rule T32 + T1138 -> T5729  occ=5  new-token=used
+  NEW BEST: bits 453090 -> 453089 (-1)
+    rule T289 + T678 -> T5729  occ=4  new-token=used
+  NEW BEST: bits 453089 -> 453076 (-13)
+    rule T2978 + T319 -> T5729  occ=4  new-token=used
+ parent 1: rules=5473 tokens=40101 bits=453105 candidates=16
+ parent 2: rules=5473 tokens=40101 bits=453105 candidates=16
+ parent 3: rules=5473 tokens=40101 bits=453105 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5474 tokens=40097 bits=453076
+  state 1  : rules=5474 tokens=40097 bits=453076
+  state 2  : rules=5474 tokens=40097 bits=453076
+  state 3  : rules=5474 tokens=40097 bits=453076
+
+ROUND 95
+ parent 0: rules=5474 tokens=40097 bits=453076 candidates=16
+  NEW BEST: bits 453076 -> 453065 (-11)
+    rule T340 + T425 -> T5730  occ=6  new-token=used
+  NEW BEST: bits 453065 -> 453061 (-4)
+    rule T265 + T1417 -> T5730  occ=5  new-token=used
+  NEW BEST: bits 453061 -> 453043 (-18)
+    rule T3015 + T771 -> T5730  occ=4  new-token=used
+ parent 1: rules=5474 tokens=40097 bits=453076 candidates=16
+ parent 2: rules=5474 tokens=40097 bits=453076 candidates=16
+ parent 3: rules=5474 tokens=40097 bits=453076 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5475 tokens=40092 bits=453043
+  state 1  : rules=5475 tokens=40092 bits=453043
+  state 2  : rules=5475 tokens=40092 bits=453043
+  state 3  : rules=5475 tokens=40092 bits=453043
+
+ROUND 96
+ parent 0: rules=5475 tokens=40092 bits=453043 candidates=16
+  NEW BEST: bits 453043 -> 453032 (-11)
+    rule T340 + T425 -> T5731  occ=6  new-token=used
+  NEW BEST: bits 453032 -> 453029 (-3)
+    rule T32 + T1138 -> T5731  occ=5  new-token=used
+  NEW BEST: bits 453029 -> 453028 (-1)
+    rule T289 + T678 -> T5731  occ=4  new-token=used
+  NEW BEST: bits 453028 -> 453001 (-27)
+    rule T3062 + T2064 -> T5731  occ=4  new-token=used
+ parent 1: rules=5475 tokens=40092 bits=453043 candidates=16
+ parent 2: rules=5475 tokens=40092 bits=453043 candidates=16
+ parent 3: rules=5475 tokens=40092 bits=453043 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5476 tokens=40088 bits=453001
+  state 1  : rules=5476 tokens=40088 bits=453001
+  state 2  : rules=5476 tokens=40088 bits=453001
+  state 3  : rules=5476 tokens=40088 bits=453001
+
+ROUND 97
+ parent 0: rules=5476 tokens=40088 bits=453001 candidates=16
+  NEW BEST: bits 453001 -> 452990 (-11)
+    rule T340 + T425 -> T5732  occ=6  new-token=used
+  NEW BEST: bits 452990 -> 452986 (-4)
+    rule T265 + T1417 -> T5732  occ=5  new-token=used
+  NEW BEST: bits 452986 -> 452950 (-36)
+    rule T3210 + T821 -> T5732  occ=4  new-token=used
+ parent 1: rules=5476 tokens=40088 bits=453001 candidates=16
+ parent 2: rules=5476 tokens=40088 bits=453001 candidates=16
+ parent 3: rules=5476 tokens=40088 bits=453001 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5477 tokens=40083 bits=452950
+  state 1  : rules=5477 tokens=40083 bits=452950
+  state 2  : rules=5477 tokens=40083 bits=452950
+  state 3  : rules=5477 tokens=40083 bits=452950
+
+ROUND 98
+ parent 0: rules=5477 tokens=40083 bits=452950 candidates=16
+  NEW BEST: bits 452950 -> 452939 (-11)
+    rule T340 + T425 -> T5733  occ=6  new-token=used
+  NEW BEST: bits 452939 -> 452936 (-3)
+    rule T32 + T1138 -> T5733  occ=5  new-token=used
+  NEW BEST: bits 452936 -> 452935 (-1)
+    rule T289 + T678 -> T5733  occ=4  new-token=used
+  NEW BEST: bits 452935 -> 452911 (-24)
+    rule T3275 + T1009 -> T5733  occ=4  new-token=used
+ parent 1: rules=5477 tokens=40083 bits=452950 candidates=16
+ parent 2: rules=5477 tokens=40083 bits=452950 candidates=16
+ parent 3: rules=5477 tokens=40083 bits=452950 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5478 tokens=40079 bits=452911
+  state 1  : rules=5478 tokens=40079 bits=452911
+  state 2  : rules=5478 tokens=40079 bits=452911
+  state 3  : rules=5478 tokens=40079 bits=452911
+
+ROUND 99
+ parent 0: rules=5478 tokens=40079 bits=452911 candidates=16
+  NEW BEST: bits 452911 -> 452900 (-11)
+    rule T340 + T425 -> T5734  occ=6  new-token=used
+  NEW BEST: bits 452900 -> 452896 (-4)
+    rule T265 + T1417 -> T5734  occ=5  new-token=used
+  NEW BEST: bits 452896 -> 452861 (-35)
+    rule T3605 + T2761 -> T5734  occ=4  new-token=used
+ parent 1: rules=5478 tokens=40079 bits=452911 candidates=16
+ parent 2: rules=5478 tokens=40079 bits=452911 candidates=16
+ parent 3: rules=5478 tokens=40079 bits=452911 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5479 tokens=40075 bits=452861
+  state 1  : rules=5479 tokens=40075 bits=452861
+  state 2  : rules=5479 tokens=40075 bits=452861
+  state 3  : rules=5479 tokens=40075 bits=452861
+
+ROUND 100
+ parent 0: rules=5479 tokens=40075 bits=452861 candidates=16
+  NEW BEST: bits 452861 -> 452850 (-11)
+    rule T340 + T425 -> T5735  occ=6  new-token=used
+  NEW BEST: bits 452850 -> 452847 (-3)
+    rule T32 + T1138 -> T5735  occ=5  new-token=used
+  NEW BEST: bits 452847 -> 452846 (-1)
+    rule T289 + T678 -> T5735  occ=4  new-token=used
+  NEW BEST: bits 452846 -> 452831 (-15)
+    rule T3833 + T771 -> T5735  occ=4  new-token=used
+ parent 1: rules=5479 tokens=40075 bits=452861 candidates=16
+ parent 2: rules=5479 tokens=40075 bits=452861 candidates=16
+ parent 3: rules=5479 tokens=40075 bits=452861 candidates=16
+beam after pruning: 4 states
+  state 0  : rules=5480 tokens=40071 bits=452831
+  state 1  : rules=5480 tokens=40071 bits=452831
+  state 2  : rules=5480 tokens=40071 bits=452831
+  state 3  : rules=5480 tokens=40071 bits=452831
+
+BEST:
+- rules 5480
+- tokens 40071
+- Huffman bits 452831
+- Huffman bytes 56604
+- rule bytes 21920
+- largest rule 27
+- best round 100
+- saving 28552 bits vs greedy
+- reduction 5.93124%
+- saving 7191 bits vs initial Shannon
+- reconstruction OK
