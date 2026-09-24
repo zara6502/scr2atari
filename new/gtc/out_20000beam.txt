@@ -1,4 +1,4 @@
-GRAMMAR GROWTH DUAL64 FAST24
+GRAMMAR GROWTH DUAL64 FAST24 SHANNON-DP
 input bytes       : 198856
 candidate pool    : 64
 payload beam      : 4
@@ -7,6 +7,7 @@ actual Huffman    : 24
 max rounds        : 100
 alpha             : 0.25
 min pair count    : 2
+Shannon DP passes : 3
 
 GREEDY BASELINE:
   rules              : 5380
@@ -36,803 +37,775 @@ INITIAL SHANNON:
   total reduction    : 3.26849%
 
 ROUND 1  beam=1
-  new BEST PAYLOAD: 457300 bits, 5381 rules, 40458 tokens
-  new BEST TOTAL:   629492 bits, 5381 rules, 40458 tokens
+  new BEST PAYLOAD: 456433 bits, 5381 rules, 40495 tokens
+  new BEST TOTAL:   628625 bits, 5381 rules, 40495 tokens
   next beam           : 4
-  global payload      : 457300 bits / 5381 rules
-  global total        : 629492 bits / 5381 rules
+  global payload      : 456433 bits / 5381 rules
+  global total        : 628625 bits / 5381 rules
 
 ROUND 2  beam=4
-  new BEST PAYLOAD: 456566 bits, 5382 rules, 40480 tokens
-  new BEST TOTAL:   628790 bits, 5382 rules, 40480 tokens
+  new BEST PAYLOAD: 456266 bits, 5382 rules, 40499 tokens
+  new BEST TOTAL:   628490 bits, 5382 rules, 40499 tokens
   next beam           : 4
-  global payload      : 456566 bits / 5382 rules
-  global total        : 628790 bits / 5382 rules
+  global payload      : 456266 bits / 5382 rules
+  global total        : 628490 bits / 5382 rules
 
 ROUND 3  beam=4
-  new BEST PAYLOAD: 456280 bits, 5383 rules, 40485 tokens
-  new BEST TOTAL:   628536 bits, 5383 rules, 40485 tokens
+  new BEST PAYLOAD: 456184 bits, 5383 rules, 40496 tokens
+  new BEST TOTAL:   628440 bits, 5383 rules, 40496 tokens
   next beam           : 4
-  global payload      : 456280 bits / 5383 rules
-  global total        : 628536 bits / 5383 rules
+  global payload      : 456184 bits / 5383 rules
+  global total        : 628440 bits / 5383 rules
 
 ROUND 4  beam=4
-  new BEST PAYLOAD: 456169 bits, 5384 rules, 40481 tokens
-  new BEST TOTAL:   628457 bits, 5384 rules, 40481 tokens
-  new BEST PAYLOAD: 456146 bits, 5384 rules, 40480 tokens
-  new BEST TOTAL:   628434 bits, 5384 rules, 40480 tokens
+  new BEST PAYLOAD: 456113 bits, 5384 rules, 40489 tokens
+  new BEST TOTAL:   628401 bits, 5384 rules, 40489 tokens
   next beam           : 4
-  global payload      : 456146 bits / 5384 rules
-  global total        : 628434 bits / 5384 rules
+  global payload      : 456113 bits / 5384 rules
+  global total        : 628401 bits / 5384 rules
 
 ROUND 5  beam=4
-  new BEST PAYLOAD: 456083 bits, 5385 rules, 40477 tokens
-  new BEST TOTAL:   628403 bits, 5385 rules, 40477 tokens
-  new BEST PAYLOAD: 456082 bits, 5385 rules, 40478 tokens
-  new BEST TOTAL:   628402 bits, 5385 rules, 40478 tokens
-  new BEST PAYLOAD: 456081 bits, 5385 rules, 40479 tokens
-  new BEST TOTAL:   628401 bits, 5385 rules, 40479 tokens
-  new BEST PAYLOAD: 456074 bits, 5385 rules, 40478 tokens
-  new BEST TOTAL:   628394 bits, 5385 rules, 40478 tokens
+  new BEST PAYLOAD: 456055 bits, 5385 rules, 40484 tokens
+  new BEST TOTAL:   628375 bits, 5385 rules, 40484 tokens
   next beam           : 4
-  global payload      : 456074 bits / 5385 rules
-  global total        : 628394 bits / 5385 rules
+  global payload      : 456055 bits / 5385 rules
+  global total        : 628375 bits / 5385 rules
 
 ROUND 6  beam=4
-  new BEST PAYLOAD: 456011 bits, 5386 rules, 40476 tokens
-  new BEST TOTAL:   628363 bits, 5386 rules, 40476 tokens
-  new BEST PAYLOAD: 456009 bits, 5386 rules, 40478 tokens
-  new BEST TOTAL:   628361 bits, 5386 rules, 40478 tokens
+  new BEST PAYLOAD: 456002 bits, 5386 rules, 40480 tokens
+  new BEST TOTAL:   628354 bits, 5386 rules, 40480 tokens
   next beam           : 4
-  global payload      : 456009 bits / 5386 rules
-  global total        : 628361 bits / 5386 rules
+  global payload      : 456002 bits / 5386 rules
+  global total        : 628354 bits / 5386 rules
 
 ROUND 7  beam=4
-  new BEST PAYLOAD: 455957 bits, 5387 rules, 40474 tokens
-  new BEST TOTAL:   628341 bits, 5387 rules, 40474 tokens
-  new BEST PAYLOAD: 455956 bits, 5387 rules, 40475 tokens
-  new BEST TOTAL:   628340 bits, 5387 rules, 40475 tokens
-  new BEST PAYLOAD: 455955 bits, 5387 rules, 40476 tokens
-  new BEST TOTAL:   628339 bits, 5387 rules, 40476 tokens
-  next beam           : 5
-  global payload      : 455955 bits / 5387 rules
-  global total        : 628339 bits / 5387 rules
-
-ROUND 8  beam=5
-  new BEST PAYLOAD: 455905 bits, 5388 rules, 40470 tokens
-  new BEST TOTAL:   628321 bits, 5388 rules, 40470 tokens
-  new BEST PAYLOAD: 455904 bits, 5388 rules, 40471 tokens
-  new BEST TOTAL:   628320 bits, 5388 rules, 40471 tokens
-  new BEST PAYLOAD: 455902 bits, 5388 rules, 40471 tokens
-  new BEST TOTAL:   628318 bits, 5388 rules, 40471 tokens
+  new BEST PAYLOAD: 455952 bits, 5387 rules, 40474 tokens
+  new BEST TOTAL:   628336 bits, 5387 rules, 40474 tokens
+  new BEST PAYLOAD: 455951 bits, 5387 rules, 40476 tokens
+  new BEST TOTAL:   628335 bits, 5387 rules, 40476 tokens
   next beam           : 4
-  global payload      : 455902 bits / 5388 rules
-  global total        : 628318 bits / 5388 rules
+  global payload      : 455951 bits / 5387 rules
+  global total        : 628335 bits / 5387 rules
+
+ROUND 8  beam=4
+  new BEST PAYLOAD: 455901 bits, 5388 rules, 40469 tokens
+  new BEST TOTAL:   628317 bits, 5388 rules, 40469 tokens
+  new BEST PAYLOAD: 455900 bits, 5388 rules, 40471 tokens
+  new BEST TOTAL:   628316 bits, 5388 rules, 40471 tokens
+  next beam           : 4
+  global payload      : 455900 bits / 5388 rules
+  global total        : 628316 bits / 5388 rules
 
 ROUND 9  beam=4
-  new BEST PAYLOAD: 455853 bits, 5389 rules, 40465 tokens
-  new BEST TOTAL:   628301 bits, 5389 rules, 40465 tokens
-  new BEST PAYLOAD: 455852 bits, 5389 rules, 40465 tokens
-  new BEST TOTAL:   628300 bits, 5389 rules, 40465 tokens
+  new BEST PAYLOAD: 455850 bits, 5389 rules, 40465 tokens
+  new BEST TOTAL:   628298 bits, 5389 rules, 40465 tokens
   next beam           : 4
-  global payload      : 455852 bits / 5389 rules
-  global total        : 628300 bits / 5389 rules
+  global payload      : 455850 bits / 5389 rules
+  global total        : 628298 bits / 5389 rules
 
 ROUND 10  beam=4
-  new BEST PAYLOAD: 455807 bits, 5390 rules, 40460 tokens
-  new BEST TOTAL:   628287 bits, 5390 rules, 40460 tokens
-  new BEST PAYLOAD: 455805 bits, 5390 rules, 40460 tokens
-  new BEST TOTAL:   628285 bits, 5390 rules, 40460 tokens
+  new BEST PAYLOAD: 455805 bits, 5390 rules, 40462 tokens
+  new BEST TOTAL:   628285 bits, 5390 rules, 40462 tokens
+  new BEST PAYLOAD: 455802 bits, 5390 rules, 40460 tokens
+  new BEST TOTAL:   628282 bits, 5390 rules, 40460 tokens
   next beam           : 4
-  global payload      : 455805 bits / 5390 rules
-  global total        : 628285 bits / 5390 rules
+  global payload      : 455802 bits / 5390 rules
+  global total        : 628282 bits / 5390 rules
 
 ROUND 11  beam=4
-  new BEST PAYLOAD: 455760 bits, 5391 rules, 40455 tokens
-  new BEST TOTAL:   628272 bits, 5391 rules, 40455 tokens
+  new BEST PAYLOAD: 455756 bits, 5391 rules, 40457 tokens
+  new BEST TOTAL:   628268 bits, 5391 rules, 40457 tokens
+  new BEST PAYLOAD: 455755 bits, 5391 rules, 40457 tokens
+  new BEST TOTAL:   628267 bits, 5391 rules, 40457 tokens
   next beam           : 4
-  global payload      : 455760 bits / 5391 rules
-  global total        : 628272 bits / 5391 rules
+  global payload      : 455755 bits / 5391 rules
+  global total        : 628267 bits / 5391 rules
 
 ROUND 12  beam=4
-  new BEST PAYLOAD: 455717 bits, 5392 rules, 40451 tokens
-  new BEST TOTAL:   628261 bits, 5392 rules, 40451 tokens
-  new BEST PAYLOAD: 455716 bits, 5392 rules, 40451 tokens
-  new BEST TOTAL:   628260 bits, 5392 rules, 40451 tokens
-  new BEST PAYLOAD: 455715 bits, 5392 rules, 40451 tokens
-  new BEST TOTAL:   628259 bits, 5392 rules, 40451 tokens
+  new BEST PAYLOAD: 455710 bits, 5392 rules, 40454 tokens
+  new BEST TOTAL:   628254 bits, 5392 rules, 40454 tokens
   next beam           : 4
-  global payload      : 455715 bits / 5392 rules
-  global total        : 628259 bits / 5392 rules
+  global payload      : 455710 bits / 5392 rules
+  global total        : 628254 bits / 5392 rules
 
 ROUND 13  beam=4
-  new BEST PAYLOAD: 455672 bits, 5393 rules, 40447 tokens
-  new BEST TOTAL:   628248 bits, 5393 rules, 40447 tokens
-  new BEST PAYLOAD: 455671 bits, 5393 rules, 40447 tokens
-  new BEST TOTAL:   628247 bits, 5393 rules, 40447 tokens
+  new BEST PAYLOAD: 455665 bits, 5393 rules, 40449 tokens
+  new BEST TOTAL:   628241 bits, 5393 rules, 40449 tokens
   next beam           : 4
-  global payload      : 455671 bits / 5393 rules
-  global total        : 628247 bits / 5393 rules
+  global payload      : 455665 bits / 5393 rules
+  global total        : 628241 bits / 5393 rules
 
 ROUND 14  beam=4
-  new BEST PAYLOAD: 455627 bits, 5394 rules, 40444 tokens
-  new BEST TOTAL:   628235 bits, 5394 rules, 40444 tokens
+  new BEST PAYLOAD: 455620 bits, 5394 rules, 40444 tokens
+  new BEST TOTAL:   628228 bits, 5394 rules, 40444 tokens
   next beam           : 4
-  global payload      : 455627 bits / 5394 rules
-  global total        : 628235 bits / 5394 rules
+  global payload      : 455620 bits / 5394 rules
+  global total        : 628228 bits / 5394 rules
 
 ROUND 15  beam=4
-  new BEST PAYLOAD: 455580 bits, 5395 rules, 40441 tokens
-  new BEST TOTAL:   628220 bits, 5395 rules, 40441 tokens
+  new BEST PAYLOAD: 455571 bits, 5395 rules, 40441 tokens
+  new BEST TOTAL:   628211 bits, 5395 rules, 40441 tokens
   next beam           : 4
-  global payload      : 455580 bits / 5395 rules
-  global total        : 628220 bits / 5395 rules
+  global payload      : 455571 bits / 5395 rules
+  global total        : 628211 bits / 5395 rules
 
 ROUND 16  beam=4
-  new BEST PAYLOAD: 455539 bits, 5396 rules, 40436 tokens
-  new BEST TOTAL:   628211 bits, 5396 rules, 40436 tokens
-  new BEST PAYLOAD: 455537 bits, 5396 rules, 40436 tokens
-  new BEST TOTAL:   628209 bits, 5396 rules, 40436 tokens
-  new BEST PAYLOAD: 455536 bits, 5396 rules, 40437 tokens
-  new BEST TOTAL:   628208 bits, 5396 rules, 40437 tokens
+  new BEST PAYLOAD: 455532 bits, 5396 rules, 40435 tokens
+  new BEST TOTAL:   628204 bits, 5396 rules, 40435 tokens
+  new BEST PAYLOAD: 455528 bits, 5396 rules, 40436 tokens
+  new BEST TOTAL:   628200 bits, 5396 rules, 40436 tokens
+  new BEST PAYLOAD: 455527 bits, 5396 rules, 40437 tokens
+  new BEST TOTAL:   628199 bits, 5396 rules, 40437 tokens
   next beam           : 4
-  global payload      : 455536 bits / 5396 rules
-  global total        : 628208 bits / 5396 rules
+  global payload      : 455527 bits / 5396 rules
+  global total        : 628199 bits / 5396 rules
 
 ROUND 17  beam=4
-  new BEST PAYLOAD: 455488 bits, 5397 rules, 40432 tokens
-  new BEST TOTAL:   628192 bits, 5397 rules, 40432 tokens
+  new BEST PAYLOAD: 455481 bits, 5397 rules, 40433 tokens
+  new BEST TOTAL:   628185 bits, 5397 rules, 40433 tokens
   next beam           : 4
-  global payload      : 455488 bits / 5397 rules
-  global total        : 628192 bits / 5397 rules
+  global payload      : 455481 bits / 5397 rules
+  global total        : 628185 bits / 5397 rules
 
 ROUND 18  beam=4
-  new BEST PAYLOAD: 455441 bits, 5398 rules, 40429 tokens
-  new BEST TOTAL:   628177 bits, 5398 rules, 40429 tokens
+  new BEST PAYLOAD: 455441 bits, 5398 rules, 40427 tokens
+  new BEST TOTAL:   628177 bits, 5398 rules, 40427 tokens
+  new BEST PAYLOAD: 455437 bits, 5398 rules, 40428 tokens
+  new BEST TOTAL:   628173 bits, 5398 rules, 40428 tokens
   next beam           : 4
-  global payload      : 455441 bits / 5398 rules
-  global total        : 628177 bits / 5398 rules
+  global payload      : 455437 bits / 5398 rules
+  global total        : 628173 bits / 5398 rules
 
 ROUND 19  beam=4
-  new BEST PAYLOAD: 455400 bits, 5399 rules, 40424 tokens
-  new BEST TOTAL:   628168 bits, 5399 rules, 40424 tokens
-  new BEST PAYLOAD: 455398 bits, 5399 rules, 40424 tokens
-  new BEST TOTAL:   628166 bits, 5399 rules, 40424 tokens
-  next beam           : 6
-  global payload      : 455398 bits / 5399 rules
-  global total        : 628166 bits / 5399 rules
-
-ROUND 20  beam=6
-  new BEST PAYLOAD: 455347 bits, 5400 rules, 40421 tokens
-  new BEST TOTAL:   628147 bits, 5400 rules, 40421 tokens
-  next beam           : 5
-  global payload      : 455347 bits / 5400 rules
-  global total        : 628147 bits / 5400 rules
-
-ROUND 21  beam=5
-  new BEST PAYLOAD: 455306 bits, 5401 rules, 40416 tokens
-  new BEST TOTAL:   628138 bits, 5401 rules, 40416 tokens
-  new BEST PAYLOAD: 455304 bits, 5401 rules, 40416 tokens
-  new BEST TOTAL:   628136 bits, 5401 rules, 40416 tokens
+  new BEST PAYLOAD: 455390 bits, 5399 rules, 40424 tokens
+  new BEST TOTAL:   628158 bits, 5399 rules, 40424 tokens
   next beam           : 4
-  global payload      : 455304 bits / 5401 rules
-  global total        : 628136 bits / 5401 rules
+  global payload      : 455390 bits / 5399 rules
+  global total        : 628158 bits / 5399 rules
+
+ROUND 20  beam=4
+  new BEST PAYLOAD: 455344 bits, 5400 rules, 40420 tokens
+  new BEST TOTAL:   628144 bits, 5400 rules, 40420 tokens
+  next beam           : 4
+  global payload      : 455344 bits / 5400 rules
+  global total        : 628144 bits / 5400 rules
+
+ROUND 21  beam=4
+  new BEST PAYLOAD: 455297 bits, 5401 rules, 40416 tokens
+  new BEST TOTAL:   628129 bits, 5401 rules, 40416 tokens
+  next beam           : 4
+  global payload      : 455297 bits / 5401 rules
+  global total        : 628129 bits / 5401 rules
 
 ROUND 22  beam=4
-  new BEST PAYLOAD: 455266 bits, 5402 rules, 40411 tokens
-  new BEST TOTAL:   628130 bits, 5402 rules, 40411 tokens
-  new BEST PAYLOAD: 455263 bits, 5402 rules, 40412 tokens
-  new BEST TOTAL:   628127 bits, 5402 rules, 40412 tokens
+  new BEST PAYLOAD: 455257 bits, 5402 rules, 40410 tokens
+  new BEST TOTAL:   628121 bits, 5402 rules, 40410 tokens
+  new BEST PAYLOAD: 455254 bits, 5402 rules, 40412 tokens
+  new BEST TOTAL:   628118 bits, 5402 rules, 40412 tokens
+  new BEST PAYLOAD: 455253 bits, 5402 rules, 40410 tokens
+  new BEST TOTAL:   628117 bits, 5402 rules, 40410 tokens
   next beam           : 4
-  global payload      : 455263 bits / 5402 rules
-  global total        : 628127 bits / 5402 rules
+  global payload      : 455253 bits / 5402 rules
+  global total        : 628117 bits / 5402 rules
 
 ROUND 23  beam=4
-  new BEST PAYLOAD: 455217 bits, 5403 rules, 40408 tokens
-  new BEST TOTAL:   628113 bits, 5403 rules, 40408 tokens
+  new BEST PAYLOAD: 455213 bits, 5403 rules, 40404 tokens
+  new BEST TOTAL:   628109 bits, 5403 rules, 40404 tokens
+  new BEST PAYLOAD: 455208 bits, 5403 rules, 40412 tokens
+  new BEST TOTAL:   628104 bits, 5403 rules, 40412 tokens
   next beam           : 4
-  global payload      : 455217 bits / 5403 rules
-  global total        : 628113 bits / 5403 rules
+  global payload      : 455208 bits / 5403 rules
+  global total        : 628104 bits / 5403 rules
 
 ROUND 24  beam=4
-  new BEST PAYLOAD: 455179 bits, 5404 rules, 40403 tokens
-  new BEST TOTAL:   628107 bits, 5404 rules, 40403 tokens
-  new BEST PAYLOAD: 455177 bits, 5404 rules, 40404 tokens
-  new BEST TOTAL:   628105 bits, 5404 rules, 40404 tokens
-  next beam           : 6
-  global payload      : 455177 bits / 5404 rules
-  global total        : 628105 bits / 5404 rules
-
-ROUND 25  beam=6
-  new BEST PAYLOAD: 455139 bits, 5405 rules, 40399 tokens
-  new BEST TOTAL:   628099 bits, 5405 rules, 40399 tokens
-  new BEST PAYLOAD: 455137 bits, 5405 rules, 40400 tokens
-  new BEST TOTAL:   628097 bits, 5405 rules, 40400 tokens
+  new BEST PAYLOAD: 455161 bits, 5404 rules, 40409 tokens
+  new BEST TOTAL:   628089 bits, 5404 rules, 40409 tokens
+  new BEST PAYLOAD: 455160 bits, 5404 rules, 40408 tokens
+  new BEST TOTAL:   628088 bits, 5404 rules, 40408 tokens
+  new BEST PAYLOAD: 455158 bits, 5404 rules, 40411 tokens
+  new BEST TOTAL:   628086 bits, 5404 rules, 40411 tokens
   next beam           : 4
-  global payload      : 455137 bits / 5405 rules
-  global total        : 628097 bits / 5405 rules
+  global payload      : 455158 bits / 5404 rules
+  global total        : 628086 bits / 5404 rules
+
+ROUND 25  beam=4
+  new BEST PAYLOAD: 455118 bits, 5405 rules, 40405 tokens
+  new BEST TOTAL:   628078 bits, 5405 rules, 40405 tokens
+  new BEST PAYLOAD: 455117 bits, 5405 rules, 40404 tokens
+  new BEST TOTAL:   628077 bits, 5405 rules, 40404 tokens
+  new BEST PAYLOAD: 455116 bits, 5405 rules, 40406 tokens
+  new BEST TOTAL:   628076 bits, 5405 rules, 40406 tokens
+  next beam           : 4
+  global payload      : 455116 bits / 5405 rules
+  global total        : 628076 bits / 5405 rules
 
 ROUND 26  beam=4
-  new BEST PAYLOAD: 455099 bits, 5406 rules, 40395 tokens
-  new BEST TOTAL:   628091 bits, 5406 rules, 40395 tokens
+  new BEST PAYLOAD: 455076 bits, 5406 rules, 40400 tokens
+  new BEST TOTAL:   628068 bits, 5406 rules, 40400 tokens
+  new BEST PAYLOAD: 455074 bits, 5406 rules, 40399 tokens
+  new BEST TOTAL:   628066 bits, 5406 rules, 40399 tokens
   next beam           : 4
-  global payload      : 455099 bits / 5406 rules
-  global total        : 628091 bits / 5406 rules
+  global payload      : 455074 bits / 5406 rules
+  global total        : 628066 bits / 5406 rules
 
 ROUND 27  beam=4
-  new BEST PAYLOAD: 455041 bits, 5407 rules, 40390 tokens
-  new BEST TOTAL:   628065 bits, 5407 rules, 40390 tokens
+  new BEST PAYLOAD: 455035 bits, 5407 rules, 40393 tokens
+  new BEST TOTAL:   628059 bits, 5407 rules, 40393 tokens
+  new BEST PAYLOAD: 455034 bits, 5407 rules, 40396 tokens
+  new BEST TOTAL:   628058 bits, 5407 rules, 40396 tokens
   next beam           : 4
-  global payload      : 455041 bits / 5407 rules
-  global total        : 628065 bits / 5407 rules
+  global payload      : 455034 bits / 5407 rules
+  global total        : 628058 bits / 5407 rules
 
 ROUND 28  beam=4
-  new BEST PAYLOAD: 455000 bits, 5408 rules, 40388 tokens
-  new BEST TOTAL:   628056 bits, 5408 rules, 40388 tokens
+  new BEST PAYLOAD: 454994 bits, 5408 rules, 40388 tokens
+  new BEST TOTAL:   628050 bits, 5408 rules, 40388 tokens
+  new BEST PAYLOAD: 454993 bits, 5408 rules, 40391 tokens
+  new BEST TOTAL:   628049 bits, 5408 rules, 40391 tokens
   next beam           : 4
-  global payload      : 455000 bits / 5408 rules
-  global total        : 628056 bits / 5408 rules
+  global payload      : 454993 bits / 5408 rules
+  global total        : 628049 bits / 5408 rules
 
 ROUND 29  beam=4
-  new BEST PAYLOAD: 454962 bits, 5409 rules, 40382 tokens
-  new BEST TOTAL:   628050 bits, 5409 rules, 40382 tokens
-  next beam           : 6
-  global payload      : 454962 bits / 5409 rules
-  global total        : 628050 bits / 5409 rules
-
-ROUND 30  beam=6
-  new BEST PAYLOAD: 454923 bits, 5410 rules, 40378 tokens
-  new BEST TOTAL:   628043 bits, 5410 rules, 40378 tokens
-  new BEST PAYLOAD: 454922 bits, 5410 rules, 40378 tokens
-  new BEST TOTAL:   628042 bits, 5410 rules, 40378 tokens
-  new BEST PAYLOAD: 454921 bits, 5410 rules, 40378 tokens
-  new BEST TOTAL:   628041 bits, 5410 rules, 40378 tokens
+  new BEST PAYLOAD: 454954 bits, 5409 rules, 40385 tokens
+  new BEST TOTAL:   628042 bits, 5409 rules, 40385 tokens
+  new BEST PAYLOAD: 454953 bits, 5409 rules, 40387 tokens
+  new BEST TOTAL:   628041 bits, 5409 rules, 40387 tokens
+  new BEST PAYLOAD: 454951 bits, 5409 rules, 40387 tokens
+  new BEST TOTAL:   628039 bits, 5409 rules, 40387 tokens
   next beam           : 4
-  global payload      : 454921 bits / 5410 rules
-  global total        : 628041 bits / 5410 rules
+  global payload      : 454951 bits / 5409 rules
+  global total        : 628039 bits / 5409 rules
+
+ROUND 30  beam=4
+  new BEST PAYLOAD: 454912 bits, 5410 rules, 40381 tokens
+  new BEST TOTAL:   628032 bits, 5410 rules, 40381 tokens
+  new BEST PAYLOAD: 454911 bits, 5410 rules, 40383 tokens
+  new BEST TOTAL:   628031 bits, 5410 rules, 40383 tokens
+  next beam           : 4
+  global payload      : 454911 bits / 5410 rules
+  global total        : 628031 bits / 5410 rules
 
 ROUND 31  beam=4
-  new BEST PAYLOAD: 454879 bits, 5411 rules, 40375 tokens
-  new BEST TOTAL:   628031 bits, 5411 rules, 40375 tokens
+  new BEST PAYLOAD: 454872 bits, 5411 rules, 40377 tokens
+  new BEST TOTAL:   628024 bits, 5411 rules, 40377 tokens
+  new BEST PAYLOAD: 454867 bits, 5411 rules, 40379 tokens
+  new BEST TOTAL:   628019 bits, 5411 rules, 40379 tokens
   next beam           : 4
-  global payload      : 454879 bits / 5411 rules
-  global total        : 628031 bits / 5411 rules
+  global payload      : 454867 bits / 5411 rules
+  global total        : 628019 bits / 5411 rules
 
 ROUND 32  beam=4
-  new BEST PAYLOAD: 454841 bits, 5412 rules, 40371 tokens
-  new BEST TOTAL:   628025 bits, 5412 rules, 40371 tokens
-  next beam           : 7
-  global payload      : 454841 bits / 5412 rules
-  global total        : 628025 bits / 5412 rules
-
-ROUND 33  beam=7
-  new BEST PAYLOAD: 454805 bits, 5413 rules, 40367 tokens
-  new BEST TOTAL:   628021 bits, 5413 rules, 40367 tokens
-  new BEST PAYLOAD: 454804 bits, 5413 rules, 40367 tokens
-  new BEST TOTAL:   628020 bits, 5413 rules, 40367 tokens
-  new BEST PAYLOAD: 454803 bits, 5413 rules, 40367 tokens
-  new BEST TOTAL:   628019 bits, 5413 rules, 40367 tokens
+  new BEST PAYLOAD: 454828 bits, 5412 rules, 40373 tokens
+  new BEST TOTAL:   628012 bits, 5412 rules, 40373 tokens
   next beam           : 4
-  global payload      : 454803 bits / 5413 rules
-  global total        : 628019 bits / 5413 rules
+  global payload      : 454828 bits / 5412 rules
+  global total        : 628012 bits / 5412 rules
+
+ROUND 33  beam=4
+  new BEST PAYLOAD: 454790 bits, 5413 rules, 40368 tokens
+  new BEST TOTAL:   628006 bits, 5413 rules, 40368 tokens
+  new BEST PAYLOAD: 454789 bits, 5413 rules, 40369 tokens
+  new BEST TOTAL:   628005 bits, 5413 rules, 40369 tokens
+  new BEST PAYLOAD: 454788 bits, 5413 rules, 40369 tokens
+  new BEST TOTAL:   628004 bits, 5413 rules, 40369 tokens
+  next beam           : 4
+  global payload      : 454788 bits / 5413 rules
+  global total        : 628004 bits / 5413 rules
 
 ROUND 34  beam=4
-  new BEST PAYLOAD: 454742 bits, 5414 rules, 40363 tokens
-  new BEST TOTAL:   627990 bits, 5414 rules, 40363 tokens
+  new BEST PAYLOAD: 454750 bits, 5414 rules, 40364 tokens
+  new BEST TOTAL:   627998 bits, 5414 rules, 40364 tokens
+  new BEST PAYLOAD: 454749 bits, 5414 rules, 40365 tokens
+  new BEST TOTAL:   627997 bits, 5414 rules, 40365 tokens
   next beam           : 4
-  global payload      : 454742 bits / 5414 rules
-  global total        : 627990 bits / 5414 rules
+  global payload      : 454749 bits / 5414 rules
+  global total        : 627997 bits / 5414 rules
 
 ROUND 35  beam=4
-  new BEST PAYLOAD: 454695 bits, 5415 rules, 40359 tokens
-  new BEST TOTAL:   627975 bits, 5415 rules, 40359 tokens
+  new BEST PAYLOAD: 454688 bits, 5415 rules, 40362 tokens
+  new BEST TOTAL:   627968 bits, 5415 rules, 40362 tokens
   next beam           : 4
-  global payload      : 454695 bits / 5415 rules
-  global total        : 627975 bits / 5415 rules
+  global payload      : 454688 bits / 5415 rules
+  global total        : 627968 bits / 5415 rules
 
 ROUND 36  beam=4
-  new BEST PAYLOAD: 454646 bits, 5416 rules, 40355 tokens
-  new BEST TOTAL:   627958 bits, 5416 rules, 40355 tokens
-  new BEST PAYLOAD: 454645 bits, 5416 rules, 40355 tokens
-  new BEST TOTAL:   627957 bits, 5416 rules, 40355 tokens
+  new BEST PAYLOAD: 454650 bits, 5416 rules, 40357 tokens
+  new BEST TOTAL:   627962 bits, 5416 rules, 40357 tokens
   next beam           : 4
-  global payload      : 454645 bits / 5416 rules
-  global total        : 627957 bits / 5416 rules
+  global payload      : 454650 bits / 5416 rules
+  global total        : 627962 bits / 5416 rules
 
 ROUND 37  beam=4
-  new BEST PAYLOAD: 454596 bits, 5417 rules, 40351 tokens
-  new BEST TOTAL:   627940 bits, 5417 rules, 40351 tokens
+  new BEST PAYLOAD: 454613 bits, 5417 rules, 40353 tokens
+  new BEST TOTAL:   627957 bits, 5417 rules, 40353 tokens
+  new BEST PAYLOAD: 454612 bits, 5417 rules, 40353 tokens
+  new BEST TOTAL:   627956 bits, 5417 rules, 40353 tokens
   next beam           : 4
-  global payload      : 454596 bits / 5417 rules
-  global total        : 627940 bits / 5417 rules
+  global payload      : 454612 bits / 5417 rules
+  global total        : 627956 bits / 5417 rules
 
 ROUND 38  beam=4
-  new BEST PAYLOAD: 454558 bits, 5418 rules, 40347 tokens
-  new BEST TOTAL:   627934 bits, 5418 rules, 40347 tokens
+  new BEST PAYLOAD: 454572 bits, 5418 rules, 40349 tokens
+  new BEST TOTAL:   627948 bits, 5418 rules, 40349 tokens
+  next beam           : 4
+  global payload      : 454572 bits / 5418 rules
+  global total        : 627948 bits / 5418 rules
+
+ROUND 39  beam=4
+  new BEST PAYLOAD: 454535 bits, 5419 rules, 40345 tokens
+  new BEST TOTAL:   627943 bits, 5419 rules, 40345 tokens
   next beam           : 5
-  global payload      : 454558 bits / 5418 rules
-  global total        : 627934 bits / 5418 rules
+  global payload      : 454535 bits / 5419 rules
+  global total        : 627943 bits / 5419 rules
 
-ROUND 39  beam=5
-  new BEST PAYLOAD: 454522 bits, 5419 rules, 40343 tokens
-  new BEST TOTAL:   627930 bits, 5419 rules, 40343 tokens
-  new BEST PAYLOAD: 454521 bits, 5419 rules, 40343 tokens
-  new BEST TOTAL:   627929 bits, 5419 rules, 40343 tokens
-  next beam           : 4
-  global payload      : 454521 bits / 5419 rules
-  global total        : 627929 bits / 5419 rules
+ROUND 40  beam=5
+  new BEST PAYLOAD: 454500 bits, 5420 rules, 40338 tokens
+  new BEST TOTAL:   627940 bits, 5420 rules, 40338 tokens
+  new BEST PAYLOAD: 454498 bits, 5420 rules, 40341 tokens
+  new BEST TOTAL:   627938 bits, 5420 rules, 40341 tokens
+  new BEST PAYLOAD: 454497 bits, 5420 rules, 40341 tokens
+  new BEST TOTAL:   627937 bits, 5420 rules, 40341 tokens
+  next beam           : 5
+  global payload      : 454497 bits / 5420 rules
+  global total        : 627937 bits / 5420 rules
 
-ROUND 40  beam=4
-  new BEST PAYLOAD: 454480 bits, 5420 rules, 40339 tokens
-  new BEST TOTAL:   627920 bits, 5420 rules, 40339 tokens
-  next beam           : 4
-  global payload      : 454480 bits / 5420 rules
-  global total        : 627920 bits / 5420 rules
+ROUND 41  beam=5
+  new BEST PAYLOAD: 454435 bits, 5421 rules, 40337 tokens
+  new BEST TOTAL:   627907 bits, 5421 rules, 40337 tokens
+  next beam           : 5
+  global payload      : 454435 bits / 5421 rules
+  global total        : 627907 bits / 5421 rules
 
-ROUND 41  beam=4
-  new BEST PAYLOAD: 454447 bits, 5421 rules, 40335 tokens
-  new BEST TOTAL:   627919 bits, 5421 rules, 40335 tokens
-  new BEST PAYLOAD: 454445 bits, 5421 rules, 40334 tokens
-  new BEST TOTAL:   627917 bits, 5421 rules, 40334 tokens
-  new BEST PAYLOAD: 454444 bits, 5421 rules, 40333 tokens
-  new BEST TOTAL:   627916 bits, 5421 rules, 40333 tokens
-  next beam           : 4
-  global payload      : 454444 bits / 5421 rules
-  global total        : 627916 bits / 5421 rules
+ROUND 42  beam=5
+  new BEST PAYLOAD: 454388 bits, 5422 rules, 40333 tokens
+  new BEST TOTAL:   627892 bits, 5422 rules, 40333 tokens
+  next beam           : 5
+  global payload      : 454388 bits / 5422 rules
+  global total        : 627892 bits / 5422 rules
 
-ROUND 42  beam=4
-  new BEST PAYLOAD: 454389 bits, 5422 rules, 40328 tokens
-  new BEST TOTAL:   627893 bits, 5422 rules, 40328 tokens
+ROUND 43  beam=5
+  new BEST PAYLOAD: 454351 bits, 5423 rules, 40329 tokens
+  new BEST TOTAL:   627887 bits, 5423 rules, 40329 tokens
   next beam           : 4
-  global payload      : 454389 bits / 5422 rules
-  global total        : 627893 bits / 5422 rules
-
-ROUND 43  beam=4
-  new BEST PAYLOAD: 454339 bits, 5423 rules, 40324 tokens
-  new BEST TOTAL:   627875 bits, 5423 rules, 40324 tokens
-  next beam           : 4
-  global payload      : 454339 bits / 5423 rules
-  global total        : 627875 bits / 5423 rules
+  global payload      : 454351 bits / 5423 rules
+  global total        : 627887 bits / 5423 rules
 
 ROUND 44  beam=4
-  new BEST PAYLOAD: 454301 bits, 5424 rules, 40320 tokens
-  new BEST TOTAL:   627869 bits, 5424 rules, 40320 tokens
+  new BEST PAYLOAD: 454302 bits, 5424 rules, 40325 tokens
+  new BEST TOTAL:   627870 bits, 5424 rules, 40325 tokens
   next beam           : 4
-  global payload      : 454301 bits / 5424 rules
-  global total        : 627869 bits / 5424 rules
+  global payload      : 454302 bits / 5424 rules
+  global total        : 627870 bits / 5424 rules
 
 ROUND 45  beam=4
-  new BEST PAYLOAD: 454268 bits, 5425 rules, 40316 tokens
-  new BEST TOTAL:   627868 bits, 5425 rules, 40316 tokens
-  new BEST PAYLOAD: 454265 bits, 5425 rules, 40315 tokens
-  new BEST TOTAL:   627865 bits, 5425 rules, 40315 tokens
+  new BEST PAYLOAD: 454253 bits, 5425 rules, 40321 tokens
+  new BEST TOTAL:   627853 bits, 5425 rules, 40321 tokens
   next beam           : 4
-  global payload      : 454265 bits / 5425 rules
-  global total        : 627865 bits / 5425 rules
+  global payload      : 454253 bits / 5425 rules
+  global total        : 627853 bits / 5425 rules
 
 ROUND 46  beam=4
-  new BEST PAYLOAD: 454225 bits, 5426 rules, 40311 tokens
-  new BEST TOTAL:   627857 bits, 5426 rules, 40311 tokens
+  new BEST PAYLOAD: 454218 bits, 5426 rules, 40314 tokens
+  new BEST TOTAL:   627850 bits, 5426 rules, 40314 tokens
+  new BEST PAYLOAD: 454217 bits, 5426 rules, 40316 tokens
+  new BEST TOTAL:   627849 bits, 5426 rules, 40316 tokens
   next beam           : 4
-  global payload      : 454225 bits / 5426 rules
-  global total        : 627857 bits / 5426 rules
+  global payload      : 454217 bits / 5426 rules
+  global total        : 627849 bits / 5426 rules
 
 ROUND 47  beam=4
-  new BEST PAYLOAD: 454192 bits, 5427 rules, 40307 tokens
-  new BEST TOTAL:   627856 bits, 5427 rules, 40307 tokens
-  new BEST PAYLOAD: 454190 bits, 5427 rules, 40304 tokens
-  new BEST TOTAL:   627854 bits, 5427 rules, 40304 tokens
+  new BEST PAYLOAD: 454182 bits, 5427 rules, 40309 tokens
+  new BEST TOTAL:   627846 bits, 5427 rules, 40309 tokens
   next beam           : 4
-  global payload      : 454190 bits / 5427 rules
-  global total        : 627854 bits / 5427 rules
+  global payload      : 454182 bits / 5427 rules
+  global total        : 627846 bits / 5427 rules
 
 ROUND 48  beam=4
-  new BEST PAYLOAD: 454149 bits, 5428 rules, 40300 tokens
-  new BEST TOTAL:   627845 bits, 5428 rules, 40300 tokens
+  new BEST PAYLOAD: 454140 bits, 5428 rules, 40305 tokens
+  new BEST TOTAL:   627836 bits, 5428 rules, 40305 tokens
   next beam           : 4
-  global payload      : 454149 bits / 5428 rules
-  global total        : 627845 bits / 5428 rules
+  global payload      : 454140 bits / 5428 rules
+  global total        : 627836 bits / 5428 rules
 
 ROUND 49  beam=4
-  new BEST PAYLOAD: 454116 bits, 5429 rules, 40296 tokens
-  new BEST TOTAL:   627844 bits, 5429 rules, 40296 tokens
-  new BEST PAYLOAD: 454115 bits, 5429 rules, 40293 tokens
-  new BEST TOTAL:   627843 bits, 5429 rules, 40293 tokens
+  new BEST PAYLOAD: 454089 bits, 5429 rules, 40300 tokens
+  new BEST TOTAL:   627817 bits, 5429 rules, 40300 tokens
   next beam           : 4
-  global payload      : 454115 bits / 5429 rules
-  global total        : 627843 bits / 5429 rules
+  global payload      : 454089 bits / 5429 rules
+  global total        : 627817 bits / 5429 rules
 
 ROUND 50  beam=4
-  new BEST PAYLOAD: 454081 bits, 5430 rules, 40289 tokens
-  new BEST TOTAL:   627841 bits, 5430 rules, 40289 tokens
-  new BEST PAYLOAD: 454080 bits, 5430 rules, 40288 tokens
-  new BEST TOTAL:   627840 bits, 5430 rules, 40288 tokens
+  new BEST PAYLOAD: 454051 bits, 5430 rules, 40296 tokens
+  new BEST TOTAL:   627811 bits, 5430 rules, 40296 tokens
   next beam           : 4
-  global payload      : 454080 bits / 5430 rules
-  global total        : 627840 bits / 5430 rules
+  global payload      : 454051 bits / 5430 rules
+  global total        : 627811 bits / 5430 rules
 
 ROUND 51  beam=4
-  new BEST PAYLOAD: 454028 bits, 5431 rules, 40284 tokens
-  new BEST TOTAL:   627820 bits, 5431 rules, 40284 tokens
+  new BEST PAYLOAD: 454001 bits, 5431 rules, 40292 tokens
+  new BEST TOTAL:   627793 bits, 5431 rules, 40292 tokens
   next beam           : 4
-  global payload      : 454028 bits / 5431 rules
-  global total        : 627820 bits / 5431 rules
+  global payload      : 454001 bits / 5431 rules
+  global total        : 627793 bits / 5431 rules
 
 ROUND 52  beam=4
-  new BEST PAYLOAD: 453982 bits, 5432 rules, 40283 tokens
-  new BEST TOTAL:   627806 bits, 5432 rules, 40283 tokens
+  new BEST PAYLOAD: 453966 bits, 5432 rules, 40285 tokens
+  new BEST TOTAL:   627790 bits, 5432 rules, 40285 tokens
   next beam           : 4
-  global payload      : 453982 bits / 5432 rules
-  global total        : 627806 bits / 5432 rules
+  global payload      : 453966 bits / 5432 rules
+  global total        : 627790 bits / 5432 rules
 
 ROUND 53  beam=4
-  new BEST PAYLOAD: 453949 bits, 5433 rules, 40279 tokens
-  new BEST TOTAL:   627805 bits, 5433 rules, 40279 tokens
-  new BEST PAYLOAD: 453944 bits, 5433 rules, 40279 tokens
-  new BEST TOTAL:   627800 bits, 5433 rules, 40279 tokens
+  new BEST PAYLOAD: 453933 bits, 5433 rules, 40281 tokens
+  new BEST TOTAL:   627789 bits, 5433 rules, 40281 tokens
   next beam           : 4
-  global payload      : 453944 bits / 5433 rules
-  global total        : 627800 bits / 5433 rules
+  global payload      : 453933 bits / 5433 rules
+  global total        : 627789 bits / 5433 rules
 
 ROUND 54  beam=4
-  new BEST PAYLOAD: 453909 bits, 5434 rules, 40277 tokens
-  new BEST TOTAL:   627797 bits, 5434 rules, 40277 tokens
+  new BEST PAYLOAD: 453893 bits, 5434 rules, 40276 tokens
+  new BEST TOTAL:   627781 bits, 5434 rules, 40276 tokens
   next beam           : 4
-  global payload      : 453909 bits / 5434 rules
-  global total        : 627797 bits / 5434 rules
+  global payload      : 453893 bits / 5434 rules
+  global total        : 627781 bits / 5434 rules
 
 ROUND 55  beam=4
-  new BEST PAYLOAD: 453871 bits, 5435 rules, 40274 tokens
-  new BEST TOTAL:   627791 bits, 5435 rules, 40274 tokens
-  next beam           : 5
-  global payload      : 453871 bits / 5435 rules
-  global total        : 627791 bits / 5435 rules
+  new BEST PAYLOAD: 453860 bits, 5435 rules, 40272 tokens
+  new BEST TOTAL:   627780 bits, 5435 rules, 40272 tokens
+  next beam           : 6
+  global payload      : 453860 bits / 5435 rules
+  global total        : 627780 bits / 5435 rules
 
-ROUND 56  beam=5
-  new BEST PAYLOAD: 453836 bits, 5436 rules, 40271 tokens
-  new BEST TOTAL:   627788 bits, 5436 rules, 40271 tokens
-  next beam           : 5
-  global payload      : 453836 bits / 5436 rules
-  global total        : 627788 bits / 5436 rules
+ROUND 56  beam=6
+  new BEST PAYLOAD: 453819 bits, 5436 rules, 40268 tokens
+  new BEST TOTAL:   627771 bits, 5436 rules, 40268 tokens
+  next beam           : 6
+  global payload      : 453819 bits / 5436 rules
+  global total        : 627771 bits / 5436 rules
 
-ROUND 57  beam=5
-  new BEST PAYLOAD: 453806 bits, 5437 rules, 40267 tokens
-  new BEST PAYLOAD: 453804 bits, 5437 rules, 40267 tokens
+ROUND 57  beam=6
+  new BEST PAYLOAD: 453787 bits, 5437 rules, 40264 tokens
+  new BEST PAYLOAD: 453786 bits, 5437 rules, 40264 tokens
+  new BEST TOTAL:   627770 bits, 5437 rules, 40264 tokens
   next beam           : 5
-  global payload      : 453804 bits / 5437 rules
-  global total        : 627788 bits / 5436 rules
+  global payload      : 453786 bits / 5437 rules
+  global total        : 627770 bits / 5437 rules
 
 ROUND 58  beam=5
-  new BEST PAYLOAD: 453774 bits, 5438 rules, 40263 tokens
-  new BEST PAYLOAD: 453773 bits, 5438 rules, 40263 tokens
-  next beam           : 8
-  global payload      : 453773 bits / 5438 rules
-  global total        : 627788 bits / 5436 rules
+  new BEST PAYLOAD: 453742 bits, 5438 rules, 40259 tokens
+  new BEST TOTAL:   627758 bits, 5438 rules, 40259 tokens
+  next beam           : 5
+  global payload      : 453742 bits / 5438 rules
+  global total        : 627758 bits / 5438 rules
 
-ROUND 59  beam=8
-  new BEST PAYLOAD: 453743 bits, 5439 rules, 40259 tokens
-  next beam           : 8
-  global payload      : 453743 bits / 5439 rules
-  global total        : 627788 bits / 5436 rules
+ROUND 59  beam=5
+  new BEST PAYLOAD: 453702 bits, 5439 rules, 40255 tokens
+  new BEST TOTAL:   627750 bits, 5439 rules, 40255 tokens
+  next beam           : 5
+  global payload      : 453702 bits / 5439 rules
+  global total        : 627750 bits / 5439 rules
 
-ROUND 60  beam=8
-  new BEST PAYLOAD: 453702 bits, 5440 rules, 40251 tokens
-  new BEST TOTAL:   627782 bits, 5440 rules, 40251 tokens
-  new BEST PAYLOAD: 453701 bits, 5440 rules, 40251 tokens
-  new BEST TOTAL:   627781 bits, 5440 rules, 40251 tokens
+ROUND 60  beam=5
+  new BEST PAYLOAD: 453670 bits, 5440 rules, 40251 tokens
   next beam           : 4
-  global payload      : 453701 bits / 5440 rules
-  global total        : 627781 bits / 5440 rules
+  global payload      : 453670 bits / 5440 rules
+  global total        : 627750 bits / 5439 rules
 
 ROUND 61  beam=4
-  new BEST PAYLOAD: 453665 bits, 5441 rules, 40248 tokens
-  new BEST TOTAL:   627777 bits, 5441 rules, 40248 tokens
-  next beam           : 6
-  global payload      : 453665 bits / 5441 rules
-  global total        : 627777 bits / 5441 rules
-
-ROUND 62  beam=6
-  new BEST PAYLOAD: 453635 bits, 5442 rules, 40243 tokens
-  new BEST PAYLOAD: 453633 bits, 5442 rules, 40242 tokens
-  new BEST PAYLOAD: 453617 bits, 5442 rules, 40243 tokens
-  new BEST TOTAL:   627761 bits, 5442 rules, 40243 tokens
+  new BEST PAYLOAD: 453638 bits, 5441 rules, 40246 tokens
   next beam           : 4
-  global payload      : 453617 bits / 5442 rules
-  global total        : 627761 bits / 5442 rules
+  global payload      : 453638 bits / 5441 rules
+  global total        : 627750 bits / 5439 rules
 
-ROUND 63  beam=4
-  new BEST PAYLOAD: 453581 bits, 5443 rules, 40239 tokens
-  new BEST TOTAL:   627757 bits, 5443 rules, 40239 tokens
-  new BEST PAYLOAD: 453579 bits, 5443 rules, 40238 tokens
-  new BEST TOTAL:   627755 bits, 5443 rules, 40238 tokens
+ROUND 62  beam=4
+  new BEST PAYLOAD: 453607 bits, 5442 rules, 40242 tokens
+  next beam           : 8
+  global payload      : 453607 bits / 5442 rules
+  global total        : 627750 bits / 5439 rules
+
+ROUND 63  beam=8
+  new BEST PAYLOAD: 453576 bits, 5443 rules, 40237 tokens
+  next beam           : 8
+  global payload      : 453576 bits / 5443 rules
+  global total        : 627750 bits / 5439 rules
+
+ROUND 64  beam=8
+  new BEST PAYLOAD: 453546 bits, 5444 rules, 40233 tokens
+  next beam           : 8
+  global payload      : 453546 bits / 5444 rules
+  global total        : 627750 bits / 5439 rules
+
+ROUND 65  beam=8
+  new BEST PAYLOAD: 453512 bits, 5445 rules, 40229 tokens
+  next beam           : 8
+  global payload      : 453512 bits / 5445 rules
+  global total        : 627750 bits / 5439 rules
+
+ROUND 66  beam=8
+  new BEST PAYLOAD: 453473 bits, 5446 rules, 40225 tokens
+  new BEST TOTAL:   627745 bits, 5446 rules, 40225 tokens
   next beam           : 4
-  global payload      : 453579 bits / 5443 rules
-  global total        : 627755 bits / 5443 rules
-
-ROUND 64  beam=4
-  new BEST PAYLOAD: 453549 bits, 5444 rules, 40234 tokens
-  next beam           : 6
-  global payload      : 453549 bits / 5444 rules
-  global total        : 627755 bits / 5443 rules
-
-ROUND 65  beam=6
-  new BEST PAYLOAD: 453515 bits, 5445 rules, 40230 tokens
-  next beam           : 4
-  global payload      : 453515 bits / 5445 rules
-  global total        : 627755 bits / 5443 rules
-
-ROUND 66  beam=4
-  new BEST PAYLOAD: 453478 bits, 5446 rules, 40226 tokens
-  new BEST TOTAL:   627750 bits, 5446 rules, 40226 tokens
-  next beam           : 4
-  global payload      : 453478 bits / 5446 rules
-  global total        : 627750 bits / 5446 rules
+  global payload      : 453473 bits / 5446 rules
+  global total        : 627745 bits / 5446 rules
 
 ROUND 67  beam=4
-  new BEST PAYLOAD: 453428 bits, 5447 rules, 40222 tokens
-  new BEST TOTAL:   627732 bits, 5447 rules, 40222 tokens
+  new BEST PAYLOAD: 453425 bits, 5447 rules, 40221 tokens
+  new BEST TOTAL:   627729 bits, 5447 rules, 40221 tokens
   next beam           : 4
-  global payload      : 453428 bits / 5447 rules
-  global total        : 627732 bits / 5447 rules
+  global payload      : 453425 bits / 5447 rules
+  global total        : 627729 bits / 5447 rules
 
 ROUND 68  beam=4
-  new BEST PAYLOAD: 453399 bits, 5448 rules, 40218 tokens
+  new BEST PAYLOAD: 453395 bits, 5448 rules, 40217 tokens
   next beam           : 8
-  global payload      : 453399 bits / 5448 rules
-  global total        : 627732 bits / 5447 rules
+  global payload      : 453395 bits / 5448 rules
+  global total        : 627729 bits / 5447 rules
 
 ROUND 69  beam=8
-  new BEST PAYLOAD: 453369 bits, 5449 rules, 40214 tokens
+  new BEST PAYLOAD: 453365 bits, 5449 rules, 40213 tokens
   next beam           : 8
-  global payload      : 453369 bits / 5449 rules
-  global total        : 627732 bits / 5447 rules
+  global payload      : 453365 bits / 5449 rules
+  global total        : 627729 bits / 5447 rules
 
 ROUND 70  beam=8
-  new BEST PAYLOAD: 453326 bits, 5450 rules, 40210 tokens
-  new BEST TOTAL:   627726 bits, 5450 rules, 40210 tokens
+  new BEST PAYLOAD: 453323 bits, 5450 rules, 40209 tokens
+  new BEST TOTAL:   627723 bits, 5450 rules, 40209 tokens
   next beam           : 4
-  global payload      : 453326 bits / 5450 rules
-  global total        : 627726 bits / 5450 rules
+  global payload      : 453323 bits / 5450 rules
+  global total        : 627723 bits / 5450 rules
 
 ROUND 71  beam=4
-  new BEST PAYLOAD: 453289 bits, 5451 rules, 40206 tokens
-  new BEST TOTAL:   627721 bits, 5451 rules, 40206 tokens
+  new BEST PAYLOAD: 453285 bits, 5451 rules, 40205 tokens
+  new BEST TOTAL:   627717 bits, 5451 rules, 40205 tokens
   next beam           : 4
-  global payload      : 453289 bits / 5451 rules
-  global total        : 627721 bits / 5451 rules
+  global payload      : 453285 bits / 5451 rules
+  global total        : 627717 bits / 5451 rules
 
 ROUND 72  beam=4
-  new BEST PAYLOAD: 453246 bits, 5452 rules, 40202 tokens
-  new BEST TOTAL:   627710 bits, 5452 rules, 40202 tokens
+  new BEST PAYLOAD: 453240 bits, 5452 rules, 40201 tokens
+  new BEST TOTAL:   627704 bits, 5452 rules, 40201 tokens
   next beam           : 4
-  global payload      : 453246 bits / 5452 rules
-  global total        : 627710 bits / 5452 rules
+  global payload      : 453240 bits / 5452 rules
+  global total        : 627704 bits / 5452 rules
 
 ROUND 73  beam=4
-  new BEST PAYLOAD: 453217 bits, 5453 rules, 40198 tokens
-  new BEST PAYLOAD: 453216 bits, 5453 rules, 40198 tokens
-  new BEST PAYLOAD: 453213 bits, 5453 rules, 40197 tokens
-  new BEST TOTAL:   627709 bits, 5453 rules, 40197 tokens
-  new BEST PAYLOAD: 453212 bits, 5453 rules, 40197 tokens
-  new BEST TOTAL:   627708 bits, 5453 rules, 40197 tokens
-  next beam           : 5
-  global payload      : 453212 bits / 5453 rules
-  global total        : 627708 bits / 5453 rules
-
-ROUND 74  beam=5
-  new BEST PAYLOAD: 453178 bits, 5454 rules, 40193 tokens
-  new BEST TOTAL:   627706 bits, 5454 rules, 40193 tokens
-  new BEST PAYLOAD: 453177 bits, 5454 rules, 40193 tokens
-  new BEST TOTAL:   627705 bits, 5454 rules, 40193 tokens
+  new BEST PAYLOAD: 453205 bits, 5453 rules, 40196 tokens
+  new BEST TOTAL:   627701 bits, 5453 rules, 40196 tokens
   next beam           : 4
-  global payload      : 453177 bits / 5454 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453205 bits / 5453 rules
+  global total        : 627701 bits / 5453 rules
+
+ROUND 74  beam=4
+  new BEST PAYLOAD: 453169 bits, 5454 rules, 40192 tokens
+  new BEST TOTAL:   627697 bits, 5454 rules, 40192 tokens
+  new BEST PAYLOAD: 453168 bits, 5454 rules, 40192 tokens
+  new BEST TOTAL:   627696 bits, 5454 rules, 40192 tokens
+  next beam           : 4
+  global payload      : 453168 bits / 5454 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 75  beam=4
-  new BEST PAYLOAD: 453149 bits, 5455 rules, 40189 tokens
-  new BEST PAYLOAD: 453148 bits, 5455 rules, 40188 tokens
-  new BEST PAYLOAD: 453147 bits, 5455 rules, 40188 tokens
+  new BEST PAYLOAD: 453138 bits, 5455 rules, 40188 tokens
+  new BEST PAYLOAD: 453137 bits, 5455 rules, 40188 tokens
   next beam           : 8
-  global payload      : 453147 bits / 5455 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453137 bits / 5455 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 76  beam=8
-  new BEST PAYLOAD: 453119 bits, 5456 rules, 40184 tokens
-  new BEST PAYLOAD: 453118 bits, 5456 rules, 40184 tokens
+  new BEST PAYLOAD: 453109 bits, 5456 rules, 40184 tokens
+  new BEST PAYLOAD: 453108 bits, 5456 rules, 40184 tokens
   next beam           : 8
-  global payload      : 453118 bits / 5456 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453108 bits / 5456 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 77  beam=8
-  new BEST PAYLOAD: 453090 bits, 5457 rules, 40180 tokens
+  new BEST PAYLOAD: 453080 bits, 5457 rules, 40180 tokens
   next beam           : 8
-  global payload      : 453090 bits / 5457 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453080 bits / 5457 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 78  beam=8
-  new BEST PAYLOAD: 453062 bits, 5458 rules, 40176 tokens
-  new BEST PAYLOAD: 453057 bits, 5458 rules, 40175 tokens
+  new BEST PAYLOAD: 453042 bits, 5458 rules, 40176 tokens
+  new BEST PAYLOAD: 453041 bits, 5458 rules, 40176 tokens
   next beam           : 8
-  global payload      : 453057 bits / 5458 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453041 bits / 5458 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 79  beam=8
-  new BEST PAYLOAD: 453022 bits, 5459 rules, 40172 tokens
+  new BEST PAYLOAD: 453013 bits, 5459 rules, 40172 tokens
   next beam           : 8
-  global payload      : 453022 bits / 5459 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 453013 bits / 5459 rules
+  global total        : 627696 bits / 5454 rules
 
 ROUND 80  beam=8
-  new BEST PAYLOAD: 452994 bits, 5460 rules, 40168 tokens
-  next beam           : 8
-  global payload      : 452994 bits / 5460 rules
-  global total        : 627705 bits / 5454 rules
+  new BEST PAYLOAD: 452985 bits, 5460 rules, 40168 tokens
+  new BEST PAYLOAD: 452970 bits, 5460 rules, 40167 tokens
+  new BEST TOTAL:   627690 bits, 5460 rules, 40167 tokens
+  next beam           : 5
+  global payload      : 452970 bits / 5460 rules
+  global total        : 627690 bits / 5460 rules
 
-ROUND 81  beam=8
-  new BEST PAYLOAD: 452969 bits, 5461 rules, 40164 tokens
-  new BEST PAYLOAD: 452966 bits, 5461 rules, 40164 tokens
-  next beam           : 8
-  global payload      : 452966 bits / 5461 rules
-  global total        : 627705 bits / 5454 rules
+ROUND 81  beam=5
+  new BEST PAYLOAD: 452924 bits, 5461 rules, 40162 tokens
+  new BEST TOTAL:   627676 bits, 5461 rules, 40162 tokens
+  next beam           : 4
+  global payload      : 452924 bits / 5461 rules
+  global total        : 627676 bits / 5461 rules
 
-ROUND 82  beam=8
-  new BEST PAYLOAD: 452941 bits, 5462 rules, 40160 tokens
-  new BEST PAYLOAD: 452938 bits, 5462 rules, 40160 tokens
-  next beam           : 8
-  global payload      : 452938 bits / 5462 rules
-  global total        : 627705 bits / 5454 rules
+ROUND 82  beam=4
+  new BEST PAYLOAD: 452893 bits, 5462 rules, 40157 tokens
+  new BEST PAYLOAD: 452892 bits, 5462 rules, 40157 tokens
+  next beam           : 6
+  global payload      : 452892 bits / 5462 rules
+  global total        : 627676 bits / 5461 rules
 
-ROUND 83  beam=8
-  new BEST PAYLOAD: 452913 bits, 5463 rules, 40156 tokens
+ROUND 83  beam=6
+  new BEST PAYLOAD: 452864 bits, 5463 rules, 40153 tokens
   next beam           : 8
-  global payload      : 452913 bits / 5463 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452864 bits / 5463 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 84  beam=8
-  new BEST PAYLOAD: 452888 bits, 5464 rules, 40152 tokens
+  new BEST PAYLOAD: 452836 bits, 5464 rules, 40149 tokens
+  new BEST PAYLOAD: 452835 bits, 5464 rules, 40149 tokens
   next beam           : 8
-  global payload      : 452888 bits / 5464 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452835 bits / 5464 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 85  beam=8
-  new BEST PAYLOAD: 452844 bits, 5465 rules, 40147 tokens
+  new BEST PAYLOAD: 452807 bits, 5465 rules, 40145 tokens
   next beam           : 8
-  global payload      : 452844 bits / 5465 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452807 bits / 5465 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 86  beam=8
-  new BEST PAYLOAD: 452818 bits, 5466 rules, 40143 tokens
-  new BEST PAYLOAD: 452807 bits, 5466 rules, 40143 tokens
+  new BEST PAYLOAD: 452779 bits, 5466 rules, 40141 tokens
   next beam           : 8
-  global payload      : 452807 bits / 5466 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452779 bits / 5466 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 87  beam=8
-  new BEST PAYLOAD: 452781 bits, 5467 rules, 40139 tokens
+  new BEST PAYLOAD: 452751 bits, 5467 rules, 40137 tokens
   next beam           : 8
-  global payload      : 452781 bits / 5467 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452751 bits / 5467 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 88  beam=8
-  new BEST PAYLOAD: 452756 bits, 5468 rules, 40135 tokens
-  new BEST PAYLOAD: 452755 bits, 5468 rules, 40135 tokens
+  new BEST PAYLOAD: 452723 bits, 5468 rules, 40133 tokens
   next beam           : 8
-  global payload      : 452755 bits / 5468 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452723 bits / 5468 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 89  beam=8
-  new BEST PAYLOAD: 452730 bits, 5469 rules, 40131 tokens
+  new BEST PAYLOAD: 452696 bits, 5469 rules, 40129 tokens
   next beam           : 8
-  global payload      : 452730 bits / 5469 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452696 bits / 5469 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 90  beam=8
-  new BEST PAYLOAD: 452705 bits, 5470 rules, 40127 tokens
-  new BEST PAYLOAD: 452700 bits, 5470 rules, 40127 tokens
+  new BEST PAYLOAD: 452661 bits, 5470 rules, 40125 tokens
   next beam           : 8
-  global payload      : 452700 bits / 5470 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452661 bits / 5470 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 91  beam=8
-  new BEST PAYLOAD: 452674 bits, 5471 rules, 40123 tokens
-  new BEST PAYLOAD: 452673 bits, 5471 rules, 40122 tokens
+  new BEST PAYLOAD: 452636 bits, 5471 rules, 40121 tokens
+  new BEST PAYLOAD: 452635 bits, 5471 rules, 40120 tokens
   next beam           : 8
-  global payload      : 452673 bits / 5471 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452635 bits / 5471 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 92  beam=8
-  new BEST PAYLOAD: 452647 bits, 5472 rules, 40118 tokens
+  new BEST PAYLOAD: 452606 bits, 5472 rules, 40116 tokens
   next beam           : 8
-  global payload      : 452647 bits / 5472 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452606 bits / 5472 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 93  beam=8
-  new BEST PAYLOAD: 452621 bits, 5473 rules, 40114 tokens
+  new BEST PAYLOAD: 452581 bits, 5473 rules, 40112 tokens
+  new BEST PAYLOAD: 452580 bits, 5473 rules, 40111 tokens
   next beam           : 8
-  global payload      : 452621 bits / 5473 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452580 bits / 5473 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 94  beam=8
-  new BEST PAYLOAD: 452597 bits, 5474 rules, 40110 tokens
-  new BEST PAYLOAD: 452596 bits, 5474 rules, 40110 tokens
-  new BEST PAYLOAD: 452593 bits, 5474 rules, 40111 tokens
+  new BEST PAYLOAD: 452555 bits, 5474 rules, 40107 tokens
+  new BEST PAYLOAD: 452554 bits, 5474 rules, 40107 tokens
   next beam           : 8
-  global payload      : 452593 bits / 5474 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452554 bits / 5474 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 95  beam=8
-  new BEST PAYLOAD: 452548 bits, 5475 rules, 40106 tokens
+  new BEST PAYLOAD: 452529 bits, 5475 rules, 40103 tokens
   next beam           : 8
-  global payload      : 452548 bits / 5475 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452529 bits / 5475 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 96  beam=8
-  new BEST PAYLOAD: 452524 bits, 5476 rules, 40102 tokens
-  new BEST PAYLOAD: 452523 bits, 5476 rules, 40102 tokens
+  new BEST PAYLOAD: 452500 bits, 5476 rules, 40100 tokens
+  new BEST PAYLOAD: 452499 bits, 5476 rules, 40100 tokens
   next beam           : 8
-  global payload      : 452523 bits / 5476 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452499 bits / 5476 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 97  beam=8
-  new BEST PAYLOAD: 452491 bits, 5477 rules, 40094 tokens
+  new BEST PAYLOAD: 452474 bits, 5477 rules, 40096 tokens
   next beam           : 8
-  global payload      : 452491 bits / 5477 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452474 bits / 5477 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 98  beam=8
-  new BEST PAYLOAD: 452465 bits, 5478 rules, 40090 tokens
+  new BEST PAYLOAD: 452449 bits, 5478 rules, 40092 tokens
   next beam           : 8
-  global payload      : 452465 bits / 5478 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452449 bits / 5478 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 99  beam=8
-  new BEST PAYLOAD: 452441 bits, 5479 rules, 40086 tokens
-  new BEST PAYLOAD: 452439 bits, 5479 rules, 40086 tokens
-  new BEST PAYLOAD: 452438 bits, 5479 rules, 40086 tokens
+  new BEST PAYLOAD: 452424 bits, 5479 rules, 40088 tokens
   next beam           : 8
-  global payload      : 452438 bits / 5479 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452424 bits / 5479 rules
+  global total        : 627676 bits / 5461 rules
 
 ROUND 100  beam=8
-  new BEST PAYLOAD: 452412 bits, 5480 rules, 40082 tokens
-  new BEST PAYLOAD: 452411 bits, 5480 rules, 40082 tokens
-  new BEST PAYLOAD: 452410 bits, 5480 rules, 40081 tokens
+  new BEST PAYLOAD: 452401 bits, 5480 rules, 40084 tokens
+  new BEST PAYLOAD: 452399 bits, 5480 rules, 40084 tokens
   next beam           : 8
-  global payload      : 452410 bits / 5480 rules
-  global total        : 627705 bits / 5454 rules
+  global payload      : 452399 bits / 5480 rules
+  global total        : 627676 bits / 5461 rules
 
 BEST PAYLOAD:
   rules              : 5480
-  tokens             : 40081
-  Huffman bits       : 452410
-  Huffman bytes      : 56552
+  tokens             : 40084
+  Huffman bits       : 452399
+  Huffman bytes      : 56550
   rule bytes         : 21920
-  approximate total  : 627770 bits
-  approximate bytes  : 78472
+  approximate total  : 627759 bits
+  approximate bytes  : 78470
   best round         : 100
-  payload saving     : 28973 bits vs greedy
-  payload reduction  : 6.0187%
-  total saving       : 25773 bits vs greedy
-  total reduction    : 3.94358%
+  payload saving     : 28984 bits vs greedy
+  payload reduction  : 6.02099%
+  total saving       : 25784 bits vs greedy
+  total reduction    : 3.94526%
 BEST TOTAL:
-  rules              : 5454
-  tokens             : 40193
-  Huffman bits       : 453177
-  Huffman bytes      : 56648
-  rule bytes         : 21816
-  approximate total  : 627705 bits
-  approximate bytes  : 78464
-  best round         : 74
-  payload saving     : 28206 bits vs greedy
-  payload reduction  : 5.85937%
-  total saving       : 25838 bits vs greedy
-  total reduction    : 3.95353%
+  rules              : 5461
+  tokens             : 40162
+  Huffman bits       : 452924
+  Huffman bytes      : 56616
+  rule bytes         : 21844
+  approximate total  : 627676 bits
+  approximate bytes  : 78460
+  best round         : 81
+  payload saving     : 28459 bits vs greedy
+  payload reduction  : 5.91192%
+  total saving       : 25867 bits vs greedy
+  total reduction    : 3.95796%
 
 COMPARISON:
 greedy:          5380 rules, 41854 tokens, 481383 bits, total 653543
 initial Shannon: 0 rules, 0 tokens, 460022 bits, total 632182
-best payload:    5480 rules, 40081 tokens, 452410 bits, total 627770
-best total:      5454 rules, 40193 tokens, 453177 bits, total 627705
+best payload:    5480 rules, 40084 tokens, 452399 bits, total 627759
+best total:      5461 rules, 40162 tokens, 452924 bits, total 627676
 
 PAYLOAD RECONSTRUCTION: OK
 TOTAL RECONSTRUCTION: OK
