@@ -46,6 +46,8 @@ bool qoi_decode(const uint8_t* data, size_t size, QoiImage& out)
 
     if (!w || !h || (channels != 3 && channels != 4))
         return false;
+    if (colorspace > 1)
+        return false;
 
     const uint64_t pixels64 = uint64_t(w) * uint64_t(h);
     if (pixels64 > (std::numeric_limits<size_t>::max() / 4))
@@ -147,7 +149,7 @@ bool qoi_decode(const uint8_t* data, size_t size, QoiImage& out)
         out.rgba[dst++] = a;
     }
 
-    // QOI requires the eight-byte end marker FF 00 00 00 00 00 00 01.
+    // QOI requires the eight-byte end marker 00 00 00 00 00 00 00 01.
     if (p + 8 > size) return false;
     static constexpr uint8_t endMarker[8] = {0,0,0,0,0,0,0,1};
     if (std::memcmp(data + p, endMarker, 8) != 0)
