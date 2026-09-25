@@ -35,7 +35,7 @@ ROUND 0: beam=1 best_total=3860 best_payload=22355
     beam[4]: total=3863 payload=22346 rules=203
     beam[5]: total=3863 payload=22346 rules=203
     beam[6]: total=3864 payload=22345 rules=203
-round   1: parents=1 pairs=64 shannon=24 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=7 new=yes 44.7 ms
+round   1: parents=1 pairs=64 shannon=24 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=7 new=yes 44.9 ms
 
 ROUND 1: beam=7 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -97,7 +97,7 @@ ROUND 1: beam=7 best_total=3860 best_payload=22355
     beam[5]: total=3866 payload=22331 rules=204
     beam[6]: total=3866 payload=22331 rules=204
     beam[7]: total=3867 payload=22330 rules=204
-round   2: parents=7 pairs=448 shannon=168 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 312.3 ms
+round   2: parents=7 pairs=448 shannon=168 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 314.5 ms
 
 ROUND 2: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -166,7 +166,7 @@ ROUND 2: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3869 payload=22320 rules=205
     beam[6]: total=3869 payload=22321 rules=205
     beam[7]: total=3869 payload=22321 rules=205
-round   3: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 355.6 ms
+round   3: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 353.0 ms
 
 ROUND 3: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -235,7 +235,7 @@ ROUND 3: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3872 payload=22311 rules=206
     beam[6]: total=3872 payload=22311 rules=206
     beam[7]: total=3872 payload=22311 rules=206
-round   4: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 356.0 ms
+round   4: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 355.0 ms
 
 ROUND 4: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -304,7 +304,7 @@ ROUND 4: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3875 payload=22302 rules=207
     beam[6]: total=3875 payload=22302 rules=207
     beam[7]: total=3875 payload=22302 rules=207
-round   5: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 357.0 ms
+round   5: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 356.8 ms
 
 ROUND 5: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -373,7 +373,7 @@ ROUND 5: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3878 payload=22292 rules=208
     beam[6]: total=3878 payload=22292 rules=208
     beam[7]: total=3878 payload=22292 rules=208
-round   6: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 358.4 ms
+round   6: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 356.7 ms
 
 ROUND 6: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -442,7 +442,7 @@ ROUND 6: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3881 payload=22282 rules=209
     beam[6]: total=3881 payload=22282 rules=209
     beam[7]: total=3881 payload=22282 rules=209
-round   7: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 359.9 ms
+round   7: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 356.0 ms
 
 ROUND 7: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -511,7 +511,7 @@ ROUND 7: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3883 payload=22274 rules=210
     beam[6]: total=3883 payload=22274 rules=210
     beam[7]: total=3883 payload=22274 rules=210
-round   8: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 360.8 ms
+round   8: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 355.8 ms
 
 ROUND 8: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -580,7 +580,7 @@ ROUND 8: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3885 payload=22264 rules=211
     beam[6]: total=3885 payload=22264 rules=211
     beam[7]: total=3885 payload=22264 rules=211
-round   9: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 359.8 ms
+round   9: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 358.4 ms
 
 ROUND 9: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -649,7 +649,7 @@ ROUND 9: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3889 payload=22252 rules=212
     beam[6]: total=3889 payload=22252 rules=212
     beam[7]: total=3889 payload=22252 rules=212
-round  10: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 360.7 ms
+round  10: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 362.4 ms
 
 ROUND 10: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -718,7 +718,7 @@ ROUND 10: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3892 payload=22242 rules=213
     beam[6]: total=3892 payload=22242 rules=213
     beam[7]: total=3892 payload=22242 rules=213
-round  11: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 360.5 ms
+round  11: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 365.0 ms
 
 ROUND 11: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -787,7 +787,7 @@ ROUND 11: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3895 payload=22234 rules=214
     beam[6]: total=3895 payload=22234 rules=214
     beam[7]: total=3895 payload=22234 rules=214
-round  12: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 359.6 ms
+round  12: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 361.0 ms
 
 ROUND 12: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -856,7 +856,7 @@ ROUND 12: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3897 payload=22222 rules=215
     beam[6]: total=3897 payload=22224 rules=215
     beam[7]: total=3897 payload=22224 rules=215
-round  13: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 361.6 ms
+round  13: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 363.6 ms
 
 ROUND 13: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -925,7 +925,7 @@ ROUND 13: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3900 payload=22213 rules=216
     beam[6]: total=3900 payload=22214 rules=216
     beam[7]: total=3900 payload=22214 rules=216
-round  14: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 363.0 ms
+round  14: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 359.6 ms
 
 ROUND 14: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -994,7 +994,7 @@ ROUND 14: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3903 payload=22205 rules=217
     beam[6]: total=3903 payload=22205 rules=217
     beam[7]: total=3903 payload=22205 rules=217
-round  15: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 358.4 ms
+round  15: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 360.4 ms
 
 ROUND 15: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1063,7 +1063,7 @@ ROUND 15: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3906 payload=22197 rules=218
     beam[6]: total=3906 payload=22197 rules=218
     beam[7]: total=3906 payload=22197 rules=218
-round  16: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 360.0 ms
+round  16: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 362.3 ms
 
 ROUND 16: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1132,7 +1132,7 @@ ROUND 16: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3910 payload=22189 rules=219
     beam[6]: total=3910 payload=22189 rules=219
     beam[7]: total=3910 payload=22189 rules=219
-round  17: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 359.6 ms
+round  17: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 363.1 ms
 
 ROUND 17: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1201,7 +1201,7 @@ ROUND 17: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3913 payload=22179 rules=220
     beam[6]: total=3914 payload=22177 rules=220
     beam[7]: total=3914 payload=22177 rules=220
-round  18: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 363.9 ms
+round  18: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 366.0 ms
 
 ROUND 18: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1270,7 +1270,7 @@ ROUND 18: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3916 payload=22167 rules=221
     beam[6]: total=3916 payload=22167 rules=221
     beam[7]: total=3916 payload=22167 rules=221
-round  19: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 366.1 ms
+round  19: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 364.7 ms
 
 ROUND 19: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1339,7 +1339,7 @@ ROUND 19: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3918 payload=22158 rules=222
     beam[6]: total=3918 payload=22158 rules=222
     beam[7]: total=3918 payload=22158 rules=222
-round  20: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 362.9 ms
+round  20: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 437.9 ms
 
 ROUND 20: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1408,7 +1408,7 @@ ROUND 20: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3922 payload=22150 rules=223
     beam[6]: total=3922 payload=22150 rules=223
     beam[7]: total=3922 payload=22150 rules=223
-round  21: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 365.7 ms
+round  21: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 398.8 ms
 
 ROUND 21: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1477,7 +1477,7 @@ ROUND 21: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3926 payload=22142 rules=224
     beam[6]: total=3926 payload=22142 rules=224
     beam[7]: total=3926 payload=22142 rules=224
-round  22: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 368.0 ms
+round  22: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 397.6 ms
 
 ROUND 22: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1546,7 +1546,7 @@ ROUND 22: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3930 payload=22133 rules=225
     beam[6]: total=3930 payload=22133 rules=225
     beam[7]: total=3930 payload=22133 rules=225
-round  23: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 366.8 ms
+round  23: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.6 ms
 
 ROUND 23: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1615,7 +1615,7 @@ ROUND 23: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3934 payload=22125 rules=226
     beam[6]: total=3934 payload=22125 rules=226
     beam[7]: total=3934 payload=22125 rules=226
-round  24: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 368.5 ms
+round  24: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 400.5 ms
 
 ROUND 24: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1684,7 +1684,7 @@ ROUND 24: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3937 payload=22118 rules=227
     beam[6]: total=3937 payload=22118 rules=227
     beam[7]: total=3937 payload=22118 rules=227
-round  25: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 369.3 ms
+round  25: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 417.5 ms
 
 ROUND 25: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1753,7 +1753,7 @@ ROUND 25: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3940 payload=22108 rules=228
     beam[6]: total=3940 payload=22108 rules=228
     beam[7]: total=3940 payload=22108 rules=228
-round  26: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 369.1 ms
+round  26: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 463.9 ms
 
 ROUND 26: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1822,7 +1822,7 @@ ROUND 26: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3943 payload=22095 rules=229
     beam[6]: total=3943 payload=22095 rules=229
     beam[7]: total=3943 payload=22095 rules=229
-round  27: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.7 ms
+round  27: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 422.2 ms
 
 ROUND 27: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1891,7 +1891,7 @@ ROUND 27: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3946 payload=22085 rules=230
     beam[6]: total=3946 payload=22085 rules=230
     beam[7]: total=3946 payload=22085 rules=230
-round  28: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 369.9 ms
+round  28: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 406.5 ms
 
 ROUND 28: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -1960,7 +1960,7 @@ ROUND 28: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3949 payload=22079 rules=231
     beam[6]: total=3949 payload=22079 rules=231
     beam[7]: total=3949 payload=22079 rules=231
-round  29: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.2 ms
+round  29: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 430.2 ms
 
 ROUND 29: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2029,7 +2029,7 @@ ROUND 29: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3953 payload=22073 rules=232
     beam[6]: total=3953 payload=22073 rules=232
     beam[7]: total=3953 payload=22073 rules=232
-round  30: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 371.4 ms
+round  30: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 423.1 ms
 
 ROUND 30: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2098,7 +2098,7 @@ ROUND 30: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3955 payload=22063 rules=233
     beam[6]: total=3956 payload=22063 rules=233
     beam[7]: total=3956 payload=22063 rules=233
-round  31: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.9 ms
+round  31: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 420.4 ms
 
 ROUND 31: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2167,7 +2167,7 @@ ROUND 31: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3959 payload=22057 rules=234
     beam[6]: total=3959 payload=22057 rules=234
     beam[7]: total=3959 payload=22057 rules=234
-round  32: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 371.6 ms
+round  32: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 430.5 ms
 
 ROUND 32: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2236,7 +2236,7 @@ ROUND 32: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3962 payload=22044 rules=235
     beam[6]: total=3962 payload=22044 rules=235
     beam[7]: total=3962 payload=22044 rules=235
-round  33: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 372.2 ms
+round  33: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 434.5 ms
 
 ROUND 33: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2305,7 +2305,7 @@ ROUND 33: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3965 payload=22038 rules=236
     beam[6]: total=3965 payload=22038 rules=236
     beam[7]: total=3965 payload=22038 rules=236
-round  34: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 373.0 ms
+round  34: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 442.1 ms
 
 ROUND 34: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2374,7 +2374,7 @@ ROUND 34: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3968 payload=22032 rules=237
     beam[6]: total=3968 payload=22032 rules=237
     beam[7]: total=3968 payload=22032 rules=237
-round  35: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 371.8 ms
+round  35: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 509.8 ms
 
 ROUND 35: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2443,7 +2443,7 @@ ROUND 35: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3971 payload=22026 rules=238
     beam[6]: total=3971 payload=22026 rules=238
     beam[7]: total=3972 payload=22020 rules=238
-round  36: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.7 ms
+round  36: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 441.6 ms
 
 ROUND 36: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2512,7 +2512,7 @@ ROUND 36: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3974 payload=22014 rules=239
     beam[6]: total=3974 payload=22014 rules=239
     beam[7]: total=3974 payload=22014 rules=239
-round  37: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.1 ms
+round  37: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 433.4 ms
 
 ROUND 37: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2581,7 +2581,7 @@ ROUND 37: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3977 payload=22008 rules=240
     beam[6]: total=3978 payload=22008 rules=240
     beam[7]: total=3978 payload=22008 rules=240
-round  38: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 370.6 ms
+round  38: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 429.4 ms
 
 ROUND 38: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2650,7 +2650,7 @@ ROUND 38: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3981 payload=22000 rules=241
     beam[6]: total=3982 payload=22000 rules=241
     beam[7]: total=3982 payload=22000 rules=241
-round  39: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 371.1 ms
+round  39: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 433.2 ms
 
 ROUND 39: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2719,7 +2719,7 @@ ROUND 39: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3986 payload=21994 rules=242
     beam[6]: total=3986 payload=21994 rules=242
     beam[7]: total=3986 payload=21994 rules=242
-round  40: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 373.4 ms
+round  40: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 412.9 ms
 
 ROUND 40: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2788,7 +2788,7 @@ ROUND 40: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3989 payload=21981 rules=243
     beam[6]: total=3989 payload=21981 rules=243
     beam[7]: total=3989 payload=21981 rules=243
-round  41: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 372.6 ms
+round  41: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 448.6 ms
 
 ROUND 41: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2857,7 +2857,7 @@ ROUND 41: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3992 payload=21971 rules=244
     beam[6]: total=3992 payload=21971 rules=244
     beam[7]: total=3992 payload=21971 rules=244
-round  42: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 373.4 ms
+round  42: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 444.8 ms
 
 ROUND 42: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2926,7 +2926,7 @@ ROUND 42: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3995 payload=21965 rules=245
     beam[6]: total=3995 payload=21965 rules=245
     beam[7]: total=3995 payload=21965 rules=245
-round  43: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 373.4 ms
+round  43: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 428.0 ms
 
 ROUND 43: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -2995,7 +2995,7 @@ ROUND 43: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=3998 payload=21957 rules=246
     beam[6]: total=3998 payload=21957 rules=246
     beam[7]: total=3998 payload=21957 rules=246
-round  44: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 378.2 ms
+round  44: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 426.0 ms
 
 ROUND 44: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3064,7 +3064,7 @@ ROUND 44: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4001 payload=21951 rules=247
     beam[6]: total=4001 payload=21951 rules=247
     beam[7]: total=4001 payload=21951 rules=247
-round  45: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 381.0 ms
+round  45: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 448.3 ms
 
 ROUND 45: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3133,7 +3133,7 @@ ROUND 45: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4006 payload=21940 rules=248
     beam[6]: total=4006 payload=21940 rules=248
     beam[7]: total=4006 payload=21940 rules=248
-round  46: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 379.8 ms
+round  46: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 507.8 ms
 
 ROUND 46: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3202,7 +3202,7 @@ ROUND 46: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4008 payload=21934 rules=249
     beam[6]: total=4008 payload=21934 rules=249
     beam[7]: total=4008 payload=21934 rules=249
-round  47: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 380.2 ms
+round  47: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 441.6 ms
 
 ROUND 47: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3271,7 +3271,7 @@ ROUND 47: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4011 payload=21928 rules=250
     beam[6]: total=4011 payload=21928 rules=250
     beam[7]: total=4011 payload=21928 rules=250
-round  48: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 381.7 ms
+round  48: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 427.9 ms
 
 ROUND 48: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3340,7 +3340,7 @@ ROUND 48: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4014 payload=21920 rules=251
     beam[6]: total=4014 payload=21920 rules=251
     beam[7]: total=4014 payload=21920 rules=251
-round  49: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 380.7 ms
+round  49: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 426.8 ms
 
 ROUND 49: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3409,7 +3409,7 @@ ROUND 49: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4019 payload=21914 rules=252
     beam[6]: total=4019 payload=21914 rules=252
     beam[7]: total=4019 payload=21914 rules=252
-round  50: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 382.2 ms
+round  50: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 499.9 ms
 
 ROUND 50: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3478,7 +3478,7 @@ ROUND 50: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4022 payload=21908 rules=253
     beam[6]: total=4022 payload=21908 rules=253
     beam[7]: total=4022 payload=21908 rules=253
-round  51: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 378.8 ms
+round  51: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 434.9 ms
 
 ROUND 51: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3547,7 +3547,7 @@ ROUND 51: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4025 payload=21902 rules=254
     beam[6]: total=4025 payload=21902 rules=254
     beam[7]: total=4025 payload=21902 rules=254
-round  52: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 379.8 ms
+round  52: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 434.8 ms
 
 ROUND 52: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3616,7 +3616,7 @@ ROUND 52: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4027 payload=21896 rules=255
     beam[6]: total=4027 payload=21896 rules=255
     beam[7]: total=4027 payload=21896 rules=255
-round  53: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 384.4 ms
+round  53: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 446.9 ms
 
 ROUND 53: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3685,7 +3685,7 @@ ROUND 53: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4031 payload=21890 rules=256
     beam[6]: total=4031 payload=21890 rules=256
     beam[7]: total=4031 payload=21890 rules=256
-round  54: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 384.4 ms
+round  54: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 439.5 ms
 
 ROUND 54: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3754,7 +3754,7 @@ ROUND 54: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4033 payload=21879 rules=257
     beam[6]: total=4033 payload=21884 rules=257
     beam[7]: total=4033 payload=21884 rules=257
-round  55: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 384.9 ms
+round  55: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 440.5 ms
 
 ROUND 55: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3823,7 +3823,7 @@ ROUND 55: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4038 payload=21873 rules=258
     beam[6]: total=4038 payload=21873 rules=258
     beam[7]: total=4038 payload=21873 rules=258
-round  56: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 382.6 ms
+round  56: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 435.9 ms
 
 ROUND 56: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3892,7 +3892,7 @@ ROUND 56: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4041 payload=21867 rules=259
     beam[6]: total=4041 payload=21867 rules=259
     beam[7]: total=4041 payload=21867 rules=259
-round  57: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 383.1 ms
+round  57: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 447.6 ms
 
 ROUND 57: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -3961,7 +3961,7 @@ ROUND 57: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4043 payload=21862 rules=260
     beam[6]: total=4043 payload=21862 rules=260
     beam[7]: total=4043 payload=21862 rules=260
-round  58: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 382.9 ms
+round  58: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 437.5 ms
 
 ROUND 58: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4030,7 +4030,7 @@ ROUND 58: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4046 payload=21854 rules=261
     beam[6]: total=4046 payload=21854 rules=261
     beam[7]: total=4046 payload=21854 rules=261
-round  59: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 383.8 ms
+round  59: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 437.2 ms
 
 ROUND 59: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4099,7 +4099,7 @@ ROUND 59: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4049 payload=21848 rules=262
     beam[6]: total=4049 payload=21848 rules=262
     beam[7]: total=4049 payload=21848 rules=262
-round  60: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 384.5 ms
+round  60: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 448.3 ms
 
 ROUND 60: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4168,7 +4168,7 @@ ROUND 60: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4053 payload=21843 rules=263
     beam[6]: total=4053 payload=21843 rules=263
     beam[7]: total=4053 payload=21843 rules=263
-round  61: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 384.6 ms
+round  61: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 454.8 ms
 
 ROUND 61: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4237,7 +4237,7 @@ ROUND 61: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4057 payload=21838 rules=264
     beam[6]: total=4057 payload=21838 rules=264
     beam[7]: total=4057 payload=21838 rules=264
-round  62: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 385.2 ms
+round  62: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 469.3 ms
 
 ROUND 62: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4306,7 +4306,7 @@ ROUND 62: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4062 payload=21826 rules=265
     beam[6]: total=4062 payload=21826 rules=265
     beam[7]: total=4062 payload=21826 rules=265
-round  63: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 388.1 ms
+round  63: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 451.6 ms
 
 ROUND 63: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4375,7 +4375,7 @@ ROUND 63: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4063 payload=21822 rules=266
     beam[6]: total=4063 payload=21822 rules=266
     beam[7]: total=4063 payload=21822 rules=266
-round  64: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 386.4 ms
+round  64: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 450.4 ms
 
 ROUND 64: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4444,7 +4444,7 @@ ROUND 64: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4066 payload=21816 rules=267
     beam[6]: total=4066 payload=21816 rules=267
     beam[7]: total=4066 payload=21816 rules=267
-round  65: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 385.8 ms
+round  65: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 403.4 ms
 
 ROUND 65: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4513,7 +4513,7 @@ ROUND 65: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4070 payload=21810 rules=268
     beam[6]: total=4070 payload=21810 rules=268
     beam[7]: total=4070 payload=21810 rules=268
-round  66: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 387.4 ms
+round  66: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 398.1 ms
 
 ROUND 66: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4582,7 +4582,7 @@ ROUND 66: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4074 payload=21804 rules=269
     beam[6]: total=4074 payload=21804 rules=269
     beam[7]: total=4074 payload=21804 rules=269
-round  67: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 387.8 ms
+round  67: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 403.9 ms
 
 ROUND 67: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4651,7 +4651,7 @@ ROUND 67: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4076 payload=21796 rules=270
     beam[6]: total=4076 payload=21796 rules=270
     beam[7]: total=4076 payload=21796 rules=270
-round  68: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 388.0 ms
+round  68: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.6 ms
 
 ROUND 68: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4720,7 +4720,7 @@ ROUND 68: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4079 payload=21791 rules=271
     beam[6]: total=4079 payload=21791 rules=271
     beam[7]: total=4079 payload=21791 rules=271
-round  69: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 388.9 ms
+round  69: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 421.1 ms
 
 ROUND 69: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4789,7 +4789,7 @@ ROUND 69: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4083 payload=21787 rules=272
     beam[6]: total=4083 payload=21787 rules=272
     beam[7]: total=4083 payload=21787 rules=272
-round  70: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 389.5 ms
+round  70: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 470.7 ms
 
 ROUND 70: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4858,7 +4858,7 @@ ROUND 70: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4086 payload=21781 rules=273
     beam[6]: total=4086 payload=21782 rules=273
     beam[7]: total=4087 payload=21781 rules=273
-round  71: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 389.9 ms
+round  71: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 400.2 ms
 
 ROUND 71: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4927,7 +4927,7 @@ ROUND 71: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4089 payload=21775 rules=274
     beam[6]: total=4090 payload=21774 rules=274
     beam[7]: total=4090 payload=21776 rules=274
-round  72: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 390.4 ms
+round  72: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 526.2 ms
 
 ROUND 72: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -4996,7 +4996,7 @@ ROUND 72: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4092 payload=21770 rules=275
     beam[6]: total=4093 payload=21768 rules=275
     beam[7]: total=4093 payload=21768 rules=275
-round  73: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 391.3 ms
+round  73: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 548.4 ms
 
 ROUND 73: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5065,7 +5065,7 @@ ROUND 73: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4096 payload=21764 rules=276
     beam[6]: total=4097 payload=21762 rules=276
     beam[7]: total=4097 payload=21762 rules=276
-round  74: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 392.0 ms
+round  74: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 471.4 ms
 
 ROUND 74: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5134,7 +5134,7 @@ ROUND 74: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4099 payload=21756 rules=277
     beam[6]: total=4101 payload=21754 rules=277
     beam[7]: total=4101 payload=21754 rules=277
-round  75: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 394.2 ms
+round  75: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 476.0 ms
 
 ROUND 75: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5203,7 +5203,7 @@ ROUND 75: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4101 payload=21743 rules=278
     beam[6]: total=4103 payload=21741 rules=278
     beam[7]: total=4103 payload=21741 rules=278
-round  76: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 395.9 ms
+round  76: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 411.5 ms
 
 ROUND 76: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5272,7 +5272,7 @@ ROUND 76: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4102 payload=21728 rules=279
     beam[6]: total=4103 payload=21726 rules=279
     beam[7]: total=4103 payload=21726 rules=279
-round  77: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 395.6 ms
+round  77: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.7 ms
 
 ROUND 77: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5341,7 +5341,7 @@ ROUND 77: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4105 payload=21709 rules=280
     beam[6]: total=4107 payload=21707 rules=280
     beam[7]: total=4107 payload=21707 rules=280
-round  78: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 394.1 ms
+round  78: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 403.1 ms
 
 ROUND 78: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5410,7 +5410,7 @@ ROUND 78: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4108 payload=21701 rules=281
     beam[6]: total=4110 payload=21699 rules=281
     beam[7]: total=4110 payload=21699 rules=281
-round  79: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 394.7 ms
+round  79: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 416.6 ms
 
 ROUND 79: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5479,7 +5479,7 @@ ROUND 79: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4112 payload=21694 rules=282
     beam[6]: total=4112 payload=21695 rules=282
     beam[7]: total=4112 payload=21695 rules=282
-round  80: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 395.5 ms
+round  80: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 401.1 ms
 
 ROUND 80: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5548,7 +5548,7 @@ ROUND 80: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4115 payload=21683 rules=283
     beam[6]: total=4117 payload=21686 rules=283
     beam[7]: total=4117 payload=21686 rules=283
-round  81: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 396.6 ms
+round  81: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 447.1 ms
 
 ROUND 81: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5617,7 +5617,7 @@ ROUND 81: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4119 payload=21677 rules=284
     beam[6]: total=4119 payload=21679 rules=284
     beam[7]: total=4119 payload=21679 rules=284
-round  82: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 397.0 ms
+round  82: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 407.9 ms
 
 ROUND 82: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5686,7 +5686,7 @@ ROUND 82: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4123 payload=21673 rules=285
     beam[6]: total=4123 payload=21673 rules=285
     beam[7]: total=4123 payload=21673 rules=285
-round  83: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.7 ms
+round  83: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 406.3 ms
 
 ROUND 83: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5755,7 +5755,7 @@ ROUND 83: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4126 payload=21663 rules=286
     beam[6]: total=4126 payload=21667 rules=286
     beam[7]: total=4126 payload=21667 rules=286
-round  84: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.8 ms
+round  84: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 406.0 ms
 
 ROUND 84: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5824,7 +5824,7 @@ ROUND 84: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4127 payload=21655 rules=287
     beam[6]: total=4130 payload=21657 rules=287
     beam[7]: total=4130 payload=21657 rules=287
-round  85: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 398.7 ms
+round  85: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 404.2 ms
 
 ROUND 85: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5893,7 +5893,7 @@ ROUND 85: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4131 payload=21644 rules=288
     beam[6]: total=4131 payload=21646 rules=288
     beam[7]: total=4132 payload=21645 rules=288
-round  86: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.7 ms
+round  86: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 408.7 ms
 
 ROUND 86: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -5962,7 +5962,7 @@ ROUND 86: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4133 payload=21636 rules=289
     beam[6]: total=4133 payload=21636 rules=289
     beam[7]: total=4133 payload=21638 rules=289
-round  87: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 399.1 ms
+round  87: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 410.9 ms
 
 ROUND 87: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6031,7 +6031,7 @@ ROUND 87: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4136 payload=21630 rules=290
     beam[6]: total=4136 payload=21630 rules=290
     beam[7]: total=4136 payload=21630 rules=290
-round  88: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 400.4 ms
+round  88: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 411.8 ms
 
 ROUND 88: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6100,7 +6100,7 @@ ROUND 88: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4141 payload=21626 rules=291
     beam[6]: total=4141 payload=21626 rules=291
     beam[7]: total=4141 payload=21626 rules=291
-round  89: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 400.2 ms
+round  89: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 413.7 ms
 
 ROUND 89: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6169,7 +6169,7 @@ ROUND 89: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4144 payload=21620 rules=292
     beam[6]: total=4144 payload=21620 rules=292
     beam[7]: total=4144 payload=21620 rules=292
-round  90: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 402.1 ms
+round  90: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 436.0 ms
 
 ROUND 90: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6238,7 +6238,7 @@ ROUND 90: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4145 payload=21614 rules=293
     beam[6]: total=4145 payload=21614 rules=293
     beam[7]: total=4146 payload=21614 rules=293
-round  91: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 402.7 ms
+round  91: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.4 ms
 
 ROUND 91: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6307,7 +6307,7 @@ ROUND 91: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4151 payload=21609 rules=294
     beam[6]: total=4152 payload=21609 rules=294
     beam[7]: total=4152 payload=21609 rules=294
-round  92: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 402.8 ms
+round  92: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 407.8 ms
 
 ROUND 92: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6376,7 +6376,7 @@ ROUND 92: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4155 payload=21603 rules=295
     beam[6]: total=4155 payload=21603 rules=295
     beam[7]: total=4156 payload=21595 rules=295
-round  93: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 403.6 ms
+round  93: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 411.6 ms
 
 ROUND 93: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6445,7 +6445,7 @@ ROUND 93: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4158 payload=21589 rules=296
     beam[6]: total=4158 payload=21589 rules=296
     beam[7]: total=4158 payload=21589 rules=296
-round  94: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 403.8 ms
+round  94: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 422.3 ms
 
 ROUND 94: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6514,7 +6514,7 @@ ROUND 94: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4160 payload=21584 rules=297
     beam[6]: total=4160 payload=21584 rules=297
     beam[7]: total=4160 payload=21584 rules=297
-round  95: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 405.1 ms
+round  95: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 441.1 ms
 
 ROUND 95: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6583,7 +6583,7 @@ ROUND 95: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4164 payload=21578 rules=298
     beam[6]: total=4164 payload=21578 rules=298
     beam[7]: total=4164 payload=21578 rules=298
-round  96: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.2 ms
+round  96: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 423.9 ms
 
 ROUND 96: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6652,7 +6652,7 @@ ROUND 96: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4167 payload=21572 rules=299
     beam[6]: total=4167 payload=21572 rules=299
     beam[7]: total=4167 payload=21572 rules=299
-round  97: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.2 ms
+round  97: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 446.6 ms
 
 ROUND 97: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6721,7 +6721,7 @@ ROUND 97: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4171 payload=21562 rules=300
     beam[6]: total=4171 payload=21562 rules=300
     beam[7]: total=4171 payload=21562 rules=300
-round  98: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 407.1 ms
+round  98: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 414.2 ms
 
 ROUND 98: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6790,7 +6790,7 @@ ROUND 98: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4174 payload=21554 rules=301
     beam[6]: total=4174 payload=21554 rules=301
     beam[7]: total=4174 payload=21554 rules=301
-round  99: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.2 ms
+round  99: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 411.8 ms
 
 ROUND 99: beam=8 best_total=3860 best_payload=22355
     candidates=64 parent_total=3860 parent_payload=22355 rules=202
@@ -6859,13 +6859,13 @@ ROUND 99: beam=8 best_total=3860 best_payload=22355
     beam[5]: total=4176 payload=21541 rules=302
     beam[6]: total=4176 payload=21541 rules=302
     beam[7]: total=4176 payload=21541 rules=302
-round 100: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 409.9 ms
+round 100: parents=8 pairs=512 shannon=192 exact=0 childBest=3860 childPayload=22355 globalBest=3860 rules=202 tokens=2809 next=8 new=yes 413.1 ms
 initial: total=3860 bytes, payload=22355 bits, rules=202, tokens=2809
 best:    total=3860 bytes, payload=22355 bits, rules=202, tokens=2809
 changed: NO
 === optimizer result ===
 final:   total=3860 bytes, payload=22355 bits, rules=202, tokens=2809
-time:    37793.7 ms
+time:    41592.8 ms
 ===============================
 
 
@@ -6887,4 +6887,4 @@ Huffman data   : 2795 bytes
 Huffman bits   : 22355
 ratio          : 2.473x
 bits/byte      : 3.234
-time           : [32m37879 ms[0m
+time           : [32m41681 ms[0m
