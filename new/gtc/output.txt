@@ -1,0 +1,949 @@
+вторник 18:41
+
+я как-то придумал концепцию, но не знаю насколько
+она подходящая. это не для старых компьютеров, это я
+обдумывал вариант решения для hitter prize где нужно
+закодировать файл enwik9. идея вот в чем - текст
+состоит из кусков слова - приставки, суффиксы,
+окончания, а так же есть составные слова. Например
+big - bigger - bigest. если мы дадим какой-то код для
+big и отдельный код для ger, тогда bigger это сумма
+кодов, а если есть новое слово digger, то у слова dig
+свой код, а слово дег уже есть в словаре. создавая
+такие словари мы можем потом умея такой словарь на
+
+Да, идея вполне здравая. Более того, ты фактически описываешь морфемно-
+субсловное словарное кодирование: вместо словаря целых слов хранить
+
+строительные блоки слов и собирать из них текст.
+
+Для enwik9 это особенно интересно, но есть важный нюанс.
+
+1. Твой пример
+
+Можно иметь словарь:
+
+big >
+915 >
+
+ger >
+
+UO WwW Py?
+
+est >
+
+Тогда:
+
+А
+
+АС
+AD
+BC
+
+big
+bigger
+
+bigest
+
+digger
+
+И это уже лучше обычного словаря слов, потому что один токен ger используется
+
+огромным количеством слов:
+
+bigger
+digger
+trigger
+logger
+
+Причём можно пойти дальше:
+
+un + predict + able
+
+re + construct + ion
+
+counter + act + ive
+
+То есть словарь фактически становится грамматикой построения слов.
+
+2. Но ДЛЯ enwik9 я бы не ограничивался морфемами
+
+Самое интересное здесь — позволить словарю самому находить
+
+повторяющиеся произвольные последовательности символов.
+
+Например:
+
+the
+tion
+ing
+and
+that
+with
+
+а также:
+
+tionally
+
+information
+
+inter
+
+micro
+
+То есть токен не обязан быть лингвистически правильной морфемой.
+
+Получится что-то вроде:
+
+dictionary:
+
+1 =
+
+nu BP WN
+ll
+
+А файл
+
+"the"
+"ing"
+"tion"
+"inter"
+"big"
+
+ger
+
+превращается в поток:
+2 171433...
+
+Это уже очень похоже на иерархический словарь фраз, а не просто словарь слов.
+
+3. И здесь возникает очень интересная возможность
+
+Токены могут ссылаться не только на символы, но и на другие токены.
+
+Например:
+
+T1 = "big"
+
+T2 = "ger
+ТЗ = T1 + Т2
+
+Тогда:
+
+bigger = T3
+
+A дальше:
+
+T4 "very "
+Т5 = 74 + T3
+
+получаем:
+
+very bigger
+Это уже превращается в грамматику / straight-line grammar.
+
+И вот 3TO ДЛЯ enwik9 гораздо интереснее первоначальной идеи.
+
+4. Почему это может хорошо работать именно на Wikipedia
+
+Wikipedia имеет огромное количество повторяющихся конструкций:
+
+United States
+United Kingdom
+New York
+according to
+isa
+
+was a
+
+one of the
+
+in the
+А внутри слов:
+
+-tion
+-ing
+-ed
+-ness
+-ment
+-ally
+
+-ation
+И ещё более длинные повторяющиеся последовательности.
+
+Получается несколько уровней:
+
+characters
+
+$
+subwords
+
+у
+words
+
+$
+phrases
+
+$
+
+long repeated phrases
+
+Причём один и тот же механизм может работать на всех уровнях.
+
+5. И вот твоя идея про электронные книги действительно интересна
+
+Для обычного DEFLATE/LZ-o@xatua:
+
+compressed data
+$
+decompressor
++
+полный/большой буфер
+$
+text
+
+А утвоей схемы можно сделать:
+
+dictionary
++
+
+token stream
+у
+
+token
+$
+output characters
+$
+display
+
+То есть декодеру совершенно необязательно иметь весь текст.
+
+Например, экран запросил следующие 200 символов:
+
+token 184
+token 27
+token 391
+
+Декодер раскрывает их до тех пор, пока не получит нужное количество символов.
+
+Это особенно удобно, если словарь статический и известен заранее.
+
+6. Более того, можно сделать random access
+
+Это уже очень полезно для ebook.
+
+Можно иметь таблицу:
+
+chapter 1 > token offset @
+chapter 2 > token offset 18342
+chapter 3 > token offset 39120
+
+или периодические checkpoints:
+
+каждые 4096 распакованных символов
+
+Тогда переход на страницу не требует распаковки всей книги от начала.
+
+7. Но есть существенный минус
+
+Для универсального текста статический словарь не всегда будет оптимальным.
+
+Например, словарь прекрасно знает:
+
+information
+
+но встретилось:
+
+informations
+Можно собрать:
+
+information + $
+что хорошо.
+
+А вот редкое имя:
+
+Xylophonic
+может оказаться дешевле передать обычными символами.
+
+Поэтому нужен специальный escape:
+
+TOKEN(id)
+RAW(length, bytes...)
+
+Например:
+
+[ТОКЕМ: 184]
+[ТОКЕМ: 52]
+[RAW:"Xylophonic" ]
+
+8. Я бы вообще сделал гибрид
+
+Для enwik9 я бы исследовал такую архитектуру
+
+|
+| static
+
+| dictionary
+|
+
+>
++
+
+text -> tokenizer > token stream
++
+
+entropy coder
+
+Где словарь содержит не только слова:
+
+"the"
+"and"
+"ing"
+"tion"
+"United "
+"States"
+
+"according to
+но и составные токены, построенные из других токенов.
+
+Например:
+1100 = "United "
+T101 = "States"
+1102 = 1100 + T101
+
+И уже т1е2 кодируется одним коротким кодом.
+
+9. А вот для Hutter Prize есть ещё более интересная мысль
+
+Не обязательно заранее придумывать морфемы.
+
+Можно автоматически построить словарь из самого enwik9 , оптимизируя:
+
+сколько бит экономит введение нового токена с учётом стоимости самого
+словаря.
+
+Это очень близко к задачам grammar-based compression / Re-Pair / Sequitur / Byte
+Pair Encoding, но твоя идея отличается тем, что ты сразу думаешь о практическом
+
+${геатта-декодере и составлении слов.
+И ябы именно это направление исследовал.
+
+Причём твоя старая идея с повторяющимися паттернами в +12 тоже концептуально
+находится рядом: ты пытаешься не просто искать копию предыдущего блока,
+
+а создавать переиспользуемые строительные элементы.
+
+Если хочешь именно побороться за хороший результат на enwik9 , я бы попробовал
+
+построить небольшой экспериментальный grammar/token compressor и сравнить его
+
+с твоим TLZ. Это может оказаться гораздо интереснее очередного варианта LZ.
+Да. Скорее всего проблема именно в новом gtc_table.cpp , a He в encoder/decoder.
+
+Мы там сделали ОР с примерно такой структурой:
+
+for (end = 1; end <= М; ++end) {
+for (start = @; start < end; ++start) {
+
+for (model = 6; model < 6; ++model) {
+
+При твоём tokenCount = 5636 это:
+
+e ~15.9 млн пар start/end
+
+e x 6Mmogenen
+
+e = 95 млн расчётов
+
+© авнутри segmentCost() ещё могут выполняться дополнительные проходы по
+сегменту.
+
+То есть фактически получается уже не просто O(N’), а очень тяжёлый вариант O(N? x
+segment length), если стоимость сегмента пересчитывается проходом по его
+
+содержимому.
+
+Но есть ещё более важная проблема
+
+Для каждого кандидата сегмента мы потенциально заново анализируем:
+
+[start ... end)
+для:
+e RAW
+e CONSTANT
+e BITMAP
+e SPARSE
+e DELTA
+
+e DELTA-SIGNED
+
+Поэтому реальное количество операций может быть миллиарды, а не сотни
+
+МИЛЛИОНОВ.
+
+И это особенно заметно именно на твоих 5636 элементах.
+Что я предлагаю сейчас
+
+Не надо пока ждать окончания. Останови программу С+г1+с.
+
+Нам нужно посмотреть Ha gtc_table.cpp , потому что я хочу исправить именно
+
+реализацию DP, а не менять саму идею.
+
+Правильный вариант здесь — сделать расчёт СТОИМОСТИ
+
+сегментов инкрементальным, чтобы при переходе:
+
+[start, end)
+
+[start, end+1)
+мы не пересчитывали весь сегмент заново.
+
+Тогда ОР останется примерно:
+
+O(N? x 6)
+но каждый переход будет действительно дешёвым.
+Для М = 5636 это уже вполне нормальная задача.
+
+Пришли мне сейчас src/gtc_table.cpp целиком — именно тот файл, который у тебя
+
+сейчас собрался. Я переделаю только его, без
+
+изменения gtc_encoder.cpp, gtc_decoder.cpp и Huffman.
+#include "gtc_table.h"
+
+#include <algorithm>
+#include <cstdint>
+#include <limits>
+#include <vector>
+
+namespace {
+
+static constexpr uint32_t MODEL_RAW = 0;
+static constexpr uint32_t MODEL_CONSTANT = 1;
+
+Да, теперь видно точную причину. Проблема действительно в gtc_table.cpp.
+
+Сейчас segmentCost() для каждого варианта [start, end) заново проходит весь
+
+сегмент:
+
+for (uint32_t i = start;
+1 < end;
+
++41) {
+
+А этот расчёт вызывается для 6 моделей внутри двойного цикла ОР. Поэтому
+
+получается примерно О(№?).
+При М = 5636 это уже очень много.
+
+Нам не нужно менять сам алгоритм ОР. Нужно изменить только
+реализацию gtc_table.cpp : при движении end вправо поддерживать стоимость
+
+сегмента инкрементально.
+
+Что именно меняем
+В src/gtc_table.cpp:
+1. Полностью удалить функцию segmentCost() .
+
+2. В GtcLengthTable::encode() заменить текущий двойной цикл DP на вариант
+
+ниже.
+3. Остальную часть файла, начиная с:
+/*
+
+* Reconstruct segments.
+
+wos
+
+“T
+
+и ниже не менять.
+
+1. src/gtc_table.cpp
+
+Удалить целиком функцию:
+static uint64_t segmentCost(
+const std::vector<uint16_t>& values,
+uint3Z_t start,
+uint32_t end,
+uint32_t model)
+
+То есть OT:
+
+static uint64_t segmentCost(
+
+до закрывающей:
+
+непосредственно перед:
+
+} // namespace
+
+2. src/gtc_table.cpp
+
+В GtcLengthTable::encode() найти этот блок:
+/*
+* DP over segment boundaries.
+*/
+std::vector<uint64_t> ар(
+static_cast<size_t>(count) + 1,
+
+INF) ;
+
+std::vector<uint32_t> bestStart(
+static_cast<size_t>(count) + 1,
+9);
+
+std: :vector<uint8 t> bestModel (
+static_cast<size_t>(count) + 1,
+9);
+
+dp[@] = 9;
+
+for (uint32_t start = 0;
+start < count;
+++start) {
+
+if (dp[start] == INF)
+
+continue;
+
+const uint32_t maxEnd =
+std: :min(
+count,
+start + MAX_SEGMENT) ;
+
+for (uint32_t end =
+start + 1;
+end <= maxEnd;
+
+++end) {
+
+for (uint32_t model = @;
+model <= MODEL_DELTA_SIGNED;
+
+++model) {
+
+const uint64 t cost =
+segmentCost(
+lengths,
+start,
+end,
+mode1) ;
+
+if (cost == INF)
+
+continue;
+
+const uint64_t total =
+dp{start] + cost;
+
+if (total <
+ар[епа]) {
+
+dp[end] = total;
+
+bestStart/ end]
+
+start;
+
+bestModel[end] =
+static_cast<uint8_t>(
+model) ;
+
+Весь этот блок удалить.
+
+Вместо него вставить:
+
+/*
+* ОР over segment boundaries.
+* Segment statistics are updated incrementally
+* as end moves forward. This keeps the DP at
+* O(N‘*2) instead of O(N%3).
+*/
+std::vector<uint64_t> ар(
+static_cast<size_t>(count) + 1,
+INF) ;
+
+std::vector<uint32_t> bestStart(
+static_cast<size_t>(count) + 1,
+9);
+
+std: :vector<uint8_t> bestModel (
+static_cast<size t>(count) + 1,
+@);
+
+dp[®] = @;
+for (uint32_t start = 0;
+start < count;
+
+++start) {
+
+if (dp[start] == INF)
+
+continue;
+
+const uint32_t base =
+lengths[ start];
+if (base > 31)
+
+continue;
+
+uint32_t exceptions = 9;
+
+uint64_t positionBits = 0;
+uint64_ t deltaBits = 9;
+uint64_t signedDeltaBits = 9;
+
+uint32_t lastPosition =
+start - 1;
+
+bool constant = true;
+bool unsignedValid = true;
+
+bool valuesValid = true;
+
+const uint32_t maxEnd =
+std: :min(
+count,
+start + MAX_SEGMENT) ;
+
+for (uint32_t end =
+start + 1;
+end <= maxEnd;
+
+++end) {
+
+const uint32_t index
+
+end - 1;
+
+const uint32_t value
+
+lengths [index];
+
+if (value > 31)
+
+valuesValid = false;
+
+if (value != base) {
+
+constant = false;
+
+const uint32_t positionDelta =
+
+index - lastPosition;
+positionBits +=
+gammaBits(
+
+positionDelta) ;
+
+lastPosition =
+
+index;
+
+++exceptions ;
+
+if (value < base) {
+unsignedValid = false;
+
+}
+else {
+deltaBits +=
+gammaBits (
+value - base);
+}
+
+const int32_t signedDelta =
+static_cast<int32_t>(
+value) -
+static_cast<int32_t>(
+
+base);
+
+signedDeltaBits +=
+
+gammaBits (
+zigzag (
+signedDelta) ) ;
+
+const uint32_t length =
+
+end - start;
+
+if (!valuesValid)
+
+continue;
+/*
+* RAW
+*/
+{
+const uint64_t cost =
+HEADER_BITS +
+static_cast<uint64_t>(
+length) *
+BASE BITS;
+const uint64_t total =
+dp[start] + cost;
+if (total < ар[епа]) {
+ар[епа] = total;
+bestStart[end] =
+start;
+bestModel[end] =
+MODEL_RAW;
+}
+}
+/*
+
+* CONSTANT
+*/
+if (constant) {
+
+const uint64_t cost =
+HEADER_BITS +
+BASE_BITS;
+
+const uint64_t total =
+dp{start] + cost;
+
+if (total < ар[епа]) {
+ар[епа] = total;
+
+bestStart| end]
+start;
+
+bestModel| end]
+MODEL_CONSTANT ;
+
+/*
+* BITMAP
+*/
+{
+const uint64_t cost =
+HEADER_BITS +
+BASE BITS +
+length +
+static_cast<uint64_t>(
+exceptions) *
+BASE_BITS;
+
+const uint64_t total =
+dp{start] + cost;
+
+if (total < ар[епа]) {
+ар[епа] = total;
+
+bestStart| end]
+start;
+
+bestModel| end]
+MODEL_BITMAP ;
+
+/*
+
+* SPARSE
+*/
+
+{
+
+const uint32_t sentinelDelta
+end - lastPosition;
+
+const uint64_t sparseBase =
+HEADER_BITS +
+BASE_BITS +
+positionBits +
+gammaBits(
+
+sentinelDelta) ;
+
+const uint64_t cost =
+sparseBase +
+static_cast<uint6é4_t>(
+exceptions) *
+BASE BITS;
+
+const uint64_t total =
+dp{start] + cost;
+
+if (total < ар[епа]) {
+ар[епа] = total;
+
+bestStart[end] =
+start;
+bestModellend] =
+MODEL_SPARSE ;
+}
+}
+/*
+* DELTA-SPARSE
+*/
+
+if (unsignedValid) {
+
+const uint32_t sentinelDelta =
+
+end - lastPosition;
+
+const uint64_t sparseBase =
+HEADER_BITS +
+BASE_BITS +
+positionBits +
+gammaBits (
+
+sentinelDelta) ;
+const uint64_t cost =
+sparseBase +
+
+deltaBits;
+
+const uint64_t total =
+dp[start] + cost;
+
+if (total < ар[епа]) {
+dp[end]| = total;
+
+bestStart[end] =
+start;
+bestModel[end] =
+MODEL_DELTA;
+}
+}
+/*
+* DELTA-SPARSE-SIGNED
+*/
+{
+
+const uint32_t sentinelDelta =
+
+end - lastPosition;
+
+const uint64_t sparseBase =
+HEADER_BITS +
+BASE_BITS +
+positionBits +
+gammaBits(
+
+sentinelDelta) ;
+
+const uint64_t cost =
+sparseBase +
+
+signedDeltaBits ;
+
+const uint64_t total =
+dp[start] + cost;
+
+if (total < ар[епа]) {
+ар[епа] = total;
+
+bestStart[end] =
+
+start;
+
+bestModel[end] =
+MODEL_DELTA_SIGNED ;
+
+Что это исправляет
+
+Было:
+start
+
+—- end
+a RAW > пройти весь сегмент
+| CONSTANT + пройти весь сегмент
+| BITMAP > пройти весь сегмент
+| SPARSE > пройти весь сегмент
+|- DELTA > пройти весь сегмент
+L_ SIGNED > пройти весь сегмент
+
+То есть стоимость одного [start,end) фактически пересчитывалась заново.
+
+Теперь для каждого start мы делаем:
+
+start
+|- end=start+1 + добавить 1 элемент
+| end=start+2 - добавить ещё 1 элемент
+
+- end=start+3 - добавить ещё 1 элемент
+Le
+
+Bce:
+
+exceptions
+positionBits
+ueLlaBLls
+signedDeltaBits
+constant
+unsignedValid
+
+поддерживаются инкрементально.
+
+Таким образом сложность становится примерно:
+
+O(N2 x 6)
+
+вместо фактически:
+
+O(N? x 6)
+Для твоих 5636 элементов это должно быть Ha порядки быстрее.
+
+После изменения
+
+Сделай:
+
+make clean
+а затем снова запусти тот же тест.
+
+И важный момент: формат \4 при этом не меняется вообще. Мы исправляем только
+
+скорость поиска оптимального разбиения. gtc_encoder.cpp, gtc_decoder.cpp ,
+
+Huffman и формат таблицы оставляем как есть.
+
+пока мы меняли код старый вариант ар завершился и я
+не удержался от теста. decode прошел успешно и
+различия не найдены. размер gtc файла 83504. сейчас
+проверю новый вариант с ар и сравним результат.
+кстати декодирование было молниеносным.
+
+Да, это очень хороший промежуточный результат.
+
+Главное уже подтверждено:
+
+старый ОР дал рабочий GTC v4;
+
+файл получился 83 504 байта;
+
+decode прошёл;
+® результат декодирования побайтно идентичен исходнику;
+® декодирование действительно оказалось практически мгновенным.
+
+Это означает, что сама новая схема таблицы длин Huffman уже работает корректно.
+
+Теперь нас интересует только эффективность нового ОР.
+
+Когда закончится новый вариант, сравним минимум три числа:
+
+Вариант Размер СТС Время encode Время decode
+
+старый v3 ? ? ?
+v4 + старый DP 83 504 В долго мгновенно
+v4 + новый DP ? ? ?
+
+[< OO ==
+Особенно интересно, изменится ли размер 83 504 В. Поскольку новый ОР должен
+
+считать те же самые модели и те же стоимости, при корректной реализации
+
+результат должен быть идентичным старому DP. Если размер вдруг отличается —
+значит, мы где-то получили расхождение в расчёте стоимости или обработке границ
+
+сегмента.
+
+И ещё важный момент: твой эксперимент со старым ОР уже фактически доказал,
+что сама идея компактной таблицы не только теоретическая — она дала
+полноценный рабочий файл, причём decoder очень быстрый. Теперь осталось
+
+сделать encoder достаточно быстрым.
