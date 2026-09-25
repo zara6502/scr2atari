@@ -11,13 +11,14 @@ The QOI stream is decoded directly. PNG/WIC/GDI+ are not used.
 * Non-QOI files are left completely to Far Manager.
 * RGB and RGBA QOI are supported.
 * Aspect ratio is preserved.
-* `1` = fit to window.
-* `0` = 100% / 1:1.
+* `1` = 100% / 1:1.
+* `0` = fit to window.
 * `+` / `-` = zoom.
 * Mouse wheel = zoom.
 * Arrow keys = pan while zoomed.
 * `Home` = center.
 * `Esc` = close.
+* SPACE / LMB = fit/zoom toggle.
 * RGBA is composited over a checkerboard background.
 * The image window is independent of the Far console and has its own message loop.
 
