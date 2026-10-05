@@ -1,0 +1,1541 @@
+# ./gtc2_grammar_test.exe sam.txt sam.txt.zx0
+GTC2 / ZX0 GRAMMAR ANALYSIS
+===========================
+
+input       : sam.txt
+original    : 172 bytes
+compressed  : 79 bytes
+decoded     : 172 bytes
+consumed    : 79 / 79 bytes
+VERIFY      : OK
+
+ZX0 OPERATIONS
+==============
+  0  LIT out=  0 len= 6 bits= 53 bytes= 7 "I am S"
+  1  NEW out=  6 len= 7 offset=  4 src=  2 bits= 14 bytes= 2 "am Sam "
+  2  NEW out= 13 len= 5 offset= 13 src=  0 bits= 14 bytes= 2 "I am "
+  3  LIT out= 18 len= 4 bits= 37 bytes= 5 "That"
+  4  NEW out= 22 len= 4 offset= 14 src=  8 bits= 12 bytes= 2 " Sam"
+  5  LIT out= 26 len= 1 bits=  9 bytes= 2 "-"
+  6 LAST out= 27 len= 1 offset= 14 src= 13 bits=  1 bytes= 1 "I"
+  7  LIT out= 28 len= 1 bits=  9 bytes= 2 "-"
+  8 LAST out= 29 len= 2 offset= 14 src= 15 bits=  3 bytes= 1 "am"
+  9  LIT out= 31 len= 1 bits=  9 bytes= 2 "!"
+ 10  NEW out= 32 len=16 offset= 15 src= 17 bits= 16 bytes= 2 " That Sam-I-am! "
+ 11  NEW out= 48 len= 2 offset= 35 src= 13 bits= 10 bytes= 2 "I "
+ 12  LIT out= 50 len= 2 bits= 19 bytes= 3 "do"
+ 13 LAST out= 52 len= 1 offset= 35 src= 17 bits=  1 bytes= 1 " "
+ 14  LIT out= 53 len= 2 bits= 19 bytes= 3 "no"
+ 15  NEW out= 55 len= 2 offset= 19 src= 36 bits= 10 bytes= 2 "t "
+ 16  LIT out= 57 len= 6 bits= 53 bytes= 7 "like t"
+ 17  NEW out= 63 len=14 offset= 29 src= 34 bits= 16 bytes= 2 "hat Sam-I-am! "
+ 18  LIT out= 77 len= 1 bits=  9 bytes= 2 "D"
+ 19  NEW out= 78 len= 2 offset= 27 src= 51 bits= 10 bytes= 2 "o "
+ 20  LIT out= 80 len= 1 bits=  9 bytes= 2 "y"
+ 21 LAST out= 81 len= 1 offset= 27 src= 54 bits=  1 bytes= 1 "o"
+ 22  LIT out= 82 len= 1 bits=  9 bytes= 2 "u"
+ 23 LAST out= 83 len= 6 offset= 27 src= 56 bits=  5 bytes= 1 " like "
+ 24  LIT out= 89 len=10 bits= 87 bytes=11 "green eggs"
+ 25  NEW out= 99 len= 2 offset= 85 src= 14 bits= 10 bytes= 2 " a"
+ 26  LIT out=101 len= 3 bits= 27 bytes= 4 "nd "
+ 27 LAST out=104 len= 1 offset= 85 src= 19 bits=  1 bytes= 1 "h"
+ 28  NEW out=105 len= 2 offset= 61 src= 44 bits= 10 bytes= 2 "am"
+ 29  LIT out=107 len= 1 bits=  9 bytes= 2 "?"
+ 30 LAST out=108 len=17 offset= 61 src= 47 bits=  9 bytes= 2 " I do not like th"
+ 31  LIT out=125 len= 3 bits= 27 bytes= 4 "em,"
+ 32  NEW out=128 len= 9 offset= 91 src= 37 bits= 16 bytes= 2 " Sam-I-am"
+ 33  LIT out=137 len= 1 bits=  9 bytes= 2 "."
+ 34 LAST out=138 len=15 offset= 91 src= 47 bits=  7 bytes= 1 " I do not like "
+ 35  NEW out=153 len=16 offset= 64 src= 89 bits= 16 bytes= 2 "green eggs and h"
+ 36  NEW out=169 len= 3 offset= 34 src=135 bits= 12 bytes= 2 "am."
+
+GTC2 vs ZX0 CANDIDATES
+=====================
+
+len  freq  literal  GTC2   Ggain  ZXops   ZXbits  ZXbytes string
+----- ------ -----------------------------------------------------
+24   2     48       4      44     0       0       0       " like green eggs and ham"
+23   2     46       4      42     0       0       0       "like green eggs and ham"
+23   2     46       4      42     0       0       0       " like green eggs and ha"
+15   3     45       5      40     2       16      3       " I do not like "
+22   2     44       4      40     0       0       0       "like green eggs and ha"
+22   2     44       4      40     0       0       0       " like green eggs and h"
+22   2     44       4      40     0       0       0       "ike green eggs and ham"
+21   2     42       4      38     0       0       0       "like green eggs and h"
+21   2     42       4      38     0       0       0       "ke green eggs and ham"
+21   2     42       4      38     0       0       0       "ike green eggs and ha"
+21   2     42       4      38     0       0       0       " like green eggs and "
+14   3     42       5      37     2       16      3       "I do not like "
+14   3     42       5      37     2       16      3       " I do not like"
+14   3     42       5      37     2       32      4       "hat Sam-I-am! "
+20   2     40       4      36     0       0       0       "ike green eggs and h"
+20   2     40       4      36     0       0       0       " like green eggs and"
+20   2     40       4      36     0       0       0       "like green eggs and "
+20   2     40       4      36     0       0       0       "ke green eggs and ha"
+20   2     40       4      36     0       0       0       "e green eggs and ham"
+13   3     39       5      34     2       32      4       "hat Sam-I-am!"
+13   3     39       5      34     2       16      3       "I do not like"
+13   3     39       5      34     2       16      3       " I do not lik"
+13   3     39       5      34     2       16      3       " do not like "
+13   3     39       5      34     2       32      4       "at Sam-I-am! "
+19   2     38       4      34     0       0       0       " like green eggs an"
+19   2     38       4      34     0       0       0       " green eggs and ham"
+19   2     38       4      34     0       0       0       "e green eggs and ha"
+19   2     38       4      34     0       0       0       "ike green eggs and "
+19   2     38       4      34     0       0       0       "like green eggs and"
+19   2     38       4      34     0       0       0       "ke green eggs and h"
+18   2     36       4      32     0       0       0       "like green eggs an"
+18   2     36       4      32     0       0       0       " like green eggs a"
+18   2     36       4      32     0       0       0       "green eggs and ham"
+18   2     36       4      32     0       0       0       "ike green eggs and"
+18   2     36       4      32     0       0       0       "e green eggs and h"
+18   2     36       4      32     0       0       0       " green eggs and ha"
+18   2     36       4      32     0       0       0       "ke green eggs and "
+12   3     36       5      31     2       32      4       "hat Sam-I-am"
+12   3     36       5      31     2       16      3       "I do not lik"
+12   3     36       5      31     2       16      3       "do not like "
+12   3     36       5      31     2       16      3       " do not like"
+12   3     36       5      31     2       32      4       "t Sam-I-am! "
+12   3     36       5      31     2       32      4       "at Sam-I-am!"
+12   3     36       5      31     2       16      3       " I do not li"
+9    4     36       6      30     3       48      6       " Sam-I-am"
+17   2     34       4      30     1       9       2       " I do not like th"
+17   2     34       4      30     0       0       0       "reen eggs and ham"
+17   2     34       4      30     0       0       0       "ke green eggs and"
+17   2     34       4      30     0       0       0       " green eggs and h"
+17   2     34       4      30     0       0       0       "ike green eggs an"
+17   2     34       4      30     0       0       0       "like green eggs a"
+17   2     34       4      30     0       0       0       "e green eggs and "
+17   2     34       4      30     0       0       0       " like green eggs "
+17   2     34       4      30     0       0       0       "green eggs and ha"
+11   3     33       5      28     2       32      4       "hat Sam-I-a"
+11   3     33       5      28     2       16      3       "o not like "
+11   3     33       5      28     2       32      4       " Sam-I-am! "
+11   3     33       5      28     2       16      3       "I do not li"
+11   3     33       5      28     2       16      3       "do not like"
+11   3     33       5      28     2       32      4       "t Sam-I-am!"
+11   3     33       5      28     2       16      3       " do not lik"
+11   3     33       5      28     2       32      4       "at Sam-I-am"
+11   3     33       5      28     2       16      3       " I do not l"
+16   2     32       4      28     1       9       2       "I do not like th"
+16   2     32       4      28     1       9       2       " I do not like t"
+16   2     32       4      28     1       16      2       "green eggs and h"
+16   2     32       4      28     0       0       0       " green eggs and "
+16   2     32       4      28     0       0       0       " like green eggs"
+16   2     32       4      28     0       0       0       "ke green eggs an"
+16   2     32       4      28     0       0       0       "reen eggs and ha"
+16   2     32       4      28     0       0       0       "een eggs and ham"
+16   2     32       4      28     0       0       0       "like green eggs "
+16   2     32       4      28     0       0       0       "e green eggs and"
+16   2     32       4      28     0       0       0       "ike green eggs a"
+8    4     32       6      26     3       48      6       " Sam-I-a"
+8    4     32       6      26     3       48      6       "Sam-I-am"
+15   2     30       4      26     1       16      2       "That Sam-I-am! "
+15   2     30       4      26     1       16      2       " That Sam-I-am!"
+15   2     30       4      26     1       16      2       "reen eggs and h"
+15   2     30       4      26     1       9       2       "I do not like t"
+15   2     30       4      26     1       9       2       " do not like th"
+15   2     30       4      26     1       16      2       "green eggs and "
+15   2     30       4      26     0       0       0       "ke green eggs a"
+15   2     30       4      26     0       0       0       "e green eggs an"
+15   2     30       4      26     0       0       0       " like green egg"
+15   2     30       4      26     0       0       0       "een eggs and ha"
+15   2     30       4      26     0       0       0       "ike green eggs "
+15   2     30       4      26     0       0       0       "like green eggs"
+15   2     30       4      26     0       0       0       "en eggs and ham"
+15   2     30       4      26     0       0       0       " green eggs and"
+10   3     30       5      25     2       32      4       "hat Sam-I-"
+10   3     30       5      25     2       16      3       "o not like"
+10   3     30       5      25     2       32      4       "Sam-I-am! "
+10   3     30       5      25     2       16      3       " do not li"
+10   3     30       5      25     2       16      3       "do not lik"
+10   3     30       5      25     2       16      3       " not like "
+10   3     30       5      25     2       32      4       "at Sam-I-a"
+10   3     30       5      25     2       32      4       "t Sam-I-am"
+10   3     30       5      25     2       16      3       " I do not "
+10   3     30       5      25     2       32      4       " Sam-I-am!"
+
+ZX0 MATCH COVERAGE
+==================
+
+" I do not like " len=15 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I do not like " len=14 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" I do not like" len=14 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat Sam-I-am! " len=14 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"hat Sam-I-am!" len=13 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do not like" len=13 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" I do not lik" len=13 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" do not like " len=13 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-I-am! " len=13 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"hat Sam-I-am" len=12 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do not lik" len=12 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not like " len=12 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" do not like" len=12 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sam-I-am! " len=12 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"at Sam-I-am!" len=12 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I do not li" len=12 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" Sam-I-am" len=9 freq=4 ZX0-covered=3
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" I do not like th" len=17 freq=2 ZX0-covered=1
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"hat Sam-I-a" len=11 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o not like " len=11 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" Sam-I-am! " len=11 freq=3 ZX0-covered=2
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do not li" len=11 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not like" len=11 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sam-I-am!" len=11 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" do not lik" len=11 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-I-am" len=11 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I do not l" len=11 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I do not like th" len=16 freq=2 ZX0-covered=1
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" I do not like t" len=16 freq=2 ZX0-covered=1
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"green eggs and h" len=16 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" Sam-I-a" len=8 freq=4 ZX0-covered=3
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"Sam-I-am" len=8 freq=4 ZX0-covered=3
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"That Sam-I-am! " len=15 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" That Sam-I-am!" len=15 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"reen eggs and h" len=15 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"I do not like t" len=15 freq=2 ZX0-covered=1
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" do not like th" len=15 freq=2 ZX0-covered=1
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"green eggs and " len=15 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"hat Sam-I-" len=10 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o not like" len=10 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"Sam-I-am! " len=10 freq=3 ZX0-covered=2
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" do not li" len=10 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not lik" len=10 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" not like " len=10 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-I-a" len=10 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"t Sam-I-am" len=10 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I do not " len=10 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" Sam-I-am!" len=10 freq=3 ZX0-covered=2
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do not l" len=10 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"That Sam-I-am!" len=14 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"green eggs and" len=14 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"do not like th" len=14 freq=2 ZX0-covered=1
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" That Sam-I-am" len=14 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"een eggs and h" len=14 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"reen eggs and " len=14 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" do not like t" len=14 freq=2 ZX0-covered=1
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"Sam-I-a" len=7 freq=4 ZX0-covered=3
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" Sam-I-" len=7 freq=4 ZX0-covered=3
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"am-I-am" len=7 freq=4 ZX0-covered=3
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"am-I-am! " len=9 freq=3 ZX0-covered=2
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" not like" len=9 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not li" len=9 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"not like " len=9 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-I-" len=9 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o not lik" len=9 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"Sam-I-am!" len=9 freq=3 ZX0-covered=2
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do not " len=9 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" do not l" len=9 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sam-I-a" len=9 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I do not" len=9 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat Sam-I" len=9 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"That Sam-I-am" len=13 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" That Sam-I-a" len=13 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"green eggs an" len=13 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een eggs and " len=13 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"reen eggs and" len=13 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs and h" len=13 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"do not like t" len=13 freq=2 ZX0-covered=1
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"o not like th" len=13 freq=2 ZX0-covered=1
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"o not like t" len=12 freq=2 ZX0-covered=1
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" not like th" len=12 freq=2 ZX0-covered=1
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"een eggs and" len=12 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That Sam-I-a" len=12 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"green eggs a" len=12 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" That Sam-I-" len=12 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"en eggs and " len=12 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n eggs and h" len=12 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"reen eggs an" len=12 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"am-I-am!" len=8 freq=3 ZX0-covered=2
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" do not " len=8 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"o not li" len=8 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-I" len=8 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"t Sam-I-" len=8 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"not like" len=8 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not l" len=8 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" I do no" len=8 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"m-I-am! " len=8 freq=3 ZX0-covered=2
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"ot like " len=8 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" not lik" len=8 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I do not" len=8 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat Sam-" len=8 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" Sam-I" len=6 freq=4 ZX0-covered=3
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"am-I-a" len=6 freq=4 ZX0-covered=3
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" like " len=6 freq=4 ZX0-covered=3
+  occurrence @ 83  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 147 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"m-I-am" len=6 freq=4 ZX0-covered=3
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 131 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"Sam-I-" len=6 freq=4 ZX0-covered=3
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"That Sam-I-" len=11 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"not like th" len=11 freq=2 ZX0-covered=1
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"een eggs an" len=11 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"reen eggs a" len=11 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" eggs and h" len=11 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green eggs " len=11 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs and" len=11 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" not like t" len=11 freq=2 ZX0-covered=1
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"n eggs and " len=11 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" That Sam-I" len=11 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" Sam" len=4 freq=6 ZX0-covered=5
+  occurrence @ 8   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 22  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"I do no" len=7 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t like " len=7 freq=3 ZX0-covered=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" not li" len=7 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not " len=7 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat Sam" len=7 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"m-I-am!" len=7 freq=3 ZX0-covered=2
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I do n" len=7 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ot like" len=7 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"not lik" len=7 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at Sam-" len=7 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" do not" len=7 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sam-I" len=7 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o not l" len=7 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"-I-am! " len=7 freq=3 ZX0-covered=2
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" eggs and " len=10 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" That Sam-" len=10 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"een eggs a" len=10 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs an" len=10 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That Sam-I" len=10 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"not like t" len=10 freq=2 ZX0-covered=1
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"n eggs and" len=10 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ot like th" len=10 freq=2 ZX0-covered=1
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"reen eggs " len=10 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green eggs" len=10 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs and h" len=10 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" Sam-" len=5 freq=4 ZX0-covered=3
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"like " len=5 freq=4 ZX0-covered=3
+  occurrence @ 84  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 148 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"Sam-I" len=5 freq=4 ZX0-covered=3
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"m-I-a" len=5 freq=4 ZX0-covered=3
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 131 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"am-I-" len=5 freq=4 ZX0-covered=3
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"-I-am" len=5 freq=4 ZX0-covered=3
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 132 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" like" len=5 freq=4 ZX0-covered=3
+  occurrence @ 83  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 147 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"green egg" len=9 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"t like th" len=9 freq=2 ZX0-covered=1
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"ggs and h" len=9 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs a" len=9 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs and " len=9 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n eggs an" len=9 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een eggs " len=9 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" eggs and" len=9 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ot like t" len=9 freq=2 ZX0-covered=1
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"reen eggs" len=9 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That Sam-" len=9 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" That Sam" len=9 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"-I-am!" len=6 freq=3 ZX0-covered=2
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" not l" len=6 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat Sa" len=6 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"ot lik" len=6 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I do n" len=6 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I-am! " len=6 freq=3 ZX0-covered=2
+  occurrence @ 42  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 71  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o not " len=6 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do not" len=6 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" do no" len=6 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"not li" len=6 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" I do " len=6 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t like" len=6 freq=3 ZX0-covered=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sam-" len=6 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"at Sam" len=6 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"am" len=2 freq=14 ZX0-covered=13
+  occurrence @ 6   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 10  -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 15  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+  occurrence @ 24  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 29  -> LAST #8 out=29 len=2 offset=14 bits=3 bytes=1
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 44  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 73  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 105 -> NEW #28 out=105 len=2 offset=61 bits=10 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+  occurrence @ 135 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+  occurrence @ 169 -> NEW #36 out=169 len=3 offset=34 bits=12 bytes=2
+
+"reen egg" len=8 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"t like t" len=8 freq=2 ZX0-covered=1
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"gs and h" len=8 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green eg" len=8 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" That Sa" len=8 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"ggs and " len=8 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That Sam" len=8 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" eggs an" len=8 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een eggs" len=8 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs " len=8 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" like th" len=8 freq=2 ZX0-covered=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"eggs and" len=8 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n eggs a" len=8 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"Sam" len=3 freq=6 ZX0-covered=5
+  occurrence @ 9   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 23  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" Sa" len=3 freq=6 ZX0-covered=5
+  occurrence @ 8   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 22  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"I-am" len=4 freq=4 ZX0-covered=3
+  occurrence @ 42  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 71  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 133 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"-I-a" len=4 freq=4 ZX0-covered=3
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 132 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"Sam-" len=4 freq=4 ZX0-covered=3
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"like" len=4 freq=4 ZX0-covered=3
+  occurrence @ 84  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 148 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" lik" len=4 freq=4 ZX0-covered=3
+  occurrence @ 83  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 147 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ike " len=4 freq=4 ZX0-covered=3
+  occurrence @ 85  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 119 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 149 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"am-I" len=4 freq=4 ZX0-covered=3
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"m-I-" len=4 freq=4 ZX0-covered=3
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 131 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" do n" len=5 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat S" len=5 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"at Sa" len=5 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"t Sam" len=5 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" not " len=5 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do no" len=5 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"o not" len=5 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ot li" len=5 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t lik" len=5 freq=3 ZX0-covered=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"-am! " len=5 freq=3 ZX0-covered=2
+  occurrence @ 43  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 72  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"not l" len=5 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I-am!" len=5 freq=3 ZX0-covered=2
+  occurrence @ 42  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 71  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"I do " len=5 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" I do" len=5 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"n eggs " len=7 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" like t" len=7 freq=2 ZX0-covered=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" eggs a" len=7 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs an" len=7 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gs and " len=7 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"s and h" len=7 freq=2 ZX0-covered=1
+  occurrence @ 162 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eggs" len=7 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That Sa" len=7 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"een egg" len=7 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" That S" len=7 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"reen eg" len=7 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ggs and" len=7 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green e" len=7 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"like th" len=7 freq=2 ZX0-covered=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"ggs an" len=6 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ike th" len=6 freq=2 ZX0-covered=1
+  occurrence @ 119 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"That S" len=6 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"en egg" len=6 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gs and" len=6 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" and h" len=6 freq=2 ZX0-covered=1
+  occurrence @ 163 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" eggs " len=6 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een eg" len=6 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n eggs" len=6 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs a" len=6 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green " len=6 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"s and " len=6 freq=2 ZX0-covered=1
+  occurrence @ 162 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"like t" len=6 freq=2 ZX0-covered=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" That " len=6 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"reen e" len=6 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" do " len=4 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"am! " len=4 freq=3 ZX0-covered=2
+  occurrence @ 44  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 73  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"not " len=4 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I do" len=4 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"-am!" len=4 freq=3 ZX0-covered=2
+  occurrence @ 43  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 72  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" I d" len=4 freq=3 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t li" len=4 freq=3 ZX0-covered=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" not" len=4 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t Sa" len=4 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"ot l" len=4 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do n" len=4 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"o no" len=4 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at S" len=4 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"hat " len=4 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"lik" len=3 freq=4 ZX0-covered=3
+  occurrence @ 84  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 148 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I-a" len=3 freq=4 ZX0-covered=3
+  occurrence @ 42  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 71  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 133 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"m-I" len=3 freq=4 ZX0-covered=3
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 131 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"-am" len=3 freq=4 ZX0-covered=3
+  occurrence @ 43  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 72  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 134 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"-I-" len=3 freq=4 ZX0-covered=3
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 132 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"ke " len=3 freq=4 ZX0-covered=3
+  occurrence @ 86  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 120 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 150 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"am " len=3 freq=4 ZX0-covered=3
+  occurrence @ 6   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 10  -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 15  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+" li" len=3 freq=4 ZX0-covered=3
+  occurrence @ 83  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 147 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ike" len=3 freq=4 ZX0-covered=3
+  occurrence @ 85  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 119 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 149 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"am-" len=3 freq=4 ZX0-covered=3
+  occurrence @ 39  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 68  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 130 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" I " len=3 freq=4 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"reen " len=5 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een e" len=5 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs " len=5 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n egg" len=5 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"en eg" len=5 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"and h" len=5 freq=2 ZX0-covered=1
+  occurrence @ 164 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ggs a" len=5 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That " len=5 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"I am " len=5 freq=2 ZX0-covered=1
+  occurrence @ 13  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+"s and" len=5 freq=2 ZX0-covered=1
+  occurrence @ 162 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"green" len=5 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" eggs" len=5 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ike t" len=5 freq=2 ZX0-covered=1
+  occurrence @ 119 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"ke th" len=5 freq=2 ZX0-covered=1
+  occurrence @ 120 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+" That" len=5 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"gs an" len=5 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" and " len=5 freq=2 ZX0-covered=1
+  occurrence @ 163 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"t " len=2 freq=6 ZX0-covered=5
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 55  -> NEW #15 out=55 len=2 offset=19 bits=10 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" S" len=2 freq=6 ZX0-covered=5
+  occurrence @ 8   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 22  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 37  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 66  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 128 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"Sa" len=2 freq=6 ZX0-covered=5
+  occurrence @ 9   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 23  -> NEW #4 out=22 len=4 offset=14 bits=12 bytes=2
+  occurrence @ 38  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 67  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 129 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"am!" len=3 freq=3 ZX0-covered=2
+  occurrence @ 44  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 73  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"t l" len=3 freq=3 ZX0-covered=2
+  occurrence @ 116 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 146 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"t S" len=3 freq=3 ZX0-covered=2
+  occurrence @ 36  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 65  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"o n" len=3 freq=3 ZX0-covered=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ot " len=3 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do " len=3 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"I d" len=3 freq=3 ZX0-covered=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" do" len=3 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"not" len=3 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at " len=3 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+" no" len=3 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"hat" len=3 freq=3 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"m! " len=3 freq=3 ZX0-covered=2
+  occurrence @ 45  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 74  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"n eg" len=4 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"s an" len=4 freq=2 ZX0-covered=1
+  occurrence @ 162 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gree" len=4 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"am S" len=4 freq=2 ZX0-covered=1
+  occurrence @ 6   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+
+"ggs " len=4 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gs a" len=4 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"and " len=4 freq=2 ZX0-covered=1
+  occurrence @ 164 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"That" len=4 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+" egg" len=4 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"Sam " len=4 freq=2 ZX0-covered=1
+  occurrence @ 9   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+
+" and" len=4 freq=2 ZX0-covered=1
+  occurrence @ 163 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"eggs" len=4 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een " len=4 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"e th" len=4 freq=2 ZX0-covered=1
+  occurrence @ 121 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"ke t" len=4 freq=2 ZX0-covered=1
+  occurrence @ 120 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"nd h" len=4 freq=2 ZX0-covered=1
+  occurrence @ 165 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" Tha" len=4 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"I am" len=4 freq=2 ZX0-covered=1
+  occurrence @ 13  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+"en e" len=4 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"m Sa" len=4 freq=2 ZX0-covered=1
+  occurrence @ 7   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+
+" am " len=4 freq=2 ZX0-covered=1
+  occurrence @ 14  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+"reen" len=4 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"I " len=2 freq=5 ZX0-covered=4
+  occurrence @ 13  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+  occurrence @ 48  -> NEW #11 out=48 len=2 offset=35 bits=10 bytes=2
+  occurrence @ 109 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 139 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ha" len=2 freq=5 ZX0-covered=2
+  occurrence @ 34  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 63  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"m " len=2 freq=4 ZX0-covered=3
+  occurrence @ 7   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 11  -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+  occurrence @ 16  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+"li" len=2 freq=4 ZX0-covered=3
+  occurrence @ 84  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 118 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 148 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ik" len=2 freq=4 ZX0-covered=3
+  occurrence @ 85  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 119 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 149 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"m-" len=2 freq=4 ZX0-covered=3
+  occurrence @ 40  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 69  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 131 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"I-" len=2 freq=4 ZX0-covered=3
+  occurrence @ 42  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 71  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 133 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"o " len=2 freq=4 ZX0-covered=3
+  occurrence @ 78  -> NEW #19 out=78 len=2 offset=27 bits=10 bytes=2
+  occurrence @ 112 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 142 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" l" len=2 freq=4 ZX0-covered=3
+  occurrence @ 83  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 117 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 147 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"-I" len=2 freq=4 ZX0-covered=3
+  occurrence @ 41  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 70  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 132 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+"e " len=2 freq=4 ZX0-covered=3
+  occurrence @ 87  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 121 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 151 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ke" len=2 freq=4 ZX0-covered=3
+  occurrence @ 86  -> LAST #23 out=83 len=6 offset=27 bits=5 bytes=1
+  occurrence @ 120 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 150 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" a" len=2 freq=4 ZX0-covered=3
+  occurrence @ 14  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+  occurrence @ 99  -> NEW #25 out=99 len=2 offset=85 bits=10 bytes=2
+  occurrence @ 163 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"-a" len=2 freq=4 ZX0-covered=3
+  occurrence @ 43  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 72  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+  occurrence @ 134 -> NEW #32 out=128 len=9 offset=91 bits=16 bytes=2
+
+" I" len=2 freq=4 ZX0-covered=2
+  occurrence @ 108 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 138 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"ree" len=3 freq=2 ZX0-covered=1
+  occurrence @ 154 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"een" len=3 freq=2 ZX0-covered=1
+  occurrence @ 155 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"nd " len=3 freq=2 ZX0-covered=1
+  occurrence @ 165 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" Th" len=3 freq=2 ZX0-covered=1
+  occurrence @ 32  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"egg" len=3 freq=2 ZX0-covered=1
+  occurrence @ 159 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"e t" len=3 freq=2 ZX0-covered=1
+  occurrence @ 121 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"en " len=3 freq=2 ZX0-covered=1
+  occurrence @ 156 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" am" len=3 freq=2 ZX0-covered=1
+  occurrence @ 14  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+" an" len=3 freq=2 ZX0-covered=1
+  occurrence @ 163 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"n e" len=3 freq=2 ZX0-covered=1
+  occurrence @ 157 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"d h" len=3 freq=2 ZX0-covered=1
+  occurrence @ 166 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+" eg" len=3 freq=2 ZX0-covered=1
+  occurrence @ 158 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ggs" len=3 freq=2 ZX0-covered=1
+  occurrence @ 160 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"and" len=3 freq=2 ZX0-covered=1
+  occurrence @ 164 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"am." len=3 freq=2 ZX0-covered=1
+  occurrence @ 169 -> NEW #36 out=169 len=3 offset=34 bits=12 bytes=2
+
+"I a" len=3 freq=2 ZX0-covered=1
+  occurrence @ 13  -> NEW #2 out=13 len=5 offset=13 bits=14 bytes=2
+
+" th" len=3 freq=2 ZX0-covered=1
+  occurrence @ 122 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+
+"m S" len=3 freq=2 ZX0-covered=1
+  occurrence @ 7   -> NEW #1 out=6 len=7 offset=4 bits=14 bytes=2
+
+"Tha" len=3 freq=2 ZX0-covered=1
+  occurrence @ 33  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+
+"s a" len=3 freq=2 ZX0-covered=1
+  occurrence @ 162 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gre" len=3 freq=2 ZX0-covered=1
+  occurrence @ 153 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"gs " len=3 freq=2 ZX0-covered=1
+  occurrence @ 161 -> NEW #35 out=153 len=16 offset=64 bits=16 bytes=2
+
+"ot" len=2 freq=3 ZX0-covered=2
+  occurrence @ 115 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 145 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" d" len=2 freq=3 ZX0-covered=2
+  occurrence @ 110 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 140 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"do" len=2 freq=3 ZX0-covered=2
+  occurrence @ 111 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 141 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"at" len=2 freq=3 ZX0-covered=2
+  occurrence @ 35  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 64  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"m!" len=2 freq=3 ZX0-covered=2
+  occurrence @ 45  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 74  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+"no" len=2 freq=3 ZX0-covered=2
+  occurrence @ 114 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 144 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+" n" len=2 freq=3 ZX0-covered=2
+  occurrence @ 113 -> LAST #30 out=108 len=17 offset=61 bits=9 bytes=2
+  occurrence @ 143 -> LAST #34 out=138 len=15 offset=91 bits=7 bytes=1
+
+"! " len=2 freq=3 ZX0-covered=2
+  occurrence @ 46  -> NEW #10 out=32 len=16 offset=15 bits=16 bytes=2
+  occurrence @ 75  -> NEW #17 out=63 len=14 offset=29 bits=16 bytes=2
+
+SUMMARY
+=======
+profitable GTC2 candidates : 505
+also covered by ZX0        : 367
